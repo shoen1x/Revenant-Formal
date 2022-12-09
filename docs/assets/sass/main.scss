@@ -3,14 +3,11 @@
 @import 'libs/mixins';
 @import 'libs/vendor';
 @import 'libs/breakpoints';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900');
+@font-face {
+	font-family: Futura;
+	src: url("/docs/assets/webfonts/Futura\ Medium\ BT\ \(Revenant\).ttf") format('truetype');
+}
 @import url('fontawesome-all.min.css');
-
-/*
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 // Breakpoints.
 
@@ -53,8 +50,8 @@
 /* Intro */
 
 	#intro {
-		background: url('images/overlay.png'), url('../../images/intro.jpg');
-		background-size: 256px 256px, cover;
+		background: url('images/overlay.png'), url('../../images/shoenixbumantara.png');
+		background-size: 2048px 2048px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
@@ -72,8 +69,8 @@
 /* Two */
 
 	#two {
-		background: url('images/overlay.png'), url('../../images/two.jpg');
-		background-size: 256px 256px, cover;
+		background: url('images/overlay.png'), url('../../images/shoenixsecond.jpg');
+		background-size: 4000px 4000px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
