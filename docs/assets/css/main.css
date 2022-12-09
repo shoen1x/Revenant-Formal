@@ -2244,7 +2244,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/ShoenixHikari1.png"), url("../../images/ShoenixHikari1.jpg");
+		background: url("images/overlay.png"), url("../../images/ShoenixHikari1.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
