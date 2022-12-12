@@ -1,5 +1,7 @@
 @font-face {
-	font-family: 'futura';
+	font-family: futura;
+	font-weight: bold;
+    font-style: normal;
 	src: url('/docs/assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
 }
 @import url("fontawesome-all.min.css");
@@ -431,7 +433,7 @@ input, select, textarea {
 			transform-origin: 50% 50%;
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: 'futura';
+			font-family: futura;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -497,7 +499,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, textarea, select {
-		font-family: 'futura';
+		font-family: futura;
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
@@ -1264,7 +1266,7 @@ input, select, textarea {
 				animation: spinner-rotate 0.75s infinite linear !important;
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: 'futura';
+				font-family: futura;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
