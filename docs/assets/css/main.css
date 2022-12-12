@@ -629,6 +629,16 @@ input, select, textarea {
 
 		.box.style2 {
 			padding: 3.5em 2.5em 3.5em 2.5em;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
+			border: 1px solid rgba(255, 255, 255, 0.16);
+		}
+
+		.box.style4 {
+			padding: 3.5em 2.5em 3.5em 2.5em;
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2048,6 +2058,23 @@ input, select, textarea {
 				background: #f5f6f7;
 			}
 
+		.main.style4 {
+			text-align: center;
+			padding: 6em 0 6em 0;
+		}
+
+			.main.style4 .content > header {
+				margin-bottom: 2em;
+			}
+
+			.main.style4.primary {
+				background: #ffffff;
+			}
+
+			.main.style4.secondary {
+				background: #f5f6f7;
+			}
+
 		.main.dark {
 			color: #ffffff;
 		}
@@ -2141,6 +2168,11 @@ input, select, textarea {
 				}
 
 			.main.style3 {
+				text-align: center;
+				padding: 3em 10px 3em 10px;
+			}
+
+			.main.style4 {
 				text-align: center;
 				padding: 3em 10px 3em 10px;
 			}
@@ -2353,12 +2385,12 @@ input, select, textarea {
 
 	}
 
-/* Test */
+/* Display Cards */
 .l-container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 15px;
-	width: 500%;
+	width: 100%;
 	margin: auto;
 	max-width: 1200px;
 	justify-content: center;
@@ -2432,3 +2464,21 @@ input, select, textarea {
 	opacity: 0.6;
 	transform: rotateX(7deg) translateY(-6px) scale(1.05);
 }
+
+/* Youtube Player */
+.video-responsive{
+		position: relative;
+		padding-top: 56.25%;
+		height: 0;
+		overflow: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.video-responsive iframe{
+		border: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
