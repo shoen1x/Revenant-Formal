@@ -1,7 +1,5 @@
 @font-face {
 	font-family: 'futura';
-	font-style: normal;
-    font-weight: normal;
 	src: url('/docs/assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
 }
 @import url("fontawesome-all.min.css");
@@ -1266,7 +1264,7 @@ input, select, textarea {
 				animation: spinner-rotate 0.75s infinite linear !important;
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'futura';
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
