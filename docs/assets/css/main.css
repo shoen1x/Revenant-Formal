@@ -1,11 +1,10 @@
 @font-face {
-	font-family: 'Futura';
+	font-family: 'futura';
 	font-style: normal;
     font-weight: normal;
 	src: url('/docs/assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
 }
 @import url("fontawesome-all.min.css");
-@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -434,7 +433,7 @@ input, select, textarea {
 			transform-origin: 50% 50%;
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'futura';
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -500,7 +499,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, textarea, select {
-		font-family: 'Futura';
+		font-family: 'futura';
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
