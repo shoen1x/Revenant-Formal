@@ -2,7 +2,7 @@
 	font-family: futura;
 	font-weight: bold;
     font-style: normal;
-	src: url('../webfonts/futura-medium-bt-revenant.ttf') format('truetype');
+	src: url('./assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
 }
 @import url("fontawesome-all.min.css");
 
