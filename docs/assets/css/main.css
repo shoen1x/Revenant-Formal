@@ -60,15 +60,6 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
-/* Added Scroll bar hide (Not tested yet) */
-.container {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-.container::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
-}
-
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -100,6 +91,12 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+	    	scrollbar-width: none; /* For Firefox */
+    		-ms-overflow-style: none; /* For Internet Explorer and Edge */
+	}
+
+	html::-webkit-scrollbar {
+    		width: 0px; /* For Chrome, Safari, and Opera */
 	}
 
 	*, *:before, *:after {
