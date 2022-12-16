@@ -60,6 +60,15 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
+/* Added Scroll bar hide (Not tested yet) */
+.container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 mark {
 	background-color: transparent;
 	color: inherit;
