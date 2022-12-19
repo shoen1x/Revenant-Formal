@@ -8,9 +8,9 @@
 	font-family: futura;
 	font-weight: bold;
     font-style: normal;
-	src: url('assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
+	src: url('../../assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
 }
-@import url('fontawesome-all.min.css');
+@import url("../../assets/css/fontawesome-all.min.css");
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2292,7 +2292,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/shoenixbumantara.webp");
+		background: url("../../images/shoenixbumantara.webp");
 		background-size: 2048px 1080px, cover;
 		background-attachment: fixed;
 		background-position: bottom center;
@@ -2302,7 +2302,7 @@ input, select, textarea {
 /* first */
 
 	#first {
-		background: url("images/shoenixfirst.webp");
+		background: url("../../images/shoenixfirst.webp");
 		background-size: 1920px 1080px, cover;
 		background-attachment: fixed;
 		background-position: center center;
@@ -2312,7 +2312,7 @@ input, select, textarea {
 /* second */
 
 	#second {
-		background: url("images/shoenixsecond.webp");
+		background: url("../../images/shoenixsecond.webp");
 		background-size: 1920px 1080px, cover;
 		background-attachment: fixed;
 		background-position: center bottom;
@@ -2641,7 +2641,7 @@ body {
 /* Beta */
 
 .flex--beta .flex__item--left {
-	background: url("assets/css/images/overlay2.png"), url("images/background-render/betabackground.webp");
+	background: url("../../assets/css/images/overlay2.png"), url("../../images/background-render/betabackground.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, absolute;
 	background-position: center, left center;
@@ -2655,7 +2655,7 @@ body {
 /* Alpha */
 
 .flex--alpha .flex__item--left {
-	background: url("assets/css/images/overlay2.png"), url("images/background-render/alphabackground.webp");
+	background: url("../../assets/css/images/overlay2.png"), url("../../images/background-render/alphabackground.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, absolute;
 	background-position: center, left center;
@@ -2669,7 +2669,7 @@ body {
 /* Charlie */
 
 .flex--charlie .flex__item--left {
-	background: url("assets/css/images/overlay2.png"), url("images/background-render/charliebackground.webp");
+	background: url("../../assets/css/images/overlay2.png"), url("../../images/background-render/charliebackground.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, absolute;
 	background-position: center, left center;
@@ -2683,7 +2683,7 @@ body {
 /* Delta */
 
 .flex--delta .flex__item--left {
-	background: url("assets/css/images/overlay2.png"), url("images/background-render/deltabackground.webp");
+	background: url("../../assets/css/images/overlay2.png"), url("../../images/background-render/deltabackground.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, absolute;
 	background-position: center, left center;
@@ -2697,7 +2697,7 @@ body {
 /* Fox */
 
 .flex--fox .flex__item--left {
-	background: url("assets/css/images/overlay2.png"), url("images/background-render/foxbackground.webp");
+	background: url("../../assets/css/images/overlay2.png"), url("../../images/background-render/foxbackground.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, absolute;
 	background-position: center, left center;
