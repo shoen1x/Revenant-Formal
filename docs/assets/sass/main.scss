@@ -7,9 +7,10 @@
 	font-family: futura;
 	font-weight: bold;
     font-style: normal;
+	font-display: swap;
 	src: url('../../assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
 }
-@import url('fontawesome-all.min.css');
+@import url('../../assets/css/fontawesome-all.min.css');
 
 // Breakpoints.
 
@@ -51,31 +52,33 @@
 
 /* Intro */
 
-	#intro {
-		background: url('images/overlay.png'), url('../../images/shoenixbumantara.png');
-		background-size: 2048px 2048px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
-	}
+#intro {
+	background: url("../css/images/overlay2.png"),url("../../images/shoenixbumantara.webp");
+	background-size: 2048px 1080px, cover;
+	background-attachment: fixed, fixed;
+	background-position: center center ,bottom center;
+	background-repeat: repeat, no-repeat;
+}
 
-/* One */
+/* first */
 
-	#one {
-		background: url('images/overlay.png'), url('../../images/one.jpg');
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#first {
+	background: url("../css/images/overlay2.png"),url("../../images/shoenixfirst.webp");
+	background-size: 1920px 1080px, cover;
+	background-attachment: fixed, fixed;
+	background-position: center center ,center center;
+	background-repeat: repeat, no-repeat;
+}
 
-/* Two */
+/* second */
 
-	#two {
-		background: url('images/overlay.png'), url('../../images/shoenixsecond.jpg');
-		background-size: 4000px 4000px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
-	}
+#second {
+	background: url("../css/images/overlay2.png"),url("../../images/shoenixsecond.webp");
+	background-size: 1920px 1080px, cover;
+	background-attachment: fixed, fixed;
+	background-position: center center ,center bottom;
+	background-repeat: repeat, no-repeat;
+}
 
 /* Contact */
 

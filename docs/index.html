@@ -5,245 +5,298 @@
 	under the CCA 3.0 License | Credit to HTML5 UP for template
 -->
 <html lang="en">
-	<head>
-		<title>Shoenix Studios</title>
-		<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link href="assets/css/fontawesome-all.min.css" rel="stylesheet"  type='text/css'>
-		<link rel="icon" href="images/ico/shoenix.ico" type="image/icon type">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<header id="header">
-				<h1>NMVX</h1>
-				<nav>
-					<ul>
-						<li><a href="#intro">Home</a></li>
-						<li><a href="#first">Artstation</a></li>
-						<li><a href="#second">Behance</a></li>
-						<li><a href="#spcarousel">Project</a></li>
-						<li><a href="#work">Works</a></li>			  
-					<!--	<li><a href="#contact">Contact</a></li>  -->
-					</ul>
-				</nav>
+<head>
+	<!--Title-->
+	<title>Shoenix Studios</title>
+
+	<!--Meta and linker-->
+	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type='text/css'>
+	<link rel="icon" href="images/ico/shoenix.ico" type="image/icon type">
+	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
+	<link rel="preload" href="../../assets/webfonts/futura-medium-bt-revenant.ttf" as="font" type="font/ttf"
+		crossorigin>
+
+	<!--No script-->
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<h1>NMVX</h1>
+		<nav>
+			<ul>
+				<li><a href="#intro">Home</a></li>
+				<li><a href="#first">Artstation</a></li>
+				<li><a href="#second">Behance</a></li>
+				<li><a href="#spcarousel">Project</a></li>
+				<li><a href="#work">Works</a></li>
+				<!--	<li><a href="#contact">Contact</a></li>  -->
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Intro -->
+	<section id="intro" class="main style1 dark fullscreen">
+		<div class="content">
+			<header>
+				<h2>2022</h2>
+			</header>
+			<p>Experimental project by <strong>NMVX</strong></p>
+			<footer>
+				<a href="#first" class="button style2 down">More</a>
+			</footer>
+		</div>
+	</section>
+
+	<!-- first -->
+	<section id="first" class="main style2 right dark fullscreen">
+		<div class="content box style2">
+			<header>
+				<h2><a href="https://www.artstation.com/shoenixstudios" aria-label="Artstation"
+						class="icon brands fa-artstation"><span class="label">Artstation</span></a> Artstation</h2>
+			</header>
+			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+				Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
+				id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+			<ul class="actions special">
+				<li><input type="button" onclick="window.open('www.artstation.com/artwork/o2OV4L')"
+						value="HQ Preview" /></li>
+			</ul>
+		</div>
+		<a href="#second" class="button style2 down anchored">Next</a>
+	</section>
+
+	<!-- second -->
+	<section id="second" class="main style2 left dark fullscreen">
+		<div class="content box style2">
+			<header>
+				<h2><a href="https://www.behance.net/ShoenixStudios" aria-label="Behance"
+						class="icon brands fa-behance"><span class="label">Behance</span></a> Behance</h2>
+			</header>
+			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+				Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
+				id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+			<ul class="actions special">
+				<li><input type="button"
+						onclick="window.open('www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios')"
+						value="HQ Preview" /></li>
+			</ul>
+		</div>
+		<a href="#spcarousel" class="button style2 down anchored">Next</a>
+	</section>
+
+	<!-- Specialized Carousel -->
+	<section id="spcarousel" class="main style2 left dark fullscreen">
+		<div class="slider__warpper">
+			<div class="flex__container flex--alpha flex--active" data-slide="1">
+				<div class="flex__item flex__item--left">
+					<div class="flex__content">
+						<p class="text--sub">Project Powerspark</p>
+						<h1 class="text--big">Harimau <strong>Malaya</strong></h1>
+						<p class="text--normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ex,
+							aliquam rerum laboriosam beatae impedit quis distinctio dolor unde necessitatibus suscipit.
+							Voluptas ea beatae nulla expedita aliquam, totam sunt exercitationem!</p>
+					</div>
+					<p class="text__background">HM</p>
+				</div>
+				<div class="flex__item flex__item--right"></div>
+				<img class="pokemon__img" src="images/shoenixspalpha.webp" alt="Harimau Malaya concept jersey" />
+			</div>
+			<div class="flex__container flex--beta animate--start" data-slide="2">
+				<div class="flex__item flex__item--left">
+					<div class="flex__content">
+						<p class="text--sub">2022 Revamped</p>
+						<h1 class="text--big">Isometric <strong>Room</strong></h1>
+						<p class="text--normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+							culpa consequuntur similique inventore perspiciatis consectetur expedita, commodi sed, quis
+							sequi natus atque, ex nesciunt illo sit voluptatibus error quibusdam odio.</p>
+					</div>
+					<p class="text__background">Isometric</p>
+				</div>
+				<div class="flex__item flex__item--right"></div>
+				<img class="pokemon__img" src="images/shoenixspbeta.webp" alt="Isometric Room 3D" />
+			</div>
+			<div class="flex__container flex--charlie animate--start" data-slide="3">
+				<div class="flex__item flex__item--left">
+					<div class="flex__content">
+						<p class="text--sub">Angular Spiritual Series</p>
+						<h1 class="text--big">Zulmat</h1>
+						<p class="text--normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+							pariatur corrupti quod illo sint tenetur, ipsa in corporis quibusdam quas sunt, debitis
+							mollitia neque quae necessitatibus dolore atque deleniti voluptatibus.</p>
+					</div>
+					<p class="text__background">Zulmat</p>
+				</div>
+				<div class="flex__item flex__item--right"></div>
+				<img class="pokemon__img" src="images/shoenixspcharlie.webp" alt="Zulmat Conceptual poster" />
+			</div>
+			<div class="flex__container flex--delta animate--start" data-slide="4">
+				<div class="flex__item flex__item--left">
+					<div class="flex__content">
+						<p class="text--sub">Inspiration Project</p>
+						<h1 class="text--big">Nordic Axe</h1>
+						<p class="text--normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ex
+							consequuntur doloribus facilis magni eaque ab accusamus itaque debitis enim illum aspernatur
+							corporis odio maiores velit, id culpa blanditiis expedita?</p>
+					</div>
+					<p class="text__background">Nordic</p>
+				</div>
+				<div class="flex__item flex__item--right"></div>
+				<img class="pokemon__img" src="images/shoenixspdelta.webp" alt="Nordic Axe" />
+			</div>
+			<div class="flex__container flex--fox animate--start" data-slide="5">
+				<div class="flex__item flex__item--left">
+					<div class="flex__content">
+						<p class="text--sub">Exodus Series</p>
+						<h1 class="text--big">Neo-Ronin</h1>
+						<p class="text--normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos voluptates
+							tempore et libero deserunt delectus cumque voluptatibus, beatae natus omnis voluptatem magni
+							laborum praesentium recusandae incidunt iusto ullam nisi. Illo.</p>
+					</div>
+					<p class="text__background">Neo-Ronin</p>
+				</div>
+				<div class="flex__item flex__item--right"></div>
+				<img class="pokemon__img" src="images/shoenixspfox.webp" alt="Ronin outfit" />
+			</div>
+		</div>
+
+		<div class="slider__navi">
+			<a href="#" class="slide-nav active" data-slide="1">alpha</a>
+			<a href="#" class="slide-nav" data-slide="2">beta</a>
+			<a href="#" class="slide-nav" data-slide="3">charlie</a>
+			<a href="#" class="slide-nav" data-slide="4">delta</a>
+			<a href="#" class="slide-nav" data-slide="5">fox</a>
+		</div>
+		</div>
+	</section>
+
+	<!-- Work -->
+	<section id="work" class="main style3 primary">
+		<div class="content">
+			<header>
+				<h2>Works</h2>
+				<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+					arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+			</header>
+			<!-- Gallery  -->
+			<div class="gallery">
+				<article class="from-left">
+					<a href="images/fulls/01.webp" class="image fit"><img src="images/thumbs/01.webp"
+							title="Cover Album Arts" alt="" /></a>
+				</article>
+				<article class="from-right">
+					<a href="images/fulls/02.webp" class="image fit"><img src="images/thumbs/02.webp"
+							title="Arus Kelajuan" alt="" /></a>
+				</article>
+				<article class="from-left">
+					<a href="images/fulls/03.webp" class="image fit"><img src="images/thumbs/03.webp"
+							title="The Phantom Cries" alt="" /></a>
+				</article>
+				<article class="from-right">
+					<a href="images/fulls/04.webp" class="image fit"><img src="images/thumbs/04.webp"
+							title="GenesisPhantom | Hyper Concept Skateboard" alt="" /></a>
+				</article>
+				<article class="from-left">
+					<a href="images/fulls/05.webp" class="image fit"><img src="images/thumbs/05.webp"
+							title="Hausboom X Shoenix Studios" alt="" /></a>
+				</article>
+				<article class="from-right">
+					<a href="images/fulls/06.webp" class="image fit"><img src="images/thumbs/06.webp" title="Zulmat"
+							alt="" /></a>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section id="youtube" class="main style3 secondary">
+		<div class="content">
+			<header>
+				<h2>Youtube</h2>
+				<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+			</header>
+			<div class="vpbox">
+				<div class="video-responsive">
+					<div class="player-wrapper">
+						<div class="plyr__video-embed js-player" id="player">
+							<iframe
+								src="https://www.youtube.com/embed/hHg4JVloLvQ?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+								allowfullscreen allowtransparency allow="autoplay"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="video-responsive">
+					<div class="player-wrapper">
+						<div class="plyr__video-embed js-player" id="player">
+							<iframe
+								src="https://www.youtube.com/embed/FMszm6B0NZQ?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+								allowfullscreen allowtransparency allow="autoplay"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="video-responsive">
+					<div class="player-wrapper">
+						<div class="plyr__video-embed js-player" id="player">
+							<iframe
+								src="https://www.youtube.com/embed/0j4TRlmfhvA?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+								allowfullscreen allowtransparency allow="autoplay"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="gamecard" class="main style4 primary">
+		<div class="content box style2">
+			<header>
+				<h2>Album Cover Design</h2>
+				<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
 			</header>
 
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-					<div class="content">
-						<header>
-							<h2>2022</h2>
-						</header>
-							<p>Experimental project by <strong>NMVX</strong></p>
-						<footer>
-							<a href="#first" class="button style2 down">More</a>
-						</footer>
-					</div>
-			</section>
-
-		<!-- first -->
-			<section id="first" class="main style2 right dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2><a href="https://www.artstation.com/shoenixstudios" aria-label="Artstation" class="icon brands fa-artstation"><span class="label">Artstation</span></a> Artstation</h2>
-					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-						<ul class="actions special">
-							<li><input type="button" onclick="window.open('www.artstation.com/artwork/o2OV4L')" value="HQ Preview" /></li>
-						</ul>
-				</div>
-				<a href="#second" class="button style2 down anchored">Next</a>
-			</section>
-
-		<!-- second -->
-			<section id="second" class="main style2 left dark fullscreen">
-				<div class="content box style2">
-					<header>
-						<h2><a href="https://www.behance.net/ShoenixStudios" aria-label="Behance" class="icon brands fa-behance"><span class="label">Behance</span></a> Behance</h2>
-					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-						<ul class="actions special">
-							<li><input type="button" onclick="window.open('www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios')" value="HQ Preview" /></li>
-						</ul>
-				</div>
-				<a href="#spcarousel" class="button style2 down anchored">Next</a>
-			</section>
-
-		<!-- Specialized Carousel -->
-				<section id="spcarousel" class="main style2 left dark fullscreen">
-					<div class="slider__warpper">
-						<div class="flex__container flex--alpha flex--active" data-slide="1">
-						  <div class="flex__item flex__item--left">
-							<div class="flex__content">
-							  <p class="text--sub">Project Powerspark</p>
-							  <h1 class="text--big">Harimau <strong>Malaya</strong></h1>
-							  <p class="text--normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ex, aliquam rerum laboriosam beatae impedit quis distinctio dolor unde necessitatibus suscipit. Voluptas ea beatae nulla expedita aliquam, totam sunt exercitationem!</p>
-							</div>
-							<p class="text__background">HM</p>
-						  </div>
-						  <div class="flex__item flex__item--right"></div>
-						  <img class="pokemon__img" src="images/shoenixspalpha.webp" alt="Harimau Malaya concept jersey" />
-						</div>
-						<div class="flex__container flex--beta animate--start" data-slide="2">
-						  <div class="flex__item flex__item--left">
-							<div class="flex__content">
-							  <p class="text--sub">2022 Revamped</p>
-							  <h1 class="text--big">Isometric <strong>Room</strong></h1>
-							  <p class="text--normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa consequuntur similique inventore perspiciatis consectetur expedita, commodi sed, quis sequi natus atque, ex nesciunt illo sit voluptatibus error quibusdam odio.</p>
-							</div>
-							<p class="text__background">Isometric</p>
-						  </div>
-						  <div class="flex__item flex__item--right"></div>
-						  <img class="pokemon__img" src="images/shoenixspbeta.webp" alt="Isometric Room 3D"/>
-						</div>
-						<div class="flex__container flex--charlie animate--start" data-slide="3">
-						  <div class="flex__item flex__item--left">
-							<div class="flex__content">
-							  <p class="text--sub">Angular Spiritual Series</p>
-							  <h1 class="text--big">Zulmat</h1>
-							  <p class="text--normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis pariatur corrupti quod illo sint tenetur, ipsa in corporis quibusdam quas sunt, debitis mollitia neque quae necessitatibus dolore atque deleniti voluptatibus.</p>
-							</div>
-							<p class="text__background">Zulmat</p>
-						  </div>
-						  <div class="flex__item flex__item--right"></div>
-						  <img class="pokemon__img" src="images/shoenixspcharlie.webp" alt="Zulmat Conceptual poster"/>
-						</div>
-						<div class="flex__container flex--delta animate--start" data-slide="4">
-						  <div class="flex__item flex__item--left">
-							<div class="flex__content">
-							  <p class="text--sub">Inspiration Project</p>
-							  <h1 class="text--big">Nordic Axe</h1>
-							  <p class="text--normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ex consequuntur doloribus facilis magni eaque ab accusamus itaque debitis enim illum aspernatur corporis odio maiores velit, id culpa blanditiis expedita?</p>
-							</div>
-							<p class="text__background">Nordic</p>
-						  </div>
-						  <div class="flex__item flex__item--right"></div>
-						  <img class="pokemon__img" src="images/shoenixspdelta.webp" alt="Nordic Axe"/>
-						</div>
-						<div class="flex__container flex--fox animate--start" data-slide="5">
-						  <div class="flex__item flex__item--left">
-							<div class="flex__content">
-							  <p class="text--sub">Exodus Series</p>
-							  <h1 class="text--big">Neo-Ronin</h1>
-							  <p class="text--normal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos voluptates tempore et libero deserunt delectus cumque voluptatibus, beatae natus omnis voluptatem magni laborum praesentium recusandae incidunt iusto ullam nisi. Illo.</p>
-							</div>
-							<p class="text__background">Neo-Ronin</p>
-						  </div>
-						  <div class="flex__item flex__item--right"></div>
-						  <img class="pokemon__img" src="images/shoenixspfox.webp" alt="Ronin outfit"/>
-						</div>
-					  </div>
-					  
-					  <div class="slider__navi">
-						<a href="#" class="slide-nav active" data-slide="1">alpha</a>
-						<a href="#" class="slide-nav" data-slide="2">beta</a>
-						<a href="#" class="slide-nav" data-slide="3">charlie</a>
-						<a href="#" class="slide-nav" data-slide="4">delta</a>
-						<a href="#" class="slide-nav" data-slide="5">fox</a>
-					  </div>
-				</div>
-			</section>
-
-			<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>Works</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
-					</header>
-					<!-- Gallery  -->
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/fulls/01.webp" class="image fit"><img src="images/thumbs/01.webp" title="Cover Album Arts" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/02.webp" class="image fit"><img src="images/thumbs/02.webp" title="Arus Kelajuan" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/03.webp" class="image fit"><img src="images/thumbs/03.webp" title="The Phantom Cries" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/04.webp" class="image fit"><img src="images/thumbs/04.webp" title="GenesisPhantom | Hyper Concept Skateboard" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/05.webp" class="image fit"><img src="images/thumbs/05.webp" title="Hausboom X Shoenix Studios" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/06.webp" class="image fit"><img src="images/thumbs/06.webp" title="Zulmat" alt="" /></a>
-							</article>
-						</div>
-				</div>
-			</section>
-
-		<section id="youtube" class="main style3 secondary">
 			<div class="content">
-					<header>
-						<h2>Youtube</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-					</header>
-					<div class="box">
-						<div class="video-responsive">
-							<iframe 	
-								src="https://www.youtube.com/embed/hHg4JVloLvQ;autoplay=0" title="Noh Salleh | Aishiteru" frameborder="0" allowfullscreen></iframe>
-						</div>
-						<div class="video-responsive">
-							<iframe 
-								src="https://www.youtube.com/embed/FMszm6B0NZQ;autoplay=0" title="A Stranger i remain (maniac agenda mix)" frameborder="0" allowfullscreen></iframe>
-						</div>
-						<div class="video-responsive">
-							<iframe 
-								src="https://www.youtube.com/embed/0j4TRlmfhvA;autoplay=0" title="It has to be this way (Platinum mix)" frameborder="0" allowfullscreen></iframe>
-						</div>
+				<div class="l-container">
+					<div class="b-game-card">
+						<div class="b-game-card__cover"
+							style="background-image: url(images/thumbs/acd1.webp); background-position: center;"></div>
 					</div>
-			</div>
-		</section>
 
-		<section id="gamecard" class="main style4 primary">
-			<div class="content box style2">
-					<header>
-						<h2>Album Cover Design</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-					</header>
-
-					<div class="content">
-						<div class="l-container">
-							<div class="b-game-card">
-							<div class="b-game-card__cover" style="background-image: url(images/thumbs/acd1.webp); background-position: center;"></div>
-							</div>
-
-							<div class="b-game-card">
-							<div class="b-game-card__cover" style="background-image: url(images/thumbs/acd2.webp); background-position: center;"></div>
-							</div>
-
-							<div class="b-game-card">
-							<div class="b-game-card__cover" style="background-image: url(images/thumbs/acd3.webp); background-position: center;"></div>
-							</div>
-
-							<div class="b-game-card">
-							<div class="b-game-card__cover" style="background-image: url(images/thumbs/acd4.webp); background-position: center;"></div>
-							</div>
-
-							<div class="b-game-card">
-							<div class="b-game-card__cover" style="background-image: url(images/thumbs/acd5.webp); background-position: center;"></div>
-							</div>
-						</div>
+					<div class="b-game-card">
+						<div class="b-game-card__cover"
+							style="background-image: url(images/thumbs/acd2.webp); background-position: center;"></div>
 					</div>
+
+					<div class="b-game-card">
+						<div class="b-game-card__cover"
+							style="background-image: url(images/thumbs/acd3.webp); background-position: center;"></div>
+					</div>
+
+					<div class="b-game-card">
+						<div class="b-game-card__cover"
+							style="background-image: url(images/thumbs/acd4.webp); background-position: center;"></div>
+					</div>
+
+					<div class="b-game-card">
+						<div class="b-game-card__cover"
+							style="background-image: url(images/thumbs/acd5.webp); background-position: center;"></div>
+					</div>
+				</div>
 			</div>
+		</div>
 
-		</section>
+	</section>
 
-				<!-- Contact -->
+	<!-- Contact -->
 
-		<!-- 
+	<!-- 
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
@@ -266,32 +319,38 @@
 			</section>
 		-->
 
-		<!-- Footer -->
-			<footer id="footer">
+	<!-- Footer -->
+	<footer id="footer">
 
-				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/shoenixstudios" aria-label="Facebook" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/shoenix_studios/" aria-label="Instagram" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://www.youtube.com/@shoenixstudios" aria-label="Youtube" class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
-					</ul>
+		<!-- Icons -->
+		<ul class="icons">
+			<li><a href="https://www.facebook.com/shoenixstudios" aria-label="Facebook"
+					class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="https://www.instagram.com/shoenix_studios/" aria-label="Instagram"
+					class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="https://www.youtube.com/@shoenixstudios" aria-label="Youtube"
+					class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
+		</ul>
 
-				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; 2022 <strong>Shoenix Studios</strong> All Rights Reserved</li>
-					</ul>
-					<a href="#" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()">Back to top</a>
-			</footer>	
+		<!-- Menu -->
+		<ul class="menu">
+			<li>&copy; 2022 <strong>Shoenix Studios</strong> All Rights Reserved</li>
+		</ul>
+		<a href="#"  onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()">Back
+			to top</a>
+	</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://cdn.plyr.io/3.7.3/plyr.js"></script>
 
-	</body>
+</body>
+
 </html>
