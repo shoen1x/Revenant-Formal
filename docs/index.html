@@ -4,6 +4,7 @@
 	Shoen1x.github.io | @Shoenixstudios
 	under the CCA 3.0 License | Credit to HTML5 UP for template
 -->
+
 <html lang="en">
 
 <head>
@@ -16,7 +17,6 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type='text/css'>
 	<link rel="icon" href="images/ico/shoenix.ico" type="image/icon type">
-	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
 	<link rel="preload" href="../../assets/webfonts/futura-medium-bt-revenant.ttf" as="font" type="font/ttf"
 		crossorigin>
 
@@ -30,14 +30,19 @@
 
 	<!-- Header -->
 	<header id="header">
-		<h1>NMVX</h1>
+		<h1><strong>NMVX</strong></h1>
 		<nav>
 			<ul>
-				<li><a href="#intro">Home</a></li>
-				<li><a href="#first">Artstation</a></li>
-				<li><a href="#second">Behance</a></li>
-				<li><a href="#spcarousel">Project</a></li>
-				<li><a href="#work">Works</a></li>
+				<li><a href="#intro"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
+				<li><a href="#first"><i class="icon brands fa-artstation" aria-hidden="true"></i> <span>Artstation</span></a></li>
+				<li><a href="#second"><i class="icon brands fa-behance" aria-hidden="true"></i> <span>Behance</span></a></li>
+				<li class="dropdown">
+					<a class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></a>
+					<div class="dropdown-content">
+						<a href="#spcarousel">Project <i  class="fa fa-bullseye" aria-hidden="true"></i></a>
+						<a href="#work">Works <i  class="fa fa-briefcase" aria-hidden="true"></i></a>
+						<a href="#coverart">Cover Art <i  class="fa fa-cube" aria-hidden="true"></i></a>
+					</div></li>
 				<!--	<li><a href="#contact">Contact</a></li>  -->
 			</ul>
 		</nav>
@@ -217,45 +222,7 @@
 		</div>
 	</section>
 
-	<section id="youtube" class="main style3 secondary">
-		<div class="content">
-			<header>
-				<h2>Youtube</h2>
-				<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-			</header>
-			<div class="vpbox">
-				<div class="video-responsive">
-					<div class="player-wrapper">
-						<div class="plyr__video-embed js-player" id="player">
-							<iframe
-								src="https://www.youtube.com/embed/hHg4JVloLvQ?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-								allowfullscreen allowtransparency allow="autoplay"></iframe>
-						</div>
-					</div>
-				</div>
-				<div class="video-responsive">
-					<div class="player-wrapper">
-						<div class="plyr__video-embed js-player" id="player">
-							<iframe
-								src="https://www.youtube.com/embed/FMszm6B0NZQ?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-								allowfullscreen allowtransparency allow="autoplay"></iframe>
-						</div>
-					</div>
-				</div>
-				<div class="video-responsive">
-					<div class="player-wrapper">
-						<div class="plyr__video-embed js-player" id="player">
-							<iframe
-								src="https://www.youtube.com/embed/0j4TRlmfhvA?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
-								allowfullscreen allowtransparency allow="autoplay"></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="gamecard" class="main style4 primary">
+	<section id="coverart" class="main style4 primary">
 		<div class="content box style2">
 			<header>
 				<h2>Album Cover Design</h2>
@@ -336,7 +303,7 @@
 		<ul class="menu">
 			<li>&copy; 2022 <strong>Shoenix Studios</strong> All Rights Reserved</li>
 		</ul>
-		<a href="#"  onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()">Back
+		<a href="#" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()">Back
 			to top</a>
 	</footer>
 
@@ -349,7 +316,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script src="https://cdn.plyr.io/3.7.3/plyr.js"></script>
 
 </body>
 
