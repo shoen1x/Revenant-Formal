@@ -4,7 +4,7 @@
   <p align="center">
     A brief experimental project by *NMVX*
     <br />
-    <a href="shoen1x.github.io"><strong>Quick access!</strong></a>
+    <a href="https://shoen1x.github.io/"><strong>Quick access!</strong></a>
   </p>
 </div>
 
@@ -55,13 +55,13 @@
         - [x] Replaced with local usage `FontAwesome-min.all.cs`
         - [x] Added icons to header and footer media socials hyperlinks
     - [x] Imported custom font
-        - [] Multi custom fonts?
+        - Multi custom fonts?
     - [x] Implemented animations
 - [x] Dropdown menu
     - [x] Re-sync with header and footer
 - [x] Youtube section
     - [x] Removed due to network and static website limitation
-    - [] Resort to local stored video?
+    - Resort to local stored video?
 - [x] Optimizations
     - [X] CSS Cleanup
         - [x] SASS/SCSS base, components, layout, libs cleanup
@@ -72,9 +72,9 @@
     - [x] Assets & images imported
         - [X] Assets converted to webp for modern format (100% completed) 
         - [X] Optimized thumbs for best reso and size.
-- [] Full project grid/carousel for multi images project (min 4 images)
-    - [] Single page or new paging file?
-- [] Explore/expand beyond `github pages` limitation
+- Full project grid/carousel for multi images project (min 4 images)
+    - Single page or new paging file?
+- Explore/expand beyond `github pages` limitation
 - [x] License generated
 
 <br />
