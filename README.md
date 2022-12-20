@@ -42,7 +42,7 @@
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Basic Interface
+- Basic Interface
     - [x] Added favicon based `.ico`
     - [x] Hero Images
     - [x] Banner Images
@@ -50,19 +50,19 @@
         - [x] Dynamic Scrolling project preview 
     - [x] Stacked Images
     - [x] Game-card like images collection
-- [x] Header, Footer
+- Header, Footer
     - [x] Implemented `FontAwesome` class for svg usage
         - [x] Replaced with local usage `FontAwesome-min.all.cs`
         - [x] Added icons to header and footer media socials hyperlinks
     - [x] Imported custom font
         - Multi custom fonts?
     - [x] Implemented animations
-- [x] Dropdown menu
+- Dropdown menu
     - [x] Re-sync with header and footer
-- [x] Youtube section
+- Youtube section
     - [x] Removed due to network and static website limitation
     - Resort to local stored video?
-- [x] Optimizations
+- Optimizations
     - [X] CSS Cleanup
         - [x] SASS/SCSS base, components, layout, libs cleanup
     - [x] Javascript
@@ -75,7 +75,7 @@
 - Full project grid/carousel for multi images project (min 4 images)
     - Single page or new paging file?
 - Explore/expand beyond `github pages` limitation
-- [x] License generated
+- License generated
 
 <br />
 
