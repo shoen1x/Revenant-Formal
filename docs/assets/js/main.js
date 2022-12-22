@@ -233,7 +233,7 @@
 	$('.slide-nav').on('click', function(e) {
 		e.preventDefault();
 		// get current slide
-		var current = $('.flex--active').data('slide'),
+		var current = $('.flex--active').data('slide'), 
 		// get button data-slide
 		next = $(this).data('slide');
 	
@@ -251,6 +251,66 @@
 		}, 800);
 		}
 	});
+
+	// Images Timer Scroll
+		setInterval(function() {
+			var current = $('.flex--active').data('slide'), next = $('.slide-nav').data('slide');
+
+			next = current + 1;
+			$('.slide-nav').removeClass('active');
+			$(this).addClass('active');
+			console.log(current + ' ' + next);
+
+			if (next == 6){
+				current = 1;
+				next = 1;
+				$('.slider__warpper').find('.flex__container[data-slide=' + next + ']').addClass('flex--preStart');
+				$('.flex--active').addClass('animate--end');
+				setTimeout(function() {
+					$('.flex--preStart').removeClass('animate--start flex--preStart').addClass('flex--active');
+					$('.animate--end').addClass('animate--start').removeClass('animate--end flex--active');
+				}, 800);
+			} else{
+				if (current === next) {
+					return false;
+					} else {
+					$('.slider__warpper').find('.flex__container[data-slide=' + next + ']').addClass('flex--preStart');
+					$('.flex--active').addClass('animate--end');
+					setTimeout(function() {
+						$('.flex--preStart').removeClass('animate--start flex--preStart').addClass('flex--active');
+						$('.animate--end').addClass('animate--start').removeClass('animate--end flex--active');
+					}, 800);
+					}
+			}
+		}, 15000);
+
+// Splide base Ads carousel
+var splide;
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  splide = new Splide('.splide', {
+    autoplay: true,
+    interval: 12000,	
+    pauseOnHover: false,
+    
+    arrows: false,
+    perPage: 1,
+    type: 'loop',
+    pagination: true,
+    keyboard: false, 
+    slideFocus: false
+  }).mount();
+  
+  splide.on('move', function() {
+    var slides = document.querySelectorAll('.splide .splide__slide');
+
+    slides.forEach(function(slide) {
+      slide.classList.add('is-visible');
+    });
+  });
+
+});
 
 })(jQuery);
 

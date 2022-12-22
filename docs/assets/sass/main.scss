@@ -116,34 +116,3 @@
 			}
 		}
 	}
-
-/* Youtube */
-
-#youtube {
-	overflow: hidden;
-	padding-bottom: 0;
-
-	.box {
-		@include vendor('transition', 'transform #{_duration(fade-in)} ease');
-		@include vendor('transform', 'translateY(0)');
-		position: relative;
-	}
-
-	&.inactive {
-		.box {
-			@include vendor('transform', 'translateY(100%)');
-		}
-	}
-
-	@include breakpoint('<=small') {
-		.box {
-			padding: 1.5em 1.5em 2em 1.5em;
-		}
-	}
-
-	@include breakpoint('<=xsmall') {
-		.box {
-			padding: 1em 1em 2em 1em;
-		}
-	}
-}
