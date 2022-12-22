@@ -30,7 +30,6 @@
 * [![Jquery][Jquery.js]][Jquery-url]
 <br/>
 
-----
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -72,7 +71,6 @@
 
 <br />
 
-----
 
 <!-- Use by -->
 ## Use by
@@ -82,7 +80,6 @@ This project is used by the following:
 - Shoenix Studios
 - NMVX
 
-----
 
 <!-- Contributing -->
 ## Contributing
@@ -96,7 +93,6 @@ Don't forget to give the project a star! Thanks again!
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
-----
 
 <!-- License -->
 ## License
@@ -106,7 +102,6 @@ Distributed under the 'CC0 1.0 Universal' License. See `LICENSE.txt` for more in
 [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
 [![License][license-shield]][license-url]
-----
 
 <!-- Authors & Support -->
 ## Authors & support
@@ -115,7 +110,6 @@ Distributed under the 'CC0 1.0 Universal' License. See `LICENSE.txt` for more in
 
 `For support, email shoenixstudios@gmail.com.`
 
-----
 
 <!-- Ackdnowledgements -->
 ## Acknowledgements
