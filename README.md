@@ -42,6 +42,7 @@
         - [x] Dynamic Scrolling project preview 
     - [x] Stacked Images
     - [x] Game-card like images collection
+        - [x] Added floating animations
 - Header, Footer
     - [x] Implemented `FontAwesome` class for svg usage
         - [x] Replaced with local usage `FontAwesome-min.all.cs`
@@ -66,6 +67,8 @@
         - [X] Optimized thumbs for best reso and size.
 - Full project grid/carousel for multi images project (min 4 images)
     - Single page or new paging file?
+- Ads banner
+- Marquee Logos for 'service used by'
 - Explore/expand beyond `github pages` limitation
 - License generated
 
