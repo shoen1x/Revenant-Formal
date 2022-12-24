@@ -1,0 +1,225 @@
+/*
+	Revenant Formal by NMVX
+	Shoen1x.github.io | @Shoenixstudios
+	under the CCA 3.0 License | Credit to HTML5 UP for template
+*/
+
+@font-face {
+	font-family: futura;
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+	src: url('../../assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
+}
+
+@import url('../../assets/css/fontawesome-all.min.css');
+@import url('../../assets/css/main.css');
+
+.navmp-list {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+    .navmp-list {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.navmp-item {
+  display: flex;
+  background-color: #000;
+  height: calc(100vh - 80px);
+  width: 33%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  align-items: center;
+  filter: grayscale(100%);
+}
+@media screen and (max-width: 768px) {
+  .navmp-item {
+    width: 100%;
+    height: 200px;
+  }
+  .navmp-item:hover {
+    height: 350px;
+  }
+}
+.navmp-item .navmp-item-bg {
+  height: 100vh;
+  width: 100%;
+  display: block;
+  position: absolute;
+}
+.navmp-item:nth-child(1) .navmp-item-bg {
+  background: url("../../images/fulls/full/bp1.webp") no-repeat bottom center/cover;
+}
+.navmp-item:nth-child(2) .navmp-item-bg {
+  background: url("https://www.ocregister.com/wp-content/uploads/migration/nyl/nyltt9-low.res.22.lakers1029.kjs.jpg") no-repeat center bottom/cover;
+}
+.navmp-item:nth-child(3) .navmp-item-bg {
+  background: url("https://cdn.vox-cdn.com/thumbor/SHtJqgdSk7FJHwKAQ9rDytJuQHE=/0x0:4267x2845/1200x800/filters:focal(1432x845:2114x1527)/cdn.vox-cdn.com/uploads/chorus_image/image/59592059/952761746.jpg.0.jpg") no-repeat center center/cover;
+}
+.navmp-item:nth-child(4) .navmp-item-bg {
+  background: url("https://www.paradisepost.com/wp-content/uploads/2019/06/BNG-L-WARRIORS-0925-1037.jpg?w=1920") no-repeat center center/cover;
+}
+.navmp-item .navmp-item-content {
+  color: #fff;
+  margin-left: -70px;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+  filter: blur(1px);
+}
+.navmp-item .navmp-item-content h2 {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 0.9em;
+  margin: 0 0 30px;
+  text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 980px) {
+  .navmp-item .navmp-item-content h2 {
+    font-size: 70px;
+  }
+}
+.navmp-item:hover {
+  width: 100%;
+  filter: none;
+}
+.navmp-item:hover .navmp-item-content {
+  margin-left: 50px;
+  opacity: 1;
+  filter: blur(0px);
+}
+.navmp-item:hover button {
+  margin-left: 0;
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .navmp-item .navmp-item-bg {
+    background-size: 70% !important;
+    background-position: center right !important;
+  }
+}
+
+button {
+  /* padding: 15px 30px; */
+  background-color: #3d3a3a;
+  font-weight: 700;
+  font-family: futura;
+  letter-spacing: 1px;
+  border: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px;
+  opacity: 0;
+  outline: 0;
+  margin-left: -60px;
+  transition: margin 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #161616;
+}
+
+button a {
+  text-decoration: none;
+}
+
+/* Article Header */
+
+.artcontent {
+  display: grid;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8em;
+}
+
+.artbutton {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8em;
+}
+
+.artcontent .poster {
+  width: 100%;
+  height: 350px;
+  display: grid;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  background: center no-repeat url('../../images/fulls/full/st7.webp');
+  position: relative;
+  box-shadow: 0px 4px 100px -3px #00059733;
+}
+
+.artcontent .poster .poster-title {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 40%;
+  text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.artcontent .poster .poster-title h1 {
+  font-size: 40px;
+  color: white;
+  font-weight: 300;
+  margin: 20px 0;
+  text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.artcontent .poster .poster-title .line {
+  background-color: #b4c4c5;
+  width: 100%;
+  height: 1px;
+}
+
+.artcontent .poster .poster-title p {
+  color: #b4c4c5;
+  font-size: 12px;
+  line-height: 1.8em;
+}
+
+.artcontent .poster .poster-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  color: white;
+  text-align: center;
+}
+.artcontent .poster .poster-buttons div {
+  cursor: pointer;
+}
+.artcontent .poster .poster-buttons div:hover {
+  color: #ccc;
+}
+
+@media (max-width: 700px) {
+  .artcontent {
+    width: 90%;
+  }
+
+  .artcontent .poster {
+    height: 250px;
+  }
+
+  .artcontent .poster .poster-title h1 {
+    font-size: 25px;
+  }
+
+  .artcontent .poster .poster-title p,
+  .artcontent .poster .poster-title .line {
+    display: none;
+  }
+}

@@ -15,12 +15,12 @@
 	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type='text/css'>
-	<link rel="icon" href="images/ico/shoenix.ico" type="image/icon type">
-	<link rel="preload" href="../../assets/webfonts/futura-medium-bt-revenant.ttf" as="font" type="font/ttf" crossorigin>
+	<link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type='text/css'/>
+	<link rel="icon" href="images/ico/shoenix.ico" type="image/icon type"/>
+	<link rel="preload" href="../../assets/webfonts/futura-medium-bt-revenant.ttf" as="font" type="font/ttf" crossorigin/>
 	
 	<!-- Third-Party Scripts -->
-	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" rel="stylesheet" type="text/css"/>
 
 	<!--No script-->
 	<noscript>
@@ -30,12 +30,14 @@
 
 <body class="is-preload">
 
+	<div class="scroll-indicator"></div>
+
 	<!-- Header -->
 	<header id="header">
 		<h1><strong>NMVX</strong></h1>
 		<nav>
 			<ul>
-				<li><a href="#intro"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
+				<li><a href="/docs/index.html#intro"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
 				<li><a href="#first"><i class="icon brands fa-artstation" aria-hidden="true"></i> <span>Artstation</span></a></li>
 				<li><a href="#second"><i class="icon brands fa-behance" aria-hidden="true"></i> <span>Behance</span></a></li>
 				<li class="dropdown">
@@ -254,6 +256,31 @@
 			</section>
 		</section>
 
+		<section id="multiproject" class="main style2 primary">
+			<div class="mphero">
+				<div class="mptext">
+				  <p class="mptext__short">Extended Projects</p>
+				  <h1 class="mptext__title">Lorem ipsum dolor sit amet</h1>
+				  <p class="mptext__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, necessitatibus reiciendis. Voluptatem, eaque fugiat? Natus ab soluta nostrum quos! Laboriosam</p>
+				  <a class="button" href="/docs/project.html" >Learn more</a>
+				</div>
+				<div class="mpgrid__container">
+				  <div class="mpgrid__item mpone"></div>
+				  <div class="mpgrid__item mptwo"></div>
+				  <div class="mpgrid__item mpthree"></div>
+				  <div class="mpgrid__item mpfour"></div>
+				  <div class="mpgrid__item mpfive"></div>
+				  <div class="mpgrid__item mpsix"></div>
+				  <div class="mpgrid__item mpseven"></div>
+				  <div class="mpgrid__item mpeight"></div>
+				  <div class="mpgrid__item mpnine"></div>
+				  <div class="mpgrid__item mpten"></div>
+				  <div class="mpgrid__item mpeleven"></div>
+				  <div class="mpgrid__item mptwelve"></div>
+				</div>
+			  </div>
+		</section>
+
 	<section id="coverart" class="main style4 primary">
 		<div class="content box style2">
 			<header>
@@ -293,31 +320,6 @@
 
 	</section>
 
-	<!-- Contact -->
-
-	<!-- 
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Say Hello.</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-					</header>
-					<div class="box">
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div>
-				</div>
-			</section>
-		-->
-
 		<section id="carouselimg" class="main style5 primary">
 			<div class="slider">
 				<div class="slide-track">
@@ -342,17 +344,43 @@
 			</div>
 		</section>
 
+			<!-- Contact -->
+			<!--
+			<section id="contact" class="main style3 secondary">
+				<div class="content">
+					<header>
+						<h2>Say Hello.</h2>
+						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+					</header>
+					<div class="box">
+						<form target="_blank" method="post" action="#">
+							<div class="fields">
+								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
+								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
+								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+							</div>
+							<ul class="actions special">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</section>
+			-->
+
 	<!-- Footer -->
 	<footer id="footer">
 
 		<!-- Icons -->
 		<ul class="icons">
-			<li><a href="https://www.facebook.com/shoenixstudios" aria-label="Facebook"
+			<li><a href="https://www.facebook.com/shoenixstudios" onclick="window.open(this.href)" aria-label="Facebook"
 					class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			<li><a href="https://www.instagram.com/shoenix_studios/" aria-label="Instagram"
+			<li><a href="https://www.instagram.com/shoenix_studios/" onclick="window.open(this.href)" aria-label="Instagram"
 					class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="https://www.youtube.com/@shoenixstudios" aria-label="Youtube"
+			<li><a href="https://www.youtube.com/@shoenixstudios" onclick="window.open(this.href)" aria-label="Youtube"
 					class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
+			<li><a href="https://github.com/shoen1x" onclick="window.open(this.href)" aria-label="Github"
+					class="icon brands fa-github"><span class="label">Github</span></a></li>
 		</ul>
 
 		<!-- Menu -->

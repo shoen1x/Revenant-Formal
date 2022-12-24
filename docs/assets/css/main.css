@@ -594,7 +594,7 @@ body.is-preload:before {
 	-webkit-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
 	-ms-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
 	animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-	z-index: 100001;
+	z-index: 100002;
 }
 
 body.is-preload:after {
@@ -3135,3 +3135,348 @@ body {
 	.splide__slide .content p {
 	  margin: 10px 0 20px 0;
 	}
+	
+/* Multi Project Learn More Hero */
+.mphero {
+	display: flex;
+	max-width: 1920px;
+	gap: 2em;
+	justify-content: space-between;
+	margin: 5em 2em;
+  }
+  
+  .mptext {
+	width: 40%;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: futura;
+  }
+  
+  .mptext__short {
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	color: #479A7E;
+  }
+  
+  .mptext__title {
+	line-height: 1.1;
+	margin: 0;
+  }
+  
+  .mptext__description {
+	line-height: 145%;
+	font-size: 1em;
+	font-weight: 300;
+	padding-bottom: 1em;
+  }
+  
+  .mptext__button {
+	max-width: 120px;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	background-color: #479A7E;
+	padding: 1em 2em;
+	border-radius: 0.5em;
+  }
+  
+  .mpgrid__container {
+	min-width: 60%;
+	display: grid;
+	grid-gap: .5em;
+	grid-template-columns: repeat(8, 1fr);
+  }
+  
+  .mpgrid__item {
+	background-color: grey;
+	border-radius: 0.5em;
+  }
+  
+  .mpone {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	background-image: url(//unsplash.it/400/400);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  .mptwo { 
+	grid-column: 2 / 5;
+	grid-row: 1 / 4;
+	background-image: url(//unsplash.it/900/900);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  .mpthree {
+	grid-column: 5 / 6;
+	grid-row: 1 / 2;
+	background-image: url(//unsplash.it/500/400);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  .mpfour {
+	grid-column: 6 / 7;
+	grid-row: 1 / 2;
+	background-color: #FDF5DD;
+	border-radius: 0 0 100px 0;
+	-moz-border-radius: 0 0 100px 0;
+	-webkit-border-radius: 0 0 100px 0;
+  }
+  
+  
+  .mpfive {
+	grid-column: 5 / 7;
+	grid-row: 2 / 4;
+	background-image: url(//unsplash.it/400/500);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  .mpsix {
+	grid-column: 7 / 8;
+	grid-row: 2 / 3;
+	background-color: #D3F0EE;
+	border-radius: 0 100px 0 0;
+	-moz-border-radius: 0 100px 0 0;
+	-webkit-border-radius: 0 100px 0 0;
+  }
+  
+  .mpseven {
+	grid-column: 7 / 8;
+	grid-row: 3 / 4;
+	background-image: url(//unsplash.it/500/500);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  .mpeight {
+	grid-column: 8 / 9;
+	grid-row: 3 / 4;
+	border-radius: 50%;
+	background-color: #CED7ED;
+  }
+  
+  .mpnine {
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
+	background-color: #FADEE0;
+	border-radius: 100px 0 0 0;
+	-moz-border-radius: 100px 0 0 0;
+	-webkit-border-radius: 100px 0 0 0;
+  }
+  
+  .mpten {
+	grid-column: 2 / 3;
+	grid-row: 4 / 5;
+	background-image: url(//unsplash.it/300/300);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  .mpeleven {
+	grid-column: 3 / 5;
+	grid-row: 4 / 6;
+	background-image: url(//unsplash.it/700/700);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  .mptwelve {
+	grid-column: 5 / 6;
+	grid-row: 4 / 5;
+	background-image: url(//unsplash.it/300/500);
+	background-position: center;
+	background-size: cover;
+  }
+  
+  @media (max-width: 900px) {
+	.mpgrid__container {
+	  min-width: 50%;
+	  height: 400px;
+	  margin-top: 50px;
+  }
+	
+	@media (max-width: 780px) {
+	  .mphero {
+		flex-direction: column-reverse;
+		margin: 2em 2em;
+	  }
+	  
+	  .mptext {
+		width: 100%;
+	  }
+	}
+}
+
+/* Parallax Image Fullscreen */
+.wrap {
+	display:grid;
+	background-color: rgb(19, 21, 22);
+	grid-template-columns: repeat(12, 1fr);
+	/* padding: 100px 0 200px; */
+  }
+  
+  image-parallax {
+	margin:40px 0;
+	padding-top:64%;
+  }
+  
+  .spacer {
+	grid-column:1 / 13;
+  }
+  .el1 {
+	grid-column: 2 / 5;
+  }
+  .el2 {
+	margin-top:200px;
+	grid-column: 7 / 12;
+  }
+  .el3 {
+	grid-column: 5 / 9;
+  }
+  .static {
+	grid-column: 4 / 10;
+  }
+
+  .center-image-background {
+	text-align: center;
+	width: 45em;
+	max-width: calc(100% - 4em);
+	margin: 0 auto;
+	margin-bottom: 0;
+  }
+
+  #center-image {
+  	background: linear-gradient(to bottom, rgb(46, 58, 141) 0%,rgba(228, 30, 42, 0.25) 100%), url("../../images/fulls/full/st1.webp");
+  	background-size: cover;
+  	background-attachment: fixed;
+  	background-position: top center;
+  	background-repeat: no-repeat;
+  }
+
+  .center-image-border {
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+  }
+
+  .center-image-parallax {
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+  }
+
+  .scroll-indicator {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 4px;
+	background-color: #ffffff;
+	z-index: 10001;
+	width: 0%;
+	transition: all 0.3s linear;
+  }
+
+/* Tools Used */
+
+/* Marquee Carousel */
+.tools {
+	height: 60px;
+	position: relative;
+	width: 100%;
+  
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+  }
+  .tools::before,
+  .tools::after{
+	position:absolute;
+	content:'';
+	height:100%;width:25%;
+	z-index:2;pointer-events:none;
+  }
+  .tools::before{
+	left:0;
+	top:0;
+  }
+  .tools::after{
+	right:0;
+	top:0;
+	transform:rotateZ(180deg);
+  }
+  
+  .tool-track {
+	width: calc(150px * 5);
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .tool {
+	width: 150px;
+	height: 60px;
+	display: grid;
+	place-items: center;
+	transition:0.5s;
+	justify-content: center;
+  }
+
+  .tool img {
+	filter: invert(100%) grayscale(1);
+	-webkit-filter: invert(100%) grayscale(1);
+	justify-content: center;
+	position: relative;
+	font-size: 0;
+	padding: 1vh;
+	width: "120px";
+  	}
+
+  @media screen and (max-width: 480px) {
+	.tool img {
+		filter: invert(100%) grayscale(1);
+		-webkit-filter: invert(100%) grayscale(1);
+		justify-content: center;
+		position: relative;
+		font-size: 0;
+		padding: 3.25vh;
+		width: "60px";
+	  }
+	}
+  
+  @keyframes scroll {
+	0% {
+	  transform: translateX(0px);
+	}
+	100% {
+	  transform: translateX(calc(-150px * 5));
+	}
+  }
+  
+  @media screen and (max-width: 768px) {
+  
+	.tool-track {
+	  width: calc(80px * 15);
+	}
+  
+	.tool {
+	  width: 80px;
+	}
+  
+	@keyframes scroll {
+	  0% {
+		transform: translateX(0px);
+	  }
+	  100% {
+		transform: translateX(calc(-80px * 5));
+	  }
+	}
+  }
