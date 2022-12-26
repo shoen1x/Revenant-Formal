@@ -9,7 +9,18 @@
     "rewrites": [
       {
           "source": "**",
-          "destination": "/maintenance.html"
+          "destination": "/maintenance.html",
+          "type": 301
+      },
+      {
+          "source": "/",
+          "destination": "/maintenance.html",
+          "type": 301
+      },
+      {
+          "source": "**",
+          "destination": "/404.html",
+          "type": 404
       }
   ]
   }
