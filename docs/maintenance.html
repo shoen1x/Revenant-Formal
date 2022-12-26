@@ -1,0 +1,277 @@
+<html>
+<style>
+    :root {
+        --color: #aaa;
+        --background: #000;
+        --size: 1;
+        /* --glow: 1 */
+        --animation: terminal-blink;
+    }
+
+    body {
+        background: #000;
+    }
+
+    a {
+        color: #5dea62;
+    }
+
+    pre {
+        color: #5dea62;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    table tr th td {
+        color: #5dea62;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .movement {
+        color: #5dea62;
+        font-family: Terminal, monospace;
+        font-size: 24px;
+        width: 100%;
+        text-align: left;
+        animation: 120ms infinite normal glitch;
+    }
+
+    span {
+        animation: 1.5s infinite normal imlec;
+    }
+
+    ::-moz-selection {
+        background: #7021d2;
+        color: #fff;
+    }
+
+    ::selection {
+        background: #7021d2;
+        color: #fff;
+    }
+
+    @keyframes glitch {
+        0% {
+            opacity: 0;
+            left: 0;
+        }
+
+        40%,
+        80% {
+            opacity: 1;
+            left: -2px;
+        }
+    }
+
+    @keyframes imlec {
+        0% {
+            opacity: 0;
+            left: 0;
+        }
+
+        40% {
+            opacity: 0;
+            left: -2px;
+        }
+
+        80% {
+            opacity: 1;
+            left: -2px;
+        }
+    }
+
+    .terminal {
+        display: inline-block;
+        position: absolute;
+        top: 23%;
+        left: calc(50% - 200px);
+    }
+
+    /*
+    .watch {
+        display: inline-block;
+        padding: 2em;
+        border:1px solid #5dea62;
+    }
+    */
+
+    .content {
+        margin: 100px;
+        z-index: 100;
+    }
+
+    .line {
+        color: #63DE6F;
+        font-size: 21px;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    @-webkit-keyframes blinking {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes blinking {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    .cursor {
+        -webkit-animation: blinking 800ms infinite;
+        animation: blinking 800ms infinite;
+        margin-left: -5px;
+    }
+
+    .input {
+        background: transparent;
+        border: none;
+        font: 1.3rem Inconsolata, monospace;
+        text-shadow: 0 0 5px #C8C8C8;
+        color: #63DE6F;
+        caret-color: transparent;
+    }
+
+    .input:focus {
+        outline: none;
+        border: none;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Penyelenggaraan</title>
+    <link rel="icon" href="images/ico/shoenix.ico" type="image/icon type" />
+</head>
+
+<body>
+    <div class="terminal watch">
+        <pre>
+█▀█ █▀▀ █░█ █▀▀ █▄░█ ▄▀█ █▄░█ ▀█▀
+█▀▄ ██▄ ▀▄▀ ██▄ █░▀█ █▀█ █░▀█ ░█░
+
+█▀▀ █▀█ █▀█ █▀▄▀█ ▄▀█ █░░
+█▀░ █▄█ █▀▄ █░▀░█ █▀█ █▄▄
+            </pre>
+        <div class="movement">█ █ █ <span style="color:red">█ █ █ █ █ █ █ █ █ █ </span>31%
+            <br>
+            <br>&gt; <a id="myId"></a>
+            <br>&gt; Dalam penyelenggaraan/ <span class="movement">█</span>
+            <br>---
+            <br>&gt; www.shoenix-studios.web.app/
+            <br>&gt; <a onclick="window.open('mailto:shoenixstudios@gmail.com')">shoenixstudios@gmail.com</a>
+            <code>
+                <a class="line">
+                <a class="prefix">&gt; C:/Console/ &gt;</a>
+                <a class="input" contenteditable="true">
+                </a>
+                <a class="cursor">_</a>
+                </a>
+            </code>
+        </div>
+    </div>
+</body>
+
+<script>
+    var date = new Date();
+    var dd = date.getDate();
+    var mm = date.getMonth() + 1;
+    var yyyy = date.getFullYear();
+    var hh = date.getHours();
+    var mm = date.getMinutes();
+    var newDate = hh + ":" + mm + " | " + dd + "-" + mm + "-" + yyyy;
+    var p = document.getElementById("myId");
+    p.innerHTML = newDate;
+
+    // terminal
+    const input = document.querySelector(".input");
+
+    // initial focus setter
+    input.focus();
+    window.addEventListener("click", () => input.focus());
+
+    // utils
+    function getInputValue() {
+        return document.querySelector(".input").innerHTML;
+    }
+
+    // typewriter
+    function write(el, text, cb) {
+        let index = 0;
+        el.innerHTML = ""; // reset line
+
+        return function append() {
+            if (index >= text.length) {
+                cb();
+                return;
+            }
+            setTimeout(() => {
+                el.innerHTML = el.innerHTML.concat(text[index]);
+                index++;
+                append();
+            }, Math.floor(Math.random() * (300 - 100 + 1) + 100));
+        };
+    }
+
+    // process input
+    document.addEventListener('keydown', ({ code }) => {
+        console.log(code);
+
+        if (code === "Enter") {
+
+            if (getInputValue() === "start project-revenant" || getInputValue() === "Start project-revenant") {
+                // display command list
+                
+                document.querySelector(".input").innerHTML = "";
+                document.querySelector(".input").innerHTML = "<a>Welcome to Project Revenant's Formal!</a>";
+                    setTimeout(function() {
+                        window.location.replace("index.html");
+                    }, 5000);
+                return;
+            }
+
+            if (getInputValue() === "" || getInputValue() === " ") {
+                window.location.replace("404.html");
+                return;
+            }
+
+            if (getInputValue() === "purge" || getInputValue() === "Purge") {
+                document.querySelector(".input").innerHTML = "";
+                var content = '<body><div class="terminal watch"><div class="movement"><a>Goodbye!</a><br><a>Purging in 3 seconds...</a></div></div><body/>';
+                document.getElementsByTagName('body')[0].innerHTML = content; 
+                    setTimeout(function() {
+                        window.location.replace("404.html");
+                    }, 3000);
+                return;
+            }
+
+            document.querySelector(".input").innerHTML = "";
+            document.querySelector(".input").setAttribute("contenteditable", false);
+            
+            const processInput = write(document.querySelector(".prefix"), "Memproses, sila tunggu sebentar..", () => {
+                const errorFound = write(document.querySelector(".prefix"), "Ralat...", () => {
+                    const typeResponse = write(document.querySelector(".prefix"), "C:/Console/ >", () => {
+                        document.querySelector(".input").setAttribute("contenteditable", true);
+                    });
+                    typeResponse();
+                });
+                errorFound();
+            });
+
+            processInput();
+        }
+    });
+</script>
+
+</html>
