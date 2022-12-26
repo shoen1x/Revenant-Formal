@@ -13,7 +13,7 @@
           "type": 301
       },
       {
-          "source": "/",
+          "source": "/maintenance.html",
           "destination": "/maintenance.html",
           "type": 301
       },
