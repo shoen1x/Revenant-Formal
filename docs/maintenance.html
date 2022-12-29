@@ -189,8 +189,8 @@
     var mm = date.getMonth() + 1;
     var yyyy = date.getFullYear();
     var hh = date.getHours();
-    var mm = date.getMinutes();
-    var newDate = hh + ":" + mm + " | " + dd + "-" + mm + "-" + yyyy;
+    var mn = date.getMinutes();
+    var newDate = hh + ":" + mn + " | " + dd + "-" + mm + "-" + yyyy;
     var p = document.getElementById("myId");
     p.innerHTML = newDate;
 
@@ -232,12 +232,21 @@
 
             if (getInputValue() === "start project-revenant" || getInputValue() === "Start project-revenant") {
                 // display command list
-                
+
                 document.querySelector(".input").innerHTML = "";
-                document.querySelector(".input").innerHTML = "<a>Welcome to Project Revenant's Formal!</a>";
-                    setTimeout(function() {
-                        window.location.replace("main.html");
-                    }, 5000);
+                document.querySelector(".input").setAttribute("contenteditable", false);
+
+                const processvalid = write(document.querySelector(".prefix"), "Initialize program ", () => {
+                    const sendToken = write(document.querySelector(".prefix"), "Welcome to project Revenant", () => {
+                            setTimeout(function() {
+                            window.location.replace("main.html");
+                            }, 8000);
+                    });
+                    sendToken();
+                });
+
+                processvalid();
+
                 return;
             }
 
@@ -248,6 +257,7 @@
 
             if (getInputValue() === "purge" || getInputValue() === "Purge") {
                 document.querySelector(".input").innerHTML = "";
+                document.querySelector(".input").setAttribute("contenteditable", false);
                 var content = '<body><div class="terminal watch"><div class="movement"><a>Goodbye!</a><br><a>Purging in 3 seconds...</a></div></div><body/>';
                 document.getElementsByTagName('body')[0].innerHTML = content; 
                     setTimeout(function() {
