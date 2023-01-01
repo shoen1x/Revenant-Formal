@@ -30,6 +30,12 @@
   ],
   "headers": [
     { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}] }
-  ]
+  ],
+  "resolutions": {
+    "node-sass": "https://registry.npmjs.org/node-sass/-/node-sass-7.0.0.tgz"
+  },
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  }  
   }
 }
