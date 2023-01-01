@@ -23,11 +23,9 @@
           "type": 404
       },
       {
-        "source": "/maintenance.html",
-        "headers": [ {
-          "key": "status",
-          "value": "503"
-        } ]
+        "source": "**",
+        "destination": "/maintenance.html",
+        "type": 503
     }
   ],
   "headers": [
