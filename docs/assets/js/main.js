@@ -332,7 +332,12 @@ const scroll = () => {
   indicator.style.width = perc + "%"
 }
 
-document.addEventListener("scroll", scroll)   
+document.addEventListener("scroll", scroll) 
+
+// Alert page not ready
+$('.not-ready').on('click', function(){
+	alert('Page are not ready yet, Sorry!');
+})
 
 })(jQuery);
 

@@ -14,13 +14,16 @@
 	<!--Meta and linker-->
 	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type='text/css'/>
-	<link rel="icon" href="images/ico/shoenix.ico" type="image/icon type"/>
-	<link rel="preload" href="../../assets/webfonts/futura-medium-bt-revenant.ttf" as="font" type="font/ttf" crossorigin/>
-	
-	<!-- Third-Party Scripts -->
-	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" rel="stylesheet" type="text/css"/>
+	<link href="assets/css/fontawesome-all.min.css" rel="stylesheet" type='text/css' />
+	<link rel="icon" href="images/ico/shoenixlogo.svg" sizes="any" type="image/svg+xml"/>
+	<link rel="preload" href="../../assets/webfonts/futura-medium-bt-revenant.ttf" as="font" type="font/ttf"
+		crossorigin />
+
+	<!-- Third-Party Linker -->
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" rel="stylesheet"
+		type="text/css" />
 
 	<!--No script-->
 	<noscript>
@@ -29,25 +32,26 @@
 </head>
 
 <body class="is-preload">
-
 	<div class="scroll-indicator"></div>
 
 	<!-- Header -->
 	<header id="header">
-		<h1><strong>NMVX</strong></h1>
+		<h1><strong>HOME</strong></h1>
 		<nav>
 			<ul>
-				<li><a href="index.html#intro"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
-				<li><a href="#first"><i class="icon brands fa-artstation" aria-hidden="true"></i> <span>Artstation</span></a></li>
-				<li><a href="#second"><i class="icon brands fa-behance" aria-hidden="true"></i> <span>Behance</span></a></li>
+				<li><a href="main.html#intro"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
+				<li><a href="main.html#first"><i class="icon brands fa-artstation" aria-hidden="true"></i>
+						<span>Artstation</span></a></li>
+				<li><a href="main.html#second"><i class="icon brands fa-behance" aria-hidden="true"></i>
+						<span>Behance</span></a></li>
 				<li class="dropdown">
 					<a class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></a>
 					<div class="dropdown-content">
-						<a href="#spcarousel">Project <i  class="fa fa-bullseye" aria-hidden="true"></i></a>
-						<a href="#work">Works <i  class="fa fa-briefcase" aria-hidden="true"></i></a>
-						<a href="#coverart">Cover Art <i  class="fa fa-cube" aria-hidden="true"></i></a>
-					</div></li>
-				<!--	<li><a href="#contact">Contact</a></li>  -->
+						<a href="main.html#spcarousel">Project <i class="fa fa-bullseye" aria-hidden="true"></i></a>
+						<a href="main.html#work">Works <i class="fa fa-briefcase" aria-hidden="true"></i></a>
+						<a href="main.html#coverart">Cover Art <i class="fa fa-cube" aria-hidden="true"></i></a>
+					</div>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -60,7 +64,7 @@
 			</header>
 			<p>Experimental project by <strong>NMVX</strong></p>
 			<footer>
-				<a href="#first" class="button style2 down">More</a>
+				<a href="#first" class="button style2 down" title="More">More</a>
 			</footer>
 		</div>
 	</section>
@@ -72,9 +76,7 @@
 				<h2><a href="https://www.artstation.com/shoenixstudios" aria-label="Artstation"
 						class="icon brands fa-artstation"><span class="label">Artstation</span></a> Artstation</h2>
 			</header>
-			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-				Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-				id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+			<p>Mainly 3D/ Sculpting based project was posted here, check Artstation for more informations.</p>
 			<ul class="actions special">
 				<li><input type="button" onclick="window.open('www.artstation.com/artwork/o2OV4L')"
 						value="HQ Preview" /></li>
@@ -90,9 +92,7 @@
 				<h2><a href="https://www.behance.net/ShoenixStudios" aria-label="Behance"
 						class="icon brands fa-behance"><span class="label">Behance</span></a> Behance</h2>
 			</header>
-			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-				Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-				id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+			<p>Mainly 2D/ Traditional arts based project was posted here, check Behance for more informations.</p>
 			<ul class="actions special">
 				<li><input type="button"
 						onclick="window.open('www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios')"
@@ -131,7 +131,7 @@
 					<p class="text__background">Isometric</p>
 				</div>
 				<div class="flex__item flex__item--right"></div>
-					<img class="prj__img" src="images/shoenixspbeta.webp" alt="Isometric Room 3D" />
+				<img class="prj__img" src="images/shoenixspbeta.webp" alt="Isometric Room 3D" />
 			</div>
 			<div class="flex__container flex--charlie animate--start" data-slide="3">
 				<div class="flex__item flex__item--left">
@@ -145,7 +145,7 @@
 					<p class="text__background">Zulmat</p>
 				</div>
 				<div class="flex__item flex__item--right"></div>
-					<img class="prj__img" src="images/shoenixspcharlie.webp" alt="Zulmat Conceptual poster" />
+				<img class="prj__img" src="images/shoenixspcharlie.webp" alt="Zulmat Conceptual poster" />
 			</div>
 			<div class="flex__container flex--delta animate--start" data-slide="4">
 				<div class="flex__item flex__item--left">
@@ -159,7 +159,7 @@
 					<p class="text__background">Nordic</p>
 				</div>
 				<div class="flex__item flex__item--right"></div>
-					<img class="prj__img" src="images/shoenixspdelta.webp" alt="Nordic Axe" />
+				<img class="prj__img" src="images/shoenixspdelta.webp" alt="Nordic Axe" />
 			</div>
 			<div class="flex__container flex--fox animate--start" data-slide="5">
 				<div class="flex__item flex__item--left">
@@ -173,7 +173,7 @@
 					<p class="text__background">Neo-Ronin</p>
 				</div>
 				<div class="flex__item flex__item--right"></div>
-					<img class="prj__img" src="images/shoenixspfox.webp" alt="Ronin outfit" />
+				<img class="prj__img" src="images/shoenixspfox.webp" alt="Ronin outfit" />
 			</div>
 		</div>
 
@@ -189,12 +189,6 @@
 	<!-- Work -->
 	<section id="work" class="main style3 primary">
 		<div class="content">
-			<header>
-				<h2>Works</h2>
-				<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-					arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
-			</header>
 			<!-- Gallery  -->
 			<div class="gallery">
 				<article class="from-left">
@@ -218,157 +212,120 @@
 							title="Hausboom X Shoenix Studios" alt="" /></a>
 				</article>
 				<article class="from-right">
-					<a href="images/fulls/06.webp" class="image fit"><img src="images/thumbs/06.webp" title="Zulmat"
-							alt="" /></a>
+					<a href="images/fulls/06.webp" class="image fit"><img src="images/thumbs/06.webp"
+							title="Zulmat" alt="" /></a>
 				</article>
 			</div>
 		</div>
 	</section>
 
-		<!-- Ads -->
-		<section id="ads" class="main style3 primary">
-			<section class="carousel" aria-label="hero banner carousel">	
-				<div class="splide">
-				  <div class="splide__track">
+	<!-- Ads -->
+	<section id="ads" class="main style3 primary">
+		<section class="carousel" aria-label="hero banner carousel">
+			<div class="splide">
+				<div class="splide__track">
 					<div class="splide__list">
 
-					  <div class="splide__slide" role="group" aria-label="slide 1 of 5">
-						<a target="_blank" href="https://www.behance.net/gallery/144767777/The-Pioneer-Mockup-%28Alpha-Version%29"><img src="./images/thumbs/ads1.webp" class="background-image" alt="The pioneer mockup"></a>
-					  </div>
-			  
-					  <div class="splide__slide" role="group" aria-label="slide 2 of 5"> 
-						<a target="_blank" href="https://www.behance.net/gallery/141503291/Karnival-FYPro-Com-20192020-UMP"><img src="./images/thumbs/ads2.webp" class="background-image" alt="FYP project display"></a>
-					  </div>
-			  
-					  <div class="splide__slide" role="group" aria-label="slide 3 of 5">
-						<a target="_blank" href="mailto:shoenixstudios@gmail.com"><img src="./images/thumbs/ads3.webp" class="background-image" alt="ITNOT collection"></a>
-					  </div>
-			  
-					  <div class="splide__slide" role="group" aria-label="slide 4 of 5">
-						<a target="_blank" href="mailto:shoenixstudios@gmail.com"><img src="./images/thumbs/ads4.webp" class="background-image" alt="The world collection"></a>
-					  </div>
-			  
-					  <div class="splide__slide" role="group" aria-label="slide 5 of 5">
-						<img src="./images/thumbs/ads5.webp" class="background-image" alt="Tiger leap concept jersey">
-					  </div>
+						<div class="splide__slide" role="group" aria-label="slide 1 of 5">
+							<a target="_blank"
+								href="https://www.behance.net/gallery/144767777/The-Pioneer-Mockup-%28Alpha-Version%29"><img
+									src="./images/thumbs/ads1.webp" class="background-image"
+									alt="The pioneer mockup"></a>
+						</div>
 
-					</div>
-				  </div>
-				</div>
-			</section>
-		</section>
+						<div class="splide__slide" role="group" aria-label="slide 2 of 5">
+							<a target="_blank"
+								href="https://www.behance.net/gallery/141503291/Karnival-FYPro-Com-20192020-UMP"><img
+									src="./images/thumbs/ads2.webp" class="background-image"
+									alt="FYP project display"></a>
+						</div>
 
-		<section id="multiproject" class="main style4 primary">
-			<div class="mphero">
-				<div class="mptext">
-				  <p class="mptext__short">lorem</p>
-				  <h1 class="mptext__title">Extended Projects</h1>
-				  <p class="mptext__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, necessitatibus reiciendis. Voluptatem, eaque fugiat? Natus ab soluta nostrum quos! Laboriosam</p>
-				  <a class="button" href="project.html" >Learn more</a>
-				</div>
-				<div class="mpgrid__container">
-				  <div class="mpgrid__item mpone"></div>
-				  <div class="mpgrid__item mptwo"></div>
-				  <div class="mpgrid__item mpthree"></div>
-				  <div class="mpgrid__item mpfour"></div>
-				  <div class="mpgrid__item mpfive"></div>
-				  <div class="mpgrid__item mpsix"></div>
-				  <div class="mpgrid__item mpseven"></div>
-				  <div class="mpgrid__item mpeight"></div>
-				  <div class="mpgrid__item mpnine"></div>
-				  <div class="mpgrid__item mpten"></div>
-				  <div class="mpgrid__item mpeleven"></div>
-				  <div class="mpgrid__item mptwelve"></div>
-				</div>
-			  </div>
-		</section>
+						<div class="splide__slide" role="group" aria-label="slide 3 of 5">
+							<a target="_blank" href="mailto:shoenixstudios@gmail.com"><img
+									src="./images/thumbs/ads3.webp" class="background-image" alt="ITNOT collection"></a>
+						</div>
 
-	<section id="coverart" class="main style4 primary">
-		<div class="content box style2">
-			<header>
-				<h2>Album Cover Design</h2>
-				<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-			</header>
+						<div class="splide__slide" role="group" aria-label="slide 4 of 5">
+							<a target="_blank" href="mailto:shoenixstudios@gmail.com"><img
+									src="./images/thumbs/ads4.webp" class="background-image"
+									alt="The world collection"></a>
+						</div>
 
-			<div class="content">
-				<div class="l-container">
-					<div class="b-game-card">
-						<div class="b-game-card__cover"
-							style="background-image: url(images/thumbs/acd1.webp); background-position: center;"></div>
-					</div>
+						<div class="splide__slide" role="group" aria-label="slide 5 of 5">
+							<img src="./images/thumbs/ads5.webp" class="background-image"
+								alt="Tiger leap concept jersey">
+						</div>
 
-					<div class="b-game-card">
-						<div class="b-game-card__cover"
-							style="background-image: url(images/thumbs/acd2.webp); background-position: center;"></div>
-					</div>
-
-					<div class="b-game-card">
-						<div class="b-game-card__cover"
-							style="background-image: url(images/thumbs/acd3.webp); background-position: center;"></div>
-					</div>
-
-					<div class="b-game-card">
-						<div class="b-game-card__cover"
-							style="background-image: url(images/thumbs/acd4.webp); background-position: center;"></div>
-					</div>
-
-					<div class="b-game-card">
-						<div class="b-game-card__cover"
-							style="background-image: url(images/thumbs/acd5.webp); background-position: center;"></div>
 					</div>
 				</div>
 			</div>
-		</div>
-
+		</section>
 	</section>
 
-		<section id="carouselimg" class="main style5 primary">
-			<div class="slider">
-				<div class="slide-track">
-					<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
-					<!-- same 5 slides doubled (duplicate)-->
-					<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
-					<!-- same 5 slides tripled (duplicate 2)-->
-					<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img></div>
-					<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
-				</div>
+	<section id="multiproject" class="main style4 primary">
+		<div class="mphero">
+			<div class="mptext">
+				<p class="mptext__short">Full project display</p>
+				<h1 class="mptext__title">Extended Projects</h1>
+				<p class="mptext__description">All full project documentation was moved here from Behance
+					and Artstation's archives, more will be added in future. This repo can be WIP or finalized project.</p>
+				<a class="button" href="project.html">Learn more</a>
 			</div>
-		</section>
+			<div class="mpgrid__container">
+				<div class="mpgrid__item mpone"></div>
+				<div class="mpgrid__item mptwo"></div>
+				<div class="mpgrid__item mpthree"></div>
+				<div class="mpgrid__item mpfour"></div>
+				<div class="mpgrid__item mpfive"></div>
+				<div class="mpgrid__item mpsix"></div>
+				<div class="mpgrid__item mpseven"></div>
+				<div class="mpgrid__item mpeight"></div>
+				<div class="mpgrid__item mpnine"></div>
+				<div class="mpgrid__item mpten"></div>
+				<div class="mpgrid__item mpeleven"></div>
+				<div class="mpgrid__item mptwelve"></div>
+			</div>
+		</div>
+	</section>
 
-			<!-- Contact -->
-			<!--
-			<section id="contact" class="main style3 secondary">
-				<div class="content">
-					<header>
-						<h2>Say Hello.</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-					</header>
-					<div class="box">
-						<form target="_blank" method="post" action="#">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
-							</ul>
-						</form>
-					</div>
+	<section id="carouselimg" class="main style5 primary">
+		<div class="slider">
+			<div class="slide-track">
+				<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px"
+						alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img>
 				</div>
-			</section>
-			-->
+				<div class="slide"><img
+						src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
+						height="" width="120px" alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img>
+				</div>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
+				<!-- !! -->
+				<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px"
+						alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img>
+				</div>
+				<div class="slide"><img
+						src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
+						height="" width="120px" alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img>
+				</div>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
+				<!-- !! -->
+				<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px"
+						alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img>
+				</div>
+				<div class="slide"><img
+						src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
+						height="" width="120px" alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img>
+				</div>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Footer -->
 	<footer id="footer">
@@ -377,8 +334,9 @@
 		<ul class="icons">
 			<li><a href="https://www.facebook.com/shoenixstudios" onclick="window.open(this.href)" aria-label="Facebook"
 					class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			<li><a href="https://www.instagram.com/shoenix_studios/" onclick="window.open(this.href)" aria-label="Instagram"
-					class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="https://www.instagram.com/shoenix_studios/" onclick="window.open(this.href)"
+					aria-label="Instagram" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+			</li>
 			<li><a href="https://www.youtube.com/@shoenixstudios" onclick="window.open(this.href)" aria-label="Youtube"
 					class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
 			<li><a href="https://github.com/shoen1x" onclick="window.open(this.href)" aria-label="Github"

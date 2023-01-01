@@ -56,13 +56,16 @@
   background: url("../../images/fulls/full/bp1.webp") no-repeat bottom center/cover;
 }
 .navmp-item:nth-child(2) .navmp-item-bg {
-  background: url("https://www.ocregister.com/wp-content/uploads/migration/nyl/nyltt9-low.res.22.lakers1029.kjs.jpg") no-repeat center bottom/cover;
+  background: url("../../images/fulls/full/bp2.webp") no-repeat center bottom/cover;
 }
 .navmp-item:nth-child(3) .navmp-item-bg {
-  background: url("https://cdn.vox-cdn.com/thumbor/SHtJqgdSk7FJHwKAQ9rDytJuQHE=/0x0:4267x2845/1200x800/filters:focal(1432x845:2114x1527)/cdn.vox-cdn.com/uploads/chorus_image/image/59592059/952761746.jpg.0.jpg") no-repeat center center/cover;
+  background: url("../../images/fulls/full/bp3.webp") no-repeat center center/cover;
 }
 .navmp-item:nth-child(4) .navmp-item-bg {
-  background: url("https://www.paradisepost.com/wp-content/uploads/2019/06/BNG-L-WARRIORS-0925-1037.jpg?w=1920") no-repeat center center/cover;
+  background: url("../../images/fulls/full/bp4.webp") no-repeat center center/cover;
+}
+.navmp-item:nth-child(5) .navmp-item-bg {
+  background: url("../../images/fulls/full/bp5.webp") no-repeat center center/cover;
 }
 .navmp-item .navmp-item-content {
   color: #fff;

@@ -9,19 +9,26 @@
     "rewrites": [
       {
           "source": "**",
-          "destination": "/maintenance.html",
+          "destination": "/main.html",
           "type": 301
       },
       {
-          "source": "/maintenance.html",
-          "destination": "/maintenance.html",
+          "source": "/main.html",
+          "destination": "/main.html",
           "type": 301
       },
       {
           "source": "**",
           "destination": "/404.html",
           "type": 404
-      }
+      },
+      {
+        "source": "/maintenance.html",
+        "headers": [ {
+          "key": "status",
+          "value": "503"
+        } ]
+    }
   ],
   "headers": [
     { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}] }
