@@ -226,6 +226,10 @@ body.is-preload *:after {
 	transition: none !important;
 }
 
+.hidden {
+	display: none;
+}
+
 /* Spinner */
 
 @-moz-keyframes spinner-rotate {
@@ -1358,17 +1362,11 @@ span {
 	vertical-align: middle;
 	background: transparent;
 	color: inherit;
-	width: 0;
+	width: calc(100% - 1.5em);
 	overflow: hidden;
+	text-align: center;
 	white-space: nowrap;
-	-moz-transition: width 0.35s ease-in-out;
-	-webkit-transition: width 0.35s ease-in-out;
-	-ms-transition: width 0.35s ease-in-out;
-	transition: width 0.35s ease-in-out;
-}
-
-header a:hover span {
-	width: 80px;
+	line-height: 1.5em;
 }
 
 header a:hover {
@@ -1417,6 +1415,7 @@ header a:hover {
 .dropdown-content {
 	display: none;
 	content: '';
+	border-radius: 0 0 8px 8px;
 	position: absolute;
 	background-color: #39454b;
 	align-items: right;
@@ -1442,6 +1441,7 @@ header a:hover {
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
 	background-color: rgb(107, 102, 102);
+	border-radius: 0 0 8px 8px;
 }
 
 /* Show the dropdown menu on hover */
@@ -2331,6 +2331,7 @@ body {
 .main.style5 {
 	text-align: center;
 	padding: 2em 0 2em 0;
+	justify-content: center;
 }
 
 .main.style5 .content>header {
@@ -3266,7 +3267,7 @@ body {
   }
 
   #center-image {
-  	background: linear-gradient(to bottom, rgb(46, 58, 141) 0%,rgba(228, 30, 42, 0.25) 100%), url("../../images/fulls/full/st1.webp");
+  	background: linear-gradient(to bottom, rgb(46, 58, 141) 0%,rgba(228, 30, 42, 0.25) 100%), url("../../images/thumbs/dummy.webp");
   	background-size: cover;
   	background-attachment: fixed;
   	background-position: top center;
@@ -3286,7 +3287,11 @@ body {
 	display: block;
 	width: 100%;
 	overflow: hidden;
-	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin-top: 12px;
+	box-shadow: 8px 8px 5px 0px rgba(0, 0, 0, 0.5)
   }
 
   .scroll-indicator {

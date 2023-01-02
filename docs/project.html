@@ -32,7 +32,6 @@
 </head>
 
 <body class="is-preload">
-
     <div class="scroll-indicator"></div>
 
     <!-- Header -->
@@ -40,67 +39,135 @@
         <h1><strong>Projects</strong></h1>
         <nav>
             <ul>
-                <li><a href="/docs/index.html#intro"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
-                <li><a href="#first"><i class="icon brands fa-artstation" aria-hidden="true"></i>
-                        <span>Artstation</span></a></li>
-                <li><a href="#second"><i class="icon brands fa-behance" aria-hidden="true"></i> <span>Behance</span></a>
-                </li>
-                <li class="dropdown">
-                    <a class="dropbtn"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#spcarousel">Project <i class="fa fa-bullseye" aria-hidden="true"></i></a>
-                        <a href="#work">Works <i class="fa fa-briefcase" aria-hidden="true"></i></a>
-                        <a href="#coverart">Cover Art <i class="fa fa-cube" aria-hidden="true"></i></a>
-                    </div>
-                </li>
+                <li><a href="main.html"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
             </ul>
         </nav>
     </header>
     
-    <nav class="navmp">
-        <ul class="navmp-list">
-            <li class="navmp-item">
-                <div class="navmp-item-bg"></div>
-                <div class="navmp-item-content">
-                    <h2>Southern<br> Tiger</h2>
-                    <button><a href="stpage.html">View</a></button>
-                </div>
-            </li>
+    <section id="navsection" class="styleb">
+        <nav class="navmp">
+            <ul class="navmp-list">
+                <li class="navmp-item">
+                    <div class="navmp-item-bg"></div>
+                    <div class="navmp-item-content">
+                        <h2>Southern<br> Tiger</h2>
+                        <button class="stpage" data-navpagenum="1">View</button>
+                    </div>
+                </li>
     
-            <li class="navmp-item">
-                <div class="navmp-item-bg"></div>
-                <div class="navmp-item-content">
-                    <h2>Istinggar<br> Concept</h2>
-                    <button class="not-ready"><a href="#">View</a></button>
-                </div>
-            </li>
+                <li class="navmp-item">
+                    <div class="navmp-item-bg"></div>
+                    <div class="navmp-item-content">
+                        <h2>Istinggar<br> Concept</h2>
+                        <button class="stpage" data-navpagenum="2">View</button>
+                    </div>
+                </li>
     
-            <li class="navmp-item">
-                <div class="navmp-item-bg"></div>
-                <div class="navmp-item-content">
-                    <h2>Aerophantom<br> Earbuds</h2>
-                    <button class="not-ready"><a href="#">View</a></button>
-                </div>
-            </li>
+                <li class="navmp-item">
+                    <div class="navmp-item-bg"></div>
+                    <div class="navmp-item-content">
+                        <h2>Aerophantom<br> Earbuds</h2>
+                        <button class="stpage" data-navpagenum="3">View</button>
+                    </div>
+                </li>
     
-            <li class="navmp-item">
-                <div class="navmp-item-bg"></div>
-                <div class="navmp-item-content">
-                    <h2>Nordic<br> Axe Concept</h2>
-                    <button class="not-ready"><a href="#">View</a></button>
-                </div>
-            </li>
+                <li class="navmp-item">
+                    <div class="navmp-item-bg"></div>
+                    <div class="navmp-item-content">
+                        <h2>Nordic<br> Axe Concept</h2>
+                        <button class="stpage" data-navpagenum="4">View</button>
+                    </div>
+                </li>
+    
+                <li class="navmp-item">
+                    <div class="navmp-item-bg"></div>
+                    <div class="navmp-item-content">
+                        <h2>Zulmat</h2>
+                        <button class="stpage" data-navpagenum="5">View</button>
+                    </div>
+                </li>
+    
+            </ul>
+        </nav>
+    </section>
 
-            <li class="navmp-item">
-                <div class="navmp-item-bg"></div>
-                <div class="navmp-item-content">
-                    <h2>Zulmat</h2>
-                    <button class="not-ready"><a href="#">View</a></button>
+    <section id="pdisplay" class="hidden">
+        <section class="main style5 primary">
+            <div class="artcontent">
+                <div class="poster">
+                    <div class="poster-title">
+                        <h1 class="project"> Southern Tigers Concept </h1>
+                        <div class="line"></div>
+                        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                            voluptate, laboriosam sunt eveniet
+                            eius
+                            iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio </p>
+                    </div>
+                    <!-- <div class="poster-buttons">
+                            <a href="#">
+                                <img src="#" onerror="this.onerror=null" width="25px" height="25px" alt="">
+                            </a>
+                        </div> -->
                 </div>
-            </li>
+                <p class="project-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate,
+                    laboriosam sunt eveniet eius
+                    iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio </p>
+            </div>
+        </section>
     
-        </ul>
-    </nav>
+        <section class="wrap">
+            <image-parallax sp="60" class="el1" src="images/thumbs/dummy.webp">
+            </image-parallax>
+    
+            <image-parallax sp="100" class="el2" src="images/thumbs/dummy.webp">
+            </image-parallax>
+    
+            <image-parallax sp="-80" class="el3">
+                <img src="images/thumbs/dummy.webp" />
+            </image-parallax>
+        </section>
+    
+        <section class="main style5 primary">
+            <div class="artcontent">
+                <h2>Created using</h2>
+            </div>
+        </section>
+    
+        <section id="toolsimg" class="main style5 primary">
+            <div class="tools">
+                <div class="tool-track">
+                    <div class="tool"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Logo_Blender.svg/512px-Logo_Blender.svg.png?20210528234327"
+                            height="" width="120px" alt=""></img></div>
+                    <div class="tool"><img src="https://www.keyshot.com/wp-content/uploads/2018/10/keyshot-rect.png"
+                            height="" width="120px" alt=""></img></div>
+                    <div class="tool"><img
+                            src="https://seeklogo.com/images/S/substance-by-adobe-logo-DF0F6D23A8-seeklogo.com.png"
+                            height="" width="120px" alt=""></img></div>
+                    <div class="tool"><img src="https://pngimg.com/uploads/photoshop/photoshop_PNG39.png" height=""
+                            width="150px" alt=""></img></div>
+                    <div class="tool"><img
+                            src="https://business.oregonstate.edu/sites/default/files/illustrator-full-logo.png" height=""
+                            width="120px" alt=""></img></div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="center-image" class="main style3 primary">
+            <div class="center-image-background">
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+                <img class="center-image-parallax" src="images/thumbs/dummy.webp" />
+            </div>
+        </section>
+    </section>
 
 	<!-- Footer -->
 	<footer id="footer">
@@ -116,13 +183,13 @@
             <li><a href="https://github.com/shoen1x" onclick="window.open(this.href)" aria-label="Github"
                     class="icon brands fa-github"><span class="label">Github</span></a></li>
          </ul>
+         
+         
 
 		<!-- Menu -->
 		<ul class="menu">
 			<li>&copy; 2022 <strong>Shoenix Studios</strong> All Rights Reserved</li>
 		</ul>
-		<a href="#" onclick="document.body.scrollTop=0;document.documentElement.scrollTop=0;event.preventDefault()">Back
-			to top</a>
 	</footer>
 
 	<!-- Scripts -->
