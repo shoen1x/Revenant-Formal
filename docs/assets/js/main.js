@@ -400,11 +400,90 @@
 			projectarticle.scrollIntoView();
 
 		} else if (fetchnumber == 3) {
-			alert('Page are not ready yet, Sorry!');
+			$('#pdisplay').removeClass('hidden');
+
+			document.querySelector('#header h1').innerHTML = 'Aerophantom Earbuds'
+			document.querySelector('.project').innerHTML = 'Aerophantom Earbuds';
+			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.wrap').innerHTML = `
+			<image-parallax sp="60" class="el1" src="images/fulls/full/ae4.webp"></image-parallax>
+			<image-parallax sp="100" class="el2" src="images/fulls/full/ae2.webp"></image-parallax>
+			<image-parallax sp="-80" class="el3" src="images/fulls/full/ae3.webp"></image-parallax>`;
+
+			document.querySelector('.center-image-background').innerHTML = `
+			<img class="center-image-parallax" src="images/fulls/full/ae1.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/ae2.webp" />	
+			<img class="center-image-parallax" src="images/fulls/full/ae3.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/ae4.webp" />`;
+
+			document.querySelector('#center-image').style.cssText = `
+				background: linear-gradient(to bottom, rgb(78, 78, 80) 0%,rgba(15, 15, 15, 0.25) 100%), url("images/fulls/full/bp3.webp");
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: top center;
+				background-repeat: no-repeat;`;
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') center no-repeat, url('images/fulls/full/ae3.webp') center no-repeat";
+
+			projectarticle.scrollIntoView();
 		} else if (fetchnumber == 4) {
-			alert('Page are not ready yet, Sorry!');
+			$('#pdisplay').removeClass('hidden');
+
+			document.querySelector('#header h1').innerHTML = 'Nordic Axe Concept'
+			document.querySelector('.project').innerHTML = 'Nordic Axe Concept';
+			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.wrap').innerHTML = `
+			<image-parallax sp="60" class="el1" src="images/fulls/full/na1.webp"></image-parallax>
+			<image-parallax sp="100" class="el2" src="images/fulls/full/na5.webp"></image-parallax>
+			<image-parallax sp="-80" class="el3" src="images/fulls/full/na4.webp"></image-parallax>`;
+
+			document.querySelector('.center-image-background').innerHTML = `
+			<img class="center-image-parallax" src="images/fulls/full/na1.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/na2.webp" />	
+			<img class="center-image-parallax" src="images/fulls/full/na3.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/na4.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/na5.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/na6.webp" />`;
+
+			document.querySelector('#center-image').style.cssText = `
+				background: linear-gradient(to bottom, rgb(78, 78, 80) 0%,rgba(15, 15, 15, 0.25) 100%), url("images/fulls/full/bp4.webp");
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: top center;
+				background-repeat: no-repeat;`;
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') center no-repeat, url('images/fulls/full/na2.webp') center no-repeat";
+
+			projectarticle.scrollIntoView();
 		} else {
-			alert('Page are not ready yet, Sorry!');
+			$('#pdisplay').removeClass('hidden');
+
+			document.querySelector('#header h1').innerHTML = 'Harimau Malaya'
+			document.querySelector('.project').innerHTML = 'Harimau Malaya';
+			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.wrap').innerHTML = `
+			<image-parallax sp="60" class="el1" src="images/fulls/full/hm1.webp"></image-parallax>
+			<image-parallax sp="100" class="el2" src="images/fulls/full/hm4.webp"></image-parallax>
+			<image-parallax sp="-80" class="el3" src="images/fulls/full/hm6.webp"></image-parallax>`;
+
+			document.querySelector('.center-image-background').innerHTML = `
+			<img class="center-image-parallax" src="images/fulls/full/hm1.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/hm2.webp" />	
+			<img class="center-image-parallax" src="images/fulls/full/hm3.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/hm4.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/hm5.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/hm6.webp" />`;
+
+			document.querySelector('#center-image').style.cssText = `
+				background: linear-gradient(to bottom,  #FFD700 0%,rgba(15, 15, 15, 0.25) 100%), url("images/fulls/full/bp5.webp");
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: top center;
+				background-repeat: no-repeat;`;
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') center no-repeat, url('images/fulls/full/bp5.webp') center no-repeat";
+
+			projectarticle.scrollIntoView();
 		}
 	})
 
