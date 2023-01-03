@@ -367,7 +367,7 @@
 				background-attachment: fixed;
 				background-position: top center;
 				background-repeat: no-repeat;`;
-			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left center no-repeat, url('images/fulls/full/st7.webp') center no-repeat";
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/st7.webp') center no-repeat";
 
 			projectarticle.scrollIntoView();
 
@@ -395,7 +395,7 @@
 				background-attachment: fixed;
 				background-position: top center;
 				background-repeat: no-repeat;`;
-			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left center no-repeat, url('images/fulls/full/ic3.webp') center no-repeat";
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/ic3.webp') center no-repeat";
 
 			projectarticle.scrollIntoView();
 
@@ -423,7 +423,7 @@
 				background-attachment: fixed;
 				background-position: top center;
 				background-repeat: no-repeat;`;
-			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left center no-repeat, url('images/fulls/full/ae3.webp') center no-repeat";
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/ae3.webp') center no-repeat";
 
 			projectarticle.scrollIntoView();
 		} else if (fetchnumber == 4) {
@@ -452,7 +452,7 @@
 				background-attachment: fixed;
 				background-position: top center;
 				background-repeat: no-repeat;`;
-			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left center no-repeat, url('images/fulls/full/na2.webp') center no-repeat";
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/na2.webp') center no-repeat";
 
 			projectarticle.scrollIntoView();
 		} else {
@@ -481,7 +481,7 @@
 				background-attachment: fixed;
 				background-position: top center;
 				background-repeat: no-repeat;`;
-			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left center no-repeat, url('images/fulls/full/bp5.webp') center no-repeat";
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/bp5.webp') center no-repeat";
 
 			projectarticle.scrollIntoView();
 		}
