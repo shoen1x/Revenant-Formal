@@ -3267,7 +3267,7 @@ body {
   }
 
   #center-image {
-  	background: linear-gradient(to bottom, rgb(46, 58, 141) 0%,rgba(228, 30, 42, 0.25) 100%), url("../../images/thumbs/dummy.webp");
+  	background: linear-gradient(to bottom, #2e3a8d 0%,rgba(228, 30, 42, 0.25) 100%), url("../../images/thumbs/dummy.webp");
   	background-size: cover;
   	background-attachment: fixed;
   	background-position: top center;

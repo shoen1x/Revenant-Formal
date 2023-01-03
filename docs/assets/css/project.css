@@ -159,7 +159,7 @@ button a {
   margin-top: 40px;
   margin-bottom: 40px;
   overflow: hidden;
-  background: url('../../assets/css/images/overlay-poster.webp') center no-repeat, url('../../images/thumbs/dummy.webp') center no-repeat;
+  background: url('../../assets/css/images/overlay-poster.webp') left center no-repeat, url('../../images/thumbs/dummy.webp') center no-repeat;
   position: relative;
   box-shadow: 0px 4px 100px -3px #00059733;
 }
