@@ -25,5 +25,8 @@
   "homepage": "https://github.com/shoen1x/Revenant-Formal#readme",
   "dependencies": {
     "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "generate-robotstxt": "^8.0.3"
   }
 }
