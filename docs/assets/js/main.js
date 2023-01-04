@@ -2,8 +2,6 @@
 //	Shoen1x.github.io | @Shoenixstudios
 //  under the CCA 3.0 License | Credit to HTML5 UP for template
 
-import robotstxt from "generate-robotstxt";
-
 (function ($) {
 
 	// Disable Mobile Experiences
