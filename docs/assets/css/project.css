@@ -18,6 +18,9 @@
 .navmp-list {
   display: flex;
   justify-content: space-between;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 @media screen and (max-width: 768px) {
@@ -27,13 +30,20 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+    .navmp-list {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .navmp-item {
   display: flex;
   background-color: #000;
   height: calc(100vh - 80px);
   width: 33%;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in;
   position: relative;
   align-items: center;
   filter: grayscale(100%);
@@ -43,7 +53,18 @@
     width: 100%;
     height: 200px;
   }
-  .navmp-item:hover {
+  .navmp-item:focus, .navmp-item:active {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navmp-item {
+    width: 100%;
+    height: 200px;
+  }
+  .navmp-item:hover,
+  .navmp-item:focus,
+  .navmp-item:active  {
     height: 350px;
   }
 }
@@ -87,6 +108,11 @@
     font-size: 70px;
   }
 }
+@media screen and (max-width: 480px) {
+  .navmp-item .navmp-item-content h2 {
+    font-size: 50px;
+  }
+}
 .navmp-item:hover {
   width: 100%;
   filter: none;
@@ -104,6 +130,26 @@
   .navmp-item .navmp-item-bg {
     background-size: 70% !important;
     background-position: center right !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navmp-item .navmp-item-bg {
+    background-size: 100% !important;
+    background-position: center !important;
+  }
+  .navmp-item:hover, .navmp-item:focus, .navmp-item:active {
+    width: 100%;
+    filter: none;
+  }
+  .navmp-item:hover, .navmp-item:focus, .navmp-item:active .navmp-item-content {
+    margin-left: 50px;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  .navmp-item:hover, .navmp-item:focus, .navmp-item:active button {
+    margin-left: 0;
+    opacity: 1;
   }
 }
 
@@ -192,25 +238,6 @@ button a {
   line-height: 1.8em;
 }
 
-/*
-.artcontent .poster .poster-buttons {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 70px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  color: white;
-  text-align: center;
-}
-.artcontent .poster .poster-buttons div {
-  cursor: pointer;
-}
-.artcontent .poster .poster-buttons div:hover {
-  color: #ccc;
-}
-*/
-
 @media (max-width: 700px) {
   .artcontent {
     width: 90%;
@@ -222,6 +249,28 @@ button a {
 
   .artcontent .poster .poster-title h1 {
     font-size: 25px;
+  }
+
+  .artcontent .poster .poster-title p,
+  .artcontent .poster .poster-title .line {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .artcontent {
+    width: 90%;
+  }
+
+  .artcontent .poster {
+    height: 180px;
+  }
+
+  .artcontent .poster .poster-title h1 {
+    width: 240px;
+    font-size: 35px;
+    margin: 8px 0;
+    text-align: left;
   }
 
   .artcontent .poster .poster-title p,
