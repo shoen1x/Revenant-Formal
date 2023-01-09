@@ -29,7 +29,11 @@
     }
   ],
   "headers": [
-    { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "max-age=604800, must-revalidate"}] }
+    { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "max-age=604800, must-revalidate"}] },
+    { "source" : "**/*.@(eot|otf|ttf|ttc|woff|font.css)","headers" : [ {"key" : "Access-Control-Allow-Origin","value" : "*"} ]},
+    { "source" : "**/*.@(js|css)","headers" : [ {"key" : "Cache-Control","value" : "max-age=604800, must-revalidate"} ]},
+    { "source" : "**/*.@(jpg|jpeg|gif|png)","headers" : [ {"key" : "Cache-Control","value" : "max-age=604800"} ]},
+    { "source" : "404.html","headers" : [ {"key" : "Cache-Control","value" : "max-age=300"} ]}
   ]
   }
 }
