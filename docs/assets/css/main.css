@@ -2563,7 +2563,7 @@ body.is-touch .main {
 /* Intro */
 
 #intro {
-	background: url("../css/images/overlay2.png"), url("../../images/shoenixintro.webp");
+	background: url("../css/images/overlay2.webp"), url("../../images/shoenixintro.webp");
 	background-size: 2048px 1080px, cover;
 	background-attachment: fixed, fixed;
 	background-position: center center, top center;
@@ -2573,7 +2573,7 @@ body.is-touch .main {
 /* first */
 
 #first {
-	background: url("../css/images/overlay2.png"), url("../../images/shoenixfirst.webp");
+	background: url("../css/images/overlay2.webp"), url("../../images/shoenixfirst.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, fixed;
 	background-position: center center, center center;
@@ -2583,7 +2583,7 @@ body.is-touch .main {
 /* second */
 
 #second {
-	background: url("../css/images/overlay2.png"), url("../../images/shoenixsecond.webp");
+	background: url("../css/images/overlay2.webp"), url("../../images/shoenixsecond.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, fixed;
 	background-position: center center, center bottom;
