@@ -240,34 +240,6 @@
 			$window.trigger('resize');
 		});
 
-	// Splide base Ads carousel
-	var splide;
-
-	document.addEventListener('DOMContentLoaded', function () {
-
-		splide = new Splide('.splide', {
-			autoplay: true,
-			interval: 12000,
-			pauseOnHover: false,
-
-			arrows: false,
-			perPage: 1,
-			type: 'loop',
-			pagination: true,
-			keyboard: false,
-			slideFocus: false
-		}).mount();
-
-		splide.on('move', function () {
-			var slides = document.querySelectorAll('.splide .splide__slide');
-
-			slides.forEach(function (slide) {
-				slide.classList.add('is-visible');
-			});
-		});
-
-	});
-
 	// Scroll Indicator
 	const indicator = document.querySelector(".scroll-indicator")
 
@@ -432,6 +404,10 @@
 	// Hanya Allah yang tahu
 
 })(jQuery);
+
+function onclickadsinfo() {
+	alert("This not yet ready, stay tuned");
+  }
 
 jQuery.event.special.touchstart = {
 	setup: function (_, ns, handle) {
