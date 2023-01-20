@@ -4,15 +4,8 @@
 	under the CCA 3.0 License | Credit to HTML5 UP for template
 */
 
-@font-face {
-	font-family: futura;
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-	src: url('../../assets/webfonts/futura-medium-bt-revenant.ttf') format('truetype');
-}
-
-@import url('../../assets/css/fontawesome-all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('../../assets/css/all.min.css');
 
 html,
 body,
@@ -182,7 +175,8 @@ textarea {
 html {
 	height: 100%;
 	background: #110101;
-	font-family: 'futura', sans-serif;
+	font-weight: 400;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 	scroll-behavior: smooth;
 }
 
@@ -555,9 +549,9 @@ body:before {
 	-webkit-transform-origin: 50% 50%;
 	-ms-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
-	font-family: futura;
+	font-weight: 400;
+	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 	font-style: normal;
-	font-weight: normal;
 	text-transform: none !important;
 	color: inherit;
 	content: '\f1ce';
@@ -624,8 +618,8 @@ body,
 input,
 textarea,
 select {
-	font-family: futura;
-	font-weight: 300;
+	font-weight: 400;
+	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 18pt;
 	line-height: 1.75em;
 	color: rgba(255, 255, 255, 0.5);
@@ -696,7 +690,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 900;
+	font-weight: 600;
 	color: inherit;
 	letter-spacing: -0.0325em;
 }
@@ -727,7 +721,7 @@ h2 {
 
 strong,
 b {
-	font-weight: 900;
+	font-weight: 600;
 	color: inherit;
 }
 
@@ -1369,6 +1363,10 @@ span {
 	line-height: 1.5em;
 }
 
+span.returnbutton {
+	display: contents;
+}
+
 header a:hover {
 	text-shadow: 0 0 0.25px #fff, 0 0 0.50px #181718, 0 0 0.75px #181718, 0 0 1px #181718, 0 0 1.25px #181718, 0 0 1.5px #181718, 0 0 1.75px #181718;
 }
@@ -1385,68 +1383,6 @@ header a:hover {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-	float: right;
-	overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-	font-size: 16px;
-	border: none;
-	outline: none;
-	padding: 14px 16px;
-	background-color: inherit;
-	font-family: inherit;
-	/* Important for vertical align on mobile phones */
-	margin: 0;
-	/* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-	 background-color: transparent; 
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-	display: none;
-	content: '';
-	border-radius: 0 0 8px 8px;
-	position: absolute;
-	background-color: #39454b;
-	align-items: right;
-	min-width: 110px;
-	right: 0;
-	top: 100%;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 2;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-	float: none;
-	position: relative;
-	color: inherit;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-	text-align: right;
-	overflow: hidden;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-	background-color: rgb(107, 102, 102);
-	border-radius: 0 0 8px 8px;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-	display: block;
 }
 
 footer {
@@ -1473,7 +1409,7 @@ table.default td {
 
 table.default th {
 	text-align: left;
-	font-weight: 900;
+	font-weight: 600;
 	padding: 0.5em 1em 0.5em 1em;
 }
 
@@ -1516,7 +1452,7 @@ table.default tfoot {
 	animation: spinner-rotate 0.75s infinite linear !important;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	font-family: futura;
+	font-family: 'Font Awesome 5 Free';
 	font-style: normal;
 	font-weight: normal;
 	text-transform: none !important;
@@ -2654,8 +2590,8 @@ body.is-touch .main {
 body {
 	position: relative;
 	font-size: 100%;
-	font-family: 'futura', sans-serif;
 	font-weight: 400;
+	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 	min-height: 100vh;
 }
 
@@ -2770,7 +2706,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	font-family: futura;
+	font-weight: 400;
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
   }
   
   .mptext__short {
@@ -3202,7 +3139,7 @@ i {
 	bottom: 0;
 	right: 130px;
 	font-size: 60px;
-	font-weight: 700;
+	font-weight: 600;
 	color: #fff;
   }
   .info-container .card .fa-arrow-right {
@@ -3300,5 +3237,20 @@ i {
 	  .info-container .card .fa-arrow-right {
 		right: 25px;
 		bottom: 10px;
+	  }
+
+	  .info-container .card:focus, .card:active i {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	  }
+	  .info-container .card:focus, .card:active button {
+		transform: scale(5);
+		}
+	  .info-container .card:focus, .card:active p {
+		color: #fff;
+		}
+	  .info-container .card:focus, .card:active .pic {
+		filter: grayscale(0);
 	  }
   }
