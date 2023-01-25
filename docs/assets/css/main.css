@@ -166,6 +166,10 @@ textarea {
 	appearance: none;
 }
 
+img {
+	max-width: 100%;
+  }
+
 /* Basic */
 
 @-ms-viewport {

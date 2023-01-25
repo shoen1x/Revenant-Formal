@@ -9,7 +9,6 @@
 
 .navmp-list {
   display: flex;
-  justify-content: space-between;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
@@ -66,20 +65,29 @@
   display: block;
   position: absolute;
 }
-.navmp-item:nth-child(1) .navmp-item-bg {
+.navmp-list:nth-of-type(1) .navmp-item:nth-child(1) .navmp-item-bg {
   background: url("../../images/fulls/full/bp1.webp") no-repeat bottom center/cover;
 }
-.navmp-item:nth-child(2) .navmp-item-bg {
+.navmp-list:nth-of-type(1) .navmp-item:nth-child(2) .navmp-item-bg {
   background: url("../../images/fulls/full/bp2.webp") no-repeat center bottom/cover;
 }
-.navmp-item:nth-child(3) .navmp-item-bg {
+.navmp-list:nth-of-type(1) .navmp-item:nth-child(3) .navmp-item-bg {
   background: url("../../images/fulls/full/bp3.webp") no-repeat center center/cover;
 }
-.navmp-item:nth-child(4) .navmp-item-bg {
+.navmp-list:nth-of-type(1) .navmp-item:nth-child(4) .navmp-item-bg {
   background: url("../../images/fulls/full/bp4.webp") no-repeat center center/cover;
 }
-.navmp-item:nth-child(5) .navmp-item-bg {
+.navmp-list:nth-of-type(1) .navmp-item:nth-child(5) .navmp-item-bg {
   background: url("../../images/fulls/full/bp5.webp") no-repeat center center/cover;
+}
+.navmp-list:nth-of-type(2) .navmp-item:nth-child(1) .navmp-item-bg {
+  background: url("../../images/fulls/full/bp6.webp") no-repeat center center/cover;
+}
+.navmp-list:nth-of-type(2) .navmp-item:nth-child(2) .navmp-item-bg {
+  background: url("../../images/fulls/full/bp7.webp") no-repeat center center/cover;
+}
+.navmp-list:nth-of-type(2) .navmp-item:nth-child(3) .navmp-item-bg {
+  background: url("../../images/fulls/full/bp8.webp") no-repeat center center/cover;
 }
 .navmp-item .navmp-item-content {
   color: #fff;

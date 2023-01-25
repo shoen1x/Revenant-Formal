@@ -264,7 +264,7 @@
 			document.querySelector('#header h1').innerHTML = 'Southern Tigers Concept'
 			document.querySelector('.project').innerHTML = 'Southern Tigers<br>Concept';
 			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
-			document.querySelector('.project-overview').innerHTML = 'Southern Tigers Lorem';
+			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
 
 			document.querySelector('.center-image-background').innerHTML = `
 			<img class="center-image-parallax" src="images/fulls/full/st7.webp" />
@@ -295,6 +295,7 @@
 			document.querySelector('.project').innerHTML = 'Istinggar<br>Concept';
 			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
 			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			
 			document.querySelector('.center-image-background').innerHTML = `
 			<img class="center-image-parallax" src="images/fulls/full/ic1.webp" />
 			<img class="center-image-parallax" src="images/fulls/full/ic2.webp" />
@@ -362,7 +363,7 @@
 			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/na2.webp') center no-repeat";
 
 			projectarticle.scrollIntoView();
-		} else {
+		} else if (fetchnumber == 5) {
 			$('#pdisplay').removeClass('hidden');
 
 			document.querySelector('#header h1').innerHTML = 'Harimau Malaya'
@@ -387,6 +388,90 @@
 			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/bp5.webp') center no-repeat";
 
 			projectarticle.scrollIntoView();
+		} else if (fetchnumber == 6) {
+			$('#pdisplay').removeClass('hidden');
+
+			document.querySelector('#header h1').innerHTML = 'Kelantan Home Concept'
+			document.querySelector('.project').innerHTML = 'Kelantan Home<br>Concept';
+			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+
+			document.querySelector('.center-image-background').innerHTML = `
+			<img class="center-image-parallax" src="images/fulls/full/cs1.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs2.webp" />	
+			<img class="center-image-parallax" src="images/fulls/full/cs3.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs4.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs5.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs6.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs7.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs8.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs9.webp" />`;
+
+			document.querySelector('#center-image').style.cssText = `
+				background: linear-gradient(to bottom,  #E50C11 0%,rgba(15, 15, 15, 0.25) 100%), url("images/fulls/full/bp6.webp");
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: top center;
+				background-repeat: no-repeat;`;
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/bp6.webp') center no-repeat";
+
+			projectarticle.scrollIntoView();
+		} else if (fetchnumber == 7) {
+			$('#pdisplay').removeClass('hidden');
+
+			document.querySelector('#header h1').innerHTML = 'Kelantan Away Concept'
+			document.querySelector('.project').innerHTML = 'Kelantan Away<br>Concept';
+			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+
+			document.querySelector('.center-image-background').innerHTML = `
+			<img class="center-image-parallax" src="images/fulls/full/cs1a.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs2a.webp" />	
+			<img class="center-image-parallax" src="images/fulls/full/cs3a.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs4a.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs5a.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs6a.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs7a.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs8a.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/cs9a.webp" />`;
+
+			document.querySelector('#center-image').style.cssText = `
+				background: linear-gradient(to bottom,  #D1B31D 0%,rgba(15, 15, 15, 0.25) 100%), url("images/fulls/full/bp7.webp");
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: top center;
+				background-repeat: no-repeat;`;
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/bp7.webp') top no-repeat";
+
+			projectarticle.scrollIntoView();
+		} else {
+			$('#pdisplay').removeClass('hidden');
+
+			document.querySelector('#header h1').innerHTML = 'Sri Pahang X Voltra'
+			document.querySelector('.project').innerHTML = 'Sri Pahang<br>X Voltra';
+			document.querySelector('.project-description').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+			document.querySelector('.project-overview').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate, laboriosam sunt eveniet eius iure, sapiente in maiores quasi saepe quas quisquam obcaecati odio ';
+
+			document.querySelector('.center-image-background').innerHTML = `
+			<img class="center-image-parallax" src="images/fulls/full/sxv1.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/sxv2.webp" />	
+			<img class="center-image-parallax" src="images/fulls/full/sxv3.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/sxv4.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/sxv5.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/sxv6.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/sxv7.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/sxv8.webp" />
+			<img class="center-image-parallax" src="images/fulls/full/sxv9.webp" />`;
+
+			document.querySelector('#center-image').style.cssText = `
+				background: linear-gradient(to bottom,  #FFD700 0%,rgba(15, 15, 15, 0.25) 100%), url("images/fulls/full/bp8.webp");
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: top center;
+				background-repeat: no-repeat;`;
+			document.querySelector('.artcontent .poster').style.background = "url('assets/css/images/overlay-poster.webp') left no-repeat, url('images/fulls/full/bp8.webp') center no-repeat";
+
+			projectarticle.scrollIntoView();
 		}
 	})
 
@@ -407,7 +492,7 @@
 
 function onclickadsinfo() {
 	alert("This not yet ready, stay tuned");
-  }
+}
 
 jQuery.event.special.touchstart = {
 	setup: function (_, ns, handle) {
