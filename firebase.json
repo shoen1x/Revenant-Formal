@@ -1,22 +1,11 @@
 {
   "hosting": {
     "public": "docs",
-    "cleanUrls": true, 
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json","**/.*","**/node_modules/**"],
     "rewrites": [
       {
           "source": "**",
-          "destination": "/main.html",
-          "type": 301
-      },
-      {
-          "source": "/main.html",
-          "destination": "/main.html",
-          "type": 301
+          "destination": "/index.html"
       },
       {
           "source": "**",
@@ -24,6 +13,7 @@
           "type": 404
       }
   ],
+  "cleanUrls": true,
   "headers": [
     { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "max-age=604800, must-revalidate"}] },
     { "source" : "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)","headers" : [ {"key" : "Access-Control-Allow-Origin","value" : "*"} ]},
