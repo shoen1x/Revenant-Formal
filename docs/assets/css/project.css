@@ -9,20 +9,23 @@
 
 .navmp-list {
   display: flex;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
 }
 
 @media screen and (max-width: 768px) {
-    .navmp-list {
+  .navmp-list {
     flex-direction: column;
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 480px) {
-    .navmp-list {
+  .navmp-list {
     flex-direction: column;
     justify-content: space-between;
   }
@@ -39,56 +42,71 @@
   align-items: center;
   filter: grayscale(100%);
 }
+
 @media screen and (max-width: 768px) {
   .navmp-item {
     width: 100%;
     height: 200px;
   }
-  .navmp-item:focus, .navmp-item:active {
+
+  .navmp-item:focus,
+  .navmp-item:active {
     height: 350px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .navmp-item {
     width: 100%;
     height: 200px;
   }
+
   .navmp-item:hover,
   .navmp-item:focus,
-  .navmp-item:active  {
+  .navmp-item:active {
     height: 350px;
   }
 }
+
 .navmp-item .navmp-item-bg {
   height: 100vh;
   width: 100%;
   display: block;
   position: absolute;
 }
+
 .navmp-list:nth-of-type(1) .navmp-item:nth-child(1) .navmp-item-bg {
   background: url("../../images/fulls/full/bp1.webp") no-repeat bottom center/cover;
 }
+
 .navmp-list:nth-of-type(1) .navmp-item:nth-child(2) .navmp-item-bg {
   background: url("../../images/fulls/full/bp2.webp") no-repeat center bottom/cover;
 }
+
 .navmp-list:nth-of-type(1) .navmp-item:nth-child(3) .navmp-item-bg {
   background: url("../../images/fulls/full/bp3.webp") no-repeat center center/cover;
 }
+
 .navmp-list:nth-of-type(1) .navmp-item:nth-child(4) .navmp-item-bg {
   background: url("../../images/fulls/full/bp4.webp") no-repeat center center/cover;
 }
+
 .navmp-list:nth-of-type(1) .navmp-item:nth-child(5) .navmp-item-bg {
   background: url("../../images/fulls/full/bp5.webp") no-repeat center center/cover;
 }
+
 .navmp-list:nth-of-type(2) .navmp-item:nth-child(1) .navmp-item-bg {
   background: url("../../images/fulls/full/bp6.webp") no-repeat center center/cover;
 }
+
 .navmp-list:nth-of-type(2) .navmp-item:nth-child(2) .navmp-item-bg {
   background: url("../../images/fulls/full/bp7.webp") no-repeat center center/cover;
 }
+
 .navmp-list:nth-of-type(2) .navmp-item:nth-child(3) .navmp-item-bg {
   background: url("../../images/fulls/full/bp8.webp") no-repeat center center/cover;
 }
+
 .navmp-item .navmp-item-content {
   color: #fff;
   margin-left: -70px;
@@ -96,6 +114,7 @@
   transition: all 0.3s ease-in-out;
   filter: blur(1px);
 }
+
 .navmp-item .navmp-item-content h2 {
   font-size: 120px;
   font-weight: 600;
@@ -103,29 +122,35 @@
   margin: 0 0 30px;
   text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
 }
+
 @media screen and (max-width: 980px) {
   .navmp-item .navmp-item-content h2 {
     font-size: 70px;
   }
 }
+
 @media screen and (max-width: 480px) {
   .navmp-item .navmp-item-content h2 {
     font-size: 50px;
   }
 }
+
 .navmp-item:hover {
   width: 100%;
   filter: none;
 }
+
 .navmp-item:hover .navmp-item-content {
   margin-left: 50px;
   opacity: 1;
   filter: blur(0px);
 }
+
 .navmp-item:hover button {
   margin-left: 0;
   opacity: 1;
 }
+
 @media screen and (max-width: 768px) {
   .navmp-item .navmp-item-bg {
     background-size: 70% !important;
@@ -138,23 +163,31 @@
     background-size: 100% !important;
     background-position: center !important;
   }
-  .navmp-item:hover, .navmp-item:focus, .navmp-item:active {
+
+  .navmp-item:hover,
+  .navmp-item:focus,
+  .navmp-item:active {
     width: 100%;
     filter: none;
   }
-  .navmp-item:hover, .navmp-item:focus, .navmp-item:active .navmp-item-content {
+
+  .navmp-item:hover,
+  .navmp-item:focus,
+  .navmp-item:active .navmp-item-content {
     margin-left: 50px;
     opacity: 1;
     filter: blur(0px);
   }
-  .navmp-item:hover, .navmp-item:focus, .navmp-item:active button {
+
+  .navmp-item:hover,
+  .navmp-item:focus,
+  .navmp-item:active button {
     margin-left: 0;
     opacity: 1;
   }
 }
 
-button {
-  /* padding: 15px 30px; */
+.stpage {
   background-color: #3d3a3a;
   font-weight: 500;
   font-family: futura;
@@ -170,11 +203,11 @@ button {
   transition: margin 0.5s ease-in-out, opacity 0.5s ease-in-out, background-color 0.2s ease;
 }
 
-button:hover {
+.stpage:hover {
   background-color: #161616;
 }
 
-button a {
+.stpage a {
   text-decoration: none;
 }
 

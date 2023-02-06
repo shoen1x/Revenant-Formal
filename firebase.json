@@ -3,7 +3,7 @@
     "public": "docs",
     "ignore": ["firebase.json","**/.*","**/node_modules/**"],
     "rewrites": [
-      {
+      { 
           "source": "**",
           "destination": "/index.html"
       },
@@ -15,7 +15,7 @@
   ],
   "cleanUrls": true,
   "headers": [
-    { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "max-age=604800, must-revalidate"}] },
+    { "source":"/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}] },
     { "source" : "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)","headers" : [ {"key" : "Access-Control-Allow-Origin","value" : "*"} ]},
     { "source" : "**/*.@(js|css)","headers" : [ {"key" : "Cache-Control","value" : "max-age=604800, must-revalidate"} ]},
     { "source" : "**/*.@(jpg|jpeg|gif|png|webp|svg)","headers" : [ {"key" : "Cache-Control","value" : "max-age=604800, must-revalidate"} ]},
