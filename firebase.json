@@ -5,11 +5,11 @@
     "rewrites": [
       { 
           "source": "**",
-          "destination": "/home"
+          "destination": "/home.html"
       },
       {
           "source": "**",
-          "destination": "/404",
+          "destination": "/404.html",
           "type": 404
       }
   ],
@@ -19,7 +19,7 @@
     { "source" : "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)","headers" : [ {"key" : "Access-Control-Allow-Origin","value" : "*"} ]},
     { "source" : "**/*.@(js|css)","headers" : [ {"key" : "Cache-Control","value" : "max-age=604800, must-revalidate"} ]},
     { "source" : "**/*.@(jpg|jpeg|gif|png|webp|svg)","headers" : [ {"key" : "Cache-Control","value" : "max-age=604800, must-revalidate"} ]},
-    { "source" : "404","headers" : [ {"key" : "Cache-Control","value" : "max-age=300"} ]}
+    { "source" : "404.html","headers" : [ {"key" : "Cache-Control","value" : "max-age=300"} ]}
   ]
   }
 }
