@@ -3182,6 +3182,7 @@ h2 {
 	bottom: 8px;
 	font-size: 40px;
 	cursor: pointer;
+	color: #000000;
 }
 
 .info-container .card p {
@@ -3220,10 +3221,10 @@ h2 {
 	bottom: 14px;
 	width: 30px;
 	height: 30px;
-	background-color: #DA4D1D;
+	background-color: #a09d9c;
 	border: none;
 	border-radius: 30px;
-	cursor: pointer;
+	cursor: default;
 	outline: none;
 	transition: all 0.3s ease;
 	mix-blend-mode: hard-light;
@@ -3234,11 +3235,14 @@ h2 {
 }
 
 .info-container .card:hover button {
-	transform: scale(16.5);
+	transform: scale(21);
+	-webkit-transform: scale(21);
+	border-radius: 0%;
+	opacity: 25%;
 }
 
 .info-container .card:hover p {
-	color: #fff;
+	color: #000000;
 }
 
 .info-container .card:hover .pic {
@@ -3249,24 +3253,16 @@ h2 {
 	background-image: url("../../images/thumbs/adsinfo-2.webp");
 }
 
-.info-container .card:nth-child(2) button {
-	background-color: #2b26c3;
-}
-
 .info-container .card:nth-child(3) .pic {
 	background-image: url("../../images/thumbs/adsinfo-3.webp");
-}
-
-.info-container .card:nth-child(3) button {
-	background-color: #19a719;
 }
 
 .info-container .card:nth-child(4) .pic {
 	background-image: url("../../images/thumbs/adsinfo-4.webp");
 }
 
-.info-container .card:nth-child(4) button {
-	background-color: #c32626;
+.info-container .card:nth-child(5) .pic {
+	background-image: url("../../images/thumbs/adsinfo-5.webp");
 }
 
 @media screen and (max-width: 480px) {
@@ -3287,6 +3283,7 @@ h2 {
 	.info-container .card .fa-arrow-right {
 		right: 25px;
 		bottom: 10px;
+		color: #ffffff;
 	}
 
 	.info-container .card:focus,
@@ -3298,7 +3295,7 @@ h2 {
 
 	.info-container .card:focus,
 	.card:active button {
-		transform: scale(5);
+		transform: scale(21);
 	}
 
 	.info-container .card:focus,

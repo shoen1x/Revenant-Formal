@@ -497,13 +497,16 @@
 			// window.open("product", "_self");
 		} else if (procollection == 2) {
 			localStorage.setItem("product_number", "2");
-			window.open("product", "_self");
+			window.open("product?" + localStorage.getItem('product_number'), "_self");
 		} else if (procollection == 3) {
 			localStorage.setItem("product_number", "3");
-			window.open("product", "_self");
-		} else {
+			window.open("product?" + localStorage.getItem('product_number'), "_self");
+		} else if (procollection == 4) {
 			localStorage.setItem("product_number", "4");
-			window.open("product", "_self");
+			window.open("product?" + localStorage.getItem('product_number'), "_self");
+		} else {
+			localStorage.setItem("product_number", "5");
+			window.open("product?" + localStorage.getItem('product_number'), "_self");
 		}
 	})
 
