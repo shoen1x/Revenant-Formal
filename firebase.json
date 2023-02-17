@@ -2,10 +2,17 @@
   "hosting": {
     "public": "docs",
     "ignore": ["firebase.json","**/.*","**/node_modules/**"],
+    "redirects":[ 
+      {
+        "source": "/",
+        "destination": "/home.html",
+        "type": 301
+      }
+    ],
     "rewrites": [
       { 
           "source": "**",
-          "destination": "/home.html"
+          "destination": "/index.html"
       },
       {
           "source": "**",

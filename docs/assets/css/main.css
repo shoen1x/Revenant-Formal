@@ -561,6 +561,7 @@ body:before {
 	text-transform: none !important;
 	color: inherit;
 	content: '\f1ce';
+	color: #000000;
 	cursor: default;
 	display: block;
 	font-size: 2em;
