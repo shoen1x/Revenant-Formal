@@ -36,6 +36,7 @@
 
 - Basic Interface
     - [x] Added favicon based `.ico`
+        - [x] Replaced favicon .ico with .svg+xml
     - [x] Hero Images
     - [x] Banner Images
     - [x] Parallax images implemented
