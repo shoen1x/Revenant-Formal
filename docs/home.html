@@ -37,15 +37,6 @@
 	<!-- Header -->
 	<header id="header">
 		<h1>Shoenix Studios</h1>
-		<div class="dropdown-container">
-			<div class="dropdown-toggle click-dropdown">Language</div>
-			<div class="dropdown-menu">
-				<ul>
-					<li><a id="language-button" value="my" href="#">Malay</a></li>
-					<li><a id="language-button" value="en" href="#">English</a></li>
-				</ul>
-			</div>
-		</div>
 	</header>
 
 	<!-- Intro -->
@@ -68,14 +59,24 @@
 		<span class="firsttext"
 			style="position: absolute; text-align: center; font-size: 100px; line-height: 100px; left: 50%; transform: translateX(-50%);">VALHALLA
 			AXE<br>CONCEPT</span>
-		<model-viewer src="images/3D/valhalla.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-			poster="images/3D/poster.webp" touch-action="pan-y" alt="Valhalla Axes by Shoenix Studios"
-			shadow-intensity="1" auto-rotate data-js-focus-visible ar-status="not-presenting"
-			generate-schema></model-viewer>
+
+			<model-viewer id="lazy-load1" src="images/3D/valhalla.glb" reveal="manual" camera-controls
+			poster="images/3D/poster.webp" disable-zoom touch-action="pan-y" alt="Valhalla Axes by Shoenix Studios"
+			shadow-intensity="1" disable-tap auto-rotate data-js-focus-visible>
+		
+			<div id="lazy-load-poster" slot="poster"></div>
+			<div id="button-load1" slot="poster">Load 3D Model</div>
+
+			<script>
+				document.querySelector('#button-load1').addEventListener('click', 
+				  () => document.querySelector('#lazy-load1').dismissPoster());
+			  </script>
+
+		</model-viewer>
 
 		<ul class="actions bottom-special">
-			<a href="#" target="_blank"
-				onclick='window.open("https://www.artstation.com/artwork/o2OV4Ls");return false;' class="button"
+			<a href="/" target="_blank"
+				onclick='window.open("https://www.artstation.com/artwork/o2OV4L");return false;' class="button"
 				aria-hidden="true">Artstation Documentation</a>
 		</ul>
 
@@ -87,10 +88,20 @@
 		<span class="secondtext"
 			style="position: absolute; text-align: center; font-size: 100px; line-height: 100px; left: 50%; transform: translateX(-50%);">JOHOR
 			DARUL TA'ZIM<br>JERSEY CONCEPT</span>
-		<model-viewer src="images/3D/johorconcept.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
-			poster="images/3D/poster2.webp" touch-action="pan-y" alt="Johor Concept by Shoenix Studios"
-			shadow-intensity="1" auto-rotate data-js-focus-visible ar-status="not-presenting"
-			generate-schema></model-viewer>
+
+			<model-viewer id="lazy-load2" src="images/3D/johorconcept.glb" reveal="manual" camera-controls
+			poster="images/3D/poster2.webp" disable-zoom touch-action="pan-y" alt="Johor Concept by Shoenix Studios"
+			shadow-intensity="1" disable-tap auto-rotate data-js-focus-visible>
+		
+			<div id="lazy-load-poster" slot="poster"></div>
+			<div id="button-load2" slot="poster">Load 3D Model</div>
+		
+			<script>
+				document.querySelector('#button-load2').addEventListener('click', 
+				  () => document.querySelector('#lazy-load2').dismissPoster());
+			  </script>
+
+		</model-viewer>
 
 		<ul class="actions bottom-special">
 			<a href="#" target="_blank"
@@ -155,7 +166,8 @@
 								<path d="M8,1 L8,11" class="svg-out"></path>
 							</svg>
 						</div>
-						<h1>NEUROKIT <br> WALLPAPER</h1><a class="go-to-next">NEXT <span class="fas fa-arrow-right" aria-hidden="true"></a>
+						<h1>NEUROKIT <br> WALLPAPER</h1><a class="go-to-next">NEXT <span class="fas fa-arrow-right"
+								aria-hidden="true"></a>
 					</div>
 				</div>
 			</div>
@@ -174,7 +186,8 @@
 								<path d="M8,1 L8,11" class="svg-out"></path>
 							</svg>
 						</div>
-						<h1>TIGER LEAP <br> WALLPAPER</h1><a class="go-to-next">NEXT <span class="fas fa-arrow-right" aria-hidden="true"></a>
+						<h1>TIGER LEAP <br> WALLPAPER</h1><a class="go-to-next">NEXT <span class="fas fa-arrow-right"
+								aria-hidden="true"></a>
 					</div>
 				</div>
 			</div>
@@ -356,7 +369,6 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script src="assets/js/languages.js"></script>
 	<script type="module" src="assets/js/firebase.js"></script>
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
