@@ -107,6 +107,10 @@
   background: url("../../images/fulls/full/bp8.webp") no-repeat center center/cover;
 }
 
+.navmp-list:nth-of-type(2) .navmp-item:nth-child(4) .navmp-item-bg {
+  background: url("../../images/fulls/full/bp9.webp") no-repeat center center/cover;
+}
+
 .navmp-item .navmp-item-content {
   color: #fff;
   margin-left: -70px;

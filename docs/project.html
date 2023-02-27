@@ -9,7 +9,7 @@
 
 <head>
     <!--Title-->
-    <title>Projects | SHX</title>
+    <title>Projects | Shoenix Studios</title>
 
     <!--Meta and linker-->
     <meta http-equiv=Content-Type content=text/html; charset=utf-8 />
@@ -41,7 +41,7 @@
     </header>
 
     <section id="navsection" class="styleb">
-        <nav class="navmp">
+        <nav id="navmpselect" class="navmp">
             <ul class="navmp-list">
                 <li class="navmp-item">
                     <div class="navmp-item-bg"></div>
@@ -86,6 +86,7 @@
             </ul>
 
             <ul class="navmp-list">
+
                 <li class="navmp-item">
                     <div class="navmp-item-bg"></div>
                     <div class="navmp-item-content">
@@ -110,7 +111,16 @@
                     </div>
                 </li>
 
+                <li class="navmp-item">
+                    <div class="navmp-item-bg"></div>
+                    <div class="navmp-item-content">
+                        <h2>Cyber<br>Sword</h2>
+                        <button class="stpage" data-navpagenum="9">View</button>
+                    </div>
+                </li>
+
             </ul>
+
         </nav>
     </section>
 
@@ -176,47 +186,46 @@
     </section>
 
     <section class="main style5 primary">
-        <li style="margin-right: 12px;" class="button style2 return" href="#" onclick='window.scrollTo(0,0);'><a
-                class="fas fa-arrow-up" aria-hidden="true"></a><span class="returnbutton"> Return to top</span></li>
-        <li class="button style2 return" href="#" onclick='window.open("home", "_self");return false;'><a
-                class="fas fa-undo-alt" aria-hidden="true"></a><span class="returnbutton"> Return Home</span></li>
+        <a style="margin-right: 12px;" class="button" onclick='window.scrollTo(0,0);' aria-hidden="true">Return to top</a>
+        <a class="button" href="home" target="_self" aria-label="Home">Return Home</a>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer">
+	<!-- Footer -->
+	<footer id="footer">
 
-        <!-- Icons -->
-        <ul class="icons">
-            <li><a href="#" onclick="window.open('https://www.facebook.com/shoenixstudios');return false;"
-                    target="_blank" aria-label="Facebook" class="icon brands fa-facebook-f"><span
-                        class="label">Facebook</span></a></li>
-            <li><a href="#" onclick="window.open('https://www.instagram.com/shoenix_studios/');return false;"
-                    target="_blank" aria-label="Instagram" class="icon brands fa-instagram"><span
-                        class="label">Instagram</span></a>
-            </li>
-            <li><a href="#" onclick="window.open('https://www.youtube.com/@shoenixstudios');return false;"
-                    target="_blank" aria-label="Youtube" class="icon brands fa-youtube"><span
-                        class="label">youtube</span></a></li>
-            <li><a href="#" onclick="window.open('https://github.com/shoen1x');return false;" target="_blank"
-                    aria-label="Github" class="icon brands fa-github"><span class="label">Github</span></a></li>
-        </ul>
+		<!-- Icons -->
+		<ul class="icons">
+			<li><a href="https://www.facebook.com/shoenixstudios"
+					target="_blank" aria-label="Facebook" class="icon brands fa-facebook-f"><span
+						class="label">Facebook</span></a></li>
+			<li><a href="https://www.instagram.com/shoenix_studios/" 
+					target="_blank" aria-label="Instagram" class="icon brands fa-instagram"><span
+						class="label">Instagram</span></a></li>
+			<li><a href="https://www.youtube.com/@shoenixstudios"
+					target="_blank" aria-label="Youtube" class="icon brands fa-youtube"><span
+						class="label">youtube</span></a></li>
+			<li><a href="https://github.com/shoen1x"
+					target="_blank" aria-label="Github" class="icon brands fa-github"><span 
+					class="label">Github</span></a></li>
+		</ul>
 
-        <!-- Menu -->
-        <ul class="menu">
-            <li>&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</li>
-        </ul>
-    </footer>
+		<!-- Menu -->
+		<ul class="menu">
+			<li>&copy; 2023 Shoenix Studios All Rights Reserved</li>
+		</ul>
+	</footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.poptrox.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/firebase.js" type="module"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+    <script src="assets/js/project.js"></script>
+	<script type="module" src="assets/js/firebase.js"></script>
 
 </body>
 
