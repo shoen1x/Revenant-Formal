@@ -13,7 +13,7 @@
 
 	<!--Meta and linker-->
 	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 	<meta name="description" content="Welcome to Shoenix Studios | Experimental project by NMVX.">
 	<meta name="msapplication-TileColor" content="#ff3a01">
@@ -38,7 +38,7 @@
 	<header id="header">
 		<h1>Shoenix Studios</h1>
 	</header>
-
+	  
 	<!-- Intro -->
 	<section id="intro" class="main style1 dark fullscreen">
 		<div class="content">
@@ -202,7 +202,7 @@
 			<div class="info-container">
 				<div class="card">
 					<h2>Pioneer</h2>
-					<i id="product-id" class="fas fa-arrow-right" data-whichproduct="1" aria-hidden="true"></i>
+					<i id="product-id" class="fas fa-arrow-right" onclick="alert('This product not yet available');" aria-hidden="true"></i>
 					<p>The Pioneer Mockup</p>
 					<div class="pic"></div>
 					<button>
@@ -210,7 +210,7 @@
 				</div>
 				<div class="card">
 					<h2>Collection 1</h2>
-					<i id="product-id" class="fas fa-arrow-right" data-whichproduct="2" aria-hidden="true"></i>
+					<i id="product-id" class="fas fa-arrow-right" onclick='window.open("product?2", "_self");' aria-hidden="true"></i>
 					<p>in the name of Tsar</p>
 					<div class="pic"></div>
 					<button>
@@ -218,7 +218,7 @@
 				</div>
 				<div class="card">
 					<h2>Collection 2</h2>
-					<i id="product-id" class="fas fa-arrow-right" data-whichproduct="3" aria-hidden="true"></i>
+					<i id="product-id" class="fas fa-arrow-right" onclick='window.open("product?3", "_self");' aria-hidden="true"></i>
 					<p>Black Steel Eagle</p>
 					<div class="pic"></div>
 					<button>
@@ -226,7 +226,7 @@
 				</div>
 				<div class="card">
 					<h2>Collection 3</h2>
-					<i id="product-id" class="fas fa-arrow-right" data-whichproduct="4" aria-hidden="true"></i>
+					<i id="product-id" class="fas fa-arrow-right" onclick='window.open("product?4", "_self");' aria-hidden="true"></i>
 					<p>The World</p>
 					<div class="pic"></div>
 					<button>
@@ -234,7 +234,7 @@
 				</div>
 				<div class="card">
 					<h2>Collection 4</h2>
-					<i id="product-id" class="fas fa-arrow-right" data-whichproduct="5" aria-hidden="true"></i>
+					<i id="product-id" class="fas fa-arrow-right" onclick='window.open("product?5", "_self");' aria-hidden="true"></i>
 					<p>Unity</p>
 					<div class="pic"></div>
 					<button>
@@ -367,8 +367,8 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script type="module" src="assets/js/firebase.js"></script>
-	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-	<script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+	<script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script async src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
 </body>
 

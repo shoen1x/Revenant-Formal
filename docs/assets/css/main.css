@@ -3130,7 +3130,7 @@ i {
 	opacity: 0;
 	font-size: 18px;
 	color: #fff;
-	will-change: transform;
+	will-change: auto;
 	-webkit-transform: scale(0.1);
 	transform: scale(0.1);
 	-webkit-transition: all 0.2s ease;

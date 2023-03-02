@@ -263,65 +263,34 @@
 
 	})
 
-	// Replace bottom articles
-	var product_id = document.querySelectorAll('.info-container .card i');
-	$(product_id).on('click', function () {
-		var procollection = $(this).data('whichproduct');
-
-		if (procollection == 1) {
-			alert('This product not yet available');
-			// localStorage.setItem("product_number","1");
-			// window.open("product", "_self");
-		} else if (procollection == 2) {
-			localStorage.setItem("product_number", "2");
-			window.open("product?" + localStorage.getItem('product_number'), "_self");
-		} else if (procollection == 3) {
-			localStorage.setItem("product_number", "3");
-			window.open("product?" + localStorage.getItem('product_number'), "_self");
-		} else if (procollection == 4) {
-			localStorage.setItem("product_number", "4");
-			window.open("product?" + localStorage.getItem('product_number'), "_self");
-		} else {
-			localStorage.setItem("product_number", "5");
-			window.open("product?" + localStorage.getItem('product_number'), "_self");
-		}
-	})
-
-	// Listen to the doc click
-	window.addEventListener('click', function (e) {
-
-		// Close the menu if click happen outside menu
-		if (e.target.closest('.dropdown-container') === null) {
-			// Close the opend dropdown
-			closeDropdown();
-		}
-
-	});
+	// 	var procollection = $(this).data('whichproduct');
+	// 	localStorage.setItem("product_number", "4");
+	// 	window.open("product?" + localStorage.getItem('product_number'), "_self");
 
 	// Freebies
-	$(document).ready(function(){
-		for (var i=1; i <= $('.dwslider__slide').length; i++){
-		  $('.dwslider__indicators').append('<div class="dwslider__indicator" data-slide="'+i+'"></div>')
+	$(document).ready(function () {
+		for (var i = 1; i <= $('.dwslider__slide').length; i++) {
+			$('.dwslider__indicators').append('<div class="dwslider__indicator" data-slide="' + i + '"></div>')
 		}
-		setTimeout(function(){
-		  $('.dwslider__wrap').addClass('dwslider__wrap--hacked');
+		setTimeout(function () {
+			$('.dwslider__wrap').addClass('dwslider__wrap--hacked');
 		}, 1000);
-	  })
-	  
-	  function goToSlide(number){
+	})
+
+	function goToSlide(number) {
 		$('.dwslider__slide').removeClass('dwslider__slide--active');
-		$('.dwslider__slide[data-slide='+number+']').addClass('dwslider__slide--active');
-	  }
-	  
-	  $('.dwslider__next, .go-to-next').on('click', function(){
+		$('.dwslider__slide[data-slide=' + number + ']').addClass('dwslider__slide--active');
+	}
+
+	$('.dwslider__next, .go-to-next').on('click', function () {
 		var currentSlide = Number($('.dwslider__slide--active').data('slide'));
 		var totalSlides = $('.dwslider__slide').length;
 		currentSlide++
-		if (currentSlide > totalSlides){
-		  currentSlide = 1;
+		if (currentSlide > totalSlides) {
+			currentSlide = 1;
 		}
 		goToSlide(currentSlide);
-	  })
+	})
 
 	//Download Button
 	var btndownload = document.querySelectorAll('#btn-download');
@@ -341,21 +310,21 @@
 		}, 2000);
 	});
 
-	function DownloadFile(fileloc,filename){
+	function DownloadFile(fileloc, filename) {
 		fetch(fileloc)
-		.then(resp => resp.blob())
-		.then(blob => {
-			const url = window.URL.createObjectURL(blob);
-			const a = document.createElement('a');
-			a.style.display = 'none';
-			a.href = url;
-			// the filename you want
-			a.download = filename;
-			document.body.appendChild(a);
-			a.click();
-			window.URL.revokeObjectURL(url);
-		})
-		.catch(() => alert('Error! Contact Admin on shoenixstudios@gmail.com'));
+			.then(resp => resp.blob())
+			.then(blob => {
+				const url = window.URL.createObjectURL(blob);
+				const a = document.createElement('a');
+				a.style.display = 'none';
+				a.href = url;
+				// the filename you want
+				a.download = filename;
+				document.body.appendChild(a);
+				a.click();
+				window.URL.revokeObjectURL(url);
+			})
+			.catch(() => alert('Error! Contact Admin on shoenixstudios@gmail.com'));
 	}
 
 	// Hanya Allah yang tahu
