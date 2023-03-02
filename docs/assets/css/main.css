@@ -3137,8 +3137,15 @@ i {
 	transition: all 0.2s ease;
 }
 
-h2 {
-	pointer-events: none;
+.info-container .icbutton {
+	opacity: 0;
+	font-size: 18px;
+	color: #fff;
+	will-change: auto;
+	-webkit-transform: scale(0.1);
+	transform: scale(0.1);
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 .info-container {

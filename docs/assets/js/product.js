@@ -20,12 +20,12 @@
 
     if (cname == null) {
       alert("Error");
-      // location.href = '/';
+      location.href = '/';
     } else {
       if (cname == 1) {
 
         alert("Don't force selection through url, it will not works.");
-        // location.href = '/';
+        location.href = '/';
 
       } else {
 
