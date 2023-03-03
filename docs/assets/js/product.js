@@ -55,25 +55,32 @@
           case 2:
             document.querySelector('#product-type').innerHTML = "Collection";
             document.querySelector('.home__subtitle').innerHTML = "In The Name of Tsar";
-            document.querySelector('.discount__description').innerHTML = "Get In The Name of Tsar now, up to 15% off."
+            document.querySelector('.discount__description').innerHTML = "Get In The Name of Tsar now, up to 15% off.";
+            document.querySelector('.home__description').innerHTML = "Introducing the In the Name of Tsar Collection: a unique, modern take on streetwear. stylish and custom-made just for you. Suitable for athleisure and sports wear";
             document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';
             break;
           case 3:
             document.querySelector('#product-type').innerHTML = "Collection";
             document.querySelector('.home__subtitle').innerHTML = "Black Steel Eagle";
-            document.querySelector('.discount__description').innerHTML = "Get Black Steel Eagle now, up to 15% off."
+            document.querySelector('.discount__description').innerHTML = "Get Black Steel Eagle now, up to 15% off.";
+            document.querySelector('.home__description').innerHTML = "Introducing the Black Steel Eagle Collection: a mainstream sports inspired design. Unique and custom-made just for you. Suitable for sport usage";
+
             document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';
             break;
           case 4:
             document.querySelector('#product-type').innerHTML = "Collection";
             document.querySelector('.home__subtitle').innerHTML = "The World";
-            document.querySelector('.discount__description').innerHTML = "Get The World now, up to 15% off."
+            document.querySelector('.discount__description').innerHTML = "Get The World now, up to 15% off.";
+            document.querySelector('.home__description').innerHTML = "Introducing The World Collection: a robust design for stylish everyday clothing. custom-made just for you. Suitable for streetwear and athleisure";
+
             document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';
             break;
           case 5:
             document.querySelector('#product-type').innerHTML = "Collection";
             document.querySelector('.home__subtitle').innerHTML = "The Unity";
-            document.querySelector('.discount__description').innerHTML = "Get The Unity now, up to 15% off."
+            document.querySelector('.discount__description').innerHTML = "Get The Unity now, up to 15% off.";
+            document.querySelector('.home__description').innerHTML = "Introducing The Unity Collection: a minimalist, clean and modern design. stylish and custom-made just for you. Suitable for e-sport and electronic sport organization";
+
             document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';
             break;
         }

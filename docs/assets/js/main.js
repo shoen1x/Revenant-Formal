@@ -267,65 +267,39 @@
 	// 	localStorage.setItem("product_number", "4");
 	// 	window.open("product?" + localStorage.getItem('product_number'), "_self");
 
-	// Freebies
-	$(document).ready(function () {
-		for (var i = 1; i <= $('.dwslider__slide').length; i++) {
-			$('.dwslider__indicators').append('<div class="dwslider__indicator" data-slide="' + i + '"></div>')
-		}
-		setTimeout(function () {
-			$('.dwslider__wrap').addClass('dwslider__wrap--hacked');
-		}, 1000);
-	})
+	// var btndownload = document.querySelectorAll('#btn-download');
+	// $(btndownload).on('click', function (event) {
+	// 	event.preventDefault();
+	// 	$(this).addClass("downloaded");
+	// 	var dwbutton = $(this).data('dwbutton');
+	// 	setTimeout(function () {
+	// 		if (dwbutton == 1) {
+	// 			DownloadFile('images/downloadfile/NeuroKit-Wallpaper.png', 'Neuro Kit Wallpaper - Shoenix Studios');
+	// 		} else if (dwbutton == 2) {
+	// 			DownloadFile('images/downloadfile/TigerLeap-Wallpaper.jpg', 'Tiger Leap Wallpaper - Shoenix Studios');
+	// 		} else {
+	// 			alert("Don't know how you get here!");
+	// 		}
+	// 		$(btndownload).removeClass('downloaded');
+	// 	}, 2000);
+	// });
 
-	function goToSlide(number) {
-		$('.dwslider__slide').removeClass('dwslider__slide--active');
-		$('.dwslider__slide[data-slide=' + number + ']').addClass('dwslider__slide--active');
-	}
-
-	$('.dwslider__next, .go-to-next').on('click', function () {
-		var currentSlide = Number($('.dwslider__slide--active').data('slide'));
-		var totalSlides = $('.dwslider__slide').length;
-		currentSlide++
-		if (currentSlide > totalSlides) {
-			currentSlide = 1;
-		}
-		goToSlide(currentSlide);
-	})
-
-	//Download Button
-	var btndownload = document.querySelectorAll('#btn-download');
-	$(btndownload).on('click', function (event) {
-		event.preventDefault();
-		$(this).addClass("downloaded");
-		var dwbutton = $(this).data('dwbutton');
-		setTimeout(function () {
-			if (dwbutton == 1) {
-				DownloadFile('images/downloadfile/NeuroKit-Wallpaper.png', 'Neuro Kit Wallpaper - Shoenix Studios');
-			} else if (dwbutton == 2) {
-				DownloadFile('images/downloadfile/TigerLeap-Wallpaper.jpg', 'Tiger Leap Wallpaper - Shoenix Studios');
-			} else {
-				alert("Don't know how you get here!");
-			}
-			$(btndownload).removeClass('downloaded');
-		}, 2000);
-	});
-
-	function DownloadFile(fileloc, filename) {
-		fetch(fileloc)
-			.then(resp => resp.blob())
-			.then(blob => {
-				const url = window.URL.createObjectURL(blob);
-				const a = document.createElement('a');
-				a.style.display = 'none';
-				a.href = url;
-				// the filename you want
-				a.download = filename;
-				document.body.appendChild(a);
-				a.click();
-				window.URL.revokeObjectURL(url);
-			})
-			.catch(() => alert('Error! Contact Admin on shoenixstudios@gmail.com'));
-	}
+	// function DownloadFile(fileloc, filename) {
+	// 	fetch(fileloc)
+	// 		.then(resp => resp.blob())
+	// 		.then(blob => {
+	// 			const url = window.URL.createObjectURL(blob);
+	// 			const a = document.createElement('a');
+	// 			a.style.display = 'none';
+	// 			a.href = url;
+	// 			// the filename you want
+	// 			a.download = filename;
+	// 			document.body.appendChild(a);
+	// 			a.click();
+	// 			window.URL.revokeObjectURL(url);
+	// 		})
+	// 		.catch(() => alert('Error! Contact Admin on shoenixstudios@gmail.com'));
+	// }
 
 	// Hanya Allah yang tahu
 })(jQuery);

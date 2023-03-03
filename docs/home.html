@@ -38,14 +38,13 @@
 	<header id="header">
 		<h1>Shoenix Studios</h1>
 	</header>
-	  
+
 	<!-- Intro -->
 	<section id="intro" class="main style1 dark fullscreen">
 		<div class="content">
 			<header>
 				<!-- <h2 id="headline">2023</h2> -->
-				<img src="assets/css/images/shoenixlab.svg" width="720" height="auto" alt="Shoenix Logo"
-					style="filter: invert(); -webkit-filter: invert();">
+				<img src="assets/css/images/shoenixlab.svg" width="720px" height="120.667px" alt="Shoenix Lab Logo">
 			</header>
 			<p id="sub_line">Experimental project by <strong>NMVX<strong></p>
 			<!-- <footer>
@@ -55,28 +54,30 @@
 	</section>
 
 	<!-- first -->
-	<section id="first" class="main style2 right dark fullscreen">
+	<section id="first" class="main style2 right dark fullscreen" loading="lazy">
 		<span class="firsttext"
 			style="position: absolute; text-align: center; font-size: 100px; line-height: 100px; left: 50%; transform: translateX(-50%);">VALHALLA
 			AXE<br>CONCEPT</span>
 
-			<model-viewer id="lazy-load1" src="images/3D/valhalla.glb" reveal="manual" camera-controls
+		<model-viewer id="lazy-load1" src="images/3D/valhalla.glb" reveal="manual" camera-controls
 			poster="images/3D/poster.webp" disable-zoom touch-action="pan-y" alt="Valhalla Axes by Shoenix Studios"
-			shadow-intensity="1" disable-tap auto-rotate data-js-focus-visible>
-		
+			shadow-intensity="1" disable-tap auto-rotate>
+
 			<div id="lazy-load-poster" slot="poster"></div>
 			<div id="button-load1" slot="poster">Load 3D Model</div>
 
 			<script>
-				document.querySelector('#button-load1').addEventListener('click', 
-				  () => document.querySelector('#lazy-load1').dismissPoster());
-			  </script>
+				document.querySelector('#button-load1').addEventListener('click',
+					() => document.querySelector('#lazy-load1').dismissPoster());
+			</script>
 
 		</model-viewer>
 
 		<ul class="actions bottom-special">
-			<a href="https://www.artstation.com/artwork/o2OV4L" target="_blank" class="button"
-			aria-label="Artstation">Artstation Documentation</a>
+			<li>
+				<a href="https://www.artstation.com/artwork/o2OV4L" target="_blank" class="button"
+				aria-label="Artstation">Artstation Documentation</a>
+			</li>
 		</ul>
 
 	</section>
@@ -88,23 +89,25 @@
 			style="position: absolute; text-align: center; font-size: 100px; line-height: 100px; left: 50%; transform: translateX(-50%);">JOHOR
 			DARUL TA'ZIM<br>JERSEY CONCEPT</span>
 
-			<model-viewer id="lazy-load2" src="images/3D/johorconcept.glb" reveal="manual" camera-controls
+		<model-viewer id="lazy-load2" src="images/3D/johorconcept.glb" reveal="manual" camera-controls
 			poster="images/3D/poster2.webp" disable-zoom touch-action="pan-y" alt="Johor Concept by Shoenix Studios"
-			shadow-intensity="1" disable-tap auto-rotate data-js-focus-visible>
-		
+			shadow-intensity="1" disable-tap auto-rotate>
+
 			<div id="lazy-load-poster" slot="poster"></div>
 			<div id="button-load2" slot="poster">Load 3D Model</div>
-		
+
 			<script>
-				document.querySelector('#button-load2').addEventListener('click', 
-				  () => document.querySelector('#lazy-load2').dismissPoster());
-			  </script>
+				document.querySelector('#button-load2').addEventListener('click',
+					() => document.querySelector('#lazy-load2').dismissPoster());
+			</script>
 
 		</model-viewer>
 
 		<ul class="actions bottom-special">
-			<a href="https://www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios" target="_blank" class="button" 
-			aria-label="Behance">Behance Documentation</a>
+			<li>
+				<a href="https://www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios" target="_blank"
+				class="button" aria-label="Behance">Behance Documentation</a>
+			</li>
 		</ul>
 
 	</section>
@@ -113,137 +116,91 @@
 	<section id="work" class="main style3 primary">
 		<div class="content">
 			<header>
-				<h2><a aria-hidden="true" class="icon brands fa-creative-commons-nd"><span
-							class="label">works</span></a> LATEST WORKS</h2>
+				<h2 class="icon brands fa-creative-commons-nd"><span
+							class="label">works</span> LATEST WORKS</h2>
 			</header>
 			<!-- Gallery  -->
 			<div class="gallery">
 				<article class="from-left">
-					<a href="images/fulls/01.webp" class="image fit"><img src="images/thumbs/01.webp"
-							title="Cover Album Arts" alt="Cover Album Arts" /></a>
+					<a href="images/fulls/01.webp" class="image fit"><img class="hidden" src="images/thumbs/01.webp"
+							title="Cover Album Arts" height="225.817" width="360px" alt="Cover Album Arts" /></a>
 				</article>
 				<article class="from-right">
 					<a href="images/fulls/02.webp" class="image fit"><img src="images/thumbs/02.webp"
-							title="Arus Kelajuan" alt="Arus Kelajuan" /></a>
+							title="Arus Kelajuan" height="225.817" width="360px" alt="Arus Kelajuan" /></a>
 				</article>
 				<article class="from-left">
 					<a href="images/fulls/03.webp" class="image fit"><img src="images/thumbs/03.webp"
-							title="The Phantom Cries" alt="The Phantom Cries" /></a>
+							title="The Phantom Cries" height="225.817" width="360px" alt="The Phantom Cries" /></a>
 				</article>
 				<article class="from-right">
 					<a href="images/fulls/04.webp" class="image fit"><img src="images/thumbs/04.webp"
-							title="GenesisPhantom | Hyper Concept Skateboard" alt="Hyper Concept Skateboard" /></a>
+							title="GenesisPhantom | Hyper Concept Skateboard" height="225.817" width="360px"
+							alt="Hyper Concept Skateboard" /></a>
 				</article>
 				<article class="from-left">
 					<a href="images/fulls/05.webp" class="image fit"><img src="images/thumbs/05.webp"
-							title="Hausboom X Shoenix Studios" alt="Hausboom X Shoenix Studios" /></a>
+							title="Hausboom X Shoenix Studios" height="225.817" width="360px"
+							alt="Hausboom X Shoenix Studios" /></a>
 				</article>
 				<article class="from-right">
 					<a href="images/fulls/06.webp" class="image fit"><img src="images/thumbs/06.webp" title="Zulmat"
-							alt="Zulmat" /></a>
+							height="225.817" width="360px" alt="Zulmat" /></a>
 				</article>
 			</div>
-		</div>
-	</section>
-
-	<!-- Freebie -->
-	<section id="freebie" class="main style3 primary">
-		<div class="dwslider">
-			<div class="dwslider__slide dwslider__slide--active" data-slide="1">
-				<div class="dwslider__wrap">
-					<div class="dwslider__back"></div>
-				</div>
-				<div class="dwslider__inner">
-					<div class="dwslider__content">
-						<div id="btn-download" data-dwbutton="1">
-							<svg width="80px" height="58px" viewBox="0 0 22 16">
-								<path
-									d="M2,10 L6,13 L12.8760559,4.5959317 C14.1180021,3.0779974 16.2457925,2.62289624 18,3.5 L18,3.5 C19.8385982,4.4192991 21,6.29848669 21,8.35410197 L21,10 C21,12.7614237 18.7614237,15 16,15 L1,15"
-									id="check"></path>
-								<polyline points="4.5 8.5 8 11 11.5 8.5" class="svg-out"></polyline>
-								<path d="M8,1 L8,11" class="svg-out"></path>
-							</svg>
-						</div>
-						<h1>NEUROKIT <br> WALLPAPER</h1><a class="go-to-next">NEXT <span class="fas fa-arrow-right"
-								aria-hidden="true"></a>
-					</div>
-				</div>
-			</div>
-			<div class="dwslider__slide" data-slide="2">
-				<div class="dwslider__wrap">
-					<div class="dwslider__back"></div>
-				</div>
-				<div class="dwslider__inner">
-					<div class="dwslider__content">
-						<div id="btn-download" data-dwbutton="2">
-							<svg width="80px" height="58px" viewBox="0 0 22 16">
-								<path
-									d="M2,10 L6,13 L12.8760559,4.5959317 C14.1180021,3.0779974 16.2457925,2.62289624 18,3.5 L18,3.5 C19.8385982,4.4192991 21,6.29848669 21,8.35410197 L21,10 C21,12.7614237 18.7614237,15 16,15 L1,15"
-									id="check"></path>
-								<polyline points="4.5 8.5 8 11 11.5 8.5" class="svg-out"></polyline>
-								<path d="M8,1 L8,11" class="svg-out"></path>
-							</svg>
-						</div>
-						<h1>TIGER LEAP <br> WALLPAPER</h1><a class="go-to-next">NEXT <span class="fas fa-arrow-right"
-								aria-hidden="true"></a>
-					</div>
-				</div>
-			</div>
-			<div class="dwslider__indicators"></div>
 		</div>
 	</section>
 
 	<section id="Infocardconcept" class="main style3 primary">
 		<div class="infocontent">
 			<header>
-				<h2><a aria-hidden="true" class="icon brands fa-product-hunt"><span
-							class="label">product</span></a> LATEST PRODUCT</h2>
+				<h2 class="icon brands fa-product-hunt"><span class="label">product</span> LATEST PRODUCT</h2>
 			</header>
 			<div class="info-container">
 				<div class="card">
 					<h2>Pioneer</h2>
-					<a id="product-id" href="/" target="_self" onclick="alert('This product not yet available');" aria-hidden="true">
-					<i class="fas fa-arrow-right"></i></a>
+					<a href="/" target="_self" onclick="alert('This product not yet available');return false;" aria-disabled="true">
+						<i class="fas fa-arrow-right"></i></a>
 					<p>The Pioneer Mockup</p>
 					<div class="pic"></div>
-					<button>
-					</button>
+					<span>
+					</span>
 				</div>
 				<div class="card">
-					<h2>Collection 1</h2>				
-					<a id="product-id" type="button" href="product?2" target="_self" aria-label="ITNOT">
+					<h2>Collection 1</h2>
+					<a type="button" href="product?2" target="_self" aria-label="ITNOT">
 						<i class="fas fa-arrow-right"></i></a>
 					<p>in the name of Tsar</p>
 					<div class="pic"></div>
-					<button>
-					</button>
+					<span>
+					</span>
 				</div>
 				<div class="card">
 					<h2>Collection 2</h2>
-					<a id="product-id" type="button" href="product?3" target="_self" aria-label="BSE">
+					<a type="button" href="product?3" target="_self" aria-label="BSE">
 						<i class="fas fa-arrow-right"></i></a>
 					<p>Black Steel Eagle</p>
 					<div class="pic"></div>
-					<button>
-					</button>
+					<span>
+					</span>
 				</div>
 				<div class="card">
 					<h2>Collection 3</h2>
-					<a id="product-id" type="button" href="product?4" target="_self" aria-label="WORLD">
+					<a type="button" href="product?4" target="_self" aria-label="WORLD">
 						<i class="fas fa-arrow-right"></i></a>
 					<p>The World</p>
 					<div class="pic"></div>
-					<button>
-					</button>
+					<span>
+					</span>
 				</div>
 				<div class="card">
 					<h2>Collection 4</h2>
-					<a id="product-id" type="button" href="product?5" target="_self" aria-label="UNITY">
+					<a type="button" href="product?5" target="_self" aria-label="UNITY">
 						<i class="fas fa-arrow-right"></i></a>
 					<p>Unity</p>
 					<div class="pic"></div>
-					<button>
-					</button>
+					<span>
+					</span>
 				</div>
 			</div>
 		</div>
@@ -259,8 +216,7 @@
 				<p class="mptext__description">All full project documentation was moved here from Behance
 					and Artstation's archives, more will be added in future. This repo can be WIP or finalized project.
 				</p>
-				<a href="project" target="_self" class="button"
-					aria-label="Project">Project Preview</a>
+				<a href="project" target="_self" class="button" aria-label="Project">Project Preview</a>
 			</div>
 			<div class="mpgrid__container">
 				<div class="mpgrid__item mpone"></div>
@@ -283,16 +239,15 @@
 	<section id="blog" class="main style4 blog">
 		<div class="blog-relative__container">
 			<div class="blog-full__width blog-object__fit">
-				<img class="blog-img" src="https://cdn.wallpapersafari.com/43/41/RCXfgB.png" alt="background picture">
+				<img class="blog-img" src="images/thumbs/blogwallpaper.webp" alt="Blog background picture">
 				<div class="blog-absolute">
-					<img src="images/ico/favicon.svg" width="48" height="48" alt="Shoenix Logo">
+					<img src="images/ico/favicon.svg" width="48px" height="48px" alt="Shoenix Logo">
 					<h1 class="blog-text">Developer Logs</h1>
 					<p class="blog-paragraph">Complete compilations of developer updated logs for the website, from
 						frontend to backend.
 						<br> Latest Update : February 12, 2023.
 					</p>
-					<a href="blog" target="_self" class="blog-button"
-						aria-label="Blog">Read Now!</a>
+					<a href="blog" target="_self" class="blog-button" aria-label="Blog">Read Now!</a>
 				</div>
 			</div>
 		</div>
@@ -301,38 +256,47 @@
 	<section id="carouselimg" class="main style5 primary">
 		<div class="slider">
 			<div class="slide-track">
-				<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px"
-						alt=""></img></div>
-				<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img>
+				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px"
+						alt="Behance"></img></div>
+				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
+						alt="Artstation"></img>
 				</div>
-				<div class="slide"><img
-						src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
-						height="" width="120px" alt=""></img></div>
-				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img>
+				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px"
+						alt="Spotify"></img></div>
+				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
+						alt="Shoenix Lab"></img>
 				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px"
+						alt="NMVX"></img>
+				</div>
 				<!-- !! -->
-				<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px"
-						alt=""></img></div>
-				<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img>
+				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px"
+						alt="Behance"></img></div>
+				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
+						alt="Artstation"></img>
 				</div>
-				<div class="slide"><img
-						src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
-						height="" width="120px" alt=""></img></div>
-				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img>
+				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px"
+						alt="Spotify"></img></div>
+				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
+						alt="Shoenix Lab"></img>
 				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px"
+						alt="NMVX"></img>
+				</div>
 				<!-- !! -->
-				<div class="slide"><img src="https://cdn.cdnlogo.com/logos/b/14/behance.svg" height="" width="120px"
-						alt=""></img></div>
-				<div class="slide"><img src="assets/css/images/artstation.svg" height="" width="120px" alt=""></img>
+				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px"
+						alt="Behance"></img></div>
+				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
+						alt="Artstation"></img>
 				</div>
-				<div class="slide"><img
-						src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png"
-						height="" width="120px" alt=""></img></div>
-				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="" width="120px" alt=""></img>
+				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px"
+						alt="Spotify"></img></div>
+				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
+						alt="Shoenix Lab"></img>
 				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="" width="120px" alt=""></img></div>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px"
+						alt="NMVX"></img>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -342,18 +306,14 @@
 
 		<!-- Icons -->
 		<ul class="icons">
-			<li><a href="https://www.facebook.com/shoenixstudios"
-					target="_blank" aria-label="Facebook" class="icon brands fa-facebook-f"><span
-						class="label">Facebook</span></a></li>
-			<li><a href="https://www.instagram.com/shoenix_studios/" 
-					target="_blank" aria-label="Instagram" class="icon brands fa-instagram"><span
-						class="label">Instagram</span></a></li>
-			<li><a href="https://www.youtube.com/@shoenixstudios"
-					target="_blank" aria-label="Youtube" class="icon brands fa-youtube"><span
-						class="label">youtube</span></a></li>
-			<li><a href="https://github.com/shoen1x"
-					target="_blank" aria-label="Github" class="icon brands fa-github"><span 
-					class="label">Github</span></a></li>
+			<li><a href="https://www.facebook.com/shoenixstudios" target="_blank" aria-label="Facebook"
+					class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="https://www.instagram.com/shoenix_studios/" target="_blank" aria-label="Instagram"
+					class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="https://www.youtube.com/@shoenixstudios" target="_blank" aria-label="Youtube"
+					class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
+			<li><a href="https://github.com/shoen1x" target="_blank" aria-label="Github"
+					class="icon brands fa-github"><span class="label">Github</span></a></li>
 		</ul>
 
 		<!-- Menu -->
@@ -372,8 +332,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script type="module" src="assets/js/firebase.js"></script>
-	<script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-	<script async src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+	<script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" defer></script>
 
 </body>
 
