@@ -13,7 +13,7 @@
 
 	<!--Meta and linker-->
 	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
 	<meta name="description" content="Welcome to Shoenix Studios | Experimental project by NMVX.">
 	<meta name="msapplication-TileColor" content="#ff3a01">
@@ -44,7 +44,8 @@
 		<div class="content">
 			<header>
 				<!-- <h2 id="headline">2023</h2> -->
-				<img src="assets/css/images/shoenixlab.svg" width="720px" height="120.667px" alt="Shoenix Lab Logo">
+				<img src="assets/css/images/shoenixlab.svg" width="720px" height="120.667px" alt="Shoenix Lab Logo"
+					loading="lazy">
 			</header>
 			<p id="sub_line">Experimental project by <strong>NMVX<strong></p>
 			<!-- <footer>
@@ -54,9 +55,8 @@
 	</section>
 
 	<!-- first -->
-	<section id="first" class="main style2 right dark fullscreen" loading="lazy">
-		<span class="firsttext"
-			style="position: absolute; text-align: center; font-size: 100px; line-height: 100px; left: 50%; transform: translateX(-50%);">VALHALLA
+	<section id="first" class="main style2 right dark fullscreen">
+		<span class="firsttext">VALHALLA
 			AXE<br>CONCEPT</span>
 
 		<model-viewer id="lazy-load1" src="images/3D/valhalla.glb" reveal="manual" camera-controls
@@ -66,86 +66,75 @@
 			<div id="lazy-load-poster" slot="poster"></div>
 			<div id="button-load1" slot="poster">Load 3D Model</div>
 
-			<script>
-				document.querySelector('#button-load1').addEventListener('click',
-					() => document.querySelector('#lazy-load1').dismissPoster());
-			</script>
-
 		</model-viewer>
 
 		<ul class="actions bottom-special">
 			<li>
 				<a href="https://www.artstation.com/artwork/o2OV4L" target="_blank" class="button"
-				aria-label="Artstation">Artstation Documentation</a>
+					aria-label="Artstation">Artstation Documentation</a>
 			</li>
 		</ul>
-
 	</section>
 
 
 	<!-- second -->
 	<section id="second" class="main style2 left dark fullscreen">
-		<span class="secondtext"
-			style="position: absolute; text-align: center; font-size: 100px; line-height: 100px; left: 50%; transform: translateX(-50%);">JOHOR
-			DARUL TA'ZIM<br>JERSEY CONCEPT</span>
+		<span class="secondtext">
+			JOHOR DARUL TA'ZIM<br>JERSEY CONCEPT</span>
 
-		<model-viewer id="lazy-load2" src="images/3D/johorconcept.glb" reveal="manual" camera-controls
-			poster="images/3D/poster2.webp" disable-zoom touch-action="pan-y" alt="Johor Concept by Shoenix Studios"
-			shadow-intensity="1" disable-tap auto-rotate>
+		<model-viewer id="lazy-load2" src="images/3D/johorconcept.glb" reveal="manual" poster="images/3D/poster2.webp"
+			disable-zoom touch-action="pan-y" alt="Johor Concept by Shoenix Studios" shadow-intensity="1" disable-tap
+			auto-rotate>
 
 			<div id="lazy-load-poster" slot="poster"></div>
 			<div id="button-load2" slot="poster">Load 3D Model</div>
-
-			<script>
-				document.querySelector('#button-load2').addEventListener('click',
-					() => document.querySelector('#lazy-load2').dismissPoster());
-			</script>
 
 		</model-viewer>
 
 		<ul class="actions bottom-special">
 			<li>
 				<a href="https://www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios" target="_blank"
-				class="button" aria-label="Behance">Behance Documentation</a>
+					class="button" aria-label="Behance">Behance Documentation</a>
 			</li>
 		</ul>
-
 	</section>
 
 	<!-- Work -->
 	<section id="work" class="main style3 primary">
 		<div class="content">
 			<header>
-				<h2 class="icon brands fa-creative-commons-nd"><span
-							class="label">works</span> LATEST WORKS</h2>
+				<h2 class="icon brands fa-creative-commons-nd"><span class="label">works</span> LATEST WORKS</h2>
 			</header>
 			<!-- Gallery  -->
 			<div class="gallery">
 				<article class="from-left">
 					<a href="images/fulls/01.webp" class="image fit"><img class="hidden" src="images/thumbs/01.webp"
-							title="Cover Album Arts" height="225.817" width="360px" alt="Cover Album Arts" /></a>
+							title="Cover Album Arts" height="225.817" width="360px" alt="Cover Album Arts"
+							loading="lazy" /></a>
 				</article>
 				<article class="from-right">
 					<a href="images/fulls/02.webp" class="image fit"><img src="images/thumbs/02.webp"
-							title="Arus Kelajuan" height="225.817" width="360px" alt="Arus Kelajuan" /></a>
+							title="Arus Kelajuan" height="225.817" width="360px" alt="Arus Kelajuan"
+							loading="lazy" /></a>
 				</article>
 				<article class="from-left">
 					<a href="images/fulls/03.webp" class="image fit"><img src="images/thumbs/03.webp"
-							title="The Phantom Cries" height="225.817" width="360px" alt="The Phantom Cries" /></a>
+							title="The Phantom Cries" height="225.817" width="360px" alt="The Phantom Cries"
+							loading="lazy" /></a>
 				</article>
 				<article class="from-right">
 					<a href="images/fulls/04.webp" class="image fit"><img src="images/thumbs/04.webp"
 							title="GenesisPhantom | Hyper Concept Skateboard" height="225.817" width="360px"
-							alt="Hyper Concept Skateboard" /></a>
+							alt="Hyper Concept Skateboard" loading="lazy" /></a>
 				</article>
 				<article class="from-left">
 					<a href="images/fulls/05.webp" class="image fit"><img src="images/thumbs/05.webp"
 							title="Hausboom X Shoenix Studios" height="225.817" width="360px"
-							alt="Hausboom X Shoenix Studios" /></a>
+							alt="Hausboom X Shoenix Studios" loading="lazy" /></a>
 				</article>
 				<article class="from-right">
 					<a href="images/fulls/06.webp" class="image fit"><img src="images/thumbs/06.webp" title="Zulmat"
-							height="225.817" width="360px" alt="Zulmat" /></a>
+							height="225.817" width="360px" alt="Zulmat" loading="lazy" /></a>
 				</article>
 			</div>
 		</div>
@@ -159,7 +148,8 @@
 			<div class="info-container">
 				<div class="card">
 					<h2>Pioneer</h2>
-					<a href="/" target="_self" onclick="alert('This product not yet available');return false;" aria-disabled="true">
+					<a href="/" target="_self" onclick="alert('This product not yet available');return false;"
+						aria-disabled="true">
 						<i class="fas fa-arrow-right"></i></a>
 					<p>The Pioneer Mockup</p>
 					<div class="pic"></div>
@@ -239,9 +229,10 @@
 	<section id="blog" class="main style4 blog">
 		<div class="blog-relative__container">
 			<div class="blog-full__width blog-object__fit">
-				<img class="blog-img" src="images/thumbs/blogwallpaper.webp" alt="Blog background picture">
+				<img class="blog-img" src="images/thumbs/blogwallpaper.webp" alt="Blog background picture"
+					loading="lazy">
 				<div class="blog-absolute">
-					<img src="images/ico/favicon.svg" width="48px" height="48px" alt="Shoenix Logo">
+					<img src="images/ico/favicon.svg" width="48px" height="48px" alt="Shoenix Logo" loading="lazy">
 					<h1 class="blog-text">Developer Logs</h1>
 					<p class="blog-paragraph">Complete compilations of developer updated logs for the website, from
 						frontend to backend.
@@ -256,46 +247,49 @@
 	<section id="carouselimg" class="main style5 primary">
 		<div class="slider">
 			<div class="slide-track">
-				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px"
-						alt="Behance"></img></div>
+				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px" alt="Behance"
+						loading="lazy" /></div>
 				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
-						alt="Artstation"></img>
+						alt="Artstation" loading="lazy" />
 				</div>
-				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px"
-						alt="Spotify"></img></div>
+				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px" alt="Spotify"
+						loading="lazy" />
+				</div>
 				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
-						alt="Shoenix Lab"></img>
+						alt="Shoenix Lab" loading="lazy" />
 				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px"
-						alt="NMVX"></img>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px" alt="NMVX"
+						loading="lazy" />
 				</div>
 				<!-- !! -->
-				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px"
-						alt="Behance"></img></div>
+				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px" alt="Behance"
+						loading="lazy" /></div>
 				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
-						alt="Artstation"></img>
+						alt="Artstation" loading="lazy" />
 				</div>
-				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px"
-						alt="Spotify"></img></div>
+				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px" alt="Spotify"
+						loading="lazy" />
+				</div>
 				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
-						alt="Shoenix Lab"></img>
+						alt="Shoenix Lab" loading="lazy" />
 				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px"
-						alt="NMVX"></img>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px" alt="NMVX"
+						loading="lazy" />
 				</div>
 				<!-- !! -->
-				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px"
-						alt="Behance"></img></div>
+				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px" alt="Behance"
+						loading="lazy" /></div>
 				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
-						alt="Artstation"></img>
+						alt="Artstation" loading="lazy" />
 				</div>
-				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px"
-						alt="Spotify"></img></div>
+				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px" alt="Spotify"
+						loading="lazy" />
+				</div>
 				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
-						alt="Shoenix Lab"></img>
+						alt="Shoenix Lab" loading="lazy" />
 				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px"
-						alt="NMVX"></img>
+				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px" alt="NMVX"
+						loading="lazy" />
 				</div>
 			</div>
 		</div>
@@ -332,6 +326,7 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script type="module" src="assets/js/firebase.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 	<script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" defer></script>
 
 </body>

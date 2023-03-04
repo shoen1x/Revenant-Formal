@@ -30,12 +30,10 @@
       } else {
 
         (function () {
-          console.log(cname);
           document.querySelector('.home__img').src = "images/products/collection" + cname + "/1.webp";
           var rotator = document.querySelector('.home__img');
           var imageDir = 'images/products/collection' + cname + "/";
           var delayInSeconds = 5;
-          console.log(cname);
 
           var images = ['1.webp', '2.webp', '3.webp', '4.webp'];
 
@@ -146,7 +144,7 @@
 
     });
 
-  });
+  }, { passive: true });
 
 })(jQuery);
 

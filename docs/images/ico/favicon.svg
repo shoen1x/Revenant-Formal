@@ -4,10 +4,7 @@
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 260 260"
 	 style="enable-background:new 0 0 260 260;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#000000;}
-	@media (prefers-color-scheme :dark){
-		.st0{fill:#ffffff;}
-	}
+	.st0{fill:#ffffff;}
 </style>
 <g>
 	<path class="st0" d="M58.5,83.1c0,0-52.2,57.7-58.5,72.4l144.8-47.4c0,0,5.5,33.6-47.7,41s-56-0.9-76.1,20.1c0,0-8.1,9-11.3,30.3

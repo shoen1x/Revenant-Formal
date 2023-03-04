@@ -833,7 +833,7 @@ button {
 	background-color: #355f62;
 	border: 0;
 	border-radius: 3.5em;
-	color: inherit;
+	color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	height: 3.5em;
@@ -2578,9 +2578,26 @@ body.is-touch .main {
 
 #first .firsttext {
 	font-weight: 800;
-	text-align: center;
 	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     color: rgb(255, 255, 255);
+	position: absolute;
+	text-align: center;
+	font-size: 100px;
+	line-height: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media screen and (max-width: 480px){
+	#first .firsttext {
+		height: 250px;
+		width: 350px;
+		font-size: 2.5em;
+		line-height: 35px;
+		text-align: center;
+		position: relative;
+		padding-top: inherit;
+	}
 }
 
 /* second */
@@ -2601,6 +2618,24 @@ body.is-touch .main {
 	font-weight: 800;
 	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
     color: rgb(255, 255, 255);
+	position: absolute;
+	text-align: center;
+	font-size: 100px;
+	line-height: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media screen and (max-width: 480px){
+	#second .secondtext {
+		height: 250px;
+		width: 350px;
+		font-size: 1.8em;
+		line-height: 35px;
+		text-align: center;
+		position: relative;
+		padding-top: inherit;
+	}
 }
 
 /* Contact */
@@ -3137,7 +3172,7 @@ i {
 	opacity: 0;
 	font-size: 18px;
 	color: #fff;
-	will-change: transform;
+	will-change: auto;
 	-webkit-transform: scale(0.1);
 	transform: scale(0.1);
 	-webkit-transition: all 0.2s ease;
@@ -3265,6 +3300,12 @@ i {
 }
 
 @media screen and (max-width: 480px) {
+	i {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
 	.info-container {
 		margin: 12px 12px 0 0;
 	}
@@ -3424,7 +3465,7 @@ i {
   /* 3D Model Viewer */
   model-viewer {
 	width: 1175px;
-	height: 607px;
+	height: 100vh;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -3538,9 +3579,10 @@ i {
 	background-color: #355f62;
 	border: 0;
 	border-radius: 0.5rem;
-	color: inherit;
+	color: #fff;;
 	cursor: pointer;
 	display: inline-block;
+	font-weight: 300;
 	height: 3.5em;
 	line-height: 3.5em;
 	outline: 0;
