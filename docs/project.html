@@ -13,6 +13,7 @@
 
   <!--Meta and linker-->
   <meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
   <meta name="description" content="Collection of experimental project from various medium.">
@@ -31,8 +32,7 @@
   </noscript>
 </head>
 
-<body class="is-preload">
-  <div class="scroll-indicator"></div>
+<body>
 
   <!-- Header -->
   <header class="header" id="header">
@@ -167,7 +167,7 @@
             src="images/fulls/full/bp1.webp">
         </div>
         <div class="Card__main">
-          <h2 class="Card__heading"><a class="Card__link" href="#">JDT Concept</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="1">JDT Concept</a></h2>
           <p>Johor Darul Ta'zim Jersey Concept.</p>
         </div>
       </article>
@@ -178,7 +178,7 @@
             src="images/fulls/full/bp2.webp">
         </div>
         <div class="Card__main">
-          <h2 class="Card__heading"><a class="Card__link" href="#">Istinggar</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="2">Istinggar</a></h2>
           <p>Istinggar | Musket - Malay old age rifle.</p>
         </div>
       </article>
@@ -189,7 +189,7 @@
             src="images/fulls/full/bp3.webp">
         </div>
         <div class="Card__main">
-          <h2 class="Card__heading"><a class="Card__link" href="#">Aerophantom Earbuds</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="3">Aerophantom Earbuds</a></h2>
           <p>AeroPhantom Earbuds concept design.</p>
         </div>
       </article>
@@ -200,7 +200,7 @@
             src="images/fulls/full/bp4.webp">
         </div>
         <div class="Card__main">
-          <h2 class="Card__heading"><a class="Card__link" href="#">Nordic Axe</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="4">Nordic Axe</a></h2>
           <p>Nordic axe game art concept.</p>
         </div>
       </article>
@@ -211,7 +211,7 @@
             src="images/fulls/full/bp5.webp">
         </div>
         <div class="Card__main">
-          <h2 class="Card__heading"><a class="Card__link" href="#">Harimau Malaya</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="5">Harimau Malaya</a></h2>
           <p>Harimau Malaya jersey concept.</p>
         </div>
       </article>
@@ -222,7 +222,7 @@
             src="images/fulls/full/bp6.webp">
         </div>
         <div class="Card__main">
-          <h2 class="Card__heading"><a class="Card__link" href="#">Kelantan Home</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="6">Kelantan Home</a></h2>
           <p>Conceptual home design jersey for Kelantan FC - 2022.</p>
         </div>
       </article>
@@ -233,8 +233,7 @@
             src="images/fulls/full/bp7.webp">
         </div>
         <div class="Card__main">
-          <!-- <h2><a class="Card__link" href="#">Kelantan Away</a></h2> -->
-          <h2 class="Card__heading"><a class="Card__link" href="#">Kelantan Away</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="7">Kelantan Away</a></h2>
           <p>Conceptual away design jersey for Kelantan FC - 2022.</p>
         </div>
       </article>
@@ -245,7 +244,7 @@
             src="images/fulls/full/bp8.webp">
         </div>
         <div class="Card__main">
-          <h2 class="Card__heading"><a class="Card__link" href="#">Twin Fangs Sword</a></h2>
+          <h2 class="Card__heading"><a class="Card__link" href="#app" data-pcarou="8">Twin Fangs Sword</a></h2>
           <p>Futuristic Sword 3d concept design.</p>
         </div>
       </article>
@@ -282,35 +281,20 @@
     </nav>
     <!--/Pagination-->
 
-    <!-- <h2>Features</h2>
-        <ul>
-          <li>Progressively enhanced (only previous/next buttons require JavaScript)</li>
-          <li>Handles focus state and keyboard navigation</li>
-          <li>Uses CSS scroll-snap for transitions and touch control</li>
-          <li>Respects reduced motion preference</li>
-          <li>Aspect ratios are preferred but max-width overrules</li>
-          <li>
-            <label>
-              <input type="checkbox" id="toggle-rtl">
-              <span>Supports <abbr title="right-to-left">RTL</abbr> styles</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input type="checkbox" id="toggle-single">
-              <span>Single slides</span>
-            </label>
-          </li>
-        </ul>
-        <p>Feedback and comments: <a href="https://twitter.com/dbushell" target="_blank">@dbushell</a></p>
-        <p>Uses my <a href="https://codepen.io/dbushell/full/MWpzGje" target="_top">“Universal” Card Pattern</a> overlay variation.</p>
-        <h2>Known issues</h2>
-        <p><b>Safari 14</b> does not support <code>scroll-behavior: smooth;</code> – Solution: polyfill / convince stakeholder the fallback behaviour is acceptable.</p>
-        <p><b>Safari 14</b> does not support <code>aspect-ratio</code>.</p>
+        <h1 id="p-title"><!-- Project title will be here --></h1>
+        <div id="app" class="Hidden" data-state="gallery">
+          <div class="gallery">
+            <!-- new elements nodes will be created here -->
+          </div>
+          <div class="detail">
+            <!--   cloned figure/image goes here!   -->
+          </div>
+        </div>
+
         <footer>
-          <p><small>MIT licensed | Copyright © 2021 <a href="https://dbushell.com" target="_blank">David Bushell</a> | <a href="https://twitter.com/dbushell" target="_blank">@dbushell</a>
+          <p><small>Revenant's Formal | Copyright © 2023 <a href="https://shoenix-studios.web.app/home" target="_blank">Shoenix Studios</a> | <a href="https://behance.com/nmvx" target="_blank">NMVX</a>
             <br>SVG from <a href="https://icons.getbootstrap.com" target="_blank">Bootstrap Icons</a></small></p>
-        </footer> -->
+        </footer> 
   </main>
 
   <footer class="footer section">
@@ -365,7 +349,6 @@
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
   <script src="assets/js/project.js"></script>
   <script type="module" src="assets/js/firebase.js"></script>
 
