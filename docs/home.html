@@ -31,13 +31,16 @@
 	</noscript>
 </head>
 
-<body class="is-preload">
-	<div class="scroll-indicator"></div>
+<body>
 
-	<!-- Header -->
-	<header id="header">
-		<h1>Shoenix Studios</h1>
-	</header>
+	<header class="header" id="header">
+		<nav class="nav container">
+		  <a href="home" target="_self" class="nav__logo">
+			<img src="images/ico/favicon.svg" alt="">
+		  </a>
+		  <span>home | <strong>Shoenix Studios</strong></span>
+		</nav>
+	  </header>
 
 	<!-- Intro -->
 	<section id="intro" class="main style1 dark fullscreen">
@@ -64,7 +67,7 @@
 			shadow-intensity="1" disable-tap auto-rotate>
 
 			<div id="lazy-load-poster" slot="poster"></div>
-			<div id="button-load1" slot="poster">Load 3D Model</div>
+			<a class="button" id="button-load1" slot="poster">Load 3D Model</a>
 
 		</model-viewer>
 
@@ -87,7 +90,7 @@
 			auto-rotate>
 
 			<div id="lazy-load-poster" slot="poster"></div>
-			<div id="button-load2" slot="poster">Load 3D Model</div>
+			<div class="button" id="button-load2" slot="poster">Load 3D Model</div>
 
 		</model-viewer>
 
@@ -140,7 +143,8 @@
 		</div>
 	</section>
 
-	<section id="Infocardconcept" class="main style3 primary">
+	<!-- Product -->
+	<section id="productcard" class="main style3 primary">
 		<div class="infocontent">
 			<header>
 				<h2 class="icon brands fa-product-hunt"><span class="label">product</span> LATEST PRODUCT</h2>
@@ -197,11 +201,11 @@
 
 	</section>
 
+	<!-- project -->
 	<section id="multiproject" class="main style4 primary">
 		<div class="mphero">
 			<div class="mptext">
-				<p class="mptext__short">All Experimental projects by Shoenix Studios</p>
-				</h1>
+				<!-- <p class="mptext__short">All Experimental projects by Shoenix Studios</p> -->
 				<h1 class="mptext__title">EXPERIMENTAL PROJECTS</h1>
 				<p class="mptext__description">All full project documentation was moved here from Behance
 					and Artstation's archives, more will be added in future. This repo can be WIP or finalized project.
@@ -238,83 +242,59 @@
 						frontend to backend.
 						<br> Latest Update : February 12, 2023.
 					</p>
-					<a href="blog" target="_self" class="blog-button" aria-label="Blog">Read Now!</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="carouselimg" class="main style5 primary">
-		<div class="slider">
-			<div class="slide-track">
-				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px" alt="Behance"
-						loading="lazy" /></div>
-				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
-						alt="Artstation" loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px" alt="Spotify"
-						loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
-						alt="Shoenix Lab" loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px" alt="NMVX"
-						loading="lazy" />
-				</div>
-				<!-- !! -->
-				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px" alt="Behance"
-						loading="lazy" /></div>
-				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
-						alt="Artstation" loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px" alt="Spotify"
-						loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
-						alt="Shoenix Lab" loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px" alt="NMVX"
-						loading="lazy" />
-				</div>
-				<!-- !! -->
-				<div class="slide"><img src="assets/css/images/behance.svg" height="60px" width="120px" alt="Behance"
-						loading="lazy" /></div>
-				<div class="slide"><img src="assets/css/images/artstation.svg" height="60px" width="120px"
-						alt="Artstation" loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/spotify.svg" height="60px" width="120px" alt="Spotify"
-						loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/shoenixlab.svg" height="60px" width="120px"
-						alt="Shoenix Lab" loading="lazy" />
-				</div>
-				<div class="slide"><img src="assets/css/images/nmvxshx.svg" height="60px" width="120px" alt="NMVX"
-						loading="lazy" />
+					<a id="blogbtn" href="blog" target="_self" class="button" aria-label="Blog">Read Now!</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Footer -->
-	<footer id="footer">
-
-		<!-- Icons -->
-		<ul class="icons">
-			<li><a href="https://www.facebook.com/shoenixstudios" target="_blank" aria-label="Facebook"
-					class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-			<li><a href="https://www.instagram.com/shoenix_studios/" target="_blank" aria-label="Instagram"
-					class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			<li><a href="https://www.youtube.com/@shoenixstudios" target="_blank" aria-label="Youtube"
-					class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
-			<li><a href="https://github.com/shoen1x" target="_blank" aria-label="Github"
-					class="icon brands fa-github"><span class="label">Github</span></a></li>
-		</ul>
-
-		<!-- Menu -->
-		<ul class="menu">
-			<li>&copy; 2023 Shoenix Studios All Rights Reserved</li>
-		</ul>
-	</footer>
+	<footer class="footer section">
+		<div class="footer__container container grid">
+		  <span class="footer__logo">
+			<img src="images/ico/favicon.svg" alt="Shoenix Studios's Logo">
+		  </span>
+	
+		  <!-- Icons -->
+		  <div class="footer__content">
+			<h3 class="footer__title">Socials</h3>
+			<ul class="footer__links">
+			  <li><a href="https://www.facebook.com/shoenixstudios" target="_blank" aria-label="Facebook"
+				  class="footer__link">Facebook</a></li>
+			  <li><a href="https://www.instagram.com/shoenix_studios/" target="_blank" aria-label="Instagram"
+				  class="footer__link">Instagram</a></li>
+			  <li><a href="https://www.youtube.com/@shoenixstudios" target="_blank" aria-label="Youtube"
+				  class="footer__link">Youtube</a></li>
+			  <li><a href="https://github.com/shoen1x" target="_blank" aria-label="Github" class="footer__link">Github</a>
+			  </li>
+			</ul>
+		  </div>
+	
+		  <div class="footer__content">
+			<h3 class="footer__title">Navigation</h3>
+	
+			<ul class="footer__links">
+			  <li>
+				<a href="project" target="_self" aria-label="Project" class="footer__link">Projects</a>
+			  </li>
+			  <li>
+				<a href="#productcard" target="_self" aria-label="Products" class="footer__link">Products</a>
+			  </li>
+			  <li>
+				<a href="blog" target="_self" aria-label="Blog" class="footer__link">Blog</a>
+			  </li>
+			</ul>
+	
+			<ul class="footer__copy">
+			  <li>
+				<span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span>
+			  </li>
+			</ul>
+		  </div>
+	
+		</div>
+	
+	  </footer>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>

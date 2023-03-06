@@ -15,13 +15,11 @@
     const sname = ["PowerWear™", "UrbanWear™", "GameOn"];
     const sdesc = ["Athleisure and active wear", "Streetwear and leisure wear", "Electronic game and competitive wear"]
 
-    let cname = parseInt(url_selection);
-    var ptitle, pprice;
-
-    if (cname == null) {
+    if (url_selection == "" || url_selection == null) {
       alert("Error");
       location.href = '/';
     } else {
+      let cname = parseInt(url_selection);
       if (cname == 1) {
 
         alert("Don't force selection through url, it will not works.");

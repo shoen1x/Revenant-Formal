@@ -1,12 +1,13 @@
 {
   "name": "revenant-formal",
   "version": "1.0.0",
-  "description": "Arts website",
+  "description": "Shoenix Studios Website",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
+    "build": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +25,7 @@
   },
   "homepage": "https://github.com/shoen1x/Revenant-Formal#readme",
   "dependencies": {
-    "firebase": "^9.17.1",
+    "firebase": "^9.17.2",
     "socket.io": "^4.5.4"
   }
 }
