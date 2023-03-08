@@ -115,7 +115,7 @@
       }
     }
 
-    const slcpk = document.querySelectorAll('#slcpk');
+    const slcpk = document.querySelectorAll('.products__content button');
     $(slcpk).on('click', function () {
       var slcpkdata = $(this).data("slcpkdata");
 
