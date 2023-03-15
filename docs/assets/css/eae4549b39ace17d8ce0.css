@@ -1,4 +1,10 @@
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/product.css ***!
+  \******************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/all.min.css ***!
+  \******************************************************************************/
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6194,7 +6200,7 @@
     font-weight: 400;
     font-display: block;
     src: url(../../assets/webfonts/23f19bb08961f37aaf69.eot);
-    src: url(../../assets/webfonts/23f19bb08961f37aaf69.eot?#iefix) format("embedded-opentype"), url(../../assets/webfonts/d878b0a6a1144760244f.woff2) format("woff2"), url(../../assets/webfonts/2285773e6b4b172f07d9.woff) format("woff"), url(../../assets/webfonts/527940b104eb2ea366c8.ttf) format("truetype"), url(../../images/svg/2f517e09eb2ca6650ff5.svg#fontawesome) format("svg")
+    src: url(../../assets/webfonts/23f19bb08961f37aaf69.eot?#iefix) format("embedded-opentype"), url(../../assets/webfonts/d878b0a6a1144760244f.woff2) format("woff2"), url(../../assets/webfonts/2285773e6b4b172f07d9.woff) format("woff"), url(../../assets/webfonts/527940b104eb2ea366c8.ttf) format("truetype"), url(../../images/svg/675f6734fc707ee98601.svg#fontawesome) format("svg")
 }
 
 .fab {
@@ -6207,7 +6213,7 @@
     font-weight: 400;
     font-display: block;
     src: url(../../assets/webfonts/77206a6bb316fa0aded5.eot);
-    src: url(../../assets/webfonts/77206a6bb316fa0aded5.eot?#iefix) format("embedded-opentype"), url(../../assets/webfonts/7a3337626410ca2f4071.woff2) format("woff2"), url(../../assets/webfonts/bb58e57c48a3e911f15f.woff) format("woff"), url(../../assets/webfonts/491974d108fe4002b2aa.ttf) format("truetype"), url(../../images/svg/4689f52cc96215721344.svg#fontawesome) format("svg")
+    src: url(../../assets/webfonts/77206a6bb316fa0aded5.eot?#iefix) format("embedded-opentype"), url(../../assets/webfonts/7a3337626410ca2f4071.woff2) format("woff2"), url(../../assets/webfonts/bb58e57c48a3e911f15f.woff) format("woff"), url(../../assets/webfonts/491974d108fe4002b2aa.ttf) format("truetype"), url(../../images/svg/0772874aec68f8e76656.svg#fontawesome) format("svg")
 }
 
 .fab,
@@ -6221,7 +6227,7 @@
     font-weight: 900;
     font-display: block;
     src: url(../../assets/webfonts/9bbb245e67a133f6e486.eot);
-    src: url(../../assets/webfonts/9bbb245e67a133f6e486.eot?#iefix) format("embedded-opentype"), url(../../assets/webfonts/1551f4f60c37af51121f.woff2) format("woff2"), url(../../assets/webfonts/eeccf4f66002c6f2ba24.woff) format("woff"), url(../../assets/webfonts/be9ee23c0c6390141475.ttf) format("truetype"), url(../../images/svg/7a8b4f130182d19a2d7c.svg#fontawesome) format("svg")
+    src: url(../../assets/webfonts/9bbb245e67a133f6e486.eot?#iefix) format("embedded-opentype"), url(../../assets/webfonts/1551f4f60c37af51121f.woff2) format("woff2"), url(../../assets/webfonts/eeccf4f66002c6f2ba24.woff) format("woff"), url(../../assets/webfonts/be9ee23c0c6390141475.ttf) format("truetype"), url(../../images/svg/45690f4345fd0e303e35.svg#fontawesome) format("svg")
 }
 
 .fa,
@@ -6234,6 +6240,9 @@
 .fas {
     font-weight: 900
 }
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/product.css (1) ***!
+  \**********************************************************************************/
 
 :root {
 	--header-height: 3rem;

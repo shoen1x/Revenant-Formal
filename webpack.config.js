@@ -48,14 +48,6 @@ module.exports = {
           use: 'html-loader',
         },
         {
-          test: /\.(glb|gltf)$/,
-          type: 'asset/resource',
-          generator: {
-            filename: 'images/3D/[hash][ext][query]'
-          },
-          exclude: /node_modules/,
-        },
-        {
           test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
           type: 'asset/resource',
             generator: {
