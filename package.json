@@ -7,7 +7,15 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_ENV=development&& webpack --mode development",
+    "dev:watch": "set NODE_ENV=development&& webpack --mode development --watch",
+    "build": "set NODE_ENV=production&& webpack",
+    "prod": "npm run build",
+    "start": "set NODE_ENV=development&& webpack-dev-server --mode development --open",
+    "watch": "npm run dev:watch",
+    "lint": "eslint assets/scripts/*.js",
+    "clean": "rm -rf docs"
   },
   "repository": {
     "type": "git",
@@ -26,5 +34,21 @@
   "dependencies": {
     "firebase": "^9.17.2",
     "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "assets-webpack-plugin": "^7.1.1",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^2.7.3",
+    "versioning-webpack-plugin": "^0.1.10",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
   }
 }

@@ -10,3 +10,4 @@
 
 # htaccess
 /.htaccess
+**node_modules
