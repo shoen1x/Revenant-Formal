@@ -244,9 +244,9 @@
                 Disini juga akan dimasukkan sebarang senarai projek baharu yang akan datang masa hadapan.
             </p>
             <div>
-                <p class="last_update">Kemaskini terakhir 5 Mac, 2023</p>
+                <p class="last_update" id="versioning">Kemaskini terakhir 5 Mac, 2023 | </p> 
             </div>
-        </article>
+        </article>  
 
          <article id="update">
             <h2>Ubahsuai 'page #1, #2 & #3'</h2>
@@ -353,4 +353,19 @@
             timeline: scrollTrackingTimeline,
         }
     )
+
+            fetch('webpack-assets.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                document.getElementById("versioning").innerHTML += 'Data versi tidak ditemui';
+            });
+        function appendData(data) {
+			console.log(data);
+			document.getElementById("versioning").innerHTML += 'Versi: <strong>' + data.metadata.version + '<strong>';
+        }
 </script>

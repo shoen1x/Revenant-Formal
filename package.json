@@ -1,6 +1,6 @@
 {
   "name": "revenant-formal",
-  "version": "1.0.0",
+  "version": "0.9.26.10-PreAlpha",
   "description": "Shoenix Studios Website",
   "main": "index.js",
   "directories": {
@@ -47,7 +47,6 @@
     "html-webpack-plugin": "^5.5.0",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.7.3",
-    "versioning-webpack-plugin": "^0.1.10",
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1"
   }

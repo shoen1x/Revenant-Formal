@@ -2946,7 +2946,7 @@ i {
 	z-index: 100;
 	width: 400px;
 	height: 200px;
-	background-image: url("../../images/thumbs/adsinfo-1.webp");
+	background-image: url("../../images/thumbs/adsinfo-2.webp");
 	background-size: cover;
 	background-position: left;
 	filter: grayscale(100%);
@@ -2992,18 +2992,14 @@ i {
 }
 
 .info-container .card:nth-child(2) .pic {
-	background-image: url("../../images/thumbs/adsinfo-2.webp");
-}
-
-.info-container .card:nth-child(3) .pic {
 	background-image: url("../../images/thumbs/adsinfo-3.webp");
 }
 
-.info-container .card:nth-child(4) .pic {
+.info-container .card:nth-child(3) .pic {
 	background-image: url("../../images/thumbs/adsinfo-4.webp");
 }
 
-.info-container .card:nth-child(5) .pic {
+.info-container .card:nth-child(4) .pic {
 	background-image: url("../../images/thumbs/adsinfo-5.webp");
 }
 

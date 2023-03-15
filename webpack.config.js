@@ -5,6 +5,18 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
+let assetsPluginInstance = new AssetsPlugin({
+  path: path.join(__dirname, './', 'docs'),
+  publicPath: "/docs/",
+  removeFullPathAutoPrefix: true,
+  metadata: {version: '0.9.26.10-PreAlpha'},
+
+  processOutput: function (assets) {
+    return JSON.stringify(assets);
+  }
+  // "window.staticMap = " +
+});
+
 let htmlPageNames = ['home', 'product', 'project', 'blog', '404'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
@@ -82,17 +94,6 @@ module.exports = {
       ],
     },
   plugins: [
-    new AssetsPlugin({
-      path: path.join(__dirname, './', 'docs'),
-      publicPath: "/docs/",
-      removeFullPathAutoPrefix: true,
-      metadata: {version: '0.9.26.10-PreAlpha'},
-
-      processOutput: function (assets) {
-        return "window.staticMap = " + JSON.stringify(assets);
-      }
-    }),
-
     new MiniCssExtractPlugin({
       filename: "assets/css/[chunkhash].css",
       chunkFilename: "assets/css/[id].[chunkhash].css"
@@ -115,7 +116,8 @@ module.exports = {
       ]
     }),
 
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    assetsPluginInstance
 
   ].concat(multipleHtmlPlugins)
 };

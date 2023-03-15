@@ -368,9 +368,12 @@
         <ul class="footer__copy">
           <li>
             <span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span>
+            <span class="footer__copy-link" id="versioning"></span>
           </li>
         </ul>
       </div>
+
+      <p id="versioning"></p>
 
     </div>
 
@@ -387,6 +390,27 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/product.js"></script>
   <!-- <script src="assets/js/firebase.js" type="module"></script> -->
+
+  <script>
+    fetch('webpack-assets.json')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        appendData(data);
+      })
+      .catch(function (err) {
+        document.getElementById("versioning").innerHTML = '</br></br>Versioning data missing';
+      });
+    function appendData(data) {
+      console.log(data);
+      document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
+      // var mainContainer = document.getElementById("versioning");
+      //     var div = document.createElement("span");
+      //     div.innerHTML = 'Build: ' + version;
+      //     mainContainer.appendChild(div);
+    }
+  </script>
 
 </body>
 

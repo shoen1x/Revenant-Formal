@@ -9188,7 +9188,7 @@ i {
 	z-index: 100;
 	width: 400px;
 	height: 200px;
-	background-image: url(../../assets/e09b76323628eccd1c01.webp);
+	background-image: url(../../assets/2996da06524081ac2584.webp);
 	background-size: cover;
 	background-position: left;
 	filter: grayscale(100%);
@@ -9234,18 +9234,14 @@ i {
 }
 
 .info-container .card:nth-child(2) .pic {
-	background-image: url(../../assets/2996da06524081ac2584.webp);
-}
-
-.info-container .card:nth-child(3) .pic {
 	background-image: url(../../assets/86c0dfa181580fb950b9.webp);
 }
 
-.info-container .card:nth-child(4) .pic {
+.info-container .card:nth-child(3) .pic {
 	background-image: url(../../assets/c4344710102997dee6c4.webp);
 }
 
-.info-container .card:nth-child(5) .pic {
+.info-container .card:nth-child(4) .pic {
 	background-image: url(../../assets/c2c6f9e993ed9e0acfdf.webp);
 }
 

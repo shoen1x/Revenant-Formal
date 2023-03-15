@@ -29,7 +29,7 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/b88d04fba731603756b1.css" />
 	</noscript>
-<script defer src="assets/js/c9f6daa2cdd144b05946.js"></script><link href="assets/css/c9f6daa2cdd144b05946.css" rel="stylesheet"></head>
+<script defer src="assets/js/cb17a86e5dbd06d5df64.js"></script><link href="assets/css/cb17a86e5dbd06d5df64.css" rel="stylesheet"></head>
 
 <body>
 
@@ -149,16 +149,6 @@
 				<h2 class="icon brands fa-product-hunt"><span class="label">product</span> LATEST PRODUCT</h2>
 			</header>
 			<div class="info-container">
-				<div class="card">
-					<h2>Pioneer</h2>
-					<a title="Not availabe" href="/" target="_self" onclick="alert('This product not yet available');return false;"
-						aria-disabled="true">
-						<i class="fas fa-arrow-right"></i></a>
-					<p>The Pioneer Mockup</p>
-					<div class="pic"></div>
-					<span>
-					</span>
-				</div>
 				<div class="card">
 					<h2>Collection 1</h2>
 					<a type="button" href="product?2" target="_self" aria-label="ITNOT">
@@ -287,6 +277,7 @@
 			<ul class="footer__copy">
 			  <li>
 				<span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span>
+				<span class="footer__copy-link" id="versioning"></span>
 			  </li>
 			</ul>
 		  </div>
@@ -307,6 +298,27 @@
 	<script type="module" src="assets/b8bb021b598d7cc87590.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
 	<script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" defer></script>
+
+	<script>
+        fetch('webpack-assets.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                document.getElementById("versioning").innerHTML = '</br></br>Versioning data missing';
+            });
+        function appendData(data) {
+			console.log(data);
+			document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
+            // var mainContainer = document.getElementById("versioning");
+            //     var div = document.createElement("span");
+            //     div.innerHTML = 'Build: ' + version;
+            //     mainContainer.appendChild(div);
+        }
+    </script>
 
 </body>
 
