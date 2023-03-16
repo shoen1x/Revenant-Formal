@@ -9,7 +9,7 @@ let assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
-  metadata: {version: '0.9.26.10-PreAlpha'},
+  metadata: {version: '0.9.26.10-PreAlpha', date: '05 Mac, 2023', revision: 'RevF' + Date.parse(Date())},
 
   processOutput: function (assets) {
     return JSON.stringify(assets);

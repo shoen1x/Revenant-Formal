@@ -368,7 +368,7 @@
         <ul class="footer__copy">
           <li>
             <span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span>
-            <span class="footer__copy-link" id="versioning"></span>
+            <span class="footer__copy-link"><span id="versioning"></span></br><span id="revisioning"></span></span>
           </li>
         </ul>
       </div>
@@ -387,30 +387,28 @@
   <script src="assets/baf6931601944992b286.js"></script>
   <script src="assets/b568ff2b48239a8b2976.js"></script>
   <script src="assets/1c8670e8674d8dd72db4.js"></script>
-  <script src="assets/7e9ec4812ba6d4e41417.js"></script>
+  <script src="assets/5956783f75034ffda335.js"></script>
   <script src="assets/ae52a3b489b197fffd6d.js"></script>
   <!-- <script src="assets/js/firebase.js" type="module"></script> -->
 
-  <script>
+	<script>
     fetch('webpack-assets.json')
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        appendData(data);
-      })
-      .catch(function (err) {
-        document.getElementById("versioning").innerHTML = '</br></br>Versioning data missing';
-      });
-    function appendData(data) {
-      console.log(data);
-      document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
-      // var mainContainer = document.getElementById("versioning");
-      //     var div = document.createElement("span");
-      //     div.innerHTML = 'Build: ' + version;
-      //     mainContainer.appendChild(div);
-    }
-  </script>
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            appendData(data);
+        })
+        .catch(function (err) {
+            document.getElementById("versioning").innerHTML = '</br></br>Versioning data missing';
+            document.getElementById("revisioning").innerHTML = 'Revisioning data missing';
+        });
+          function appendData(data) {
+            console.log(data);
+            document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
+            document.getElementById("revisioning").innerHTML = 'Revision: <strong>' + data.metadata.revision + '<strong>';
+          }
+</script>
 
 </body>
 

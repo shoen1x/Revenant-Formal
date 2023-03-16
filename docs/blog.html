@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Revenant Formal by NMVX
 	Shoen1x.github.io | @Shoenixstudios
@@ -354,7 +354,7 @@
         }
     )
 
-            fetch('webpack-assets.json')
+    fetch('webpack-assets.json')
             .then(function (response) {
                 return response.json();
             })
@@ -362,10 +362,13 @@
                 appendData(data);
             })
             .catch(function (err) {
-                document.getElementById("versioning").innerHTML += 'Data versi tidak ditemui';
+                document.getElementById("versioning").innerHTML = 'Data versi tidak ditemui';
             });
         function appendData(data) {
 			console.log(data);
-			document.getElementById("versioning").innerHTML += 'Versi: <strong>' + data.metadata.version + '<strong>';
+			document.getElementById("versioning").innerHTML = 'Kemaskini Terbaharu: <strong>' + data.metadata.date + '<strong> ' + '|' + '  Versi: <strong>' + data.metadata.version + '<strong>';
         }
+        
 </script>
+
+</html>

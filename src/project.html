@@ -336,7 +336,7 @@
         <ul class="footer__copy">
           <li>
             <span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span>
-            <span class="footer__copy-link" id="versioning"></span>
+            <span class="footer__copy-link"><span id="versioning"></span></br><span id="revisioning"></span></span>
           </li>
         </ul>
       </div>
@@ -355,7 +355,7 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/project.js"></script>
 
-  <script>
+	<script>
     fetch('webpack-assets.json')
         .then(function (response) {
             return response.json();
@@ -365,15 +365,13 @@
         })
         .catch(function (err) {
             document.getElementById("versioning").innerHTML = '</br></br>Versioning data missing';
+            document.getElementById("revisioning").innerHTML = 'Revisioning data missing';
         });
-    function appendData(data) {
-  console.log(data);
-  document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
-        // var mainContainer = document.getElementById("versioning");
-        //     var div = document.createElement("span");
-        //     div.innerHTML = 'Build: ' + version;
-        //     mainContainer.appendChild(div);
-    }
+          function appendData(data) {
+            console.log(data);
+            document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
+            document.getElementById("revisioning").innerHTML = 'Revision: <strong>' + data.metadata.revision + '<strong>';
+          }
 </script>
 
 </body>

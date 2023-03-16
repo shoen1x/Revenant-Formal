@@ -1,7 +1,6 @@
 //	Revenant Formal by NMVX
 //	Shoen1x.github.io | @Shoenixstudios
 //  under the CCA 3.0 License | Credit to HTML5 UP for template
-
 (function ($) {
 
 	//  Disable Mobile Experiences
@@ -25,11 +24,11 @@
 	});
 
 	// Play initial animations on page load.
-	// $window.on('load', function () {	
-	// 	setTimeout(function () {
-	// 		$body.removeClass('is-preload');
-	// 	}, 100);
-	// });
+	$window.on('load', function () {	
+		setTimeout(function () {
+			$body.removeClass('is-preload');
+		}, 100);
+	});
 
 	// Touch mode.
 	if (browser.mobile)
@@ -265,6 +264,32 @@
 			return;
 		}
 	});
+
+	var slideShow = function(container) {
+		this.images = [];//public var
+		this.curImage = 0; 
+		for (i = 0; i < container.childElementCount; i++) {
+			this.images.push(container.children[i]);
+			this.images[i].style.display = "none";
+		}
+		
+		// Handle going to to the next slide
+		var nextSlide = function() {
+			for (var i = 0; i < this.images.length; i++) {
+				this.images[i].style.display = "none";
+			}
+			this.images[this.curImage].style.display = "block";
+			this.curImage++;
+			if (this.curImage >= this.images.length) {
+				this.curImage = 0;
+			}
+			window.setTimeout(nextSlide.bind(this), 5000);
+		};
+		
+		nextSlide.call(this);
+	};
+	var slike = document.getElementById("slideshow");
+	slideShow(slike);
 
 	// 	var procollection = $(this).data('whichproduct');
 	// 	localStorage.setItem("product_number", "4");
