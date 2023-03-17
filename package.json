@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/shoen1x/Revenant-Formal#readme",
   "dependencies": {
-    "animejs": "^3.2.1",
     "firebase": "^9.17.2",
     "socket.io": "^4.5.4"
   },
