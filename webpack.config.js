@@ -14,7 +14,6 @@ let assetsPluginInstance = new AssetsPlugin({
   processOutput: function (assets) {
     return JSON.stringify(assets);
   }
-  // "window.staticMap = " +
 });
 
 let htmlPageNames = ['home', 'product', 'project', 'blog', '404'];

@@ -3301,57 +3301,17 @@ i {
 
 /* 3D Model Viewer */
 model-viewer {
-	width: 1175px;
+	width: 35vw;
 	height: 100vh;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
-#lazy-load-poster {
-	display: none;
-}
-
-#button-load1,
-#button-load2 {
-	background: var(--black-color);
-	color: var(--white-color);
-	cursor: pointer;
-	display: inline-block;
-	padding: 18px 18px 18px 18px;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .2), 0 0 4px rgba(0, 0, 0, .25);
-	position: absolute;
-	left: 50%;
-	top: 87%;
-	transform: translate3d(-50%, -50%, 0);
-	z-index: 1;
-}
-
-#button-load1:hover,
-#button-load2:hover {
-	background: #3c3d3d;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-	-moz-transition: background-color 0.2s ease-in-out;
-	-webkit-transition: background-color 0.2s ease-in-out;
-	-ms-transition: background-color 0.2s ease-in-out;
-	transition: background-color 0.2s ease-in-out;
-}
-
-@media screen and (max-width:900px) {
+@media screen and (max-width: 480px){
 	model-viewer {
-		display: none;
-	}
-
-	#lazy-load-poster {
-		display: none;
-	}
-
-	#button-load1,
-	#button-load2 {
-		display: none;
+		width: 60vw;
+		height: 80vh;
 	}
 }
 
