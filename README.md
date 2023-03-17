@@ -18,10 +18,9 @@
   <summary>Contents</summary>
   <ol>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#use-by">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#authors-&-support">Contact</a></li>
+    <li><a href="#support">Support</a></li>
     <li><a href="#acknowledgements">Acknowledgments</a></li>
   </ol>
 </details>
@@ -71,9 +70,9 @@
     - [x] Added new ***Project*** page
         - [x] News like project preview for Hero.
         - [x] Added carousel based selection.
-            - [] Fix the js instability for selection (too much card jump from one selection to another).
+            - [ ] Fix the js instability for selection (too much card jump from one selection to another).
         - [x] Grid based full preview with initial focus on click.
-            - [] Fix problematic canvas display sizes for multiple ratio of display (`Problematic with (max-width: 480px) and (min-width: 408px)`).
+            - [ ] Fix problematic canvas display sizes for multiple ratio of display (`Problematic with (max-width: 480px) and (min-width: 408px)`).
 
 - ### Product
     - [x] Added new ***Product*** page
@@ -82,9 +81,9 @@
         - [x] Added new hotspot based garment inspection for more elaborate explanation about the interchangeability in product.
             - [x] Fixed canvas overflows.
         - [x] Added new product select card information with custom logo.
-        - [] Added guides for templates.
-        - [] New payment gateway
-            - [] New custom inquery/ Order system in last section for `Product` page?
+        - [ ] Added guides for templates.
+        - [ ] New payment gateway
+            - [ ] New custom inquery/ Order system in last section for `Product` page?
 
 - ### Blog
     - [x] Blog page for documentation and versioning purposes.
@@ -102,7 +101,7 @@
 - ### Optimizations
     - [X] CSS Cleanup
         - [x] SASS/SCSS base, components, layout, libs cleanup
-        - [] SASS/SCSS implementation fix later for more usable ***`Will change in future`***
+        - [ ] SASS/SCSS implementation fix later for more usable ***`Will change in future`***
     - [x] Javascript
         - [x] All js files cleanup
             - [x] Re-unified all redundances and extra codes into single unit, Minified using Babel in webpack.
