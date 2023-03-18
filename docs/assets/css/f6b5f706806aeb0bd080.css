@@ -7285,7 +7285,6 @@ ul.icons a {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
 	padding: 4rem 0 2rem;
-	background: var(--body-color);
 }
 
 .section__title {
@@ -10022,9 +10021,8 @@ model-viewer {
 	font-style: normal;
 	font-weight: 900;
 	text-transform: none !important;
-	color: inherit;
 	content: '\f1ce';
-	color: #000000;
+	color: #ffffff;
 	cursor: default;
 	display: block;
 	font-size: 2em;
