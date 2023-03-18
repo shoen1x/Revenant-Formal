@@ -64,9 +64,16 @@
 		<span class="firsttext">VALHALLA
 			AXE<br>CONCEPT</span>
 
-		<model-viewer loading="eager" src="images/3D/valhalla.glb" disable-zoom touch-action="pan-y"
-			alt="Valhalla Axes by Shoenix Studios" poster="images/3D/poster-1.webp" shadow-intensity="1" disable-tap auto-rotate>
-
+		<model-viewer src="images/3D/valhalla.glb" disable-zoom touch-action="pan-y" data-js-focus-visible 
+			alt="Valhalla Axes by Shoenix Studios" poster="images/3D/poster-1.webp" shadow-intensity="1" 
+			disable-tap auto-rotate>
+		
+			<div class="model-viewer-poster" slot="poster" style="background-image: url(./images/3D/poster-1.webp);"></div>
+		  
+			<div class="progress-bar hide" slot="progress-bar">
+			  <div class="update-bar" style="width: 100%;"></div>
+			</div>
+			
 		</model-viewer>
 
 		<ul class="actions bottom-special">
@@ -83,9 +90,15 @@
 		<span class="secondtext">
 			JOHOR DARUL TA'ZIM<br>JERSEY CONCEPT</span>
 
-		<model-viewer loading="eager" src="images/3D/johorconcept.glb" disable-zoom touch-action="pan-y"
-			alt="Johor Concept by Shoenix Studios" poster="images/3D/poster.webp" shadow-intensity="1" disable-tap auto-rotate>
+		<model-viewer src="images/3D/johorconcept.glb" disable-zoom touch-action="pan-y" data-js-focus-visible
+			alt="Johor Concept by Shoenix Studios" poster="images/3D/poster.webp" shadow-intensity="1"
+			disable-tap auto-rotate>
 
+			<div class="model-viewer-poster" slot="poster" style="background-image: url(./images/3D/poster.webp);"></div>
+		  
+			<div class="progress-bar hide" slot="progress-bar">
+			  <div class="update-bar" style="width: 100%;"></div>
+			</div>
 		</model-viewer>
 
 		<ul class="actions bottom-special">
@@ -295,8 +308,8 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script type="module" src="assets/js/firebase.js"></script>
-	<script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
-	<script async type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" defer></script>
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
 
 	<script>
 		fetch('webpack-assets.json')

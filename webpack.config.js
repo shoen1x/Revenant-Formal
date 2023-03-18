@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
+const PROD = JSON.parse(process.env.PROD_ENV || '0');
+
 let assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
@@ -23,6 +25,21 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
     template: `./src/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
+    minify: {
+      html5                          : true,
+      collapseWhitespace             : true,
+      minifyCSS                      : true,
+      minifyJS                       : true,
+      minifyURLs                     : false,
+      removeAttributeQuotes          : true,
+      removeComments                 : true, // false for Vue SSR to find app placeholder
+      removeEmptyAttributes          : true,
+      removeOptionalTags             : true,
+      removeRedundantAttributes      : true,
+      removeScriptTypeAttributes     : true,
+      removeStyleLinkTypeAttributese : true,
+      useShortDoctype                : true
+    },
   })
 });
 
@@ -95,7 +112,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "assets/css/[chunkhash].css",
-      chunkFilename: "assets/css/[id].[chunkhash].css"
+      chunkFilename: "assets/css/[id].[chunkhash].css",
     }),
 
     new CopyPlugin ({
