@@ -1043,6 +1043,7 @@ ul.icons a {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
 	padding: 4rem 0 2rem;
+	background: var(--body-color);
 }
 
 .section__title {
