@@ -26,9 +26,8 @@
 	// Play initial animations on page load.
 	$window.on('load', function () {	
 		setTimeout(function () {
-			$body.removeClass('hidden');
-			$('#preloader').remove();
-		}, 600);
+			$body.removeClass('is-preload');
+		}, 100);
 	});
 
 	// Touch mode.
