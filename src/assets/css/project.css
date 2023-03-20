@@ -109,6 +109,7 @@
 }
 
 html {
+  scrollbar-width: none;
   scroll-behavior: smooth;
 }
 
@@ -1345,6 +1346,7 @@ img {
   text-decoration-thickness: 0.125rem;
   text-decoration-skip: ink;
   text-decoration-skip-ink: all;
+  text-decoration: none;
 }
 
 .Card__link::after {
@@ -1512,23 +1514,23 @@ img {
 .gallery {
   display: flex;
   flex-flow: column wrap;
-  align-content: space-between;
-  overflow: hidden;
-  height: 150vh;
+  align-content: center;
+  /* height: 150vh; */
   /* Re-order items into rows */
   /* Force new columns */
 }
-@media screen and (max-width: 480px) {
-  .gallery {
-    height: 48vh;
-    /* Re-order items into rows */
-    /* Force new columns */
+.gallery .gallery-image {
+  width: 80%;
+  /* width: 33.3%; */
+}
+
+@media screen and (max-width: 480px){
+  .gallery .gallery-image {
+    width: 100%;
   }
 }
-.gallery .gallery-image {
-  width: 33.3%;
-}
-.gallery .gallery-image[data-flipping] {
+
+/* .gallery .gallery-image[data-flipping] {
   opacity: 1;
   z-index: 3;
 }
@@ -1546,7 +1548,7 @@ img {
   flex-basis: 100%;
   width: 0;
   order: 2;
-}
+} */
 
 .gallery-image {
   margin: 0;

@@ -3027,6 +3027,7 @@ i {
 	font-size: 60px;
 	font-weight: 600;
 	color: #fff;
+	cursor: default;
 }
 
 .info-container .card .fa-arrow-right {

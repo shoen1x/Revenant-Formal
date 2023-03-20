@@ -22,8 +22,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       pfigure.className = "gallery-image";
       pfigure.appendChild(pimg);
       pfigure.appendChild(pfigc);
-      pimg.width = 800;
-      pimg.height = 800;
       pimg.src = "images/fulls/full/" + gifn + (_i + 1) + ".webp";
       pfigc.innerHTML = _i + 1;
     }
@@ -43,50 +41,38 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     removeAllChildNodes(gal);
     switch (caroldata) {
       case 1:
-        gal.style.height = "150vh";
         document.querySelector('#p-title').innerHTML = "Johor Darul Ta'zim Concept Jersey";
         canvasfpro(9, "st");
         break;
       case 2:
-        gal.style.height = "100vh";
         document.querySelector('#p-title').innerHTML = "Istinggar";
         canvasfpro(7, "ic");
         break;
       case 3:
-        gal.style.height = "60vh";
         document.querySelector('#p-title').innerHTML = "Aerophantom Earbud";
         canvasfpro(4, "ae");
         break;
       case 4:
-        gal.style.height = "80vh";
         document.querySelector('#p-title').innerHTML = "Nordic Axe";
         canvasfpro(6, "na");
         break;
       case 5:
-        gal.style.height = "150vh";
         document.querySelector('#p-title').innerHTML = "Harimau Malaya Jersey Concept";
         canvasfpro(7, "hm");
         break;
       case 6:
-        gal.style.height = "150vh";
         document.querySelector('#p-title').innerHTML = "Kelantan Home Jersey Concept";
         canvasfpro(9, "cs");
         break;
       case 7:
-        gal.style.height = "150vh";
         document.querySelector('#p-title').innerHTML = "Kelantan Away Jersey Concept";
         canvasfpro(9, "csa");
         break;
       case 8:
-        gal.style.height = "60vh";
         document.querySelector('#p-title').innerHTML = "Twin Fangs Sword";
         canvasfpro(5, "rn");
         break;
     }
-    if (isMobile()) {
-      gal.style.height = "48vh";
-    }
-    ;
     startcanvas();
     $('#app').removeClass("Hidden");
   });
