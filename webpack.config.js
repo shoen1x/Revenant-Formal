@@ -72,15 +72,7 @@ module.exports = {
         },
         {
           test: /\.html$/,
-          exclude: /node_modules/,
           use: 'html-loader',
-        },
-        {
-          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
-          type: 'asset/resource',
-            generator: {
-              filename: 'assets/ico/[hash][ext][query]'
-            },
           exclude: /node_modules/,
         },
         {
@@ -105,6 +97,14 @@ module.exports = {
           generator: {
             filename: 'images/[hash][ext][query]'
           },
+          exclude: /node_modules/,
+        },
+        {
+          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
+          type: 'asset/resource',
+            generator: {
+              filename: 'assets/ico/[hash][ext][query]'
+            },
           exclude: /node_modules/,
         }
       ],
