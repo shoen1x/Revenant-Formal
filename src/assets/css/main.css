@@ -283,8 +283,6 @@ img {
 html {
 	height: 100%;
 	background: var(--body-color);
-	font-weight: 300;
-	font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
 	scroll-behavior: smooth;
 }
 
