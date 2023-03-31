@@ -72,6 +72,22 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         document.querySelector('#p-title').innerHTML = "Twin Fangs Sword";
         canvasfpro(5, "rn");
         break;
+      case 9:
+        document.querySelector('#p-title').innerHTML = "Genesis Phantom Skateboard Concept";
+        canvasfpro(7, "nc");
+        break;
+      case 10:
+        document.querySelector('#p-title').innerHTML = "Isometric Room";
+        canvasfpro(3, "ri");
+        break;
+      case 11:
+        document.querySelector('#p-title').innerHTML = "Hausboom X Shoenix Studios";
+        canvasfpro(4, "th");
+        break;
+      case 12:
+        document.querySelector('#p-title').innerHTML = "NeoRonin Techwear Concept";
+        canvasfpro(3, "nr");
+        break;
     }
     startcanvas();
     $('#app').removeClass("Hidden");
