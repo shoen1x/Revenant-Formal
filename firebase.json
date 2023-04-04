@@ -39,20 +39,20 @@
         ]
       },
       {
-        "source": "/**",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "no-cache, no-store, must-revalidate"
-          }
-        ]
-      },
-      {
         "source": "404.html",
         "headers": [
           {
             "key": "Cache-Control",
             "value": "max-age=300"
+          }
+        ]
+      },
+      {
+        "source": "/modules/*",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
           }
         ]
       }
