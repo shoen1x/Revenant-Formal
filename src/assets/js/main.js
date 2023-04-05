@@ -296,6 +296,30 @@
 		localStorage.setItem("product_num", procollection);
 	})
 
+	// Carousel
+	$(document).ready(function(){
+		$('.client-slider').slick({
+		  slidesToShow: 6,
+		  slidesToScroll: 1,
+		  autoplay: true,
+		  autoplaySpeed: 2100,
+		  arrows: false,
+		  dots: false,
+		  pauseOnHover: false,
+		  responsive: [{
+			breakpoint: 768,
+			settings: {
+			  slidesToShow: 4
+			}
+		  }, {
+			breakpoint: 520,
+			settings: {
+			  slidesToShow: 3
+			}
+		  }]
+		});
+	  });
+
 	// var btndownload = document.querySelectorAll('#btn-download');
 	// $(btndownload).on('click', function (event) {
 	// 	event.preventDefault();

@@ -386,6 +386,12 @@ img {
 	right: -4rem;
 }
 
+@media screen and (max-width: 480px){
+	.specs__img {
+		right: -1rem;
+	}
+}
+
 .case__container {
 	position: relative;
 	grid-template-columns: repeat(2, 1fr);
@@ -428,6 +434,15 @@ img {
 	position: absolute;
 	/* top: 4rem; */
 	right: -11rem;
+}
+
+@media screen and (max-width: 480px){
+	.discount__img {
+		width: 127px;
+		top: 8rem;
+		right: 0;
+		padding: 12px;
+	}
 }
 
 .products__line {

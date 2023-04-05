@@ -16,6 +16,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+  <meta name="keywords" content="Shoenix, Shoenix Studios, NMVX, Revenant's Formal, Revenant Formal, NemesisV">
   <meta name="description" content="Collection of experimental projects by NMVX | Shoenix Studios.">
   <link rel="stylesheet" href="assets/debug/project.css?v=b88d04fba731603756b1" />
   <link rel="stylesheet" href="assets/debug/all.min.css?v=b88d04fba731603756b1" />
@@ -25,12 +26,13 @@
 	<link rel="manifest" href="assets/ico/site.webmanifest?v=9374aad54a45d57829e0">
 	<link rel="mask-icon" href="images/svg/safari-pinned-tab.svg?v=aefb2ac60f294aa7500f" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="images/ico/browserconfig.xml">
+  <meta name="format-detection" content="telephone=no">
 
   <!--No script-->
   <noscript>
     <link rel="stylesheet" href="assets/debug/noscript.css?v=b88d04fba731603756b1" />
   </noscript>
-<script defer src="assets/project.js?v=d1b393dfcb8595f4fe67"></script><link href="assets/css/project.css?v=40acbc2461c853786fbd" rel="stylesheet"></head>
+<script defer src="assets/project.js?v=d1b393dfcb8595f4fe67"></script><link href="assets/css/project.css?v=500017ee573363cfe822" rel="stylesheet"></head>
 
 <body>
 
@@ -431,7 +433,6 @@
             document.getElementById("revisioning").innerHTML = 'Revisioning data missing';
         });
           function appendData(data) {
-            console.log(data);
             document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
             document.getElementById("revisioning").innerHTML = 'Revision: <strong>' + data.metadata.revision + '<strong>';
           }

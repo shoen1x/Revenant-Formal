@@ -16,6 +16,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+  <meta name="keywords" content="Shoenix, Shoenix Studios, NMVX, Revenant's Formal, Revenant Formal, NemesisV">
   <meta name="description" content="Collection of experimental projects by NMVX | Shoenix Studios.">
   <link rel="stylesheet" href="assets/css/project.css" />
   <link rel="stylesheet" href="assets/css/all.min.css" />
@@ -25,6 +26,7 @@
 	<link rel="manifest" href="images/ico/site.webmanifest">
 	<link rel="mask-icon" href="images/ico/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="images/ico/browserconfig.xml">
+  <meta name="format-detection" content="telephone=no">
 
   <!--No script-->
   <noscript>
@@ -431,7 +433,6 @@
             document.getElementById("revisioning").innerHTML = 'Revisioning data missing';
         });
           function appendData(data) {
-            console.log(data);
             document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
             document.getElementById("revisioning").innerHTML = 'Revision: <strong>' + data.metadata.revision + '<strong>';
           }
