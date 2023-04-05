@@ -25,21 +25,21 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
     template: `./src/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
-    minify: {
-      html5                          : true,
-      collapseWhitespace             : true,
-      minifyCSS                      : true,
-      minifyJS                       : true,
-      minifyURLs                     : false,
-      removeAttributeQuotes          : true,
-      removeComments                 : true, // false for Vue SSR to find app placeholder
-      removeEmptyAttributes          : true,
-      removeOptionalTags             : true,
-      removeRedundantAttributes      : true,
-      removeScriptTypeAttributes     : true,
-      removeStyleLinkTypeAttributese : true,
-      useShortDoctype                : true
-    },
+    // minify: {
+    //   html5                          : true,
+    //   collapseWhitespace             : true,
+    //   minifyCSS                      : true,
+    //   minifyJS                       : true,
+    //   minifyURLs                     : false,
+    //   removeAttributeQuotes          : true,
+    //   removeComments                 : true, // false for Vue SSR to find app placeholder
+    //   removeEmptyAttributes          : true,
+    //   removeOptionalTags             : true,
+    //   removeRedundantAttributes      : true,
+    //   removeScriptTypeAttributes     : true,
+    //   removeStyleLinkTypeAttributese : true,
+    //   useShortDoctype                : true
+    // },
   })
 });
 
@@ -51,8 +51,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './docs'),
-        filename: "assets/js/[chunkhash].js",
-        assetModuleFilename: "assets/[hash][ext]"
+        filename: "assets/[name].js?v=[chunkhash]",
+        assetModuleFilename: "assets/debug/[name][ext]?v=[hash]"
     },
     performance: {
       // Turn off size warnings for entry points
@@ -61,25 +61,25 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.css$/,
+          test: /\.html$/i,
+          use: 'html-loader',
           exclude: /node_modules/,
-          use: [MiniCssExtractPlugin.loader, "css-loader"],
         },
         {
-          test: /\.js$/,
+          test: /\.js$/i,
           loader: 'babel-loader',
           exclude: /node_modules/,
         },
         {
-          test: /\.html$/,
-          use: 'html-loader',
+          test: /\.css$/i,
           exclude: /node_modules/,
+          use: [MiniCssExtractPlugin.loader, "css-loader"],
         },
         {
           test: /\.(svg)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/svg/[hash][ext][query]'
+            filename: 'images/svg/[name][ext]?v=[hash]'
           },
           exclude: /node_modules/,
         },
@@ -87,15 +87,15 @@ module.exports = {
           test: /\.(woff(2)?|ttf|eot)(\?[a-z0-9=.]+)?$/,
           type: 'asset/resource',
             generator: {
-              filename: 'assets/webfonts/[hash][ext][query]'
+              filename: 'assets/webfonts/[name][ext]?v=[hash]'
             },
           exclude: /node_modules/,
         },
         {
-          test: /\.(png|jpe?g|gif|webp)(\?v=[0-9]\.[0-9]\.[0-9])$/i,
+          test: /\.(png|jpe?g|gif|webp)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/[hash][ext][query]'
+            filename: 'images/[name][ext]?v=[hash]'
           },
           exclude: /node_modules/,
         },
@@ -103,16 +103,24 @@ module.exports = {
           test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
           type: 'asset/resource',
             generator: {
-              filename: 'assets/ico/[hash][ext][query]'
+              filename: 'assets/ico/[name][ext]?v=[hash]'
             },
           exclude: /node_modules/,
-        }
+        },
+        {
+          test: /\.(glb|gltf)$/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'assets/3D/[name][ext]?v=[hash]'
+          },
+          exclude: /node_modules/,
+        },
       ],
     },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/css/[chunkhash].css",
-      chunkFilename: "assets/css/[id].[chunkhash].css",
+      filename: "assets/css/[name].css?v=[fullhash]",
+      chunkFilename: "assets/css/[id].css?v=[fullhash]",
     }),
 
     new CopyPlugin ({
@@ -133,7 +141,7 @@ module.exports = {
     }),
 
     new CleanWebpackPlugin(),
-    assetsPluginInstance
+    assetsPluginInstance,
 
   ].concat(multipleHtmlPlugins)
 };

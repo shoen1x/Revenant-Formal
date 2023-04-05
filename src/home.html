@@ -15,6 +15,7 @@
 	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
 	<meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
+	<meta name="keywords" content="Shoenix, Shoenix Studios, NMVX, Revenant's Formal, Revenant Formal, NemesisV">
 	<meta name="description" content="Welcome to Shoenix Studios | Experimental project by NMVX.">
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="assets/css/all.min.css" />
@@ -24,8 +25,10 @@
 	<link rel="manifest" href="images/ico/site.webmanifest">
 	<link rel="mask-icon" href="images/ico/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="images/ico/browserconfig.xml">
+	<meta name="format-detection" content="telephone=no">
 
 	<!-- Social Media metadata -->
+	<meta property="og:type" content="website">
 	<meta property="og:image:width" content="1563">
 	<meta property="og:image:height" content="818">
 	<meta property="og:description" content="Experimental project by NMVX.">
@@ -333,7 +336,6 @@
 				document.getElementById("dateup").innerHTML = '<br> Latest Update: Failed to load.';
 			});
 		function appendData(data) {
-			console.log(data);
 			document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
 			document.getElementById("revisioning").innerHTML = 'Revision: <strong>' + data.metadata.revision + '<strong>';
 			document.getElementById("dateup").innerHTML = '<br> Latest Update: <strong>' + data.metadata.date + '<strong>';

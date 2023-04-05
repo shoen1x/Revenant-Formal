@@ -296,7 +296,6 @@
 		localStorage.setItem("product_num", procollection);
 	})
 
-
 	// var btndownload = document.querySelectorAll('#btn-download');
 	// $(btndownload).on('click', function (event) {
 	// 	event.preventDefault();
