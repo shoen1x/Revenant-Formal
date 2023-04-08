@@ -1,9 +1,24 @@
+'use strict';
+
+/**
+ * @Created by Revenant|Shoenix on 2022/12/12
+ * @version 0.9.26.10-PreAlpha Created
+ * @description Using Next Generation Vanilla JS & JS Modules today with Webpack 3 & Babel!
+ *
+ * @license MIT
+ * @copyright Shoenix Studios All Rights Reserved
+ * @update 2023.3.5
+ *
+ */
+
 const path = require('path');
+const webpack = require('webpack'); //to access built-in plugins
 const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackInjector = require('html-webpack-injector');
 
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 
@@ -21,10 +36,11 @@ let assetsPluginInstance = new AssetsPlugin({
 let htmlPageNames = ['home', 'product', 'project', 'blog', '404'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
-    inject: true,
+    hash: true,
     template: `./src/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
+    inject: true,
     // minify: {
     //   html5                          : true,
     //   collapseWhitespace             : true,
@@ -45,14 +61,14 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
 
 module.exports = {
     entry: {
-        home :["./src/assets/js/main.js", "./src/assets/css/main.css"],
-        product :["./src/assets/js/product.js", "./src/assets/css/product.css"],
-        project :["./src/assets/js/project.js", "./src/assets/css/project.css"],
+        home :["./src/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
+        product :["./src/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
+        project :["./src/project.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
         path: path.resolve(__dirname, './docs'),
-        filename: "assets/[name].js?v=[chunkhash]",
-        assetModuleFilename: "assets/debug/[name][ext]?v=[hash]"
+        filename: "assets/js/[name].js?v=[chunkhash]",
+        assetModuleFilename: "assets/debug/[name][ext]?v=[hash]",
     },
     performance: {
       // Turn off size warnings for entry points
@@ -73,7 +89,7 @@ module.exports = {
         {
           test: /\.css$/i,
           exclude: /node_modules/,
-          use: [MiniCssExtractPlugin.loader, "css-loader"],
+          use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
         },
         {
           test: /\.(svg)$/,
@@ -142,6 +158,7 @@ module.exports = {
 
     new CleanWebpackPlugin(),
     assetsPluginInstance,
+    new HtmlWebpackInjector(),
 
   ].concat(multipleHtmlPlugins)
 };
