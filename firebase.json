@@ -58,7 +58,7 @@
       }
     ],
     "cleanUrls": true,
-    "trailingSlash": true,
+    "trailingSlash": false,
     "ignore": [
       "firebase.json",
       "**/.*",
