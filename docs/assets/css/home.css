@@ -2527,7 +2527,7 @@ body.is-touch .main {
 		linear-gradient(75deg, #0003 0%, #0000 66%),
 		linear-gradient(18deg, #0000004d 0%, #0000 33%),
 		linear-gradient(15deg, #0006 0%, #0000 66%),
-		linear-gradient(15deg, #00000080, #0000), url(../../images/overlay2.webp?v=10533eceb7d3d7741e52), url(../../images/shoenixfirst.webp?v=adfda9bd319fb073093c);
+		linear-gradient(15deg, #00000080, #0000), url(../../images/overlay2.webp?v=10533eceb7d3d7741e52), url(../../images/shoenixfirst.webp?v=0ae2836c75d979b40fcc);
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, fixed;
 	background-position: center center, center center;

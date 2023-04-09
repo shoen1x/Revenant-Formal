@@ -41,21 +41,21 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
     filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
-    // minify: {
-    //   html5                          : true,
-    //   collapseWhitespace             : true,
-    //   minifyCSS                      : true,
-    //   minifyJS                       : true,
-    //   minifyURLs                     : false,
-    //   removeAttributeQuotes          : true,
-    //   removeComments                 : true, // false for Vue SSR to find app placeholder
-    //   removeEmptyAttributes          : true,
-    //   removeOptionalTags             : true,
-    //   removeRedundantAttributes      : true,
-    //   removeScriptTypeAttributes     : true,
-    //   removeStyleLinkTypeAttributese : true,
-    //   useShortDoctype                : true
-    // },
+    minify: {
+      html5                          : true,
+      collapseWhitespace             : true,
+      minifyCSS                      : true,
+      minifyJS                       : true,
+      minifyURLs                     : false,
+      removeAttributeQuotes          : true,
+      removeComments                 : true, // false for Vue SSR to find app placeholder
+      removeEmptyAttributes          : true,
+      removeOptionalTags             : true,
+      removeRedundantAttributes      : true,
+      removeScriptTypeAttributes     : true,
+      removeStyleLinkTypeAttributese : true,
+      useShortDoctype                : true
+    },
   })
 });
 
@@ -121,14 +121,6 @@ module.exports = {
             generator: {
               filename: 'assets/ico/[name][ext]?v=[hash]'
             },
-          exclude: /node_modules/,
-        },
-        {
-          test: /\.(glb|gltf)$/,
-          type: 'asset/resource',
-          generator: {
-            filename: 'assets/3D/[name][ext]?v=[hash]'
-          },
           exclude: /node_modules/,
         },
       ],
