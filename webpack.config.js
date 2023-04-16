@@ -116,6 +116,14 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
+          test: /\.(webm)$/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'videos/[name][ext]?v=[hash]'
+          },
+          exclude: /node_modules/,
+        },
+        {
           test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
           type: 'asset/resource',
             generator: {
