@@ -1118,6 +1118,7 @@ img {
   flex: 1 0 auto;
   min-height: 100%;
   scroll-snap-align: start;
+  cursor: pointer;
 }
 
 .Carousel .Card__media {

@@ -41,21 +41,21 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
     filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
-    minify: {
-      html5                          : true,
-      collapseWhitespace             : true,
-      minifyCSS                      : true,
-      minifyJS                       : true,
-      minifyURLs                     : false,
-      removeAttributeQuotes          : true,
-      removeComments                 : true, // false for Vue SSR to find app placeholder
-      removeEmptyAttributes          : true,
-      removeOptionalTags             : true,
-      removeRedundantAttributes      : true,
-      removeScriptTypeAttributes     : true,
-      removeStyleLinkTypeAttributese : true,
-      useShortDoctype                : true
-    },
+    // minify: {
+    //   html5                          : true,
+    //   collapseWhitespace             : true,
+    //   minifyCSS                      : true,
+    //   minifyJS                       : true,
+    //   minifyURLs                     : false,
+    //   removeAttributeQuotes          : true,
+    //   removeComments                 : true, // false for Vue SSR to find app placeholder
+    //   removeEmptyAttributes          : true,
+    //   removeOptionalTags             : true,
+    //   removeRedundantAttributes      : true,
+    //   removeScriptTypeAttributes     : true,
+    //   removeStyleLinkTypeAttributese : true,
+    //   useShortDoctype                : true
+    // },
   })
 });
 
@@ -92,7 +92,7 @@ module.exports = {
           use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
         },
         {
-          test: /\.(svg)$/,
+          test: /\.svg$/,
           type: 'asset/resource',
           generator: {
             filename: 'images/svg/[name][ext]?v=[hash]'
@@ -141,10 +141,6 @@ module.exports = {
 
     new CopyPlugin ({
       patterns:[
-        {
-          from: "./src/images/fulls/",
-          to: "images/fulls/",
-        },
         {
           from: "./src/og-image.jpg",
           to: "images/",
