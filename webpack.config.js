@@ -116,6 +116,14 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
+          test: /\.(gltf|glb)$/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'images/3D/[name][ext]?v=[hash]'
+          },
+          exclude: /node_modules/,
+        },
+        {
           test: /\.(webm)$/,
           type: 'asset/resource',
           generator: {
@@ -149,10 +157,6 @@ module.exports = {
           from: "./src/images/products/",
           to: "images/products/",
         },
-        {
-          from: "./src/images/3D/",
-          to: "images/3D/",
-        }
       ]
     }),
 
