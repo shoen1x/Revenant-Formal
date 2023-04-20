@@ -13,9 +13,9 @@
 /*!**********************************!*\
   !*** ./src/assets/js/product.js ***!
   \**********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("//\tRevenant Formal by NMVX\n//\tShoen1x.github.io | @Shoenixstudios\n//  under the CCA 3.0 License | Credit to HTML5 UP for template\n\n(function ($) {\n  addEventListener(\"DOMContentLoaded\", function (e) {\n    e.preventDefault;\n    var pronum = localStorage.getItem('product_num');\n\n    // var url_selection = window.location.href.match(/\\d+$/);\n    var jcount = 4;\n    var col2 = {\n      'colname': [\"Monarch\", \"Bos Gaurus\", \"Nightmare\", \"Legion\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var col3 = {\n      'colname': [\"Nexus\", \"Plexus\", \"Scar\", \"Nemesis\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var col4 = {\n      'colname': [\"San Mirage\", \"Avarice\", \"Chaos\", \"Wrath\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var col5 = {\n      'colname': [\"Alpha\", \"Beta\", \"Charlie\", \"Delta\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var sname = [\"PowerWear™\", \"UrbanWear™\", \"GameOn\"];\n    var sdesc = [\"Athleisure and active wear\", \"Streetwear and leisure wear\", \"Electronic game and competitive wear\"];\n    var cname = parseInt(pronum);\n    if (cname == 1 || cname > 5) {\n      alert(\"Error\");\n      location.href = '/';\n    } else {\n      (function () {\n        document.querySelector('.home__img').src = \"images/products/collection\" + cname + \"/1.webp\";\n        var rotator = document.querySelector('.home__img');\n        var imageDir = 'images/products/collection' + cname + \"/\";\n        var delayInSeconds = 5;\n        var images = ['1.webp', '2.webp', '3.webp', '4.webp'];\n        var num = 0;\n        var changeImage = function changeImage() {\n          var len = images.length;\n          rotator.src = imageDir + images[num++];\n          if (num == len) {\n            num = 0;\n          }\n        };\n        setInterval(changeImage, delayInSeconds * 1000);\n      })();\n\n      // Neat Page changes information\n      switch (cname) {\n        case 2:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"In The Name of Tsar\";\n          document.querySelector('.discount__description').innerHTML = \"Get In The Name of Tsar now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing the In the Name of Tsar Collection: a unique, modern take on streetwear. stylish and custom-made just for you. Suitable for athleisure and sports wear\";\n          document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';\n          break;\n        case 3:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"Black Steel Eagle\";\n          document.querySelector('.discount__description').innerHTML = \"Get Black Steel Eagle now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing the Black Steel Eagle Collection: a mainstream sports inspired design. Unique and custom-made just for you. Suitable for sport usage\";\n          document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';\n          break;\n        case 4:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"The World\";\n          document.querySelector('.discount__description').innerHTML = \"Get The World now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing The World Collection: a robust design for stylish everyday clothing. custom-made just for you. Suitable for streetwear and athleisure\";\n          document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';\n          break;\n        case 5:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"The Unity\";\n          document.querySelector('.discount__description').innerHTML = \"Get The Unity now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing The Unity Collection: a minimalist, clean and modern design. stylish and custom-made just for you. Suitable for e-sport and electronic sport organization\";\n          document.querySelector('.discount__img').src = 'images/products/Bundle' + cname + '.svg';\n          break;\n      }\n\n      // For Loop catch image query, name, and prices\n      switch (cname) {\n        case 2:\n          for (var i = 0; i < jcount; i++) {\n            document.querySelectorAll('.products__img')[i].src = \"images/products/collection\" + cname + \"/\" + (i + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[i].innerHTML = col2['colname'][i];\n            document.querySelectorAll('.products__price')[i].innerHTML = col2['colprice'][i];\n          }\n          break;\n        case 3:\n          for (var _i = 0; _i < jcount; _i++) {\n            document.querySelectorAll('.products__img')[_i].src = \"images/products/collection\" + cname + \"/\" + (_i + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[_i].innerHTML = col3['colname'][_i];\n            document.querySelectorAll('.products__price')[_i].innerHTML = col3['colprice'][_i];\n          }\n          break;\n        case 4:\n          for (var _i2 = 0; _i2 < jcount; _i2++) {\n            document.querySelectorAll('.products__img')[_i2].src = \"images/products/collection\" + cname + \"/\" + (_i2 + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[_i2].innerHTML = col4['colname'][_i2];\n            document.querySelectorAll('.products__price')[_i2].innerHTML = col4['colprice'][_i2];\n          }\n          break;\n        case 5:\n          for (var _i3 = 0; _i3 < jcount; _i3++) {\n            document.querySelectorAll('.products__img')[_i3].src = \"images/products/collection\" + cname + \"/\" + (_i3 + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[_i3].innerHTML = col5['colname'][_i3];\n            document.querySelectorAll('.products__price')[_i3].innerHTML = col5['colprice'][_i3];\n          }\n          break;\n      }\n    }\n    var slcpk = document.querySelectorAll('.products__content button');\n    $(slcpk).on('click', function () {\n      var slcpkdata = $(this).data(\"slcpkdata\");\n      document.querySelector('.tag').innerHTML = document.querySelectorAll('.products__title')[slcpkdata].innerHTML;\n      var checktag = document.querySelector('.tag').innerHTML;\n      document.querySelector('#pdmtitle').innerHTML = checktag;\n      document.querySelector('#pdminfo').innerHTML = \"This \" + checktag + \" is availabe with:\";\n      document.querySelector('#pdrtitle').innerHTML = \"What included in \" + checktag + \"'s Packages?\";\n      document.querySelector('#pdprice').innerHTML = document.querySelectorAll('.products__price')[slcpkdata].innerHTML;\n      if (checktag == 'Monarch' || checktag == 'Nightmare' || checktag == 'Nexus' || checktag == \"San Mirage\" || checktag == \"Avarice\" || checktag == \"Chaos\" || checktag == \"Wrath\") {\n        document.querySelector('#pdltitle').innerHTML = sname[0] + \" Series\";\n        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[0] + ' Series for ' + sdesc[0] + '.';\n        document.querySelector('#pdlsvg').src = 'images/products/ctype/powerwear.svg';\n      } else if (checktag == 'Bos Gaurus' || checktag == 'Legion' || checktag == \"Plexus\" || checktag == \"Scar\" || checktag == \"Nemesis\") {\n        document.querySelector('#pdltitle').innerHTML = sname[1] + \" Series\";\n        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[1] + ' Series for ' + sdesc[1] + '.';\n        document.querySelector('#pdlsvg').src = 'images/products/ctype/urbanwear.svg';\n      } else {\n        document.querySelector('#pdltitle').innerHTML = sname[2] + \" Series\";\n        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[2] + ' Series for ' + sdesc[2] + '.';\n        document.querySelector('#pdlsvg').src = 'images/products/ctype/gameon.svg';\n      }\n    });\n  }, {\n    passive: true\n  });\n})(jQuery);\n\n//# sourceURL=webpack://revenant-formal/./src/assets/js/product.js?");
+eval("//\tRevenant Formal by NMVX\n//\tShoen1x.github.io | @Shoenixstudios\n//  under the CCA 3.0 License | Credit to HTML5 UP for template\n\n(function ($) {\n  // Importer\n  var importAll = function importAll(require) {\n    return require.keys().reduce(function (acc, next) {\n      acc[next.replace(\"../../\", \"\")] = require(next);\n      return acc;\n    }, {});\n  };\n  importAll(__webpack_require__(\"./src/images/products sync recursive \\\\.(svg%7Cwebp)$\"));\n  addEventListener(\"DOMContentLoaded\", function (e) {\n    e.preventDefault;\n    var pronum = localStorage.getItem('product_num');\n\n    // var url_selection = window.location.href.match(/\\d+$/);\n    var jcount = 4;\n    var col2 = {\n      'colname': [\"Monarch\", \"Bos Gaurus\", \"Nightmare\", \"Legion\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var col3 = {\n      'colname': [\"Nexus\", \"Plexus\", \"Scar\", \"Nemesis\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var col4 = {\n      'colname': [\"San Mirage\", \"Avarice\", \"Chaos\", \"Wrath\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var col5 = {\n      'colname': [\"Alpha\", \"Beta\", \"Charlie\", \"Delta\"],\n      'colprice': [\"RM???\", \"RM???\", \"RM???\", \"RM???\"]\n    };\n    var sname = [\"PowerWear™\", \"UrbanWear™\", \"GameOn\"];\n    var sdesc = [\"Athleisure and active wear\", \"Streetwear and leisure wear\", \"Electronic game and competitive wear\"];\n    var cname = parseInt(pronum);\n    if (cname == 1 || cname > 5) {\n      alert(\"Error\");\n      location.href = '/';\n    } else {\n      (function () {\n        document.querySelector('.home__img').src = \"images/\" + \"c\" + cname + \"-1.webp\";\n        var rotator = document.querySelector('.home__img');\n        var imageDir = 'images/';\n        var delayInSeconds = 5;\n        var images = ['c' + cname + '-1.webp', 'c' + cname + '-2.webp', 'c' + cname + '-3.webp', 'c' + cname + '-4.webp'];\n        var num = 0;\n        var changeImage = function changeImage() {\n          var len = images.length;\n          rotator.src = imageDir + images[num++];\n          if (num == len) {\n            num = 0;\n          }\n        };\n        setInterval(changeImage, delayInSeconds * 1000);\n      })();\n\n      // Neat Page changes information\n      switch (cname) {\n        case 2:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"In The Name of Tsar\";\n          document.querySelector('.discount__description').innerHTML = \"Get In The Name of Tsar now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing the In the Name of Tsar Collection: a unique, modern take on streetwear. stylish and custom-made just for you. Suitable for athleisure and sports wear\";\n          document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';\n          break;\n        case 3:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"Black Steel Eagle\";\n          document.querySelector('.discount__description').innerHTML = \"Get Black Steel Eagle now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing the Black Steel Eagle Collection: a mainstream sports inspired design. Unique and custom-made just for you. Suitable for sport usage\";\n          document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';\n          break;\n        case 4:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"The World\";\n          document.querySelector('.discount__description').innerHTML = \"Get The World now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing The World Collection: a robust design for stylish everyday clothing. custom-made just for you. Suitable for streetwear and athleisure\";\n          document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';\n          break;\n        case 5:\n          document.querySelector('#product-type').innerHTML = \"Collection\";\n          document.querySelector('.home__subtitle').innerHTML = \"The Unity\";\n          document.querySelector('.discount__description').innerHTML = \"Get The Unity now, up to 15% off.\";\n          document.querySelector('.home__description').innerHTML = \"Introducing The Unity Collection: a minimalist, clean and modern design. stylish and custom-made just for you. Suitable for e-sport and electronic sport organization\";\n          document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';\n          break;\n      }\n\n      // For Loop catch image query, name, and prices\n      switch (cname) {\n        case 2:\n          for (var i = 0; i < jcount; i++) {\n            document.querySelectorAll('.products__img')[i].src = \"images/c\" + cname + \"-\" + (i + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[i].innerHTML = col2['colname'][i];\n            document.querySelectorAll('.products__price')[i].innerHTML = col2['colprice'][i];\n          }\n          break;\n        case 3:\n          for (var _i = 0; _i < jcount; _i++) {\n            document.querySelectorAll('.products__img')[_i].src = \"images/c\" + cname + \"-\" + (_i + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[_i].innerHTML = col3['colname'][_i];\n            document.querySelectorAll('.products__price')[_i].innerHTML = col3['colprice'][_i];\n          }\n          break;\n        case 4:\n          for (var _i2 = 0; _i2 < jcount; _i2++) {\n            document.querySelectorAll('.products__img')[_i2].src = \"images/c\" + cname + \"-\" + (_i2 + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[_i2].innerHTML = col4['colname'][_i2];\n            document.querySelectorAll('.products__price')[_i2].innerHTML = col4['colprice'][_i2];\n          }\n          break;\n        case 5:\n          for (var _i3 = 0; _i3 < jcount; _i3++) {\n            document.querySelectorAll('.products__img')[_i3].src = \"images/c\" + cname + \"-\" + (_i3 + 1) + \".webp\";\n            document.querySelectorAll('.products__title')[_i3].innerHTML = col5['colname'][_i3];\n            document.querySelectorAll('.products__price')[_i3].innerHTML = col5['colprice'][_i3];\n          }\n          break;\n      }\n    }\n    var slcpk = document.querySelectorAll('.products__content button');\n    $(slcpk).on('click', function () {\n      var slcpkdata = $(this).data(\"slcpkdata\");\n      document.querySelector('.tag').innerHTML = document.querySelectorAll('.products__title')[slcpkdata].innerHTML;\n      var checktag = document.querySelector('.tag').innerHTML;\n      document.querySelector('#pdmtitle').innerHTML = checktag;\n      document.querySelector('#pdminfo').innerHTML = \"This \" + checktag + \" is availabe with:\";\n      document.querySelector('#pdrtitle').innerHTML = \"What included in \" + checktag + \"'s Packages?\";\n      document.querySelector('#pdprice').innerHTML = document.querySelectorAll('.products__price')[slcpkdata].innerHTML;\n      if (checktag == 'Monarch' || checktag == 'Nightmare' || checktag == 'Nexus' || checktag == \"San Mirage\" || checktag == \"Avarice\" || checktag == \"Chaos\" || checktag == \"Wrath\") {\n        document.querySelector('#pdltitle').innerHTML = sname[0] + \" Series\";\n        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[0] + ' Series for ' + sdesc[0] + '.';\n        document.querySelector('#pdlsvg').src = 'images/svg/powerwear.svg';\n      } else if (checktag == 'Bos Gaurus' || checktag == 'Legion' || checktag == \"Plexus\" || checktag == \"Scar\" || checktag == \"Nemesis\") {\n        document.querySelector('#pdltitle').innerHTML = sname[1] + \" Series\";\n        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[1] + ' Series for ' + sdesc[1] + '.';\n        document.querySelector('#pdlsvg').src = 'images/svg/urbanwear.svg';\n      } else {\n        document.querySelector('#pdltitle').innerHTML = sname[2] + \" Series\";\n        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[2] + ' Series for ' + sdesc[2] + '.';\n        document.querySelector('#pdlsvg').src = 'images/svg/gameon.svg';\n      }\n    });\n  }, {\n    passive: true\n  });\n})(jQuery);\n\n//# sourceURL=webpack://revenant-formal/./src/assets/js/product.js?");
 
 /***/ }),
 
@@ -49,6 +49,16 @@ eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://revenant-formal/./src/assets/css/product.css?");
+
+/***/ }),
+
+/***/ "./src/images/products sync recursive \\.(svg%7Cwebp)$":
+/*!***************************************************!*\
+  !*** ./src/images/products/ sync \.(svg%7Cwebp)$ ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var map = {\n\t\"./Bundle2.svg\": \"./src/images/products/Bundle2.svg\",\n\t\"./Bundle3.svg\": \"./src/images/products/Bundle3.svg\",\n\t\"./Bundle4.svg\": \"./src/images/products/Bundle4.svg\",\n\t\"./Bundle5.svg\": \"./src/images/products/Bundle5.svg\",\n\t\"./cadjust.webp\": \"./src/images/products/cadjust.webp\",\n\t\"./collection2/c2-1.webp\": \"./src/images/products/collection2/c2-1.webp\",\n\t\"./collection2/c2-2.webp\": \"./src/images/products/collection2/c2-2.webp\",\n\t\"./collection2/c2-3.webp\": \"./src/images/products/collection2/c2-3.webp\",\n\t\"./collection2/c2-4.webp\": \"./src/images/products/collection2/c2-4.webp\",\n\t\"./collection3/c3-1.webp\": \"./src/images/products/collection3/c3-1.webp\",\n\t\"./collection3/c3-2.webp\": \"./src/images/products/collection3/c3-2.webp\",\n\t\"./collection3/c3-3.webp\": \"./src/images/products/collection3/c3-3.webp\",\n\t\"./collection3/c3-4.webp\": \"./src/images/products/collection3/c3-4.webp\",\n\t\"./collection4/c4-1.webp\": \"./src/images/products/collection4/c4-1.webp\",\n\t\"./collection4/c4-2.webp\": \"./src/images/products/collection4/c4-2.webp\",\n\t\"./collection4/c4-3.webp\": \"./src/images/products/collection4/c4-3.webp\",\n\t\"./collection4/c4-4.webp\": \"./src/images/products/collection4/c4-4.webp\",\n\t\"./collection5/c5-1.webp\": \"./src/images/products/collection5/c5-1.webp\",\n\t\"./collection5/c5-2.webp\": \"./src/images/products/collection5/c5-2.webp\",\n\t\"./collection5/c5-3.webp\": \"./src/images/products/collection5/c5-3.webp\",\n\t\"./collection5/c5-4.webp\": \"./src/images/products/collection5/c5-4.webp\",\n\t\"./ctype/gameon.svg\": \"./src/images/products/ctype/gameon.svg\",\n\t\"./ctype/powerwear.svg\": \"./src/images/products/ctype/powerwear.svg\",\n\t\"./ctype/urbanwear.svg\": \"./src/images/products/ctype/urbanwear.svg\",\n\t\"./icn_bundle_symbols_spr.svg\": \"./src/images/products/icn_bundle_symbols_spr.svg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/images/products sync recursive \\\\.(svg%7Cwebp)$\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/_sync_\\.(svg%257Cwebp)$?");
 
 /***/ }),
 
@@ -272,6 +282,50 @@ eval("module.exports = __webpack_require__.p + \"assets/ico/site.webmanifest?v=9
 
 /***/ }),
 
+/***/ "./src/images/products/Bundle2.svg":
+/*!*****************************************!*\
+  !*** ./src/images/products/Bundle2.svg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/Bundle2.svg?v=63ae1f2d2977b13813ad\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/Bundle2.svg?");
+
+/***/ }),
+
+/***/ "./src/images/products/Bundle3.svg":
+/*!*****************************************!*\
+  !*** ./src/images/products/Bundle3.svg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/Bundle3.svg?v=9d87a6ea0ce7f59ad8ff\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/Bundle3.svg?");
+
+/***/ }),
+
+/***/ "./src/images/products/Bundle4.svg":
+/*!*****************************************!*\
+  !*** ./src/images/products/Bundle4.svg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/Bundle4.svg?v=8e052f194490ac8c1608\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/Bundle4.svg?");
+
+/***/ }),
+
+/***/ "./src/images/products/Bundle5.svg":
+/*!*****************************************!*\
+  !*** ./src/images/products/Bundle5.svg ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/Bundle5.svg?v=c5bc2eeba14db3172bd5\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/Bundle5.svg?");
+
+/***/ }),
+
 /***/ "./src/images/products/cadjust.webp":
 /*!******************************************!*\
   !*** ./src/images/products/cadjust.webp ***!
@@ -280,6 +334,226 @@ eval("module.exports = __webpack_require__.p + \"assets/ico/site.webmanifest?v=9
 
 "use strict";
 eval("module.exports = __webpack_require__.p + \"images/cadjust.webp?v=b7967ee70a5c8f5d7274\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/cadjust.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection2/c2-1.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection2/c2-1.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c2-1.webp?v=82f42ad157250c51fade\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection2/c2-1.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection2/c2-2.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection2/c2-2.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c2-2.webp?v=2a88d0c0346a33ac6458\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection2/c2-2.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection2/c2-3.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection2/c2-3.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c2-3.webp?v=89b0d0449e9c272d2513\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection2/c2-3.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection2/c2-4.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection2/c2-4.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c2-4.webp?v=212d37381588db59bb52\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection2/c2-4.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection3/c3-1.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection3/c3-1.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c3-1.webp?v=1bb132b8ad6847e0fed8\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection3/c3-1.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection3/c3-2.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection3/c3-2.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c3-2.webp?v=7b56ad258e7861faaa93\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection3/c3-2.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection3/c3-3.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection3/c3-3.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c3-3.webp?v=a6f7b8cc37a6c96a2104\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection3/c3-3.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection3/c3-4.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection3/c3-4.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c3-4.webp?v=7b05667ed8dfe312a772\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection3/c3-4.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection4/c4-1.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection4/c4-1.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c4-1.webp?v=0797e5683b1b50e3d757\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection4/c4-1.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection4/c4-2.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection4/c4-2.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c4-2.webp?v=c0620ccb3a8106c7e839\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection4/c4-2.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection4/c4-3.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection4/c4-3.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c4-3.webp?v=9fa2093f7f821376324f\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection4/c4-3.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection4/c4-4.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection4/c4-4.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c4-4.webp?v=33ace33105d42be4ad39\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection4/c4-4.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection5/c5-1.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection5/c5-1.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c5-1.webp?v=7ffb4654de7586989341\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection5/c5-1.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection5/c5-2.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection5/c5-2.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c5-2.webp?v=107b72abc1eada746f1b\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection5/c5-2.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection5/c5-3.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection5/c5-3.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c5-3.webp?v=dbeeaa78724a0d28da3b\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection5/c5-3.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/collection5/c5-4.webp":
+/*!***************************************************!*\
+  !*** ./src/images/products/collection5/c5-4.webp ***!
+  \***************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/c5-4.webp?v=e0b89be6ee7421100eb6\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/collection5/c5-4.webp?");
+
+/***/ }),
+
+/***/ "./src/images/products/ctype/gameon.svg":
+/*!**********************************************!*\
+  !*** ./src/images/products/ctype/gameon.svg ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/gameon.svg?v=eb9197407a631d8c609f\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/ctype/gameon.svg?");
+
+/***/ }),
+
+/***/ "./src/images/products/ctype/powerwear.svg":
+/*!*************************************************!*\
+  !*** ./src/images/products/ctype/powerwear.svg ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/powerwear.svg?v=14e756e287ee9634a44b\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/ctype/powerwear.svg?");
+
+/***/ }),
+
+/***/ "./src/images/products/ctype/urbanwear.svg":
+/*!*************************************************!*\
+  !*** ./src/images/products/ctype/urbanwear.svg ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/urbanwear.svg?v=6ed120f2daf2683fa2d6\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/ctype/urbanwear.svg?");
+
+/***/ }),
+
+/***/ "./src/images/products/icn_bundle_symbols_spr.svg":
+/*!********************************************************!*\
+  !*** ./src/images/products/icn_bundle_symbols_spr.svg ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"images/svg/icn_bundle_symbols_spr.svg?v=d0f6b066892a4813da34\";\n\n//# sourceURL=webpack://revenant-formal/./src/images/products/icn_bundle_symbols_spr.svg?");
 
 /***/ }),
 

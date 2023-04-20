@@ -153,10 +153,6 @@ module.exports = {
           from: "./src/og-image.jpg",
           to: "images/",
         },
-        {
-          from: "./src/images/products/",
-          to: "images/products/",
-        },
       ]
     }),
 

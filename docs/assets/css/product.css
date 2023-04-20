@@ -1392,3 +1392,38 @@ img {
 	  border: none;
 	}
   }
+
+  
+/* Skeletons elements */
+.skeleton {
+	background: linear-gradient(
+	  90deg,
+	  hsl(210, 15%, 88%),
+	  hsl(210, 15%, 95%),
+	  hsl(210, 15%, 88%)
+	);
+	background-size: 200%;
+	animation: loader 1s infinite reverse;
+  }
+  h2.skeleton {
+	width: 50%;
+	height: 1em;
+  }
+  small.skeleton {
+	height: 1rem;
+	width: 4rem;
+  }
+  p.skeleton {
+	height: 3em;
+  }
+  
+  /* skeleton animation */
+  @keyframes loader {
+	from {
+	  background-position: -100% 0;
+	}
+	to {
+	  background-position: 100% 0;
+	}
+  }
+  
