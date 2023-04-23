@@ -132,6 +132,14 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
+          test: /(og-image).*\.jpg$/,
+          type: 'asset/resource',
+          generator: {
+            filename: 'images/og-image/[name][ext]?v=[hash]'
+          },
+          exclude: /node_modules/,
+        },
+        {
           test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
           type: 'asset/resource',
             generator: {
@@ -147,14 +155,14 @@ module.exports = {
       chunkFilename: "assets/css/[id].css?v=[fullhash]",
     }),
 
-    new CopyPlugin ({
-      patterns:[
-        {
-          from: "./src/og-image.jpg",
-          to: "images/",
-        },
-      ]
-    }),
+    // new CopyPlugin ({
+    //   patterns:[
+    //     {
+    //       from: "./src/og-image.jpg",
+    //       to: "images/",
+    //     },
+    //   ]
+    // }),
 
     new CleanWebpackPlugin(),
     assetsPluginInstance,

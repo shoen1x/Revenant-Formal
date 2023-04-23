@@ -10,7 +10,7 @@
 		return acc;
 	}, {});
 
-	importAll(require.context('../../images/fulls/', true, /\.webp$/), require.context('../../images/3D/', true, /\.(glb|webp)$/));
+	importAll(require.context('../../images/fulls/', true, /\.webp$/), require.context('../../images/3D/', true, /\.(glb|webp)$/), require.context('../../images/og-images/', true, /(og-image).*\.jpg$/));
 
 	//  Disable Mobile Experiences
 	function isMobile() {
