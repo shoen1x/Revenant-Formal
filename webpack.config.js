@@ -27,7 +27,6 @@ let assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
-  update: true,
   metadata: {version: '0.9.26.10-PreAlpha', date: '05 Mac, 2023', revision: 'RevF' + Date.parse(Date())},
 
   processOutput: function (assets) {
@@ -69,6 +68,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './docs'),
         filename: "assets/js/[name].js?v=[contenthash]",
+        chunkFilename: "assets/js/[name].chunk.js?v=[contenthash]",
         assetModuleFilename: "assets/debug/[name][ext]?v=[contenthash]",
         crossOriginLoading: "anonymous",
     },
@@ -89,9 +89,20 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
-          test: /\.css$/i,
-          exclude: /node_modules/,
-          use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+          test: /\.css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+                modules: {
+                  auto: true,
+                },
+                importLoaders: 1,
+              },
+            },
+          ],
         },
         {
           test: /\.svg$/,
@@ -159,7 +170,6 @@ module.exports = {
       filename: "assets/css/[name].css?v=[contenthash]",
       chunkFilename: "assets/css/[id].css?v=[contenthash]",
     }),
-
     new CleanWebpackPlugin(),
     new HtmlWebpackInjector(),
     assetsPluginInstance,
