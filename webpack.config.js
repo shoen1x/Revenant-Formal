@@ -175,7 +175,7 @@ module.exports = {
     assetsPluginInstance,
     new WebpackAssetsManifest({ integrity: true }),
     new SubresourceIntegrityPlugin({
-      hashFuncNames: ["sha384", "sha512"],
+      hashFuncNames: ["sha256", "sha384"],
       enabled: true,
     }),
 
