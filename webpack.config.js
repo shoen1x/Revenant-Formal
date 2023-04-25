@@ -17,12 +17,13 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackInjector = require('html-webpack-injector');
+const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 
 let assetsPluginInstance = new AssetsPlugin({
+  integrity: true,
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
@@ -66,9 +67,10 @@ module.exports = {
         project :["./src/project.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
+        crossOriginLoading: "anonymous",
         path: path.resolve(__dirname, './docs'),
-        filename: "assets/js/[name].js?v=[chunkhash]",
-        assetModuleFilename: "assets/debug/[name][ext]?v=[hash]",
+        filename: "assets/js/[name].js?v=[contenthash]",
+        assetModuleFilename: "assets/debug/[name][ext]?v=[contenthash]",
     },
     performance: {
       // Turn off size warnings for entry points
@@ -95,7 +97,7 @@ module.exports = {
           test: /\.svg$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/svg/[name][ext]?v=[hash]'
+            filename: 'images/svg/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -103,7 +105,7 @@ module.exports = {
           test: /\.(woff(2)?|ttf|eot)(\?[a-z0-9=.]+)?$/,
           type: 'asset/resource',
             generator: {
-              filename: 'assets/webfonts/[name][ext]?v=[hash]'
+              filename: 'assets/webfonts/[name][ext]?v=[contenthash]'
             },
           exclude: /node_modules/,
         },
@@ -111,7 +113,7 @@ module.exports = {
           test: /\.(png|jpe?g|gif|webp)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/[name][ext]?v=[hash]'
+            filename: 'images/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -119,7 +121,7 @@ module.exports = {
           test: /\.(gltf|glb)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/3D/[name][ext]?v=[hash]'
+            filename: 'images/3D/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -127,7 +129,7 @@ module.exports = {
           test: /\.(webm)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'videos/[name][ext]?v=[hash]'
+            filename: 'videos/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -135,7 +137,7 @@ module.exports = {
           test: /(og-image).*\.jpg$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/og-image/[name][ext]?v=[hash]'
+            filename: 'images/og-image/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -143,27 +145,25 @@ module.exports = {
           test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
           type: 'asset/resource',
             generator: {
-              filename: 'assets/ico/[name][ext]?v=[hash]'
+              filename: 'assets/ico/[name][ext]?v=[contenthash]'
             },
           exclude: /node_modules/,
         },
       ],
     },
+    optimization: {
+      realContentHash: true,
+    },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/css/[name].css?v=[fullhash]",
-      chunkFilename: "assets/css/[id].css?v=[fullhash]",
+      filename: "assets/css/[name].css?v=[contenthash]",
+      chunkFilename: "assets/css/[id].css?v=[contenthash]",
     }),
 
-    // new CopyPlugin ({
-    //   patterns:[
-    //     {
-    //       from: "./src/og-image.jpg",
-    //       to: "images/",
-    //     },
-    //   ]
-    // }),
-
+    new SubresourceIntegrityPlugin({
+      hashFuncNames: ["sha256", "sha384"],
+      enabled: true,
+    }),
     new CleanWebpackPlugin(),
     assetsPluginInstance,
     new HtmlWebpackInjector(),
