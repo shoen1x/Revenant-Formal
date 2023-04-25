@@ -14,6 +14,7 @@
 const path = require('path');
 const webpack = require('webpack'); //to access built-in plugins
 const AssetsPlugin = require('assets-webpack-plugin');
+const WebpackAssetsManifest = require('webpack-assets-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -23,11 +24,13 @@ const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 
 let assetsPluginInstance = new AssetsPlugin({
+  integrity: true,
+  prettyPrint: true,
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
+  update: true,
   metadata: {version: '0.9.26.10-PreAlpha', date: '05 Mac, 2023', revision: 'RevF' + Date.parse(Date())},
-  integrity: true,
 
   processOutput: function (assets) {
     return JSON.stringify(assets);
@@ -37,7 +40,6 @@ let assetsPluginInstance = new AssetsPlugin({
 let htmlPageNames = ['home', 'product', 'project', 'blog', '404'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
-    hash: true,
     template: `./src/${name}.html`, // relative path to the HTML files
     filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
@@ -164,9 +166,10 @@ module.exports = {
     assetsPluginInstance,
     new HtmlWebpackInjector(),
     new SubresourceIntegrityPlugin({
-      hashFuncNames: ["sha256", "sha384"],
+      hashFuncNames: ["sha384", "sha512"],
       enabled: true,
     }),
+    new WebpackAssetsManifest({ integrity: true }),
 
   ].concat(multipleHtmlPlugins)
 };
