@@ -161,13 +161,13 @@ module.exports = {
     }),
 
     new CleanWebpackPlugin(),
-    assetsPluginInstance,
     new HtmlWebpackInjector(),
+    assetsPluginInstance,
+    new WebpackAssetsManifest({ integrity: true }),
     new SubresourceIntegrityPlugin({
       hashFuncNames: ["sha384", "sha512"],
       enabled: true,
     }),
-    new WebpackAssetsManifest({ integrity: true }),
 
   ].concat(multipleHtmlPlugins)
 };
