@@ -24,8 +24,6 @@ const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 
 let assetsPluginInstance = new AssetsPlugin({
-  integrity: true,
-  prettyPrint: true,
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
