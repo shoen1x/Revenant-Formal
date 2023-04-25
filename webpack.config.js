@@ -23,11 +23,11 @@ const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 
 let assetsPluginInstance = new AssetsPlugin({
-  integrity: true,
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
   metadata: {version: '0.9.26.10-PreAlpha', date: '05 Mac, 2023', revision: 'RevF' + Date.parse(Date())},
+  integrity: true,
 
   processOutput: function (assets) {
     return JSON.stringify(assets);
@@ -67,10 +67,10 @@ module.exports = {
         project :["./src/project.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
-        crossOriginLoading: "anonymous",
         path: path.resolve(__dirname, './docs'),
         filename: "assets/js/[name].js?v=[contenthash]",
         assetModuleFilename: "assets/debug/[name][ext]?v=[contenthash]",
+        crossOriginLoading: "anonymous",
     },
     performance: {
       // Turn off size warnings for entry points
@@ -160,13 +160,13 @@ module.exports = {
       chunkFilename: "assets/css/[id].css?v=[contenthash]",
     }),
 
+    new CleanWebpackPlugin(),
+    assetsPluginInstance,
+    new HtmlWebpackInjector(),
     new SubresourceIntegrityPlugin({
       hashFuncNames: ["sha256", "sha384"],
       enabled: true,
     }),
-    new CleanWebpackPlugin(),
-    assetsPluginInstance,
-    new HtmlWebpackInjector(),
 
   ].concat(multipleHtmlPlugins)
 };
