@@ -3543,6 +3543,31 @@ model-viewer {
 	}
 }
 
+/* Advertisment */
+.adsslider {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.ads-slider {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+@media screen and (max-width:480px){
+	.adsslider {
+		width: 100%;
+		margin: 0 auto;
+		padding: 5px;
+	}
+
+	.ads-slider {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
 .slick-slide {
 	margin: 0px 20px;
 }
@@ -3686,4 +3711,3 @@ model-viewer {
 	  background-position: 100% 0;
 	}
   }
-  

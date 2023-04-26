@@ -336,6 +336,17 @@
 				}
 			}]
 		});
+
+		$('.ads-slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 12000,
+			arrows: false,
+			dots: false,
+			pauseOnHover: false,
+			centerMode: true,
+		  });
 	});
 
 	// Model Viewer
@@ -380,9 +391,6 @@
 		break;
 	  }
 	});
-	
-
-
 
 	// var btndownload = document.querySelectorAll('#btn-download');
 	// $(btndownload).on('click', function (event) {

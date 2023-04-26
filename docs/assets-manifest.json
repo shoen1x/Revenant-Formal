@@ -68,16 +68,16 @@
     "integrity": "sha256-yWweEKNWAP8r+FdkoP4Eua3qHtCpXx9Ni++gOKG/iN0= sha384-2gs2WrDlRPYZ+fntnhoVwQhBIXeiM2LQTGIHurYO0AjyVehzDBdalAj1tmkHpXXX sha512-uAdVJBqDg3C1kOqkDNtom64EmO/xAdzHl/RJ4IPKPQifhyaNU8rxF/3UwYYy9OKIGUOoxUGRib3DlKywNGINXQ=="
   },
   "home.css": {
-    "src": "assets/css/home.css?v=f61bdb7f1f4f384176a1",
-    "integrity": "sha256-qloZo/HObGgZBhaFnJTllBNLkqwqD9OlHGMScyGgipo= sha384-Z9XTXSZgFramFQ0l73UipLppM1kTkYyPiRM3u74exEyZLzWv8DBEhlQZlaFuz0c/ sha512-8mKgXU1H5mgr1lW2SVLNoMju+XiGTLmdtxGQ5I5Hj9jutLIyRIBJytIgkNb63wi9v9/OIUL9DdJ/0WwsOgmuTw=="
+    "src": "assets/css/home.css?v=4ddb698867084c72efc1",
+    "integrity": "sha256-Tq005Zmy+wDWgDBCurSx0qdT1ZutT8LAFhjIo7W7CN4= sha384-6xYCXtUrwsHh/C1BiPASd4myn4+fOZcmigiZ3oo7U+OXRcVb5zq6UUf91nZIbRIF sha512-qR7jJwnqCQo8ZScM9xd0vt5sP9jLa7lOQcCZ7Nb3D/wO/nNSOXxGRfDUUzleiCwwmdFX5OGdUbg2Eg2m7xQT4Q=="
   },
   "home.html": {
     "src": "home.html",
-    "integrity": "sha256-cZaRPG9uaJBuEpZ8tTiAFAjOF2AIlyySWKFzHSN7VYU= sha384-yM6n6kDdm9v7kIiUkyXgMk4ftrBtfymMypuLxZ5S1Q/RN2IhvOc9pD0tOhFbWqcG sha512-ubvTNTUFSMV+8JvhwumT64m+ArtIykvGB7Q9nXT/x5vzL2Ah0sZhoqH57c3NvIm1W+7+iIAebeFdRqUi+S/nkQ=="
+    "integrity": "sha256-3utSlDc2PhUcEgZtXaovMEOgSgTz7nRLomzpaP3fw9U= sha384-wp1o+N5Kbzx6LAkg9tKxJ5DGC4KWxMuvrk8v+xiTh9XBDU4/p6N1PJJg1A8XxnaF sha512-VBb985HtNHaczExbxq/seOUXrAwMyzuh7qefFLLrRd56j/ruOfKPH+Iz5Nsgc4EwGppKFHUGQeg5r4tjuSRDLA=="
   },
   "home.js": {
-    "src": "assets/js/home.js?v=5f4ef89aae045993ddd2",
-    "integrity": "sha256-1Lnr4Dr6fm7U8CABjbkKPg8KgoMbYV0r2rUwaMK5CTY= sha384-3FFbuU1cMaPQ8S7r/j8JWDsysCDCK0CG/+olyTNlh5lTuEdlhddyM0jh7b20usQ5 sha512-99mm4HB6xOuAwieukh1cpXYd0+Cr8q4G1vlHn5gjj1b/FApLJwik1sjSm4qeX0VIxbZo7CEEejrEYl7LHN5XWw=="
+    "src": "assets/js/home.js?v=2a66354596173cfabd03",
+    "integrity": "sha256-Bw7ggaOuO0FgvfSsCk3M0RlpGnFnohZAoj3RSLzd+lg= sha384-XxT6RXpfe0cc9YJORRcLK38St1mKZO2dORSiO2Nw9ZOZPL6IawwjhAC0iPYW+z6W sha512-pkpeUxY/vRhVWGnMpCOWQ1cog1q95rM61i9u/KJODeL6UtYCOsdQr9ifwB5P1vx0wJAB9GMdfnNzUTe/XXUYOQ=="
   },
   "images/01-full.webp": {
     "src": "images/01-full.webp?v=016ed6a796685c0b2ca3",
@@ -790,6 +790,26 @@
   "images/vm_comp-4c.webp": {
     "src": "images/vm_comp-4c.webp?v=9e0401fdafe3146c4cd1",
     "integrity": "sha256-+puZqzudSO+p9F077CwwqAdRsld3pGUh2uLZW2DGFrI= sha384-I6EVZs3hjsX4Rx6s0S3G+uOKdQlVwvWr7Pqe+lyBcEbUOz949qzx7wwlzZ6hXCus sha512-P0HzzH9zq/R+V8ROMMs6Xvi8O9bYTSxhcGGcW+HOgNs9sZxIek8tLONJfs87pfZMhhwmzdUfV9nmUvo/3bTMFQ=="
+  },
+  "images/web-ad1.webp": {
+    "src": "images/web-ad1.webp?v=dbf40673d867165ddf2d",
+    "integrity": "sha256-FM6oCmiqMQ6WbkT9yvVOtqNfyNtV281K0T2Ji1am5vg= sha384-XfpF3HsPCi/vNg20v4IH6LN7LdtM42E3ht85pui+UF1LxVv51KXfX60MrTvJJ4Kf sha512-hL4JKGFzG/Qag8dsMmw/eZjni49EGzLGBQx0BtaPaN1o3Xb6Dbo6NbvzMFrRs03BNyb8bmG1KVYuWloaOaGcYw=="
+  },
+  "images/web-ad2.webp": {
+    "src": "images/web-ad2.webp?v=5c6f760e695ae3cb1b55",
+    "integrity": "sha256-FvPpyuUtn3G5KQ31FZjesfYe6M5O3OzH9O8MYvxR0b4= sha384-axo2RGRGDLqhZ2akUk+IIBGzpoyz16k+K1opds6ddaexTShKxPHKJJ2LS0tgHmv+ sha512-c9wBm+LPQW74Ff5u60DC5BHXldu6T3HiJ1lGY6Vi8NDp5gSuZLXvcBrx7acVWEgD7wjPxHmpqPJXBL6gJfD+cQ=="
+  },
+  "images/web-ad3.webp": {
+    "src": "images/web-ad3.webp?v=1612f72398d0adf4c393",
+    "integrity": "sha256-Z/rrlS4nEXqRsHjo3ySG05lVn5Vnd1bkBbBJgBsKyMQ= sha384-kjbpKC4d3s8PaQ5GAQsVXMrB1srEab7tegljtKa5edqVCgxV+Pldeq8gQa9wI39X sha512-zVcBkXRoDHatECOLbfldE4LHfLRe02AHUYumJ5owZe0l3qFz/TqA0Qb/GzgPRssDLN5eQN8zAG0nkZBeopAbig=="
+  },
+  "images/web-ad4.webp": {
+    "src": "images/web-ad4.webp?v=c1e6fb96d49b7131ec16",
+    "integrity": "sha256-BbMf6y4GtI/wKE3st5a79vqxCqZgNNN5h17ymEU9Wp0= sha384-NaHfqMkZXAXTu3nzqJiA5ZG+RQrYePMC0Y85aSpSaGZOQQwLBpW8Px2O71KDrVjs sha512-A4RzXjNc0TuT/62bdAcd1OkuT2tkNUhc0TPFYiNxr57aZDWLaQtflTxE97Z48tLEbG3Hp82sHzI4LE95A+AR5g=="
+  },
+  "images/web-ad5.webp": {
+    "src": "images/web-ad5.webp?v=55f37b15c8f0ac958984",
+    "integrity": "sha256-YPOMXmIE8CWueaq/7RFx3IalT2K9ZzC1/CkHQKfMnDM= sha384-7gDyLNzclIXisVsZ80FwA3XTTbT/OXBRqzxoRoG2CPxfRCWL9iXpYvYWjOgnx4xE sha512-mQq8KE+XZRfezQedN076ioafiWTZrr92GBgM3jhcLjWOVin+/58SssfdB2oQFoOBNtmg4v7xEPv159dCduFhCA=="
   },
   "product.css": {
     "src": "assets/css/product.css?v=f5170cf85995aff08db0",
