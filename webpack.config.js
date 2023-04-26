@@ -159,7 +159,7 @@ module.exports = {
       filename: "assets/css/[name].css?v=[contenthash]",
       chunkFilename: "assets/css/[id].css?v=[contenthash]",
     }),
-    new SubresourceIntegrityPlugin(),
+    // new SubresourceIntegrityPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackInjector(),
     assetsPluginInstance,
