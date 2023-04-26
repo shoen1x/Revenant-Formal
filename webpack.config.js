@@ -89,20 +89,9 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
-          test: /\.css$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: "css-loader",
-              options: {
-                sourceMap: true,
-                modules: {
-                  auto: true,
-                },
-                importLoaders: 1,
-              },
-            },
-          ],
+          test: /\.css$/i,
+          use: [MiniCssExtractPlugin.loader, "css-loader"],
+          exclude: /node_modules/,
         },
         {
           test: /\.svg$/,
@@ -170,14 +159,11 @@ module.exports = {
       filename: "assets/css/[name].css?v=[contenthash]",
       chunkFilename: "assets/css/[id].css?v=[contenthash]",
     }),
+    new SubresourceIntegrityPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackInjector(),
     assetsPluginInstance,
     new WebpackAssetsManifest({ integrity: true }),
-    new SubresourceIntegrityPlugin({
-      hashFuncNames: ["sha256", "sha384"],
-      enabled: true,
-    }),
 
   ].concat(multipleHtmlPlugins)
 };
