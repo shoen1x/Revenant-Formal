@@ -73,7 +73,7 @@
   },
   "home.html": {
     "src": "home.html",
-    "integrity": "sha256-3utSlDc2PhUcEgZtXaovMEOgSgTz7nRLomzpaP3fw9U= sha384-wp1o+N5Kbzx6LAkg9tKxJ5DGC4KWxMuvrk8v+xiTh9XBDU4/p6N1PJJg1A8XxnaF sha512-VBb985HtNHaczExbxq/seOUXrAwMyzuh7qefFLLrRd56j/ruOfKPH+Iz5Nsgc4EwGppKFHUGQeg5r4tjuSRDLA=="
+    "integrity": "sha256-5KhxPtjZaqkMqkWck1VXA4cxcJEAFKlKxS6NYS/Ba7k= sha384-D6+EkNcQ5ktNjcU1Qf701bE7zRFzg4fjGCiubN77IK9UqpTf0UL/8AKOYgoy8sBT sha512-NDHKA8mbVig0dCxC4xIBsKtFGxiJcLogKpcUmizhkJxPHvsqCmfXZ57M3SHgMbG+8DuxeI+42pSq3a56ln9ayw=="
   },
   "home.js": {
     "src": "assets/js/home.js?v=2a66354596173cfabd03",

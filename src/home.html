@@ -212,12 +212,12 @@
 		<section id="multiproject" class="main style4 primary">
 			<div class="mphero">
 				<div class="mptext">
-					<!-- <p class="mptext__short">All Experimental projects by Shoenix Studios</p> -->
-					<h1 class="mptext__title">Experimental Projects</h1>
-					<p class="mptext__description"></br>All full project documentation was moved here from Behance
-						and Artstation's archives, more will be added in future. This repo can be WIP or finalized project.
+					<p id="projectup" class="mptext__short">Latest Update: </p>
+					<h1 class="mptext__title">Projects Collection</h1>
+					<p class="mptext__description"></br>All project visualization & documentation from planning, texturing and rendering phase,
+						 all projects is subject to change. + Included video gallery from previous project.
 					</p>
-					<a href="project" target="_self" class="button" aria-label="Project">Project Preview</a>
+					<a href="project" target="_self" class="button" aria-label="Project">View all projects</a>
 				</div>
 				<div class="mpgrid__container">
 					<div class="mpgrid__item mpone"></div>
@@ -394,12 +394,14 @@
 			.catch(function (err) {
 				document.getElementById("versioning").innerHTML = '</br></br>Versioning data missing';
 				document.getElementById("revisioning").innerHTML = 'Revisioning data missing';
-				document.getElementById("dateup").innerHTML = '<br> Latest Update: Failed to load.';
+				document.getElementById("dateup").innerHTML = '<br> Latest update: Failed to load.';
+				document.getElementById("projectup").innerHTML = '<br> Latest update: Failed to load.';
 			});
 		function appendData(data) {
 			document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
 			document.getElementById("revisioning").innerHTML = 'Revision: <strong>' + data.metadata.revision + '<strong>';
-			document.getElementById("dateup").innerHTML = '<br> Latest Update: <strong>' + data.metadata.date + '<strong>';
+			document.getElementById("dateup").innerHTML = '<br> Latest update: <strong>' + data.metadata.date + '<strong>';
+			document.getElementById("projectup").innerHTML = '<br> Latest update: <strong>' + data.metadata.date + '<strong>';
 		}
 	</script>
 

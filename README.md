@@ -3,9 +3,9 @@
 <!-- Header -->
 <h1 align="center"><strong>Revenant's Formal<strong></h1>
 <div align="center">
-    <img src="https://shoenix-studios.web.app/images/svg/4c946665281fbe829fc5.svg" width="50%" alt="Revenant Formal">
+    <img src="https://shoenix-studios.web.app/images/revenant-formal-header.webp" width="50%" alt="Revenant Formal">
   <p>
-    A brief experimental project by <strong>NMVX</strong>
+    A experimental project by <strong>NMVX</strong>
     <br />
     <a href="https://shoenix-studios.web.app/home"><strong>Quick access!</strong></a>
     </br>
@@ -38,6 +38,11 @@
 [![Webpack][Webpack.js]][Webpack-url]
 
 - - - -
+## Plugins
+
+[![Owl Carousel][owl.carousel.js]][owl.carousel-url]
+[![Slick][slick.js]][slick-url]
+
 <br />
 
 
@@ -70,9 +75,9 @@
     - [x] Added new ***Project*** page
         - [x] News like project preview for Hero.
         - [x] Added carousel based selection.
-            - [ ] Fix the js instability for selection (too much card jump from one selection to another).
+            - [x] Fix the js instability for selection (too much card jump from one selection to another).
         - [x] Grid based full preview with initial focus on click.
-            - [ ] Fix problematic canvas display sizes for multiple ratio of display (`Problematic with (max-width: 480px) and (min-width: 408px)`).
+            - [x] Fix problematic canvas display sizes for multiple ratio of display (`Problematic with (max-width: 480px) and (min-width: 408px)`).
 
 - ### Product
     - [x] Added new ***Product*** page
@@ -105,15 +110,17 @@
     - [x] Javascript
         - [x] All js files cleanup
             - [x] Re-unified all redundances and extra codes into single unit, Minified using Babel in webpack.
-        - Embbed (youtube.com) js network problem removed ***`Deprecated`***
+        - Embed (youtube.com) js network problem removed ***`Permanent Removed`***
     - [x] Assets & images
         - [X] Assets converted to webp for modern format.
         - [X] Optimized thumbs for better resolution and size for multiple display ratio.
     - Single page or new paging file?
 
-- ### Ads banner ***`Deprecated`***
+- ### Ads banner (Pre-alpha version) ***`Deprecated`***
+    - ### `Reintroduced in later version with better images, sizes control using Slick Carousel plugin implemented.`
 
-- ### Marquee Logos for 'service used by' ***`Deprecated, Will be replace with better design`***
+- ### Marquee Logos for 'service used by' (Pre-alpha version) ***`Deprecated`***
+    - ### `Reintroduced in later version with better images, sizes control using Slick Carousel plugin implemented.`
 
 - ### License generated
 
@@ -126,14 +133,17 @@
             "assets-webpack-plugin": "^7.1.1",
             "babel-loader": "^9.1.2",
             "clean-webpack-plugin": "^4.0.0",
-            "copy-webpack-plugin": "^11.0.0",
             "css-loader": "^6.7.3",
             "html-loader": "^4.2.0",
+            "html-webpack-injector": "^1.1.4",
             "html-webpack-plugin": "^5.5.0",
-            "json-loader": "^0.5.7",
             "mini-css-extract-plugin": "^2.7.3",
+            "postcss": "^8.4.21",
+            "postcss-loader": "^7.2.4",
             "webpack": "^5.76.1",
-            "webpack-cli": "^5.0.1"
+            "webpack-assets-manifest": "^5.1.0",
+            "webpack-cli": "^5.0.1",
+            "webpack-subresource-integrity": "^5.2.0-rc.1" //Disabled in pre-Alpha version (Conflicting with Mini-Extract-CSS-Plugin)
         }
     ```
 
@@ -142,6 +152,13 @@
 ```javascript
   "scripts": {
     "dev": "set NODE_ENV=development&& webpack --mode development",
+    "dev:watch": "set NODE_ENV=development&& webpack --mode development --watch",
+    "build": "set NODE_ENV=production&& webpack",
+    "prod": "npm run build",
+    "start": "set NODE_ENV=development&& webpack-dev-server --mode development --open",
+    "watch": "npm run dev:watch",
+    "lint": "eslint assets/scripts/*.js",
+    "clean": "rm -rf docs"
   }
 ```
 
@@ -195,3 +212,7 @@ Distributed under the 'CC0 1.0 Universal' License. See `LICENSE.txt` or [CC0 1.0
 [Webpack-url]: https://webpack.js.org/
 [Firebase.js]: https://img.shields.io/badge/Firebase-20232A?style=for-the-badge&logo=firebase&logoColor=61DAFB
 [Firebase-url]: https://firebase.google.com/
+[owl.carousel.js]: https://img.shields.io/badge/Owl%20Carousel-20232A?style=for-the-badge&logo=dev.to&logoColor=61DAFB
+[owl.carousel-url]: https://owlcarousel2.github.io/OwlCarousel2/
+[slick.js]: https://img.shields.io/badge/Slick-20232A?style=for-the-badge&logo=dev.to&logoColor=61DAFB
+[slick-url]: https://kenwheeler.github.io/slick/
