@@ -17,96 +17,89 @@
 */
 
 :root {
-  --header-height: 3rem;
+	--header-height: 3rem;
 
-  --hue-color: 206;
-  --black-color: hsl(var(--hue-color), 4%, 4%);
-  --black-color-alt: hsl(var(--hue-color), 4%, 8%);
-  --title-color: hsl(var(--hue-color), 4%, 95%);
-  --text-color: hsl(var(--hue-color), 4%, 75%);
-  --text-color-light: hsl(var(--hue-color), 4%, 65%);
-  --white-color: #fff;
-  --body-color: hsl(var(--hue-color), 4%, 6%);
-  --container-color: hsl(var(--hue-color), 4%, 10%);
-  --text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 100%),
-      hsl(var(--hue-color), 4%, 8%));
-  --scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
-  --scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
+	--hue-color: 206;
+	--black-color: hsl(var(--hue-color), 4%, 4%);
+	--black-color-alt: hsl(var(--hue-color), 4%, 8%);
+	--title-color: hsl(var(--hue-color), 4%, 95%);
+	--text-color: hsl(var(--hue-color), 4%, 75%);
+	--text-color-light: hsl(var(--hue-color), 4%, 65%);
+	--white-color: #fff;
+	--white-color-alt: #b9b1b1;
+	--body-color: hsl(var(--hue-color), 4%, 6%);
+	--container-color: hsl(var(--hue-color), 4%, 10%);
+	--text-gradient: linear-gradient(hsl(var(--hue-color), 4%, 100%),
+			hsl(var(--hue-color), 4%, 8%));
+	--scroll-thumb-color: hsl(var(--hue-color), 4%, 16%);
+	--scroll-thumb-color-alt: hsl(var(--hue-color), 4%, 20%);
 
-  --body-font: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-  --biggest-font-size: 5rem;
-  --bigger-font-size: 3.5rem;
-  --big-font-size: 2.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
-  --text-line-height: 2rem;
+	--body-font: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+	--biggest-font-size: 5rem;
+	--bigger-font-size: 3.5rem;
+	--big-font-size: 2.5rem;
+	--h2-font-size: 1.25rem;
+	--h3-font-size: 1.125rem;
+	--normal-font-size: 0.938rem;
+	--small-font-size: 0.813rem;
+	--smaller-font-size: 0.75rem;
+	--text-line-height: 2rem;
 
-  --font-medium: 500;
-  --font-semi-bold: 600;
+	--font-medium: 500;
+	--font-semi-bold: 600;
 
-  --mb-0-5: 0.5rem;
-  --mb-0-75: 0.75rem;
-  --mb-1: 1rem;
-  --mb-1-5: 1.5rem;
-  --mb-2: 2rem;
-  --mb-2-5: 2.5rem;
+	--mb-0-5: 0.5rem;
+	--mb-0-75: 0.75rem;
+	--mb-1: 1rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--mb-2-5: 2.5rem;
 
-  --z-tooltip: 10;
-  --z-fixed: 100;
+	--z-tooltip: 10;
+	--z-fixed: 100;
 
-  --c-white: #181a1b;
-  --c-black: #000;
-  --c-ash: #eaeef6;
-  --c-charcoal: #a0a0a0;
-  --c-void: #e3e6e9;
-  --c-fair-pink: #181a1b;
-  --c-apricot: #444443;
-  --c-coffee: #e4e1e1;
-  --c-del-rio: #bbb4b4;
-  --c-java: #b6caca;
-  --c-titan-white: #34343c;
-  --c-cold-purple: #a69fd6;
-  --c-indigo: #ebebeb;
-  --c-governor: #99999b;
+	--c-white: #181a1b;
+	--c-black: #000;
+	--c-ash: #eaeef6;
+	--c-charcoal: #a0a0a0;
+	--c-void: #e3e6e9;
+	--c-fair-pink: #181a1b;
+	--c-apricot: #444443;
+	--c-coffee: #e4e1e1;
+	--c-del-rio: #bbb4b4;
+	--c-java: #b6caca;
+	--c-titan-white: #34343c;
+	--c-cold-purple: #a69fd6;
+	--c-indigo: #ebebeb;
+	--c-governor: #99999b;
 
-  --point-1-top: 220px;
-  --point-1-left: 120px;
-  --point-2-top: 55px;
-  --point-2-left: 200px;
-  --point-3-top: 77px;
-  --point-3-left: 77px;
-  --point-4-top: 155px;
-  --point-4-left: 315px;
-  --point-width: 15px;
-  --point-height: 15px;
-  --point-1-scale: 5;
-  --point-2-scale: 3;
-  --point-3-scale: 5;
-  --point-4-scale: 4;
-
-  --theme-blue: 200, 80%, 38%;
-  --theme-red: 350, 63%, 52%;
-  --theme-pink: 350, 100%, 69%;
-  --theme-black: 0, 7%, 9%;
-  --theme-white: 0, 0%, 100%;
-  --theme-light: 40, 100%, 97%;
-  --theme-dark: 0, 7%, 29%;
+	--point-1-top: 220px;
+	--point-1-left: 120px;
+	--point-2-top: 55px;
+	--point-2-left: 200px;
+	--point-3-top: 77px;
+	--point-3-left: 77px;
+	--point-4-top: 155px;
+	--point-4-left: 315px;
+	--point-width: 15px;
+	--point-height: 15px;
+	--point-1-scale: 5;
+	--point-2-scale: 3;
+	--point-3-scale: 5;
+	--point-4-scale: 4;
 }
 
 @media screen and (min-width: 968px) {
-  :root {
-    --biggest-font-size: 7.5rem;
-    --bigger-font-size: 4.5rem;
-    --big-font-size: 4rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
-  }
+	:root {
+		--biggest-font-size: 7.5rem;
+		--bigger-font-size: 4.5rem;
+		--big-font-size: 4rem;
+		--h2-font-size: 1.5rem;
+		--h3-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: 0.875rem;
+		--smaller-font-size: 0.813rem;
+	}
 }
 
 *,
@@ -157,6 +150,10 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+p, ul, ol, dl, table {
+  margin-bottom: 1em;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -1900,4 +1897,62 @@ img {
 	  background-position: 100% 0;
 	}
   }
+
+  
+  /* Language Changer Dropdown */
+  .select-language {
+    position: relative;
+    min-width: 200px;
+    }
+    .select-language svg {
+    position: absolute;
+    right: 12px;
+    top: calc(50% - 3px);
+    width: 10px;
+    height: 6px;
+    stroke-width: 2px;
+    stroke: #9098a9;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+    }
+    .select-language select {
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 7px 40px 7px 12px;
+    width: 100%;
+    border: 1px solid var(--body-color);
+    border-radius: 5px;
+    background: var(--c-white);
+    box-shadow: 0 1px 3px -2px #9098a9;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    transition: all 150ms ease;
+    }
+    .select-language select:required:invalid {
+    color: #5a667f;
+    }
+    .select-language select option {
+    font-size: var(--small-font-size);
+    }
+    .select-language select option[value=""][disabled] {
+    display: none;
+    }
+    .select-language select:focus {
+    outline: none;
+    border-color: #07f;
+    box-shadow: 0 0 0 2px rgba(0,119,255,0.2);
+    }
+    .select-language select:hover + svg {
+    stroke: #07f;
+    }
+    .sprites-language {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+    }
   

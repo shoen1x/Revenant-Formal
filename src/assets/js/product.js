@@ -56,33 +56,33 @@
       // Neat Page changes information
       switch (cname) {
         case 2:
-          document.querySelector('#product-type').innerHTML = "Collection";
-          document.querySelector('.home__subtitle').innerHTML = "In The Name of Tsar";
-          document.querySelector('.discount__description').innerHTML = "Get In The Name of Tsar now, up to 15% off.";
-          document.querySelector('.home__description').innerHTML = "Introducing the In the Name of Tsar Collection: a unique, modern take on streetwear. stylish and custom-made just for you. Suitable for athleisure and sports wear";
+          document.querySelector('#product-type').innerHTML = DOMPurify.sanitize("Collection");
+          document.querySelector('.home__subtitle').innerHTML = DOMPurify.sanitize("In The Name of Tsar");
+          document.querySelector('.discount__description').innerHTML = DOMPurify.sanitize("Get In The Name of Tsar now, up to 15% off.");
+          document.querySelector('.home__description').innerHTML = DOMPurify.sanitize("Introducing the In the Name of Tsar Collection: a unique, modern take on streetwear. stylish and custom-made just for you. Suitable for athleisure and sports wear");
           document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';
           break;
         case 3:
-          document.querySelector('#product-type').innerHTML = "Collection";
-          document.querySelector('.home__subtitle').innerHTML = "Black Steel Eagle";
-          document.querySelector('.discount__description').innerHTML = "Get Black Steel Eagle now, up to 15% off.";
-          document.querySelector('.home__description').innerHTML = "Introducing the Black Steel Eagle Collection: a mainstream sports inspired design. Unique and custom-made just for you. Suitable for sport usage";
+          document.querySelector('#product-type').innerHTML = DOMPurify.sanitize("Collection");
+          document.querySelector('.home__subtitle').innerHTML = DOMPurify.sanitize("Black Steel Eagle");
+          document.querySelector('.discount__description').innerHTML = DOMPurify.sanitize("Get Black Steel Eagle now, up to 15% off.");
+          document.querySelector('.home__description').innerHTML = DOMPurify.sanitize("Introducing the Black Steel Eagle Collection: a mainstream sports inspired design. Unique and custom-made just for you. Suitable for sport usage");
 
           document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';
           break;
         case 4:
-          document.querySelector('#product-type').innerHTML = "Collection";
-          document.querySelector('.home__subtitle').innerHTML = "The World";
-          document.querySelector('.discount__description').innerHTML = "Get The World now, up to 15% off.";
-          document.querySelector('.home__description').innerHTML = "Introducing The World Collection: a robust design for stylish everyday clothing. custom-made just for you. Suitable for streetwear and athleisure";
+          document.querySelector('#product-type').innerHTML = DOMPurify.sanitize("Collection");
+          document.querySelector('.home__subtitle').innerHTML = DOMPurify.sanitize("The World");
+          document.querySelector('.discount__description').innerHTML = DOMPurify.sanitize("Get The World now, up to 15% off.");
+          document.querySelector('.home__description').innerHTML = DOMPurify.sanitize("Introducing The World Collection: a robust design for stylish everyday clothing. custom-made just for you. Suitable for streetwear and athleisure");
 
           document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';
           break;
         case 5:
-          document.querySelector('#product-type').innerHTML = "Collection";
-          document.querySelector('.home__subtitle').innerHTML = "The Unity";
-          document.querySelector('.discount__description').innerHTML = "Get The Unity now, up to 15% off.";
-          document.querySelector('.home__description').innerHTML = "Introducing The Unity Collection: a minimalist, clean and modern design. stylish and custom-made just for you. Suitable for e-sport and electronic sport organization";
+          document.querySelector('#product-type').innerHTML = DOMPurify.sanitize("Collection");
+          document.querySelector('.home__subtitle').innerHTML = DOMPurify.sanitize("The Unity");
+          document.querySelector('.discount__description').innerHTML = DOMPurify.sanitize("Get The Unity now, up to 15% off.");
+          document.querySelector('.home__description').innerHTML = DOMPurify.sanitize("Introducing The Unity Collection: a minimalist, clean and modern design. stylish and custom-made just for you. Suitable for e-sport and electronic sport organization");
 
           document.querySelector('.discount__img').src = 'images/svg/Bundle' + cname + '.svg';
           break;
@@ -93,29 +93,29 @@
         case 2:
           for (let i = 0; i < jcount; i++) {
             document.querySelectorAll('.products__img')[i].src = "images/c" + cname + "-" + (i + 1) + ".webp";
-            document.querySelectorAll('.products__title')[i].innerHTML = col2['colname'][i];
-            document.querySelectorAll('.products__price')[i].innerHTML = col2['colprice'][i];
+            document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(col2['colname'][i]);
+            document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(col2['colprice'][i]);
           }
           break;
         case 3:
           for (let i = 0; i < jcount; i++) {
             document.querySelectorAll('.products__img')[i].src = "images/c" + cname + "-" + (i + 1) + ".webp";
-            document.querySelectorAll('.products__title')[i].innerHTML = col3['colname'][i];
-            document.querySelectorAll('.products__price')[i].innerHTML = col3['colprice'][i];
+            document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(col3['colname'][i]);
+            document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(col3['colprice'][i]);
           }
           break;
         case 4:
           for (let i = 0; i < jcount; i++) {
             document.querySelectorAll('.products__img')[i].src = "images/c" + cname + "-" + (i + 1) + ".webp";
-            document.querySelectorAll('.products__title')[i].innerHTML = col4['colname'][i];
-            document.querySelectorAll('.products__price')[i].innerHTML = col4['colprice'][i];
+            document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(col4['colname'][i]);
+            document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(col4['colprice'][i]);
           }
           break;
         case 5:
           for (let i = 0; i < jcount; i++) {
             document.querySelectorAll('.products__img')[i].src = "images/c" + cname + "-" + (i + 1) + ".webp";
-            document.querySelectorAll('.products__title')[i].innerHTML = col5['colname'][i];
-            document.querySelectorAll('.products__price')[i].innerHTML = col5['colprice'][i];
+            document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(col5['colname'][i]);
+            document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(col5['colprice'][i]);
           }
           break;
       }
@@ -127,22 +127,22 @@
 
       document.querySelector('.tag').innerHTML = document.querySelectorAll('.products__title')[slcpkdata].innerHTML;
       var checktag = document.querySelector('.tag').innerHTML;
-      document.querySelector('#pdmtitle').innerHTML = checktag;
-      document.querySelector('#pdminfo').innerHTML = "This " + checktag + " is availabe with:";
-      document.querySelector('#pdrtitle').innerHTML = "What included in " + checktag + "'s Packages?";
+      document.querySelector('#pdmtitle').innerHTML = DOMPurify.sanitize(checktag);
+      document.querySelector('#pdminfo').innerHTML = DOMPurify.sanitize("This " + checktag + " is availabe with:");
+      document.querySelector('#pdrtitle').innerHTML = DOMPurify.sanitize("What included in " + checktag + "'s Packages?");
       document.querySelector('#pdprice').innerHTML = document.querySelectorAll('.products__price')[slcpkdata].innerHTML
 
       if (checktag == 'Monarch' || checktag == 'Nightmare' || checktag == 'Nexus' || checktag == "San Mirage" || checktag == "Avarice" || checktag == "Chaos" || checktag == "Wrath") {
-        document.querySelector('#pdltitle').innerHTML = sname[0] + " Series";
-        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[0] + ' Series for ' + sdesc[0] + '.';
+        document.querySelector('#pdltitle').innerHTML = DOMPurify.sanitize(sname[0] + " Series");
+        document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('This is ' + checktag + ', ' + sname[0] + ' Series for ' + sdesc[0] + '.');
         document.querySelector('#pdlsvg').src = 'images/svg/powerwear.svg'
       } else if (checktag == 'Bos Gaurus' || checktag == 'Legion' || checktag == "Plexus" || checktag == "Scar" || checktag == "Nemesis") {
-        document.querySelector('#pdltitle').innerHTML = sname[1] + " Series";
-        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[1] + ' Series for ' + sdesc[1] + '.';
+        document.querySelector('#pdltitle').innerHTML = DOMPurify.sanitize(sname[1] + " Series");
+        document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('This is ' + checktag + ', ' + sname[1] + ' Series for ' + sdesc[1] + '.');
         document.querySelector('#pdlsvg').src = 'images/svg/urbanwear.svg'
       } else {
-        document.querySelector('#pdltitle').innerHTML = sname[2] + " Series";
-        document.querySelector('#pdlinfo').innerHTML = 'This is ' + checktag + ', ' + sname[2] + ' Series for ' + sdesc[2] + '.';
+        document.querySelector('#pdltitle').innerHTML = DOMPurify.sanitize(sname[2] + " Series");
+        document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('This is ' + checktag + ', ' + sname[2] + ' Series for ' + sdesc[2] + '.');
         document.querySelector('#pdlsvg').src = 'images/svg/gameon.svg'
       }
 

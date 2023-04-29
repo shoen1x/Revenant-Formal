@@ -358,7 +358,7 @@
 
       <!-- Icons -->
       <div class="footer__content">
-        <h3 class="footer__title">Socials</h3>
+        <h3 id="ftitle_id_sns" class="footer__title">Socials</h3>
         <ul class="footer__links">
           <li><a href="https://www.facebook.com/shoenixstudios" target="_blank" aria-label="Facebook"
               class="footer__link">Facebook</a></li>
@@ -372,14 +372,14 @@
       </div>
 
       <div class="footer__content">
-        <h3 class="footer__title">News</h3>
+        <h3 id="ftitle_id_nav" class="footer__title">Navigation</h3>
 
         <ul class="footer__links">
           <li>
-            <a href="home" target="_self" aria-label="Home" class="footer__link">Home</a>
+            <a id="flink_id_home" href="home" target="_self" aria-label="Home" class="footer__link">Home</a>
           </li>
           <li>
-            <a href="project" target="_self" aria-label="Project" class="footer__link">Projects</a>
+            <a id="flink_id_project" href="project" target="_self" aria-label="Project" class="footer__link">Projects</a>
           </li>
           <li>
             <a href="blog" target="_self" aria-label="Blog" class="footer__link">Blog</a>
@@ -388,13 +388,31 @@
 
         <ul class="footer__copy">
           <li>
-            <span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span>
+            <span id="strademark_id" class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span>
             <span class="footer__copy-link"><span id="versioning"></span></br><span id="revisioning"></span></span>
-          </li>
+          </li> 
         </ul>
-      </div>
 
-      <p id="versioning"></p>
+				<ul class="footer__links">
+					<li>
+						<label class="select-language" for="langslct">
+							<select id="langslct" required="required">
+								<option value="" disabled="disabled" selected="selected">Select option</option>
+								<option value="en">English</option>
+								<option value="my">Malay</option>
+							</select>
+							<svg>
+								<use xlink:href="#select-arrow-down"></use>
+							</svg>
+						</label>
+						<svg class="sprites-language">
+							<symbol id="select-arrow-down" viewbox="0 0 10 6">
+								<polyline points="1 1 5 5 9 1"></polyline>
+							</symbol>
+						</svg>
+					</li>
+				</ul>
+      </div>
 
     </div>
 
@@ -408,7 +426,9 @@
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
+	<script src="assets/js/language.js"></script>
   <script src="assets/js/firebase.js" type="module"></script>
+  <script type="text/javascript" src="/node_modules/dompurify/dist/purify.min.js"></script>
 
 	<script>
     fetch('webpack-assets.json')
@@ -419,12 +439,12 @@
             appendData(data);
         })
         .catch(function (err) {
-            document.getElementById("versioning").innerHTML = '</br></br>Versioning data missing';
-            document.getElementById("revisioning").innerHTML = 'Revisioning data missing';
+            document.getElementById("versioning").innerHTML = DOMPurify.sanitize('</br></br>Versioning data missing');
+            document.getElementById("revisioning").innerHTML = DOMPurify.sanitize('Revisioning data missing');
         });
           function appendData(data) {
-            document.getElementById("versioning").innerHTML = '</br></br>Build: <strong>' + data.metadata.version + '<strong>';
-            document.getElementById("revisioning").innerHTML = 'Revision: <strong>' + data.metadata.revision + '<strong>';
+            document.getElementById("versioning").innerHTML = DOMPurify.sanitize('</br></br>Build: <strong>' + data.metadata.version + '<strong>');
+            document.getElementById("revisioning").innerHTML = DOMPurify.sanitize('Revision: <strong>' + data.metadata.revision + '<strong>');
           }
 </script>
 

@@ -381,12 +381,12 @@
 	  switch(modelViewerVariants.variantName){
 		case 'JDT':
 			document.querySelector('#behancerd').href = "https://www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios"
-			document.querySelector('.secondtext').innerHTML = "JOHOR DARUL TA'ZIM<br>JERSEY CONCEPT"
+			document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("JOHOR DARUL TA'ZIM<br>JERSEY CONCEPT");
 			$('#second-1').attr("id","second");
 		break;
 		case 'HM':
 			document.querySelector('#behancerd').href = "https://www.behance.net/gallery/145829475/Harimau-Malaya-Concept-Shoenix-Studios"
-			document.querySelector('.secondtext').innerHTML = "HARIMAU MALAYA HOME<br>JERSEY CONCEPT"
+			document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("HARIMAU MALAYA HOME<br>JERSEY CONCEPT");
 			$('#second').attr("id","second-1");
 		break;
 	  }

@@ -351,6 +351,7 @@
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
+    <script type="text/javascript" src="/node_modules/dompurify/dist/purify.min.js"></script>
 
 </body>
 
@@ -384,10 +385,10 @@
                 appendData(data);
             })
             .catch(function (err) {
-                document.getElementById("versioning").innerHTML = 'Data versi tidak ditemui';
+                document.getElementById("versioning").innerHTML = DOMPurify.sanitize('Data versi tidak ditemui');
             });
         function appendData(data) {
-			document.getElementById("versioning").innerHTML = 'Kemaskini Terbaharu: <strong>' + data.metadata.date + '<strong> ' + '|' + '  Versi: <strong>' + data.metadata.version + '<strong>';
+			document.getElementById("versioning").innerHTML = DOMPurify.sanitize('Kemaskini Terbaharu: <strong>' + data.metadata.date + '<strong> ' + '|' + '  Versi: <strong>' + data.metadata.version + '<strong>');
         }
         
 </script>

@@ -30,7 +30,7 @@
       pfigure.appendChild(pfigc);
 
       pimg.src = "images/" + gifn + (i + 1) + ".webp";
-      pfigc.innerHTML = i + 1;
+      pfigc.innerHTML = DOMPurify.sanitize(i + 1);
       document.getElementById('app').scrollIntoView();
     }
   }
@@ -51,51 +51,51 @@
 
     switch (caroldata) {
       case 1:
-        document.querySelector('#p-title').innerHTML = "Johor Darul Ta'zim Concept Jersey";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Johor Darul Ta'zim Concept Jersey");
         canvasfpro(9, "st");
         break;
       case 2:
-        document.querySelector('#p-title').innerHTML = "Istinggar";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Istinggar");
         canvasfpro(7, "ic");
         break;
       case 3:
-        document.querySelector('#p-title').innerHTML = "Aerophantom Earbud";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Aerophantom Earbud");
         canvasfpro(4, "ae");
         break;
       case 4:
-        document.querySelector('#p-title').innerHTML = "Nordic Axe";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Nordic Axe");
         canvasfpro(6, "na");
         break;
       case 5:
-        document.querySelector('#p-title').innerHTML = "Harimau Malaya Jersey Concept";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Harimau Malaya Jersey Concept");
         canvasfpro(7, "hm");
         break;
       case 6:
-        document.querySelector('#p-title').innerHTML = "Kelantan Home Jersey Concept";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Kelantan Home Jersey Concept");
         canvasfpro(9, "cs");
         break;
       case 7:
-        document.querySelector('#p-title').innerHTML = "Kelantan Away Jersey Concept";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Kelantan Away Jersey Concept");
         canvasfpro(9, "csa");
         break;
       case 8:
-        document.querySelector('#p-title').innerHTML = "Twin Fangs Sword";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Twin Fangs Sword");
         canvasfpro(5, "rn");
         break;
       case 9:
-        document.querySelector('#p-title').innerHTML = "Genesis Phantom Skateboard Concept";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Genesis Phantom Skateboard Concept");
         canvasfpro(7, "nc");
         break;
       case 10:
-        document.querySelector('#p-title').innerHTML = "Isometric Room";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Isometric Room");
         canvasfpro(3, "ri");
         break;
       case 11:
-        document.querySelector('#p-title').innerHTML = "Hausboom X Shoenix Studios";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("Hausboom X Shoenix Studios");
         canvasfpro(4, "th");
         break;
       case 12:
-        document.querySelector('#p-title').innerHTML = "NeoRonin Techwear Concept";
+        document.querySelector('#p-title').innerHTML = DOMPurify.sanitize("NeoRonin Techwear Concept");
         canvasfpro(3, "nr");
         break;
     }
@@ -148,7 +148,7 @@
       figure.addEventListener("click", () => {
         const elImage = figure.querySelector('img');
 
-        elDetail.innerHTML = "";
+        elDetail.innerHTML = DOMPurify.sanitize("");
 
         const elClone = figure.cloneNode(true);
         elDetail.appendChild(elClone);
