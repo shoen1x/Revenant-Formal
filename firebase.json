@@ -3,8 +3,8 @@
     "public": "docs",
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/404.html",
+        "source": "/",
+        "destination": "/en-MY/404.html",
         "type": 404
       }
     ],
