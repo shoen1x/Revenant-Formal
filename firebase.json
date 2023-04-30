@@ -3,15 +3,15 @@
     "public": "docs",
     "redirects": [
       {
-        "source": "/",
-        "destination": "/en-MY/home.html",
+        "source": "/en-MY/",
+        "destination": "/home.html",
         "type": 301
       }
     ],
     "rewrites": [
       {
-        "source": "/",
-        "destination": "/en-MY/home.html"
+        "source": "/en-MY/",
+        "destination": "/home.html"
       },
       {
         "source": "/en-MY/",
