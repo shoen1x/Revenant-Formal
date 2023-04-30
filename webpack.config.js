@@ -35,10 +35,34 @@ let assetsPluginInstance = new AssetsPlugin({
 });
 
 let htmlPageNames = ['home', 'product', 'project', 'blog', '404'];
-let multipleHtmlPlugins = htmlPageNames.map(name => {
+let multipleHtmlPlugins_en = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
-    template: `./src/${name}.html`, // relative path to the HTML files
-    filename: `${name}.html`, // output HTML files
+    template: `./src/en-MY/${name}.html`, // relative path to the HTML files
+    filename: `en-MY/${name}.html`, // output HTML files
+    chunks: [`${name}`], // respective JS files
+    inject: true,
+    // minify: {
+    //   html5                          : true,
+    //   collapseWhitespace             : true,
+    //   minifyCSS                      : true,
+    //   minifyJS                       : true,
+    //   minifyURLs                     : false,
+    //   removeAttributeQuotes          : true,
+    //   removeComments                 : true, // false for Vue SSR to find app placeholder
+    //   removeEmptyAttributes          : true,
+    //   removeOptionalTags             : true,
+    //   removeRedundantAttributes      : true,
+    //   removeScriptTypeAttributes     : true,
+    //   removeStyleLinkTypeAttributese : true,
+    //   useShortDoctype                : true
+    // },
+  })
+});
+
+let multipleHtmlPlugins_my = htmlPageNames.map(name => {
+  return new HtmlWebpackPlugin({
+    template: `./src/my-MY/${name}.html`, // relative path to the HTML files
+    filename: `my-MY/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
     // minify: {
@@ -61,9 +85,9 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
 
 module.exports = {
     entry: {
-        home :["./src/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
-        product :["./src/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
-        project :["./src/project.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
+        home :["./src/en-MY/home.html", "./src/my-MY/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
+        product :["./src/en-MY/product.html", "./src/my-MY/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
+        project :["./src/en-MY/project.html", "./src/my-MY/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
         path: path.resolve(__dirname, './docs'),
@@ -165,5 +189,5 @@ module.exports = {
     assetsPluginInstance,
     new WebpackAssetsManifest({ integrity: true }),
 
-  ].concat(multipleHtmlPlugins)
+  ].concat(multipleHtmlPlugins_en, multipleHtmlPlugins_my)
 };

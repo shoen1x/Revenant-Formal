@@ -4,14 +4,14 @@
     "redirects": [
       {
         "source": "/",
-        "destination": "/home.html",
+        "destination": "/en-MY/home.html",
         "type": 301
       }
     ],
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "/en-MY/home.html"
       },
       {
         "source": "**",

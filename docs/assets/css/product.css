@@ -1,5 +1,14 @@
+/*!******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/product.css ***!
+  \******************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/product.css (1) ***!
+  \**********************************************************************************/
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+/*!*******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/noscript.css ***!
+  \*******************************************************************************/
 /*
 	Revenant Formal by NMVX
 	Shoen1x.github.io | @Shoenixstudios
@@ -10,6 +19,9 @@
 	body:before, body:after {
 		display: none;
 	}
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/assets/css/product.css (2) ***!
+  \**********************************************************************************/
 
 :root {
 	--header-height: 3rem;

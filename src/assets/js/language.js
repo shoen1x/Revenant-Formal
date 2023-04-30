@@ -39,6 +39,28 @@
           "Versi Istinggar yang dikemas kini, dikemas gabung semula dalam 'Cycles X' dan 'retouch' dalam photoshop."],
         //
 
+        product__type: "Koleksi", 
+        htitle__desc__id: "Gambaran keseluruhan",
+        bflex__id: '<i class="ri-shopping-bag-line button__icon"></i></i> Beli Sekarang!',
+        sectitle__id1: "Spesifikasi </br> Teknikal", sectitle__id2: "Pilih <br> Gaya Anda", sectitle__id3: "Fleksibel",
+        specs__title: ["Dimensi","Saiz Fail","Format templat","Fleksibel"],
+        specs__subtitle: ["Resolusi Tinggi, CMYK, <br>Vektor Penuh","Purata 10~100 megabait",".AI .EPS .PDF","Format mudah <br> dan perubahan warna"],
+        bundle__id: "Beli Bundle",
+        pdmtag__id1: "<strong>PRO</strong> Pembelian lesen", pdmtag__id2: "Poster <strong>tersuai</strong>", pdmtag__id3: "Pembelian Sekali",
+        pdmbuy__id: "Beli Sekarang!", pdrtag__id: "Templat lengan panjang & pendek", pdrtag__id1: "Bentuk Vektor 'Illustrator' Penuh", 
+        pdrtag__desc__id: "Templat", pdrtag__desc__id1: "Vektor",
+        cusj__id: "Produk ini fleksibel, reka bentuknya tersuai mengikut pelbagai jenis corak pakaian.",
+        cusj__id1: "Sesuaikan panel sisi dengan reben tersuai untuk mendapatkan lebih banyak lagi ",
+        cusj__id2: "pengudaraan udara dan regangan",
+        cusj__id3: "Tukar reka bentuk kolar, dengan pelbagai jenis bentuk kolar",
+        cusj__id4: "Pilih pelbagai jenis corak lengan. Daripada lalai, ",
+        cusj__id5: "raglan dan lengan potongan tersuai!",
+        cusj__id6: "Reka reka bentuk cuff lengan anda sendiri, dengan getah, jersi atau",
+        cusj__id7: "jenis benam dengan pelbagai kombinasi",
+        cdesc__id: "Dengan reka bentuk yang mudah dan fleksibel supaya anda boleh menukarnya bila-bila masa anda mahu, dan terus mencuba dengan pelbagai kombinasi.",
+        ri__info__id: '<i class="ri-information-line button__icon"></i> Muat turun Panduan',
+        disc__title__id: "Beli keseluruhan <br>pelan pakej",
+        ri__shop__id: '<i class="ri-shopping-bag-line button__icon"></i> Beli pakej sekarang!',
         nproject_id: "Semua Projek Baharu",
         v_id: "Galeri Video",
         ftitle_id_sns: "Sosial",
@@ -48,6 +70,7 @@
         flink_id_product: "Produk",
         strademark_id: "&copy; 2023 <strong>Shoenix Studios</strong> Hak Cipta Terpelihara",
       },
+
       en: {
         sub_line: "Experimental project by <strong>NMVX</strong>",
         firstid: "VALHALLA AXE<br>CONCEPT",
@@ -83,6 +106,28 @@
           "Updated version of Istinggar, re-rendered in cycles X and retouch in photoshop."],
         //
 
+        product__type: "Collection", 
+        htitle__desc__id: "Overview",
+        bflex__id: '<i class="ri-shopping-bag-line button__icon"></i></i> Purchase now!',
+        sectitle__id1: "Technical </br> Specs", sectitle__id2: "Choose <br> Your Style", sectitle__id3: "Flexible",
+        specs__title: ["Dimensions","File Sizes","Template Format","Flexible"],
+        specs__subtitle: ["High Resolution, CMYK, <br>Fully Vectorized","Average 10~100 megabytes",".AI .EPS .PDF","Easy format <br> and colour changes"],
+        bundle__id: "Buy Bundle",
+        pdmtag__id1: "<strong>PRO</strong> License purchase", pdmtag__id2: "Custom <strong>poster</strong>", pdmtag__id3: "One-Time Purchase",
+        pdmbuy__id: "Purchase Now!", pdrtag__id: "Long & Short sleeve template", pdrtag__id1: "Full Vectorized Form", 
+        pdrtag__desc__id: "Template", pdrtag__desc__id1: "Vector",
+        cusj__id: "The product was flexible, the design was react to the different types of garment pattern.",
+        cusj__id1: "Customize the side panel with custom ribbon for more ",
+        cusj__id2: "air ventilation and stretchiness",
+        cusj__id3: "Change collar design, with different types of collars shapes",
+        cusj__id4: "Choose different types of sleeves pattern. From default, ",
+        cusj__id5:"raglan and custom cut sleeve!",
+        cusj__id6:"Design your own sleeves cuff design, with rubber, jersey or",
+        cusj__id7:"embed types with various combinations",
+        cdesc__id: "With a easy and flexible made design so that you can change it whenever you want, and keep experimenting with various combinations. ",
+        ri__info__id: '<i class="ri-information-line button__icon"></i> Download Guides',
+        disc__title__id: "Buy the whole <br>package plan",
+        ri__shop__id: '<i class="ri-shopping-bag-line button__icon"></i> Buy package now!',
         nproject_id: "All New Projects",
         v_id: "Video Gallery",
         ftitle_id_sns: "Socials",
@@ -103,6 +148,13 @@
         for (i = 0; i < 12; i++) {
           document.querySelectorAll(".Card__link")[i].innerText = languages[code].Card__link[i];
           document.querySelectorAll(".Card__desc")[i].innerText = languages[code].Card__desc[i];
+        }
+      }
+
+      if (document.querySelector('.specs__title') && document.querySelector('.specs__subtitle') !== null){
+        for (i = 0; i < 3; i++) {
+          document.querySelectorAll(".specs__title")[i].innerHTML = DOMPurify.sanitize(languages[code].specs__title[i]);
+          document.querySelectorAll(".specs__subtitle")[i].innerHTML = DOMPurify.sanitize(languages[code].specs__subtitle[i]);
         }
       }
 
