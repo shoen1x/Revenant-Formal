@@ -4,18 +4,18 @@
     "redirects": [
       {
         "source": "/en-MY/",
-        "destination": "/home.html",
+        "destination": "/en-MY/home.html",
         "type": 301
       }
     ],
     "rewrites": [
       {
         "source": "/en-MY/",
-        "destination": "/home.html"
+        "destination": "/en-MY/home.html"
       },
       {
         "source": "/en-MY/",
-        "destination": "/404.html",
+        "destination": "/en-MY/404.html",
         "type": 404
       }
     ],
