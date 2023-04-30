@@ -4,10 +4,6 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/en-MY/home.html"
-      },
-      {
-        "source": "**",
         "destination": "/404.html",
         "type": 404
       }
