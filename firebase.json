@@ -3,19 +3,19 @@
     "public": "docs",
     "redirects": [
       {
-        "source": "/en-MY/",
-        "destination": "/en-MY/home.html",
+        "source": "/",
+        "destination": "/Maintenance.html",
         "type": 301
       }
     ],
     "rewrites": [
       {
-        "source": "/en-MY/",
-        "destination": "/en-MY/home.html"
+        "source": "**",
+        "destination": "/Maintenance.html"
       },
       {
-        "source": "/en-MY/",
-        "destination": "/en-MY/404.html",
+        "source": "**",
+        "destination": "/Maintenance.html",
         "type": 404
       }
     ],

@@ -37,8 +37,8 @@ let assetsPluginInstance = new AssetsPlugin({
 let htmlPageNames = ['home', 'product', 'project', 'blog', '404'];
 let multipleHtmlPlugins_en = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
-    template: `./src/en-MY/${name}.html`, // relative path to the HTML files
-    filename: `en-MY/${name}.html`, // output HTML files
+    template: `./src/en-US/${name}.html`, // relative path to the HTML files
+    filename: `en-US/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
     // minify: {
@@ -61,8 +61,8 @@ let multipleHtmlPlugins_en = htmlPageNames.map(name => {
 
 let multipleHtmlPlugins_my = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
-    template: `./src/my-MY/${name}.html`, // relative path to the HTML files
-    filename: `my-MY/${name}.html`, // output HTML files
+    template: `./src/ms-MY/${name}.html`, // relative path to the HTML files
+    filename: `ms-MY/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
     // minify: {
@@ -85,15 +85,16 @@ let multipleHtmlPlugins_my = htmlPageNames.map(name => {
 
 module.exports = {
     entry: {
-        home :["./src/en-MY/home.html", "./src/my-MY/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
-        product :["./src/en-MY/product.html", "./src/my-MY/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
-        project :["./src/en-MY/project.html", "./src/my-MY/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
+        home :["./src/en-US/home.html", "./src/ms-MY/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
+        product :["./src/en-US/product.html", "./src/ms-MY/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
+        project :["./src/en-US/project.html", "./src/ms-MY/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
+        maintenance : "./src/Maintenance.html",
     },
     output: {
         path: path.resolve(__dirname, './docs'),
         filename: "assets/js/[name].js?v=[contenthash]",
         chunkFilename: "assets/js/[name].chunk.js?v=[contenthash]",
-        assetModuleFilename: "assets/debug/[name][ext]?v=[contenthash]",
+        assetModuleFilename: "assets/portal/[name][ext]?v=[contenthash]",
         crossOriginLoading: "anonymous",
     },
     performance: {
@@ -183,11 +184,19 @@ module.exports = {
       filename: "assets/css/[name].css?v=[contenthash]",
       chunkFilename: "assets/css/[id].css?v=[contenthash]",
     }),
+
+    new HtmlWebpackPlugin({
+      template: `./src/Maintenance.html`, // relative path to the HTML files
+      filename: `Maintenance.html`, // output HTML files
+      chunks: [`Maintenance`], // respective JS files
+      inject: true,
+    }),
+
     // new SubresourceIntegrityPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackInjector(),
     assetsPluginInstance,
     new WebpackAssetsManifest({ integrity: true }),
 
-  ].concat(multipleHtmlPlugins_en, multipleHtmlPlugins_my)
+  ]//.concat(multipleHtmlPlugins_en, multipleHtmlPlugins_my)
 };
