@@ -6,11 +6,6 @@
         "source": "/",
         "destination": "/home.html",
         "type": 301
-      },
-      {
-        "source": "**",
-        "destination": "/404.html",
-        "type": 404
       }
     ],
     "rewrites": [
