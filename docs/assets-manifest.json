@@ -17,7 +17,7 @@
   },
   "common/language/ms-MY/home.html": {
     "src": "common/language/ms-MY/home.html",
-    "integrity": "sha256-o+P+O1eDrb7OKIC3Nd3t4p0o13ooOE77aqYihIrsHyM= sha384-2fqNQJ8R9fF0+J21g5Gub+4I8479KxHJ5T+uPnj43GsCzrynehYNJzTuLlbNFcec sha512-5CjSSCwaL3JFzQIy43CLEb13cXU2UUH7G1rUO3RxwtBY0ChQZRjtKYk03MHdUm6EPMss6U+k0OLPFhGpks7w6A=="
+    "integrity": "sha256-00uYaZFRTE0x4Pxi+YLx2w2GFfDC6wpQuWnySVMnGN4= sha384-70xXapkkbebp/nm1HCjQzg5FeG3X1O/2o7EOdK/tJ/320MTc23MPyHchcHIqGQZx sha512-ydADMV+1rTuPvTOFWmBQ2Yr7R3w6cc0tQvDI+UX+jQWIjRAOdwedOSHqAEkY6CN4J2exOgqnMdm3uhe+FsDYSw=="
   },
   "common/language/ms-MY/product.html": {
     "src": "common/language/ms-MY/product.html",
@@ -905,7 +905,7 @@
   },
   "home.html": {
     "src": "home.html",
-    "integrity": "sha256-QsHqR5cpGXjtoK2VTbc+ot9tcZYl4Fpe88MNcxbx8/0= sha384-4OCG1H/QtMxq9n5sgl1pfAMk8pB/2+etuMV7Hhw9PxQbN8niIzWEM51E49y1DQc6 sha512-gfT1vLK+1ftwSq8QzBzP/LUqvgX0iTpP2SX/HDdDH4y4FoXXtHvX2AR0WX/+NRTkM53jyeBarFtpuInLWOWfKQ=="
+    "integrity": "sha256-8xJqNPyl77m9LOWiyBjNfGSEZQleUXgs5H/q2VwbdNc= sha384-ha4yTCLrQ1nFPV25gkrKz+oOPSSLf7O4TG4r1+Knz2zetTBFrzNOBbw5zRYTWNPV sha512-UJqFUFYa53sa0MqrN/jyLFKmTxo0SVZqgnR5GOoaAnWqv/NtOTjx7kR1of58SGpF505KxHfHNJS6PXkD50xhYg=="
   },
   "home.js": {
     "src": "global/assets/js/home.js?v=d93589efd6fb5c4b8865",
