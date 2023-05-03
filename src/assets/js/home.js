@@ -353,6 +353,25 @@
 		  });
 	});
 
+	// Ambik sekut ikut 'home'
+	function getCookie(cname) {
+		let name = cname + "=";
+		let decodedCookie = decodeURIComponent(document.cookie);
+		let ca = decodedCookie.split(';');
+		for (let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	const lang_injection = getCookie("firebase-language-override");
+
 	// 3D
 	const modelViewerVariants = document.querySelector("model-viewer#playcard");
 	const select = document.querySelector('#variant');
@@ -364,10 +383,18 @@
 		option.value = name;
 		switch(option.value){
 			case 'JDT':
-				option.textContent = 'Johor Darul Ta`zim Jersey Concept';
+				if(lang_injection == 'ms'){
+					option.textContent = 'Jersi Konsep Johor Darul Ta`zim';
+				}else {
+					option.textContent = 'Johor Darul Ta`zim Jersey Concept';
+				}
 				break;
 			case 'HM':
-				option.textContent =  'Harimau Malaya Jersey Concept';
+				if(lang_injection == 'ms'){
+					option.textContent = 'Jersi Konsep Harimau Malaya';
+				}else {
+					option.textContent =  'Harimau Malaya Jersey Concept';
+				}
 				break;
 		}
 		select.appendChild(option);
@@ -385,12 +412,20 @@
 	  switch(modelViewerVariants.variantName){
 		case 'JDT':
 			document.querySelector('#behancerd').href = "https://www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios"
-			document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("JOHOR DARUL TA'ZIM<br>JERSEY CONCEPT");
+			if(lang_injection == 'ms'){
+				document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("JERSI KONSEP<br>JOHOR DARUL TA'ZIM");
+			}else {
+				document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("JOHOR DARUL TA'ZIM<br>JERSEY CONCEPT");
+			}
 			$('#second-1').attr("id","second");
 		break;
 		case 'HM':
 			document.querySelector('#behancerd').href = "https://www.behance.net/gallery/145829475/Harimau-Malaya-Concept-Shoenix-Studios"
-			document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("HARIMAU MALAYA HOME<br>JERSEY CONCEPT");
+			if(lang_injection == 'ms'){
+				document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("JERSI KONSEP<br>HARIMAU MALAYA");
+			}else {
+				document.querySelector('.secondtext').innerHTML = DOMPurify.sanitize("HARIMAU MALAYA HOME<br>JERSEY CONCEPT");
+			}
 			$('#second').attr("id","second-1");
 		break;
 	  }

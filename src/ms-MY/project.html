@@ -34,8 +34,7 @@
   <meta name="format-detection" content="telephone=no">
 
   <meta http-equiv="content-language" content="ms" />
-  <link rel="alternate" hreflang="ms-MY" href="https://shoenix-studios.web.app/ms-MY">
-	<link rel="alternate" hreflang="en-US" href="https://shoenix-studios.web.app">
+	<link rel="canonical" href="https://shoenix-studios.web.app/ms/project.html">
 
   <!-- Social Media metadata -->
   <meta property="og:type" content="website">
@@ -46,7 +45,7 @@
   <meta property="og:title" content="Projek | Shoenix Studios">
   <meta property="og:url" content="https://shoenix-studios.web.app/project">
   <meta property="og:image" content="https://shoenix-studios.web.app/images/og-image/og-image-project.jpg">
-  <meta property="og:locale" content="en_MY">
+  <meta property="og:locale" content="ms">
   <meta property="og:site_name" content="Project">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -463,7 +462,7 @@
 							<select id="langslct" required="required">
 								<option value="" disabled="disabled" selected="selected">Pilihan Bahasa</option>
 								<option value="en">Bahasa Inggeris</option>
-								<option value="my">Bahasa Melayu</option>
+								<option value="ms">Bahasa Melayu</option>
 							</select>
 							<svg>
 								<use xlink:href="#select-arrow-down"></use>
@@ -488,20 +487,20 @@
   <script src="../assets/js/jquery.scrollex.min.js"></script>
   <script src="../assets/js/browser.min.js"></script>
   <script src="../assets/js/breakpoints.min.js"></script>
-  <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
   <script src="../assets/js/util.js"></script>
 
-  <script>
+	<script>
 		var Revf_format = 'MMM d, yyyy';
-		var bodyLangCode = "ms-MY";
+		var bodyLangCode = "ms";
 		var bodyCountryCode = "my";
 	</script>
 	<script src="../network.js"></script>
-
+  
+  <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
   <script type="text/javascript" src="/node_modules/dompurify/dist/purify.min.js"></script>
 
   <script>
-    fetch('webpack-assets.json')
+    fetch(net_path + 'webpack-assets.json')
       .then(function (response) {
         return response.json();
       })

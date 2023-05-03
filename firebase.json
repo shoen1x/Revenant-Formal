@@ -3,19 +3,19 @@
     "public": "docs",
     "redirects": [
       {
-        "source": "shoenix-studios.web.app",
+        "source": "/",
         "destination": "/home.html",
         "type": 301
+      },
+      {
+        "source": "/*/**",
+        "destination": "/404.html"
       }
     ],
     "rewrites": [
       {
         "source": "/",
         "destination": "/home.html"
-      },
-      {
-        "source": "/common/language/**",
-        "destination": "/**"
       }
     ],
     "headers": [
@@ -38,13 +38,11 @@
         ]
       },
       {
-        "source": "**",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-          }
-        ]
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [ {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        } ]
       },
       {
         "source": "404.html",

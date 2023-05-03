@@ -33,8 +33,9 @@
   addEventListener("DOMContentLoaded", e => {
     e.preventDefault;
     const cname = parseInt(getCookie("proj-col"));
-    const lang_injection = getCookie("lang");
+    const lang_injection = getCookie("firebase-language-override");
     // var url_selection = window.location.href.match(/\d+$/);
+
     var project_index = (code) => {
       const sdesc = ["Athleisure and active wear", "Streetwear and leisure wear", "Electronic game and competitive wear"];
       const sdesc_ms = ["Pakaian sukan dan aktif", "Pakaian jalanan dan pakaian santai", "Permainan elektronik dan pakaian kompetitif"];
@@ -109,34 +110,34 @@
         },
       };
       var objkey_proj;
-      if (lang_injection == 'en-US'){objkey_proj = proj_index_p}else if(lang_injection == 'ms-MY'){objkey_proj = proj_index_p_MY}
+      if (lang_injection == 'en'){objkey_proj = proj_index_p}else if(lang_injection == 'ms'){objkey_proj = proj_index_p_MY}
       for (let proj_selector of Object.keys(objkey_proj["1"])) {
         if (document.querySelector(`.${proj_selector}`) && document.querySelector('.discount__img') !== null) {
           document.querySelector(`.${proj_selector}`).innerHTML = DOMPurify.sanitize(objkey_proj[code][proj_selector]);
-          document.querySelector('.discount__img').src = 'global/assets/images/svg/Bundle' + code + '.svg';
+          document.querySelector('.discount__img').src = net_path + 'global/assets/images/svg/Bundle' + code + '.svg';
         }
 
         for (let i = 0; i < 4; i++) {  // sini semo brapo jumlah projek, tukar nombo sini kalu ado tukar2
-          document.querySelectorAll('.products__img')[i].src = "global/assets/images/c" + code + "-" + (i + 1) + ".webp";
+          document.querySelectorAll('.products__img')[i].src = net_path + "global/assets/images/c" + code + "-" + (i + 1) + ".webp";
           document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(objkey_proj[code].colname[i]);
           document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(objkey_proj[code].colprice[i]);
         }
         // Dio ule2 sapa siap. 
-        if(lang_injection == 'en-US'){ //inggeris
+        if(lang_injection == 'en'){ //inggeris
           $('.products__content button').on('click', function () {
+            document.querySelector("#productsdetails").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
             var slcpkdata = $(this).data("slcpkdata");
             var series_desc, series_svg;
-            console.log(slcpkdata);
   
             if (proj_index_p[code].series_cat[slcpkdata] == 'PowerWear™') {
               series_desc = sdesc[0];
-              series_svg = 'global/assets/images/svg/powerwear.svg';
+              series_svg = net_path + 'global/assets/images/svg/powerwear.svg';
             } else if (proj_index_p[code].series_cat[slcpkdata] == 'UrbanWear™') {
               series_desc = sdesc[1];
-              series_svg = 'global/assets/images/svg/urbanwear.svg';
+              series_svg = net_path + 'global/assets/images/svg/urbanwear.svg';
             } else {
               series_desc = sdesc[2];
-              series_svg = 'global/assets/images/svg/gameon.svg';
+              series_svg = net_path + 'global/assets/images/svg/gameon.svg';
             }
   
             var checktag = DOMPurify.sanitize(proj_index_p[code].colname[slcpkdata]);
@@ -149,21 +150,21 @@
             document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('This is ' + checktag + ', ' + proj_index_p[code].series_cat[slcpkdata] + ' Series for ' + series_desc + '.');
             document.querySelector('#pdlsvg').src = series_svg;
           });
-        }else if(lang_injection == 'ms-MY'){ //Bahaso mlayu
+        }else if(lang_injection == 'ms'){ //Bahaso mlayu
           $('.products__content button').on('click', function () {
+            document.querySelector("#productsdetails").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
             var slcpkdata = $(this).data("slcpkdata");
             var series_desc, series_svg;
-            console.log(slcpkdata);
   
             if (proj_index_p[code].series_cat[slcpkdata] == 'PowerWear™') {
               series_desc = sdesc_ms[0];
-              series_svg = 'global/assets/images/svg/powerwear-ms.svg';
+              series_svg = net_path + 'global/assets/images/svg/powerwear-ms.svg';
             } else if (proj_index_p[code].series_cat[slcpkdata] == 'UrbanWear™') {
               series_desc = sdesc_ms[1];
-              series_svg = 'global/assets/images/svg/urbanwear-ms.svg';
+              series_svg = net_path + 'global/assets/images/svg/urbanwear-ms.svg';
             } else {
               series_desc = sdesc_ms[2];
-              series_svg = 'global/assets/images/svg/gameon-ms.svg';
+              series_svg = net_path + 'global/assets/images/svg/gameon-ms.svg';
             }
   
             var checktag = DOMPurify.sanitize(proj_index_p[code].colname[slcpkdata]);
@@ -182,14 +183,15 @@
     };
 
     if (cname == 0 || cname > 4) {
+
       alert("Error");
-      location.href = '/';
+      location.href = 'home';
 
     } else {
       (function () {
-        document.querySelector('.home__img').src = "global/assets/images/" + "c" + cname + "-1.webp";
+        document.querySelector('.home__img').src = net_path + "global/assets/images/" + "c" + cname + "-1.webp";
         var rotator = document.querySelector('.home__img');
-        var imageDir = 'global/assets/images/';
+        var imageDir = net_path + 'global/assets/images/';
         var delayInSeconds = 5;
 
         var images = ['c' + cname + '-1.webp', 'c' + cname + '-2.webp', 'c' + cname + '-3.webp', 'c' + cname + '-4.webp'];
