@@ -1,10 +1,13 @@
 {
   "hosting": {
     "public": "docs",
-    "redirects": {
-      "source": "/common/language/**",
-      "destination": "/ms-MY/home.html"
-    },
+    "redirects": [
+      {
+        "source": "/common/language/**",
+        "destination": "/ms-MY/home.html",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "/",
