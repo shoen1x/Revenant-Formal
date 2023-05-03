@@ -62,8 +62,8 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
 let htmlPageNames_my = ['home', 'product', 'project', 'blog', '404'];
 let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
   return new HtmlWebpackPlugin({
-    template: `./src/ms-MY/${name}.html`, // relative path to the HTML files
-    filename: `common/language/ms-MY/${name}.html`, // output HTML files
+    template: `./src/ms-my/${name}.html`, // relative path to the HTML files
+    filename: `common/language/ms-my/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
     // minify: {

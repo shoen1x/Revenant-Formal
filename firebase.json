@@ -3,20 +3,19 @@
     "public": "docs",
     "redirects": [
       {
-        "source": "/common/language/**",
-        "destination": "/ms-MY/home.html",
+        "source": "shoenix-studios.web.app",
+        "destination": "/home.html",
         "type": 301
       }
     ],
     "rewrites": [
       {
         "source": "/",
-        "destination": "/en-US/home.html"
+        "destination": "/home.html"
       },
       {
-        "source": "/",
-        "destination": "/en-US/404.html",
-        "type": 404
+        "source": "/common/language/**",
+        "destination": "/**"
       }
     ],
     "headers": [
