@@ -8,8 +8,9 @@
         "type": 301
       },
       {
-        "source": "/*/**",
-        "destination": "/404.html"
+        "source": "**",
+        "destination": "/404.html",
+        "type": 404
       }
     ],
     "rewrites": [
