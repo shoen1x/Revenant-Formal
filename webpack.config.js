@@ -34,11 +34,11 @@ let assetsPluginInstance = new AssetsPlugin({
   }
 });
 
-let htmlPageNames = ['home', 'product', 'project', 'blog', '404'];
-let multipleHtmlPlugins_en = htmlPageNames.map(name => {
+let htmlPageNames = ['home', 'product', 'project', 'blog', '404', 'maintenance'];
+let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
-    template: `./src/en-US/${name}.html`, // relative path to the HTML files
-    filename: `en-US/${name}.html`, // output HTML files
+    template: `./src/${name}.html`, // relative path to the HTML files
+    filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
     // minify: {
@@ -59,10 +59,11 @@ let multipleHtmlPlugins_en = htmlPageNames.map(name => {
   })
 });
 
-let multipleHtmlPlugins_my = htmlPageNames.map(name => {
+let htmlPageNames_my = ['home', 'product', 'project', 'blog', '404'];
+let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/ms-MY/${name}.html`, // relative path to the HTML files
-    filename: `ms-MY/${name}.html`, // output HTML files
+    filename: `common/language/ms-MY/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
     // minify: {
@@ -85,16 +86,15 @@ let multipleHtmlPlugins_my = htmlPageNames.map(name => {
 
 module.exports = {
     entry: {
-        home :["./src/en-US/home.html", "./src/ms-MY/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
-        product :["./src/en-US/product.html", "./src/ms-MY/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
-        project :["./src/en-US/project.html", "./src/ms-MY/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
-        maintenance : "./src/Maintenance.html",
+        home :["./src/home.html", "./src/ms-MY/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
+        product :["./src/product.html", "./src/ms-MY/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
+        project :["./src/project.html", "./src/ms-MY/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
         path: path.resolve(__dirname, './docs'),
-        filename: "assets/js/[name].js?v=[contenthash]",
-        chunkFilename: "assets/js/[name].chunk.js?v=[contenthash]",
-        assetModuleFilename: "assets/portal/[name][ext]?v=[contenthash]",
+        filename: "global/assets/js/[name].js?v=[contenthash]",
+        chunkFilename: "global/assets/js/[name].chunk.js?v=[contenthash]",
+        assetModuleFilename: "global/assets/portal/[name][ext]?v=[contenthash]",
         crossOriginLoading: "anonymous",
     },
     performance: {
@@ -122,7 +122,7 @@ module.exports = {
           test: /\.svg$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/svg/[name][ext]?v=[contenthash]'
+            filename: 'global/assets/images/svg/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -130,7 +130,7 @@ module.exports = {
           test: /\.(woff(2)?|ttf|eot)(\?[a-z0-9=.]+)?$/,
           type: 'asset/resource',
             generator: {
-              filename: 'assets/webfonts/[name][ext]?v=[contenthash]'
+              filename: 'global/assets/webfonts/[name][ext]?v=[contenthash]'
             },
           exclude: /node_modules/,
         },
@@ -138,7 +138,7 @@ module.exports = {
           test: /\.(png|jpe?g|gif|webp)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/[name][ext]?v=[contenthash]'
+            filename: 'global/assets/images/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -146,7 +146,7 @@ module.exports = {
           test: /\.(gltf|glb)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/3D/[name][ext]?v=[contenthash]'
+            filename: 'global/assets/images/3D/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -154,7 +154,7 @@ module.exports = {
           test: /\.(webm)$/,
           type: 'asset/resource',
           generator: {
-            filename: 'videos/[name][ext]?v=[contenthash]'
+            filename: 'global/assets/videos/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -162,7 +162,7 @@ module.exports = {
           test: /(og-image).*\.jpg$/,
           type: 'asset/resource',
           generator: {
-            filename: 'images/og-image/[name][ext]?v=[contenthash]'
+            filename: 'global/assets/images/og-image/[name][ext]?v=[contenthash]'
           },
           exclude: /node_modules/,
         },
@@ -170,7 +170,7 @@ module.exports = {
           test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
           type: 'asset/resource',
             generator: {
-              filename: 'assets/ico/[name][ext]?v=[contenthash]'
+              filename: 'global/assets/ico/[name][ext]?v=[contenthash]'
             },
           exclude: /node_modules/,
         },
@@ -181,15 +181,8 @@ module.exports = {
     },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/css/[name].css?v=[contenthash]",
-      chunkFilename: "assets/css/[id].css?v=[contenthash]",
-    }),
-
-    new HtmlWebpackPlugin({
-      template: `./src/Maintenance.html`, // relative path to the HTML files
-      filename: `Maintenance.html`, // output HTML files
-      chunks: [`Maintenance`], // respective JS files
-      inject: true,
+      filename: "global/assets/css/[name].css?v=[contenthash]",
+      chunkFilename: "global/assets/css/[id].css?v=[contenthash]",
     }),
 
     // new SubresourceIntegrityPlugin(),
@@ -198,5 +191,5 @@ module.exports = {
     assetsPluginInstance,
     new WebpackAssetsManifest({ integrity: true }),
 
-  ]//.concat(multipleHtmlPlugins_en, multipleHtmlPlugins_my)
+  ].concat(multipleHtmlPlugins, multipleHtmlPlugins_my)
 };

@@ -32,8 +32,8 @@
   <meta name="format-detection" content="telephone=no">
 
   <meta http-equiv="content-language" content="ms" />
-  <link rel="alternate" hreflang="ms" href="https://shoenix-studios.web.app/ms-MY">
-	<link rel="alternate" hreflang="en" href="https://shoenix-studios.web.app/en-US">
+  <link rel="alternate" hreflang="ms-MY" href="https://shoenix-studios.web.app/ms-MY">
+	<link rel="alternate" hreflang="en-US" href="https://shoenix-studios.web.app">
 
 	<!-- Social Media metadata -->
 	<meta property="og:type" content="website">
@@ -64,7 +64,7 @@
 
   <header class="header" id="header">
     <nav class="nav container">
-		  <a title="Home" href="home" target="_self" aria-label="Home" class="nav__logo">
+		  <a title="Home" href="ms-MY/home" target="_self" aria-label="Home" class="nav__logo">
         <img src="../images/ico/shoenix.svg" height="32" width="32" alt="">
       </a>
       <span>produk | <strong>Shoenix Studios</strong></span>
@@ -385,13 +385,13 @@
 
         <ul class="footer__links">
           <li>
-            <a href="home" target="_self" aria-label="Home" class="footer__link">Rerumah</a>
+            <a href="ms-MY/home" target="_self" aria-label="Home" class="footer__link">Rerumah</a>
           </li>
           <li>
-            <a href="project" target="_self" aria-label="Project" class="footer__link">Projek</a>
+            <a href="ms-MY/home#productcard" target="_self" aria-label="Project" class="footer__link">Projek</a>
           </li>
           <li>
-            <a href="blog" target="_self" aria-label="Blog" class="footer__link">Blog</a>
+            <a href="ms-MY/blog" target="_self" aria-label="Blog" class="footer__link">Blog</a>
           </li>
         </ul>
 
@@ -435,7 +435,14 @@
   <script src="../assets/js/browser.min.js"></script>
   <script src="../assets/js/breakpoints.min.js"></script>
   <script src="../assets/js/util.js"></script>
-	<script src="../assets/js/language.js"></script>
+
+  <script>
+		var Revf_format = 'MMM d, yyyy';
+		var bodyLangCode = "ms-MY";
+		var bodyCountryCode = "my";
+	</script>
+	<script src="../network.js"></script>
+
   <script src="../assets/js/firebase.js" type="module"></script>
   <script type="text/javascript" src="/node_modules/dompurify/dist/purify.min.js"></script>
 

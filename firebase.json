@@ -1,21 +1,14 @@
 {
   "hosting": {
     "public": "docs",
-    "redirects": [
-      {
-        "source": "/",
-        "destination": "/Maintenance.html",
-        "type": 301
-      }
-    ],
     "rewrites": [
       {
         "source": "**",
-        "destination": "/Maintenance.html"
+        "destination": "/home.html"
       },
       {
         "source": "**",
-        "destination": "/Maintenance.html",
+        "destination": "/404.html",
         "type": 404
       }
     ],
@@ -72,6 +65,9 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+    "i18n": {
+      "root": "/common/language"
+    }  
   }
 }
