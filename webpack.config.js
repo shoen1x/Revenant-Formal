@@ -22,12 +22,13 @@ const HtmlWebpackInjector = require('html-webpack-injector');
 const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
+const package_version = require('./package.json').version;
 
 let assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
-  metadata: {version: '0.9.26.10-PreAlpha', date: '05 Mac, 2023', revision: 'RevF' + Date.parse(Date())},
+  metadata: {version: package_version, date: '04 Mei, 2023', revision: 'RevF' + Date.parse(Date())},
 
   processOutput: function (assets) {
     return JSON.stringify(assets);

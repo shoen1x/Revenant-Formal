@@ -5,7 +5,7 @@ const net_path = '../../../';
     var current_lang_sm = (bodyCountryCode || 'default').toLowerCase();
 
     var CookieDate = new Date, tmp;
-    CookieDate.setFullYear(CookieDate.getFullYear() +10);
+    CookieDate.setDate(CookieDate.getDate() +30);
 
     	function getCookie(cname) {
 		let name = cname + "=";

@@ -1,7 +1,7 @@
 {
   "name": "revenant-formal",
-  "version": "0.9.26.10-PreAlpha",
-  "description": "Shoenix Studios Website",
+  "version": "0.10.0.1-Alpha",
+  "description": "Shoenix Studios",
   "main": "index.js",
   "directories": {
     "doc": "docs"
