@@ -68,7 +68,7 @@
 
       pimg.src = net_path + "global/assets/images/" + gifn + (i + 1) + ".webp";
       pfigc.innerHTML = DOMPurify.sanitize(i + 1);
-      document.getElementById('app').scrollIntoView();
+      document.getElementById('p-title').scrollIntoView();
     }
   }
 
