@@ -44,7 +44,7 @@
         1: {
           colname: ["Monarch", "Bos Gaurus", "Nightmare", "Legion"],
           series_cat: ["PowerWear™", "UrbanWear™", "PowerWear™", "UrbanWear™"],
-          colprice: ["RM001", "RM002", "RM003", "RM004"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "In The Name of Tsar",
           discount__description: "Get In The Name of Tsar now, up to 15% off.",
           home__description: "Introducing the In the Name of Tsar Collection: a unique, modern take on streetwear. stylish and custom-made just for you. Suitable for athleisure and sports wear",
@@ -52,7 +52,7 @@
         2: {
           colname: ["Nexus", "Plexus", "Scar", "Nemesis"],
           series_cat: ["PowerWear™", "UrbanWear™", "UrbanWear™", "UrbanWear™"],
-          colprice: ["RM005", "RM006", "RM007", "RM008"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "Black Steel Eagle",
           discount__description: "Get Black Steel Eagle now, up to 15% off.",
           home__description: "Introducing the Black Steel Eagle Collection: a mainstream sports inspired design. Unique and custom-made just for you. Suitable for sport usage",
@@ -60,7 +60,7 @@
         3: {
           colname: ["San Mirage", "Avarice", "Chaos", "Wrath"],
           series_cat: ["PowerWear™", "PowerWear™", "PowerWear™", "PowerWear™"],
-          colprice: ["RM009", "RM010", "RM011", "RM012"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "The World",
           discount__description: "Get The World now, up to 15% off.",
           home__description: "Introducing The World Collection: a robust design for stylish everyday clothing. custom-made just for you. Suitable for streetwear and athleisure",
@@ -68,7 +68,7 @@
         4: {
           colname: ["Alpha", "Beta", "Charlie", "Delta"],
           series_cat: ["GameOn™", "GameOn™", "GameOn™", "GameOn™"],
-          colprice: ["RM013", "RM014", "RM015", "RM016"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "The Unity",
           discount__description: "Get The Unity now, up to 15% off.",
           home__description: "Introducing The Unity Collection: a minimalist, clean and modern design. stylish and custom-made just for you. Suitable for e-sport and electronic sport organization",
@@ -79,7 +79,7 @@
         1: {
           colname: ["Monarch", "Bos Gaurus", "Nightmare", "Legion"],
           series_cat: ["PowerWear™", "UrbanWear™", "PowerWear™", "UrbanWear™"],
-          colprice: ["RM001", "RM002", "RM003", "RM004"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "Di Atas Nama Tsar",
           discount__description: "Dapatkan 'Di Atas Nama Tsar' sekarang, diskaun sehingga 15%.",
           home__description: "Memperkenalkan Koleksi 'Di Atas Nama Tsar': pakaian jalanan yang unik dan moden. bergaya dan dibuat khas untuk anda. Sesuai untuk pakaian sukan dan sukan",
@@ -87,7 +87,7 @@
         2: {
           colname: ["Nexus", "Plexus", "Scar", "Nemesis"],
           series_cat: ["PowerWear™", "UrbanWear™", "UrbanWear™", "UrbanWear™"],
-          colprice: ["RM005", "RM006", "RM007", "RM008"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "Helang Keluli Hitam",
           discount__description: "Dapatkan 'Helang Keluli Hitam' sekarang, diskaun sehingga 15%.",
           home__description: "Memperkenalkan Koleksi 'Helang Keluli Hitam': reka bentuk inspirasi sukan arus perdana. Unik dan dibuat khas hanya untuk anda. Sesuai untuk kegunaan sukan",
@@ -95,7 +95,7 @@
         3: {
           colname: ["San Mirage", "Avarice", "Chaos", "Wrath"],
           series_cat: ["PowerWear™", "PowerWear™", "PowerWear™", "PowerWear™"],
-          colprice: ["RM009", "RM010", "RM011", "RM012"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "Dunia",
           discount__description: "Dapatkan 'Dunia' sekarang, diskaun sehingga 15%.",
           home__description: "Memperkenalkan Koleksi 'Dunia': reka bentuk yang teguh untuk pakaian harian yang bergaya. dibuat khas hanya untuk anda. Sesuai untuk pakaian jalanan dan sukan",
@@ -103,82 +103,95 @@
         4: {
           colname: ["Alpha", "Beta", "Charlie", "Delta"],
           series_cat: ["GameOn™", "GameOn™", "GameOn™", "GameOn™"],
-          colprice: ["RM013", "RM014", "RM015", "RM016"],
+          colprice: ["RM???", "RM???", "RM???", "RM???"],
           home__subtitle: "Kesatuan",
           discount__description: "Dapatkan 'Kesatuan' sekarang, diskaun sehingga 15%.",
           home__description: "Memperkenalkan Koleksi 'Kesatuan': reka bentuk minimalis, bersih dan moden. bergaya dan dibuat khas untuk anda. Sesuai untuk e-sukan dan organisasi sukan elektronik",
         },
       };
       var objkey_proj;
-      if (lang_injection == 'en'){objkey_proj = proj_index_p}else if(lang_injection == 'ms'){objkey_proj = proj_index_p_MY}
-      for (let proj_selector of Object.keys(objkey_proj["1"])) {
-        if (document.querySelector(`.${proj_selector}`) && document.querySelector('.discount__img') !== null) {
-          document.querySelector(`.${proj_selector}`).innerHTML = DOMPurify.sanitize(objkey_proj[code][proj_selector]);
-          document.querySelector('.discount__img').src = net_path + 'global/assets/images/svg/Bundle' + code + '.svg';
+      if (lang_injection == 'en') {
+        for (let proj_selector of Object.keys(proj_index_p["1"])) {
+          if (document.querySelector(`.${proj_selector}`) && document.querySelector('.discount__img') !== null) {
+            document.querySelector(`.${proj_selector}`).innerHTML = DOMPurify.sanitize(proj_index_p[code][proj_selector]);
+            document.querySelector('.discount__img').src = net_path + 'global/assets/images/svg/Bundle' + code + '.svg';
+          }
+  
+          for (let i = 0; i < 4; i++) {  // sini semo brapo jumlah projek, tukar nombo sini kalu ado tukar2
+            document.querySelectorAll('.products__img')[i].src = net_path + "global/assets/images/c" + code + "-" + (i + 1) + ".webp";
+            document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(proj_index_p[code].colname[i]);
+            document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(proj_index_p[code].colprice[i]);
+          }
+          // Dio ule2 sapa siap. 
+  
+            $('.products__content button').on('click', function () {
+              document.querySelector("#productsdetails").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
+              var slcpkdata = $(this).data("slcpkdata");
+              var series_desc, series_svg;
+    
+              if (proj_index_p[code].series_cat[slcpkdata] == 'PowerWear™') {
+                series_desc = sdesc[0];
+                series_svg = net_path + 'global/assets/images/svg/powerwear.svg';
+              } else if (proj_index_p[code].series_cat[slcpkdata] == 'UrbanWear™') {
+                series_desc = sdesc[1];
+                series_svg = net_path + 'global/assets/images/svg/urbanwear.svg';
+              } else {
+                series_desc = sdesc[2];
+                series_svg = net_path + 'global/assets/images/svg/gameon.svg';
+              }
+    
+              var checktag = DOMPurify.sanitize(proj_index_p[code].colname[slcpkdata]);
+              document.querySelector('.tag').innerHTML = checktag;
+              document.querySelector('#pdmtitle').innerHTML = checktag;
+              document.querySelector('#pdminfo').innerHTML = DOMPurify.sanitize("This " + checktag + " is availabe with:");
+              document.querySelector('#pdrtitle').innerHTML = DOMPurify.sanitize("What included in " + checktag + "'s Packages?");
+              document.querySelector('#pdprice').innerHTML = DOMPurify.sanitize(proj_index_p[code].colprice[slcpkdata]);
+              document.querySelector('#pdltitle').innerHTML = DOMPurify.sanitize(proj_index_p[code].series_cat[slcpkdata] + " Series");
+              document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('This is ' + checktag + ', ' + proj_index_p[code].series_cat[slcpkdata] + ' Series for ' + series_desc + '.');
+              document.querySelector('#pdlsvg').src = series_svg;
+            });
         }
+      } else if (lang_injection == 'ms') {
+        for (let proj_selector of Object.keys(proj_index_p_MY["1"])) {
+          if (document.querySelector(`.${proj_selector}`) && document.querySelector('.discount__img') !== null) {
+            document.querySelector(`.${proj_selector}`).innerHTML = DOMPurify.sanitize(proj_index_p_MY[code][proj_selector]);
+            document.querySelector('.discount__img').src = net_path + 'global/assets/images/svg/Bundle' + code + '.svg';
+          }
 
-        for (let i = 0; i < 4; i++) {  // sini semo brapo jumlah projek, tukar nombo sini kalu ado tukar2
-          document.querySelectorAll('.products__img')[i].src = net_path + "global/assets/images/c" + code + "-" + (i + 1) + ".webp";
-          document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(objkey_proj[code].colname[i]);
-          document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(objkey_proj[code].colprice[i]);
-        }
-        // Dio ule2 sapa siap. 
-        if(lang_injection == 'en'){ //inggeris
+          for (let i = 0; i < 4; i++) {  // sini semo brapo jumlah projek, tukar nombo sini kalu ado tukar2
+            document.querySelectorAll('.products__img')[i].src = net_path + "global/assets/images/c" + code + "-" + (i + 1) + ".webp";
+            document.querySelectorAll('.products__title')[i].innerHTML = DOMPurify.sanitize(proj_index_p_MY[code].colname[i]);
+            document.querySelectorAll('.products__price')[i].innerHTML = DOMPurify.sanitize(proj_index_p_MY[code].colprice[i]);
+          }
+          // Dio ule2 sapa siap. 
+
           $('.products__content button').on('click', function () {
             document.querySelector("#productsdetails").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
             var slcpkdata = $(this).data("slcpkdata");
             var series_desc, series_svg;
-  
-            if (proj_index_p[code].series_cat[slcpkdata] == 'PowerWear™') {
-              series_desc = sdesc[0];
-              series_svg = net_path + 'global/assets/images/svg/powerwear.svg';
-            } else if (proj_index_p[code].series_cat[slcpkdata] == 'UrbanWear™') {
-              series_desc = sdesc[1];
-              series_svg = net_path + 'global/assets/images/svg/urbanwear.svg';
-            } else {
-              series_desc = sdesc[2];
-              series_svg = net_path + 'global/assets/images/svg/gameon.svg';
-            }
-  
-            var checktag = DOMPurify.sanitize(proj_index_p[code].colname[slcpkdata]);
-            document.querySelector('.tag').innerHTML = checktag;
-            document.querySelector('#pdmtitle').innerHTML = checktag;
-            document.querySelector('#pdminfo').innerHTML = DOMPurify.sanitize("This " + checktag + " is availabe with:");
-            document.querySelector('#pdrtitle').innerHTML = DOMPurify.sanitize("What included in " + checktag + "'s Packages?");
-            document.querySelector('#pdprice').innerHTML = DOMPurify.sanitize(proj_index_p[code].colprice[slcpkdata]);
-            document.querySelector('#pdltitle').innerHTML = DOMPurify.sanitize(proj_index_p[code].series_cat[slcpkdata] + " Series");
-            document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('This is ' + checktag + ', ' + proj_index_p[code].series_cat[slcpkdata] + ' Series for ' + series_desc + '.');
-            document.querySelector('#pdlsvg').src = series_svg;
-          });
-        }else if(lang_injection == 'ms'){ //Bahaso mlayu
-          $('.products__content button').on('click', function () {
-            document.querySelector("#productsdetails").scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
-            var slcpkdata = $(this).data("slcpkdata");
-            var series_desc, series_svg;
-  
-            if (proj_index_p[code].series_cat[slcpkdata] == 'PowerWear™') {
+    
+            if (proj_index_p_MY[code].series_cat[slcpkdata] == 'PowerWear™') {
               series_desc = sdesc_ms[0];
               series_svg = net_path + 'global/assets/images/svg/powerwear-ms.svg';
-            } else if (proj_index_p[code].series_cat[slcpkdata] == 'UrbanWear™') {
+            } else if (proj_index_p_MY[code].series_cat[slcpkdata] == 'UrbanWear™') {
               series_desc = sdesc_ms[1];
               series_svg = net_path + 'global/assets/images/svg/urbanwear-ms.svg';
             } else {
               series_desc = sdesc_ms[2];
               series_svg = net_path + 'global/assets/images/svg/gameon-ms.svg';
             }
-  
-            var checktag = DOMPurify.sanitize(proj_index_p[code].colname[slcpkdata]);
+    
+            var checktag = DOMPurify.sanitize(proj_index_p_MY[code].colname[slcpkdata]);
             document.querySelector('.tag').innerHTML = checktag;
             document.querySelector('#pdmtitle').innerHTML = checktag;
             document.querySelector('#pdminfo').innerHTML = DOMPurify.sanitize(checktag + " ini tersedia dengan:");
             document.querySelector('#pdrtitle').innerHTML = DOMPurify.sanitize("Apa yang termasuk dalam pakej " + checktag + "?");
-            document.querySelector('#pdprice').innerHTML = DOMPurify.sanitize(proj_index_p[code].colprice[slcpkdata]);
-            document.querySelector('#pdltitle').innerHTML = DOMPurify.sanitize("Siri " + proj_index_p[code].series_cat[slcpkdata]);
-            document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('Ini adalah ' + checktag + ', Siri ' + proj_index_p[code].series_cat[slcpkdata] + ' untuk ' + series_desc + '.');
+            document.querySelector('#pdprice').innerHTML = DOMPurify.sanitize(proj_index_p_MY[code].colprice[slcpkdata]);
+            document.querySelector('#pdltitle').innerHTML = DOMPurify.sanitize("Siri " + proj_index_p_MY[code].series_cat[slcpkdata]);
+            document.querySelector('#pdlinfo').innerHTML = DOMPurify.sanitize('Ini adalah ' + checktag + ', Siri ' + proj_index_p_MY[code].series_cat[slcpkdata] + ' untuk ' + series_desc + '.');
             document.querySelector('#pdlsvg').src = series_svg;
           });
         }
-
       }
     };
 

@@ -312,10 +312,11 @@
 	slideShow(slike);
 
 	$('.card a').on('click', function () {
-		var procol = $(this).data('pro-col');
+		var projcol = $(this).data("proj-col");
+
 		var CookieDate = new Date, tmp;
 		CookieDate.setFullYear(CookieDate.getFullYear() +1);
-		document.cookie = "proj-col=" + procol + "; expires=" + CookieDate.toUTCString() + "; path=/";
+		document.cookie = "proj-col=" + projcol + "; expires=" + CookieDate.toUTCString() + "; path=/";
 	})
 
 	// putar2
