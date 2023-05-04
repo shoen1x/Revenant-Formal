@@ -32,7 +32,7 @@
 
   addEventListener("DOMContentLoaded", e => {
     e.preventDefault;
-    const cname = parseInt(getCookie("proj-col"));
+    const cname = getCookie("proj-col");
     const lang_injection = getCookie("firebase-language-override");
     // var url_selection = window.location.href.match(/\d+$/);
 
@@ -195,12 +195,13 @@
       }
     };
 
-    if (cname == 0 || cname > 4) {
-
-      alert("Error");
-      location.href = 'home';
+    if (!cname || cname == 0 || cname > 4) {
+      
+      console.log(cname);
+      window.location.href = '/home#product';
 
     } else {
+      console.log(cname);
       (function () {
         document.querySelector('.home__img').src = net_path + "global/assets/images/" + "c" + cname + "-1.webp";
         var rotator = document.querySelector('.home__img');
@@ -223,6 +224,7 @@
       // Tuka 'page' depe jadi comey skit
       project_index(cname);
     }
+
   }, { passive: true });
 })(jQuery);
 
