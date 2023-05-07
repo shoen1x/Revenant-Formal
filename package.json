@@ -33,7 +33,7 @@
   "homepage": "https://github.com/shoen1x/Revenant-Formal#readme",
   "dependencies": {
     "dompurify": "^3.0.2",
-    "firebase": "^9.17.2",
+    "firebase": "^9.21.0",
     "focus-visible": "^5.2.0",
     "owl.carousel": "^2.3.4",
     "socket.io": "^4.5.4"

@@ -9,7 +9,7 @@
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en-US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
 <!--[if IE 8]> <html class="lt-ie9" lang="en-US" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en-US" xmlns:fb="http://ogp.me/ns/fb#">
+<html lang="en" xmlns:fb="http://ogp.me/ns/fb#">
 
 <head prefix="og: http://ogp.me/ns# object: http://ogp.me/ns/object#">
 	<!--Title-->
@@ -17,11 +17,14 @@
 
 	<!--Meta and linker-->
 	<meta http-equiv=Content-Type content=text/html; charset=utf-8 />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-language" content="en" />
 	<meta name="viewport" user-scalable="yes" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
 	<meta name="keywords" content="Shoenix, Shoenix Studios, NMVX, Revenant's Formal, Revenant Formal, NemesisV">
 	<meta name="description" content="Welcome to Shoenix Studios | Experimental project by NMVX.">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link rel="stylesheet" href="assets/css/home.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="images/ico/apple-touch-icon.png">
 	<link rel="icon" type="image/x-icon" href="images/ico/favicon.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/ico/favicon-32x32.png">
@@ -31,9 +34,10 @@
 	<meta name="msapplication-TileColor" content="images/ico/browserconfig.xml">
 	<meta name="format-detection" content="telephone=no">
 
-	<meta http-equiv="content-language" content="ms" />
-	<link rel="alternate" hreflang="ms" href="https://shoenix-studios.web.app/ms/home.html">
-	<link rel="alternate" hreflang="en" href="https://shoenix-studios.web.app/en/home.html">
+	<link rel="canonical" href="https://shoenix-studios.web.app/home"/>
+	<link rel="alternate" hreflang="x-default" href="https://shoenix-studios.web.app/">
+	<link rel="alternate" hreflang="ms" href="https://shoenix-studios.web.app/ms/home">
+	<link rel="alternate" hreflang="en" href="https://shoenix-studios.web.app/home">
 
 	<!-- Social Media metadata -->
 	<meta property="og:type" content="website">
@@ -413,6 +417,7 @@
 	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
 	<script type="text/javascript" src="/node_modules/dompurify/dist/purify.min.js"></script>
+	<script src="assets/js/home.js"></script>
 
 	<script>
 		fetch('webpack-assets.json')

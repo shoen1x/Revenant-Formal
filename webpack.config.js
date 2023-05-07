@@ -24,6 +24,8 @@ const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 const package_version = require('./package.json').version;
 
+const cdn_url = `https://shoenix-studios.web.app`;
+
 let assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
@@ -63,8 +65,8 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
 let htmlPageNames_my = ['home', 'product', 'project', 'blog', '404'];
 let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
   return new HtmlWebpackPlugin({
-    template: `./src/ms-MY/${name}.html`, // relative path to the HTML files
-    filename: `common/language/ms_ALL/${name}.html`, // output HTML files
+    template: `./src/ms/${name}.html`, // relative path to the HTML files
+    filename: `/ms/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
     // minify: {
@@ -87,11 +89,12 @@ let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
 
 module.exports = {
     entry: {
-        home :["./src/home.html", "./src/ms-MY/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
-        product :["./src/product.html", "./src/ms-MY/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
-        project :["./src/project.html", "./src/ms-MY/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
+        home :["./src/home.html", "./src/ms/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
+        product :["./src/product.html", "./src/ms/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
+        project :["./src/project.html", "./src/ms/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
+        publicPath: `https://shoenix-studios.web.app`,
         path: path.resolve(__dirname, './docs'),
         filename: "global/assets/js/[name].js?v=[contenthash]",
         chunkFilename: "global/assets/js/[name].chunk.js?v=[contenthash]",
@@ -116,7 +119,15 @@ module.exports = {
         },
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, "css-loader"],
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: cdn_url,
+              },
+            },
+            "css-loader",
+          ],
           exclude: /node_modules/,
         },
         {

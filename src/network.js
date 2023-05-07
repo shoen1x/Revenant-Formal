@@ -1,4 +1,4 @@
-const net_path = '../../../';
+const net_path = 'https://shoenix-studios.web.app/';
 
 (function () {
     var current_lang = (bodyLangCode || 'en-us').toLowerCase();
@@ -35,7 +35,11 @@ const net_path = '../../../';
             // .filter('[value=' + document.cookie.substring(langck + 5) + ']')
             .attr('selected', true);
         langStr = '[firebase-language-override="' + langStr + '"]';
-        // window.location.href = '../' + document.cookie.substring(langck + 5) +'/';
+        if(getCookie('firebase-language-override') == 'ms'){
+            window.location.href = net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1);
+        }else{
+            window.location.href = net_path + location.pathname.split("/").slice(-1);
+        }
         // Utk debug jah
     } else {
         // No cookie - tunjuk inggeris
@@ -45,7 +49,6 @@ const net_path = '../../../';
             .attr('selected', true);
         document.cookie = "firebase-language-override="+bodyLangCode+"; expires=" + CookieDate.toUTCString() + "; path=/";
         document.cookie = "firebase-country-override="+bodyCountryCode+"; expires=" + CookieDate.toUTCString() + "; path=/";
-        // window.location.href = './' + bodyLangCode;
     }
 
     $('#langslct').on('change',function () {
@@ -55,13 +58,14 @@ const net_path = '../../../';
                 // document.cookie = "lang=en-US; expires=" + CookieDate.toUTCString() + ";path=/";
                 document.cookie = "firebase-country-override=US; expires=" + CookieDate.toUTCString() + "; path=/";
                 document.cookie = "firebase-language-override=en; expires=" + CookieDate.toUTCString() + "; path=/";
+                window.location.href = net_path + location.pathname.split("/").slice(-1);
                 break;
             case 'ms':
                 // document.cookie = "lang=ms-MY; expires=" + CookieDate.toUTCString() + "; path=/";
                 document.cookie = "firebase-country-override=MY; expires=" + CookieDate.toUTCString() + "; path=/";
                 document.cookie = "firebase-language-override=ms; expires=" + CookieDate.toUTCString() + "; path=/";
+                window.location.href = net_path + "ms/" + location.pathname.split("/").slice(-1);
                 break;
         }
-        window.location.reload();
     });
 })();

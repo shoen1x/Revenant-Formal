@@ -1,4 +1,5 @@
 # Core
+/node_modules/
 **contact_Examples
 **Commented_not_use
 **.favicon_package
@@ -10,4 +11,3 @@
 
 # htaccess
 /.htaccess
-**node_modules

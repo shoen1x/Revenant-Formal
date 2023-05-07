@@ -6,12 +6,21 @@
         "source": "/",
         "destination": "/home.html",
         "type": 301
+      },
+      {
+        "source": "/ms/",
+        "destination": "/ms/home.html",
+        "type": 301
       }
     ],
     "rewrites": [
       {
         "source": "/",
         "destination": "/home.html"
+      },
+      {
+        "source": "/ms/",
+        "destination": "/ms/home.html"
       }
     ],
     "headers": [
@@ -34,7 +43,7 @@
         ]
       },
       {
-        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "source": "**/*",
         "headers": [ {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
@@ -65,9 +74,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "i18n": {
-      "root": "/common/language"
-    }  
+    ]
   }
 }
