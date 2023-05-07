@@ -24,7 +24,6 @@ const net_path = 'https://shoenix-studios.web.app/';
 	}
 
     var langStr;
-    var net_path_slicer  = net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1);
     if (document.cookie.indexOf("firebase-language-override=") >= 0) {
         langStr = getCookie('firebase-language-override');
         countryStr = getCookie('firebase-country-override');
@@ -37,11 +36,12 @@ const net_path = 'https://shoenix-studios.web.app/';
             .attr('selected', true);
         langStr = '[firebase-language-override="' + langStr + '"]';
         $( document ).ready(function(){
-            console.log(window.location.href);
-            if(getCookie('firebase-language-override') == 'ms' && window.location.href != net_path_slicer){
-                window.location.href = net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1);
-            }else if(getCookie('firebase-language-override') == 'en' && window.location.href != net_path_slicer){
-                window.location.href = net_path + location.pathname.split("/").slice(-1);
+            if(getCookie('firebase-language-override') == 'ms' && window.location.href != net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1)){
+                // window.location.href = net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1);
+                console.log('debug1');
+            }else if(getCookie('firebase-language-override') == 'en' && window.location.href != net_path + location.pathname.split("/").slice(-1)){
+                // window.location.href = net_path + location.pathname.split("/").slice(-1);
+                console.log('debug2');
             }
          });
         // Utk debug jah
@@ -62,13 +62,13 @@ const net_path = 'https://shoenix-studios.web.app/';
                 // document.cookie = "lang=en-US; expires=" + CookieDate.toUTCString() + ";path=/";
                 document.cookie = "firebase-country-override=US; expires=" + CookieDate.toUTCString() + "; path=/";
                 document.cookie = "firebase-language-override=en; expires=" + CookieDate.toUTCString() + "; path=/";
-                window.location.href = net_path + location.pathname.split("/").slice(-1);
+                // window.location.href = net_path + location.pathname.split("/").slice(-1);
                 break;
             case 'ms':
                 // document.cookie = "lang=ms-MY; expires=" + CookieDate.toUTCString() + "; path=/";
                 document.cookie = "firebase-country-override=MY; expires=" + CookieDate.toUTCString() + "; path=/";
                 document.cookie = "firebase-language-override=ms; expires=" + CookieDate.toUTCString() + "; path=/";
-                window.location.href = net_path + "ms/" + location.pathname.split("/").slice(-1);
+                // window.location.href = net_path + "ms/" + location.pathname.split("/").slice(-1);
                 break;
         }
     });

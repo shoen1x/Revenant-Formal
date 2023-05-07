@@ -24,7 +24,7 @@ const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 const package_version = require('./package.json').version;
 
-const cdn_url = `https://shoenix-studios.web.app`;
+const cdn_url = `https://shoenix-studios.web.app/`;
 
 let assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
