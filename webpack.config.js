@@ -20,11 +20,18 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackInjector = require('html-webpack-injector');
 const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
+const { devNull } = require('os');
 
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 const package_version = require('./package.json').version;
 
-const cdn_url = `https://shoenix-studios.web.app/`;
+var cdn_url;
+if(process.env.NODE_ENV == "development"){
+  cdn_url = "../../../";
+}else if (process.env.NODE_ENV == "production"){
+  cdn_url = "https://shoenix-studios.web.app/";
+}
+  console.log(cdn_url);
 
 let assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
@@ -94,7 +101,7 @@ module.exports = {
         project :["./src/project.html", "./src/ms/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
-        publicPath: `https://shoenix-studios.web.app`,
+        publicPath: cdn_url,
         path: path.resolve(__dirname, './docs'),
         filename: "global/assets/js/[name].js?v=[contenthash]",
         chunkFilename: "global/assets/js/[name].chunk.js?v=[contenthash]",
