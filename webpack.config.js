@@ -20,7 +20,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackInjector = require('html-webpack-injector');
 const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
-const { devNull } = require('os');
 
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 const package_version = require('./package.json').version;
@@ -31,16 +30,20 @@ if(process.env.NODE_ENV == "development"){
 }else if (process.env.NODE_ENV == "production"){
   cdn_url = "https://shoenix-studios.web.app/";
 }
-  console.log(cdn_url);
+  console.log("Now running: " + process.env.NODE_ENV + " Environment");
 
-let assetsPluginInstance = new AssetsPlugin({
+var assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
   removeFullPathAutoPrefix: true,
+  includeDynamicImportedAssets: true,
+  update: true,
+  filename: 'assets-terminal.json',
+  prettyPrint: true,
   metadata: {version: package_version, date: '04 Mei, 2023', revision: 'RevF' + Date.parse(Date())},
 
   processOutput: function (assets) {
-    return JSON.stringify(assets);
+    return JSON.stringify(assets)
   }
 });
 
@@ -76,21 +79,6 @@ let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
     filename: `/ms/${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
-    // minify: {
-    //   html5                          : true,
-    //   collapseWhitespace             : true,
-    //   minifyCSS                      : true,
-    //   minifyJS                       : true,
-    //   minifyURLs                     : false,
-    //   removeAttributeQuotes          : true,
-    //   removeComments                 : true, // false for Vue SSR to find app placeholder
-    //   removeEmptyAttributes          : true,
-    //   removeOptionalTags             : true,
-    //   removeRedundantAttributes      : true,
-    //   removeScriptTypeAttributes     : true,
-    //   removeStyleLinkTypeAttributese : true,
-    //   useShortDoctype                : true
-    // },
   })
 });
 
@@ -205,10 +193,10 @@ module.exports = {
     }),
 
     // new SubresourceIntegrityPlugin(),
-    new CleanWebpackPlugin(),
     new HtmlWebpackInjector(),
-    assetsPluginInstance,
     new WebpackAssetsManifest({ integrity: true }),
+    new CleanWebpackPlugin(),
+    assetsPluginInstance,
 
   ].concat(multipleHtmlPlugins, multipleHtmlPlugins_my)
 };
