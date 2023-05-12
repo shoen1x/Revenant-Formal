@@ -177,7 +177,7 @@ module.exports = {
           test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
           type: 'asset/resource',
             generator: {
-              filename: 'global/assets/ico/[name][ext]?v=[contenthash]'
+              filename: '[name][ext]?v=[contenthash]'
             },
           exclude: /node_modules/,
         },
