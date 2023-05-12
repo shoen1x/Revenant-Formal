@@ -3,7 +3,7 @@
 <!-- Header -->
 <h1 align="center"><strong>Revenant's Formal<strong></h1>
 <div align="center">
-    <img src="https://shoenix-studios.web.app/images/revenant-formal-header.webp" width="50%" alt="Revenant Formal">
+    <img src="https://shoenix-studios.web.app/global/assets/images/revenant-formal-header.webp" width="50%" alt="Revenant Formal">
   <p>
     A experimental project by <strong>NMVX</strong>
     <br />

@@ -12,7 +12,7 @@
 	}, {});
 
 	importAll(require.context('../../images/fulls/', true, /\.webp$/), require.context('../../images/3D/', true, /\.(glb|webp)$/), 
-	require.context('../../images/og-images/', true, /(og-image).*\.jpg$/));
+	require.context('../../images/og-images/', true, /(og-image).*\.jpg$/), require.context('../../images/ico/', true, /\.*$/));
 
 	// Mobile ejah tene dlu
 	function isMobile() {
