@@ -6,6 +6,16 @@
 	under the CCA 3.0 License | Credit to HTML5 UP for template
 */
 
+/* Loader */
+	body:before, body:after {
+		display: none;
+	}
+/*
+	Revenant Formal by NMVX
+	Shoen1x.github.io | @Shoenixstudios
+	under the CCA 3.0 License | Credit to HTML5 UP for template
+*/
+
 :root {
 	--header-height: 3rem;
 
@@ -3759,13 +3769,3 @@ model-viewer {
 	user-select: none;
   }
   
-/*
-	Revenant Formal by NMVX
-	Shoen1x.github.io | @Shoenixstudios
-	under the CCA 3.0 License | Credit to HTML5 UP for template
-*/
-
-/* Loader */
-	body:before, body:after {
-		display: none;
-	}

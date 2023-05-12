@@ -4,15 +4,6 @@
 
 (function ($) {
 
-  // 'Webpack import' aset
-  const importAll = require =>
-    require.keys().reduce((acc, next) => {
-      acc[next.replace("../../", "")] = require(next);
-      return acc;
-    }, {});
-
-  importAll(require.context('../../images/products/', true, /\.(svg|webp)$/));
-
   // Ambik sekut ikut 'home'
   function getCookie(cname) {
     let name = cname + "=";

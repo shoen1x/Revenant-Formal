@@ -5,7 +5,6 @@ var net_path = "https://shoenix-studios.web.app/";
 (function () {
     var current_lang = (bodyLangCode || 'en-us').toLowerCase();
     var current_lang_sm = (bodyCountryCode || 'default').toLowerCase();
-    console.log(net_path);
 
     var CookieDate = new Date, tmp;
     CookieDate.setDate(CookieDate.getDate() + 30);
