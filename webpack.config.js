@@ -20,6 +20,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackInjector = require('html-webpack-injector');
 const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 const package_version = require('./package.json').version;
@@ -109,7 +110,13 @@ module.exports = {
         },
         {
           test: /\.js$/i,
-          loader: 'babel-loader',
+          use: {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+              presets: ['@babel/preset-env']
+            }
+          },
           exclude: /node_modules/,
         },
         {
@@ -121,7 +128,8 @@ module.exports = {
                 publicPath: cdn_url,
               },
             },
-            "css-loader",
+            { loader: "css-loader", options: { sourceMap: true } },
+            { loader: "postcss-loader", options: { sourceMap: true } },
           ],
           exclude: /node_modules/,
         },
@@ -185,6 +193,7 @@ module.exports = {
     },
     optimization: {
       realContentHash: true,
+      minimizer: [new CssMinimizerPlugin({parallel: true})],
     },
   plugins: [
     new MiniCssExtractPlugin({

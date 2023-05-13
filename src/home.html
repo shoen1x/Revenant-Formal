@@ -59,7 +59,13 @@
 
 	<!--No script-->
 	<noscript> 
-		<link rel="stylesheet" href="assets/css/noscript.css" />
+		<style>
+			body:before,
+			body:after {
+				display: none;
+			}
+		</style>
+		<noscript>Sorry, your browser does not have/support JavaScript!</noscript>
 	</noscript>
 </head>
 

@@ -3473,9 +3473,7 @@ model-viewer {
 	}
 }
 
-/*
- * Skeleton for Loading
- */
+/* Skeleton for Loading */
 .skeleton {
 	width: 280px;
 	height: var(--card-height);
