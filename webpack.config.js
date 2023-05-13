@@ -85,6 +85,7 @@ let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
 
 module.exports = {
     entry: {
+
         home :["./src/home.html", "./src/ms/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
         product :["./src/product.html", "./src/ms/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
         project :["./src/project.html", "./src/ms/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
@@ -182,7 +183,7 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
-          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
+          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt|xml)$/,
           type: 'asset/resource',
             generator: {
               filename: '[name][ext]?v=[contenthash]'

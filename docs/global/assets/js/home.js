@@ -337,6 +337,35 @@ webpackContext.id = 9570;
 
 /***/ }),
 
+/***/ 5311:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./sitemap.xml": 2753
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 5311;
+
+/***/ }),
+
 /***/ 2691:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -1863,6 +1892,14 @@ module.exports = __webpack_require__.p + "global/assets/images/06.webp?v=f2e2aa3
 "use strict";
 module.exports = __webpack_require__.p + "global/assets/images/blog_wp_small.webp?v=85b0ddd3edda612a3c66";
 
+/***/ }),
+
+/***/ 2753:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "sitemap.xml?v=753879e5d43a876fa575";
+
 /***/ })
 
 /******/ 	});
@@ -2152,7 +2189,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return acc;
     }, {});
   };
-  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570));
+  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(5311));
 
   // Mobile ejah tene dlu
   function isMobile() {
