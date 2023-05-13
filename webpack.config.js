@@ -183,7 +183,7 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
-          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt|xml)$/,
+          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt|sitemap.xml|robots.txt)$/,
           type: 'asset/resource',
             generator: {
               filename: '[name][ext]?v=[contenthash]'

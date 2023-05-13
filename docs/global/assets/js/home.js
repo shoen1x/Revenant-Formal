@@ -337,10 +337,11 @@ webpackContext.id = 9570;
 
 /***/ }),
 
-/***/ 5311:
+/***/ 8286:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./robots.txt": 8497,
 	"./sitemap.xml": 2753
 };
 
@@ -362,7 +363,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 5311;
+webpackContext.id = 8286;
 
 /***/ }),
 
@@ -1894,6 +1895,14 @@ module.exports = __webpack_require__.p + "global/assets/images/blog_wp_small.web
 
 /***/ }),
 
+/***/ 8497:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "robots.txt?v=b7d20b86f991a84ead98";
+
+/***/ }),
+
 /***/ 2753:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -2189,7 +2198,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return acc;
     }, {});
   };
-  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(5311));
+  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(8286));
 
   // Mobile ejah tene dlu
   function isMobile() {
