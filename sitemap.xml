@@ -7,21 +7,37 @@
 
 <url>
   <loc>https://shoenix-studios.web.app/home</loc>
+  <xhtml:link
+               rel="alternate"
+               hreflang="ms"
+               href="https://shoenix-studios.web.app/ms/home"/>
   <lastmod>2023-04-26T17:51:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://shoenix-studios.web.app/project</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ms"
+               href="https://shoenix-studios.web.app/ms/project"/>
   <lastmod>2023-04-26T17:51:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://shoenix-studios.web.app/product</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ms"
+               href="https://shoenix-studios.web.app/ms/product"/>
   <lastmod>2023-04-26T17:51:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://shoenix-studios.web.app/blog</loc>
+    <xhtml:link
+               rel="alternate"
+               hreflang="ms"
+               href="https://shoenix-studios.web.app/ms/blog"/>
   <lastmod>2023-04-26T17:51:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>

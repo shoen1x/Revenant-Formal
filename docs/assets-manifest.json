@@ -939,6 +939,10 @@
     "src": "global/assets/videos/vm_comp-4.webm?v=6e56aa94a5d46341ea9b",
     "integrity": "sha256-GDMq6cEb07GwRtGYPA2KLRzg9r/kg0aTNGBfJF4rqX4= sha384-Oe7tiERwV1LohJYwws6DsMk9Uq43IY9wKDWjjcdmB3ineP8zJstmtDH9MIVzDng3 sha512-+lubKTB3XRaL51Q8//T+6FF/QjP5Q5bI/NBRZmThznmcNrot/YFfsN6eHJnZyP1NJnH3wx/poGggElPk1KKtpw=="
   },
+  "googlebcf19c60ad795d29.html": {
+    "src": "googlebcf19c60ad795d29.html",
+    "integrity": "sha256-hvKYgS/0h6n6UaApfl3wBWHo+rhfxAIiOHMS++gOhXI= sha384-qYY0LPsL/F7Uv0tMv28QjTedJf6dNuw9JPFhL0bCLgPkkbqpgOiFRvyM9+h7ydcj sha512-b7vREnBQ4jEAa9WXf/kck5fDb/APygv7fOouKW7ecNfLju3irOvu8Ki+E/kWsqMe8elteznMs9tW59PxCr8nkQ=="
+  },
   "home.css": {
     "src": "global/assets/css/home.css?v=cbd7ade9d872550fe728",
     "integrity": "sha256-oEjh2z0+kLi/7d0b72bMuKe+gLkSWf0m0H1fSyB/Ckk= sha384-6yilut3F7w+jSnoN30TOrgrGucodiC+aUlEB06WxOH7YfblMl7KVdkQg6Z48CDDI sha512-wTtyqHQrecxUqNH1H9+pKCCtmPdaPSncoLJr01MvOCLRNRLpkKEIW04JfZJWZvHQ+BRdo6kfXEEEVUMSTmv3SQ=="
