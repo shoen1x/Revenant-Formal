@@ -21,6 +21,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackInjector = require('html-webpack-injector');
 const { SubresourceIntegrityPlugin } = require('webpack-subresource-integrity');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
 
 const PROD = JSON.parse(process.env.PROD_ENV || '0');
 const package_version = require('./package.json').version;
@@ -204,6 +205,23 @@ module.exports = {
     // new SubresourceIntegrityPlugin(),
     new HtmlWebpackInjector(),
     new WebpackAssetsManifest({ integrity: true }),
+    new CspHtmlWebpackPlugin({
+      'base-uri': "'self'",
+      'object-src': "'none'",
+      'script-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"],
+      'style-src': ["'unsafe-inline'", "'self'", "'unsafe-eval'"]
+    }, {
+      enabled: true,
+      hashingMethod: 'sha384',
+      hashEnabled: {
+        'script-src': true,
+        'style-src': true
+      },
+      nonceEnabled: {
+        'script-src': true,
+        'style-src': true
+      }
+    }),
     new CleanWebpackPlugin(),
     assetsPluginInstance,
 
