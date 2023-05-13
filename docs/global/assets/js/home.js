@@ -1898,7 +1898,7 @@ module.exports = __webpack_require__.p + "global/assets/images/blog_wp_small.web
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "sitemap.xml?v=753879e5d43a876fa575";
+module.exports = __webpack_require__.p + "sitemap.xml?v=efdc4278d82aa7de8878";
 
 /***/ })
 
