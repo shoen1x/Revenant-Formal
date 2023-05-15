@@ -1,6 +1,7 @@
-// var net_path = "https://shoenix-studios.web.app/";
+var net_path = "https://shoenix-studios.web.app/";
 // var net_path = "../../../";
-var net_path = 'http://127.0.0.1:5000/';
+// var net_path = 'http://127.0.0.1:5000/';
+
 var current_lang = (bodyLangCode || 'en-us').toLowerCase();
 var current_lang_sm = (bodyCountryCode || 'default').toLowerCase();
 var newURL = location.protocol + '//' + location.host + "/ms" + location.pathname + location.search + location.hash;
