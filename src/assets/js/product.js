@@ -52,7 +52,9 @@
 
     (function () {
       var slike = document.getElementById('col-slidershow');
-      slideShow(slike);
+      if(slike != null){
+        slideShow(slike);
+      }
 
         // Dio ule2 sapa siap. 
         $('.products__content button').on('click', function () {

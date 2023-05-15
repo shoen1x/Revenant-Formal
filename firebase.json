@@ -1,18 +1,6 @@
 {
   "hosting": {
     "public": "docs",
-    "redirects": [
-      {
-        "source": "/",
-        "destination": "/home.html",
-        "type": 301
-      },
-      {
-        "source": "/ms/",
-        "destination": "/ms/home.html",
-        "type": 301
-      }
-    ],
     "rewrites": [
       {
         "source": "/",
