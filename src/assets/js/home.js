@@ -13,7 +13,7 @@
 
 	importAll(require.context('../../images/fulls/', true, /\.webp$/), require.context('../../images/3D/', true, /\.(glb|webp)$/), 
 	require.context('../../images/og-images/', true, /(og-image).*\.jpg$/), require.context('../../images/ico/', true, /\.*$/),
-	require.context('../../images/products/', true, /\.(svg|webp)$/),require.context('../../', true, /(sitemap.xml|robots.txt)$/));
+	require.context('../../images/products/', true, /\.(svg|webp)$/),require.context('../../', true, /(sitemap_index.xml|robots.txt)$/));
 
 	// Mobile ejah tene dlu
 	function isMobile() {
@@ -311,14 +311,6 @@
 	};
 	var slike = document.getElementById("slideshow");
 	slideShow(slike);
-
-	$('.card a').on('click', function () {
-		var projcol = $(this).data("proj-col");
-
-		var CookieDate = new Date, tmp;
-		CookieDate.setDate(CookieDate.getDate() +3);
-		document.cookie = "proj-col=" + projcol + "; expires=" + CookieDate.toUTCString() + "; path=/";
-	})
 
 	// putar2
 	$(document).ready(function () {

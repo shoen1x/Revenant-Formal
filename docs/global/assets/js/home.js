@@ -1,39 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 7091:
-/***/ ((module) => {
-
-"use strict";
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    // eslint-disable-next-line no-param-reassign
-    options = {};
-  }
-
-  if (!url) {
-    return url;
-  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
-
-
-  url = String(url.__esModule ? url.default : url);
-
-  if (options.hash) {
-    // eslint-disable-next-line no-param-reassign
-    url += options.hash;
-  }
-
-  if (options.maybeNeedQuotes && /[\t\n\f\r "'=<>`]/.test(url)) {
-    return "\"".concat(url, "\"");
-  }
-
-  return url;
-};
-
-/***/ }),
-
 /***/ 2171:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -337,12 +304,12 @@ webpackContext.id = 9570;
 
 /***/ }),
 
-/***/ 8286:
+/***/ 1374:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
 	"./robots.txt": 8497,
-	"./sitemap.xml": 2753
+	"./sitemap_index.xml": 5599
 };
 
 
@@ -363,167 +330,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 8286;
-
-/***/ }),
-
-/***/ 2691:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/breakpoints.min.js?v=b568ff2b48239a8b2976";
-
-/***/ }),
-
-/***/ 2666:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/browser.min.js?v=baf6931601944992b286";
-
-/***/ }),
-
-/***/ 5697:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/firebase.js?v=a3f170d8b063abd6a386";
-
-/***/ }),
-
-/***/ 9977:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/jquery.min.js?v=c21f3ac6141264bc18ad";
-
-/***/ }),
-
-/***/ 6961:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/jquery.poptrox.min.js?v=5484ce8d739fe5e26097";
-
-/***/ }),
-
-/***/ 707:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/jquery.scrollex.min.js?v=96d91821481488162df9";
-
-/***/ }),
-
-/***/ 9737:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/jquery.scrolly.min.js?v=6929292720cadd047e5f";
-
-/***/ }),
-
-/***/ 6697:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/util.js?v=1c8670e8674d8dd72db4";
-
-/***/ }),
-
-/***/ 565:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/network.js?v=4c2d75e32c570881587f";
-
-/***/ }),
-
-/***/ 8046:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/purify.min.js?v=6b996bf860e92edec9b6";
-
-/***/ }),
-
-/***/ 2635:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/portal/focus-visible.min.js?v=d1860f814e7cdd80c60a";
-
-/***/ }),
-
-/***/ 7356:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/Pioneercli.svg?v=70d9607699c8526eaa1c";
-
-/***/ }),
-
-/***/ 9759:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/atmaxcli.svg?v=b4924655b7b7c20433da";
-
-/***/ }),
-
-/***/ 2347:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/ftslr.svg?v=6e6f90e67bedf36cbedf";
-
-/***/ }),
-
-/***/ 3241:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/grvcli.svg?v=7d505c640c8a3fa75802";
-
-/***/ }),
-
-/***/ 1910:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/nmvxcli.svg?v=df94af18f0bd0d225408";
-
-/***/ }),
-
-/***/ 2049:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/temorcli.svg?v=e2e1ec11a9b8f8d35303";
-
-/***/ }),
-
-/***/ 6318:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/usultimur.svg?v=04a6c597689ffb60f5bc";
-
-/***/ }),
-
-/***/ 3767:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/nmvxshx.svg?v=a384defcdd84df80dbf8";
-
-/***/ }),
-
-/***/ 5980:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/shoenixlab.svg?v=791af3afb5d99149044c";
+webpackContext.id = 1374;
 
 /***/ }),
 
@@ -1831,83 +1638,19 @@ module.exports = __webpack_require__.p + "global/assets/images/svg/icn_bundle_sy
 
 /***/ }),
 
-/***/ 3583:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/svg/revenant-typeform.svg?v=59d0bc32b8124c0fde14";
-
-/***/ }),
-
-/***/ 5514:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/01.webp?v=7a177460252ad36b2892";
-
-/***/ }),
-
-/***/ 5666:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/02.webp?v=73e188bfd8181b16aa3c";
-
-/***/ }),
-
-/***/ 7958:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/03.webp?v=020e7c726724d22e314b";
-
-/***/ }),
-
-/***/ 5653:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/04.webp?v=d2322f9fba54abfaa03b";
-
-/***/ }),
-
-/***/ 348:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/05.webp?v=fc92c98d689c5bf695b2";
-
-/***/ }),
-
-/***/ 7971:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/06.webp?v=f2e2aa321f5d34f1691d";
-
-/***/ }),
-
-/***/ 1836:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "global/assets/images/blog_wp_small.webp?v=85b0ddd3edda612a3c66";
-
-/***/ }),
-
 /***/ 8497:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "robots.txt?v=b7d20b86f991a84ead98";
+module.exports = __webpack_require__.p + "robots.txt?v=47a13b8955fb1e48e9cc";
 
 /***/ }),
 
-/***/ 2753:
+/***/ 5599:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "sitemap.xml?v=efdc4278d82aa7de8878";
+module.exports = __webpack_require__.p + "sitemap_index.xml?v=92c0dc51568f78798555";
 
 /***/ })
 
@@ -1937,34 +1680,7 @@ module.exports = __webpack_require__.p + "sitemap.xml?v=efdc4278d82aa7de8878";
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -1975,212 +1691,8 @@ module.exports = __webpack_require__.p + "sitemap.xml?v=efdc4278d82aa7de8878";
 /******/ 		__webpack_require__.p = "https://shoenix-studios.web.app/";
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			177: 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7091);
-/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(6368), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(1194), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(5344), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(8750), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(9411), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(3767), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(5980), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(7578), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(5168), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(8666), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(9749), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_11___ = new URL(/* asset import */ __webpack_require__(7196), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_12___ = new URL(/* asset import */ __webpack_require__(5514), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_13___ = new URL(/* asset import */ __webpack_require__(5666), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_14___ = new URL(/* asset import */ __webpack_require__(7958), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_15___ = new URL(/* asset import */ __webpack_require__(5653), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_16___ = new URL(/* asset import */ __webpack_require__(348), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_17___ = new URL(/* asset import */ __webpack_require__(7971), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_18___ = new URL(/* asset import */ __webpack_require__(1836), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_19___ = new URL(/* asset import */ __webpack_require__(3583), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_20___ = new URL(/* asset import */ __webpack_require__(7356), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_21___ = new URL(/* asset import */ __webpack_require__(1910), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_22___ = new URL(/* asset import */ __webpack_require__(9759), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_23___ = new URL(/* asset import */ __webpack_require__(6318), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_24___ = new URL(/* asset import */ __webpack_require__(2347), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_25___ = new URL(/* asset import */ __webpack_require__(2049), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_26___ = new URL(/* asset import */ __webpack_require__(3241), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_27___ = new URL(/* asset import */ __webpack_require__(9977), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_28___ = new URL(/* asset import */ __webpack_require__(6961), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_29___ = new URL(/* asset import */ __webpack_require__(9737), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_30___ = new URL(/* asset import */ __webpack_require__(707), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_31___ = new URL(/* asset import */ __webpack_require__(2666), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_32___ = new URL(/* asset import */ __webpack_require__(2691), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_33___ = new URL(/* asset import */ __webpack_require__(6697), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_34___ = new URL(/* asset import */ __webpack_require__(565), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_35___ = new URL(/* asset import */ __webpack_require__(5697), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_36___ = new URL(/* asset import */ __webpack_require__(2635), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_37___ = new URL(/* asset import */ __webpack_require__(8046), __webpack_require__.b);
-// Module
-var ___HTML_LOADER_REPLACEMENT_0___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_0___);
-var ___HTML_LOADER_REPLACEMENT_1___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_1___);
-var ___HTML_LOADER_REPLACEMENT_2___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_2___);
-var ___HTML_LOADER_REPLACEMENT_3___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_3___);
-var ___HTML_LOADER_REPLACEMENT_4___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_4___);
-var ___HTML_LOADER_REPLACEMENT_5___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_5___);
-var ___HTML_LOADER_REPLACEMENT_6___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_6___);
-var ___HTML_LOADER_REPLACEMENT_7___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_7___);
-var ___HTML_LOADER_REPLACEMENT_8___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_8___);
-var ___HTML_LOADER_REPLACEMENT_9___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_9___);
-var ___HTML_LOADER_REPLACEMENT_10___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_10___);
-var ___HTML_LOADER_REPLACEMENT_11___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_11___);
-var ___HTML_LOADER_REPLACEMENT_12___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_12___);
-var ___HTML_LOADER_REPLACEMENT_13___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_13___);
-var ___HTML_LOADER_REPLACEMENT_14___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_14___);
-var ___HTML_LOADER_REPLACEMENT_15___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_15___);
-var ___HTML_LOADER_REPLACEMENT_16___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_16___);
-var ___HTML_LOADER_REPLACEMENT_17___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_17___);
-var ___HTML_LOADER_REPLACEMENT_18___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_18___);
-var ___HTML_LOADER_REPLACEMENT_19___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_19___);
-var ___HTML_LOADER_REPLACEMENT_20___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_20___);
-var ___HTML_LOADER_REPLACEMENT_21___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_21___);
-var ___HTML_LOADER_REPLACEMENT_22___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_22___);
-var ___HTML_LOADER_REPLACEMENT_23___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_23___);
-var ___HTML_LOADER_REPLACEMENT_24___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_24___);
-var ___HTML_LOADER_REPLACEMENT_25___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_25___);
-var ___HTML_LOADER_REPLACEMENT_26___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_26___);
-var ___HTML_LOADER_REPLACEMENT_27___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_27___);
-var ___HTML_LOADER_REPLACEMENT_28___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_28___);
-var ___HTML_LOADER_REPLACEMENT_29___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_29___);
-var ___HTML_LOADER_REPLACEMENT_30___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_30___);
-var ___HTML_LOADER_REPLACEMENT_31___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_31___);
-var ___HTML_LOADER_REPLACEMENT_32___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_32___);
-var ___HTML_LOADER_REPLACEMENT_33___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_33___);
-var ___HTML_LOADER_REPLACEMENT_34___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_34___);
-var ___HTML_LOADER_REPLACEMENT_35___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_35___);
-var ___HTML_LOADER_REPLACEMENT_36___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_36___);
-var ___HTML_LOADER_REPLACEMENT_37___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_37___);
-var code = "<!DOCTYPE HTML> <!--[if lt IE 7]> <html class=\"lt-ie9 lt-ie8 lt-ie7\" lang=\"en-US\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <![endif]--> <!--[if IE 7]> <html class=\"lt-ie9 lt-ie8\" lang=\"en-US\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <![endif]--> <!--[if IE 8]> <html class=\"lt-ie9\" lang=\"en-US\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <![endif]--> <!--[if gt IE 8]><!--> <html lang=\"en\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <head prefix=\"og: http://ogp.me/ns# object: http://ogp.me/ns/object#\"> <title>Home | Shoenix Studios</title> <meta http-equiv=\"Content-Type\" content=\"text/html;\" charset=\"utf-8\"/> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <meta http-equiv=\"content-language\" content=\"en\"/> <meta name=\"viewport\" user-scalable=\"yes\" content=\"width=device-width,initial-scale=1,minimum-scale=1\"/> <meta name=\"theme-color\" media=\"(prefers-color-scheme: dark)\" content=\"#000000\"/> <meta name=\"keywords\" content=\"Shoenix, Shoenix Studios, NMVX, Revenant's Formal, Revenant Formal, NemesisV\"> <meta name=\"description\" content=\"Welcome to Shoenix Studios | Experimental project by NMVX.\"> <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\"/> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\"> <link rel=\"icon\" type=\"image/x-icon\" href=\"" + ___HTML_LOADER_REPLACEMENT_1___ + "\"> <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"" + ___HTML_LOADER_REPLACEMENT_2___ + "\"> <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"" + ___HTML_LOADER_REPLACEMENT_3___ + "\"> <link rel=\"manifest\" href=\"https://shoenix-studios.web.app/site.webmanifest\"> <link rel=\"mask-icon\" href=\"https://shoenix-studios.web.app/global/assets/images/svg/safari-pinned-tab.svg\" color=\"#5bbad5\"> <meta name=\"msapplication-TileColor\" content=\"https://shoenix-studios.web.app/browserconfig.xml\"> <meta name=\"format-detection\" content=\"telephone=no\"> <link rel=\"canonical\" href=\"https://shoenix-studios.web.app/home\"/> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://shoenix-studios.web.app/\"> <link rel=\"alternate\" hreflang=\"ms\" href=\"https://shoenix-studios.web.app/ms/home\"> <link rel=\"alternate\" hreflang=\"en\" href=\"https://shoenix-studios.web.app/home\"> <meta property=\"og:type\" content=\"website\"> <meta property=\"og:image:type\" content=\"image/png\"> <meta property=\"og:image:width\" content=\"1563\"> <meta property=\"og:image:height\" content=\"818\"> <meta property=\"og:description\" content=\"Experimental project by NMVX.\"> <meta property=\"og:title\" content=\"Home | Shoenix Studios\"> <meta property=\"og:url\" content=\"https://shoenix-studios.web.app/home\"> <meta property=\"og:image\" content=\"https://shoenix-studios.web.app/global/assets/images/og-image/og-image-home.jpg\"> <meta property=\"og:locale\" content=\"en\"> <meta property=\"og:site_name\" content=\"Home\"> <meta name=\"twitter:card\" content=\"summary_large_image\"> <meta property=\"twitter:domain\" content=\"shoenix-studios.web.app\"> <meta property=\"twitter:url\" content=\"https://shoenix-studios.web.app/home\"> <meta name=\"twitter:title\" content=\"Home | Shoenix Studios\"> <meta name=\"twitter:description\" content=\"Experimental project by NMVX.\"> <meta name=\"twitter:image\" content=\"https://shoenix-studios.web.app/global/assets/images/og-image/og-image-home.jpg\"> <noscript> <style>body:after,body:before{display:none}</style> <noscript>Sorry, your browser does not have/support JavaScript!</noscript> </noscript> </head> <body class=\"is-preload\"> <header class=\"header\" id=\"header\"> <nav class=\"nav container\"> <a title=\"Home\" href=\"home\" target=\"_self\" aria-label=\"Home\" class=\"nav__logo\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" height=\"32\" width=\"32\" alt=\"\"> </a> <span>Home | <strong>Shoenix Studios</strong></span> </nav> </header> <section id=\"intro\" class=\"main style1 dark fullscreen\"> <div class=\"content\"> <header> <div id=\"slideshow\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" width=\"320\" height=\"320\" alt=\"NemesisV\" loading=\"eager\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_5___ + "\" width=\"720\" height=\"120.667\" alt=\"NemesisV\" loading=\"eager\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_6___ + "\" width=\"720\" height=\"120.667\" alt=\"Shoenix Lab Logo\" loading=\"eager\"> </div> </header> <p>Experimental project by <strong>NMVX</strong></p> </div> </section> <section id=\"first\" class=\"main style2 right dark fullscreen\"> <span class=\"firsttext\">VALHALLA AXE<br>CONCEPT</span> <model-viewer src=\"https://shoenix-studios.web.app/global/assets/images/3D/valhalla.glb\" disable-zoom touch-action=\"pan-y\" data-js-focus-visible alt=\"Valhalla Axes by Shoenix Studios\" poster=\"https://shoenix-studios.web.app/global/assets/images/poster-1.webp\" shadow-intensity=\"1\" disable-tap auto-rotate> <div class=\"model-viewer-poster\" slot=\"poster\" style=\"background-image:url(https://shoenix-studios.web.app/global/assets/images/poster-1.webp)\"></div> <div class=\"progress-bar hide\" slot=\"progress-bar\"> <div class=\"update-bar\" style=\"width:100%\"></div> </div> </model-viewer> <ul class=\"actions bottom-special\"> <li> <a href=\"https://www.artstation.com/artwork/o2OV4L\" target=\"_blank\" class=\"button\" aria-label=\"Artstation\">Artstation Documentation</a> </li> </ul> </section> <section id=\"second\" class=\"main style2 left dark fullscreen\"> <span class=\"secondtext\">JOHOR DARUL TA'ZIM<br>JERSEY CONCEPT</span> <model-viewer id=\"playcard\" src=\"https://shoenix-studios.web.app/global/assets/images/3D/playcard.glb\" disable-zoom touch-action=\"pan-y\" data-js-focus-visible alt=\"Johor Concept by Shoenix Studios\" poster=\"https://shoenix-studios.web.app/global/assets/images/poster.webp\" shadow-intensity=\"1\" disable-tap auto-rotate> <div class=\"model-viewer-poster\" slot=\"poster\" style=\"background-image:url(https://shoenix-studios.web.app/global/assets/images/poster.webp)\"></div> <div class=\"progress-bar hide\" slot=\"progress-bar\"> <div class=\"update-bar\" style=\"width:100%\"></div> </div> </model-viewer> <ul class=\"actions bottom-special\"> <div class=\"controls\"> <div><select id=\"variant\"></select></div> </div> <li> <a id=\"behancerd\" href=\"https://www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios\" target=\"_blank\" class=\"button\" aria-label=\"Behance\">Behance Documentation</a> </li> </ul> </section> <section> <div class=\"adsslider\"> <div class=\"ads-slider\"> <div class=\"slide\"> <a aria-label=\"Revenant Formal\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_7___ + "\" title=\"Revenant Formal\" width=\"1920\" height=\"300\" alt=\"Revenant Formal\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a href=\"https://www.behance.net/gallery/141503291/Karnival-FYPro-Com-20192020-UMP\" aria-label=\"Karnival FYPro-com\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_8___ + "\" title=\"Revenant Formal\" width=\"1920\" height=\"300\" alt=\"Revenant Formal\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a href=\"#productcard\" aria-label=\"ITNOT Collection\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_9___ + "\" title=\"ITNOT Collection\" width=\"1920\" height=\"300\" alt=\"In The Name of Tsar Collection\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a href=\"#productcard\" aria-label=\"World Collection\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_10___ + "\" title=\"World Collection\" width=\"1920\" height=\"300\" alt=\"The World Collection\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a aria-label=\"HM Concept\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" title=\"Harimau Malaya | AC Milan Concept\" width=\"1920\" height=\"300\" alt=\"Harimau Malaya | AC Milan Concept\" loading=\"lazy\"/></a> </div> </div> </div> </section> <section id=\"work\" class=\"main style3 primary\"> <div class=\"content\"> <header> <h2 class=\"label\">Latest Works</h2> </header> <div class=\"gallery\"> <article class=\"from-left\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/01-full.webp\" class=\"image fit\"><img class=\"hidden\" src=\"" + ___HTML_LOADER_REPLACEMENT_12___ + "\" title=\"Cover Album Arts\" height=\"225.817\" width=\"360\" alt=\"Cover Album Arts\" loading=\"lazy\"/></a> </article> <article class=\"from-right\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/02-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_13___ + "\" title=\"Arus Kelajuan\" height=\"225.817\" width=\"360\" alt=\"Arus Kelajuan\" loading=\"lazy\"/></a> </article> <article class=\"from-left\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/03-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_14___ + "\" title=\"The Phantom Cries\" height=\"225.817\" width=\"360\" alt=\"The Phantom Cries\" loading=\"lazy\"/></a> </article> <article class=\"from-right\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/04-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_15___ + "\" title=\"GenesisPhantom | Hyper Concept Skateboard\" height=\"225.817\" width=\"360\" alt=\"Hyper Concept Skateboard\" loading=\"lazy\"/></a> </article> <article class=\"from-left\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/05-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_16___ + "\" title=\"Hausboom X Shoenix Studios\" height=\"225.817\" width=\"360\" alt=\"Hausboom X Shoenix Studios\" loading=\"lazy\"/></a> </article> <article class=\"from-right\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/06-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_17___ + "\" title=\"Zulmat\" height=\"225.817\" width=\"360\" alt=\"Zulmat\" loading=\"lazy\"/></a> </article> </div> </div> </section> <section id=\"multiproject\" class=\"main style4 primary\"> <div class=\"mphero\"> <div class=\"mptext\"> <p id=\"projectup\" class=\"mptext__short\">Latest Update: </p> <h1 class=\"mptext__title\">Projects Collection</h1> <p class=\"mptext__description\"><br>All project visualization & documentation from planning, texturing and rendering phase, all projects is subject to change. + Included video gallery from previous project. </p> <a href=\"project\" target=\"_self\" class=\"button\" aria-label=\"Project\">View all projects</a> </div> <div class=\"mpgrid__container\"> <div class=\"mpgrid__item mpone\"></div> <div class=\"mpgrid__item mptwo\"></div> <div class=\"mpgrid__item mpthree\"></div> <div class=\"mpgrid__item mpfour\"></div> <div class=\"mpgrid__item mpfive\"></div> <div class=\"mpgrid__item mpsix\"></div> <div class=\"mpgrid__item mpseven\"></div> <div class=\"mpgrid__item mpeight\"></div> <div class=\"mpgrid__item mpnine\"></div> <div class=\"mpgrid__item mpten\"></div> <div class=\"mpgrid__item mpeleven\"></div> <div class=\"mpgrid__item mptwelve\"></div> </div> </div> </section> <section id=\"productcard\" class=\"main style3 primary\"> <div class=\"infocontent\"> <header> <h2 class=\"label\">Latest Collections</h2> </header> <div class=\"info-container\"> <div class=\"card\"> <h2>Collection 1</h2> <a href=\"product\" data-proj-col=\"1\" type=\"button\" target=\"_self\" aria-label=\"ITNOT\"> <i class=\"fas fa-arrow-right\"></i></a> <p>in the name of Tsar</p> <div class=\"pic\"></div> <span> </span> </div> <div class=\"card\"> <h2>Collection 2</h2> <a href=\"product\" data-proj-col=\"2\" type=\"button\" target=\"_self\" aria-label=\"BSE\"> <i class=\"fas fa-arrow-right\"></i></a> <p>Black Steel Eagle</p> <div class=\"pic\"></div> <span> </span> </div> <div class=\"card\"> <h2>Collection 3</h2> <a href=\"product\" data-proj-col=\"3\" type=\"button\" target=\"_self\" aria-label=\"WORLD\"> <i class=\"fas fa-arrow-right\"></i></a> <p>The World</p> <div class=\"pic\"></div> <span> </span> </div> <div class=\"card\"> <h2>Collection 4</h2> <a href=\"product\" data-proj-col=\"4\" type=\"button\" target=\"_self\" aria-label=\"UNITY\"> <i class=\"fas fa-arrow-right\"></i></a> <p>Unity</p> <div class=\"pic\"></div> <span> </span> </div> </div> </div> </section> <section id=\"blog\" class=\"main style4 blog\"> <div class=\"blog-relative__container\"> <div class=\"blog-full__width blog-object__fit\"> <img class=\"blog-img\" src=\"" + ___HTML_LOADER_REPLACEMENT_18___ + "\" alt=\"Blog background picture\" loading=\"lazy\"> <div class=\"blog-absolute\"> <img class=\"blog-icon\" src=\"" + ___HTML_LOADER_REPLACEMENT_19___ + "\" width=\"128\" height=\"31.3\" style=\"margin-bottom:12px\" alt=\"Shoenix Logo\" loading=\"lazy\"> <h1 class=\"blog-text\">Developer Logs</h1> <p class=\"blog-paragraph\">Complete compilations of developer updated logs for the website, from frontend to backend. <span id=\"dateup\"><br> Latest Update: </span> </p> <a id=\"blogbtn\" href=\"blog\" target=\"_self\" class=\"button\" aria-label=\"Blog\">Read Now!</a> </div> </div> </div> </section> <section> <div class=\"clientslider\"> <section class=\"client-slider\"> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_20___ + "\" width=\"149\" height=\"97\" alt=\"Pioneer CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_21___ + "\" width=\"149\" height=\"97\" alt=\"NMVX CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_22___ + "\" width=\"149\" height=\"97\" alt=\"Atmax CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_23___ + "\" width=\"149\" height=\"97\" alt=\"Usul Timur CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_24___ + "\" width=\"149\" height=\"97\" alt=\"FTSLR CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_25___ + "\" width=\"149\" height=\"97\" alt=\"Temor CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_26___ + "\" width=\"149\" height=\"97\" alt=\"Granova CLI\"></div> </section> </div> </section> <footer class=\"footer section\"> <div class=\"footer__container container grid\"> <span class=\"footer__logo\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" width=\"32\" height=\"32\" alt=\"Shoenix Studios's Logo\"> </span> <div class=\"footer__content\"> <h2 class=\"footer__title\">Socials</h2> <ul class=\"footer__links\"> <li><a href=\"https://www.facebook.com/shoenixstudios\" target=\"_blank\" aria-label=\"Facebook\" class=\"footer__link\">Facebook</a></li> <li><a href=\"https://www.instagram.com/shoenix_studios/\" target=\"_blank\" aria-label=\"Instagram\" class=\"footer__link\">Instagram</a></li> <li><a href=\"https://www.youtube.com/@shoenixstudios\" target=\"_blank\" aria-label=\"Youtube\" class=\"footer__link\">Youtube</a></li> <li><a href=\"https://github.com/shoen1x\" target=\"_blank\" aria-label=\"Github\" class=\"footer__link\">Github</a> </li> </ul> </div> <div class=\"footer__content\"> <h2 class=\"footer__title\">Navigation</h2> <ul class=\"footer__links\"> <li> <a href=\"project\" target=\"_self\" aria-label=\"Project\" class=\"footer__link\">Projects</a> </li> <li> <a href=\"#productcard\" target=\"_self\" aria-label=\"Products\" class=\"footer__link\">Products</a> </li> <li> <a href=\"blog\" target=\"_self\" aria-label=\"Blog\" class=\"footer__link\">Blog</a> </li> </ul> <ul class=\"footer__copy\"> <li> <span class=\"footer__copy-link\">&copy; 2023 <strong>Shoenix Studios</strong> All Rights Reserved</span> <span class=\"footer__copy-link\"><span id=\"versioning\"></span><br><span id=\"revisioning\"></span></span> </li> </ul> <ul class=\"footer__links\"> <li> <label class=\"select-language\" for=\"langslct\"> <select id=\"langslct\" required=\"required\"> <option value=\"\" disabled=\"disabled\" selected=\"selected\">Language Options</option> <option value=\"en\">English</option> <option value=\"ms\">Malay</option> </select> <svg> <use xlink:href=\"#select-arrow-down\"></use> </svg> </label> <svg class=\"sprites-language\"> <symbol id=\"select-arrow-down\" viewbox=\"0 0 10 6\"> <polyline points=\"1 1 5 5 9 1\"></polyline> </symbol> </svg> </li> </ul> </div> </div> </footer> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_27___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_28___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_29___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_30___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_31___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_32___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_33___ + "\"><" + "/script> <" + "script>var Revf_format=\"MMM d, yyyy\",bodyLangCode=\"en\",bodyCountryCode=\"my\"<" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_34___ + "\"><" + "/script> <" + "script src=\"https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js\"><" + "/script> <" + "script type=\"module\" src=\"" + ___HTML_LOADER_REPLACEMENT_35___ + "\"><" + "/script> <" + "script type=\"module\" src=\"https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_36___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_37___ + "\"><" + "/script> <" + "script>function appendData(e){document.getElementById(\"versioning\").innerHTML=DOMPurify.sanitize(\"</br></br>Build: <strong>\"+e.metadata.version+\"<strong>\"),document.getElementById(\"revisioning\").innerHTML=DOMPurify.sanitize(\"Revision: <strong>\"+e.metadata.revision+\"<strong>\"),document.getElementById(\"dateup\").innerHTML=DOMPurify.sanitize(\"<br> Latest update: <strong>\"+e.metadata.date+\"<strong>\"),document.getElementById(\"projectup\").innerHTML=DOMPurify.sanitize(\"<br> Latest update: <strong>\"+e.metadata.date+\"<strong>\")}fetch(\"assets-terminal.json\").then((function(e){return e.json()})).then((function(e){appendData(e)})).catch((function(e){document.getElementById(\"versioning\").innerHTML=DOMPurify.sanitize(\"</br></br>Versioning data missing\"),document.getElementById(\"revisioning\").innerHTML=DOMPurify.sanitize(\"Revisioning data missing\"),document.getElementById(\"dateup\").innerHTML=DOMPurify.sanitize(\"<br> Latest update: Failed to load.\"),document.getElementById(\"projectup\").innerHTML=DOMPurify.sanitize(\"<br> Latest update: Failed to load.\")}))<" + "/script> </body> </html>";
-// Exports
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (code)));
-})();
-
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-(() => {
-"use strict";
-/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7091);
-/* harmony import */ var _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(6368), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(1194), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(5344), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(8750), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(9411), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(3767), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(5980), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(4262), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(2684), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(4170), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(8036), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_11___ = new URL(/* asset import */ __webpack_require__(9653), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_12___ = new URL(/* asset import */ __webpack_require__(5514), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_13___ = new URL(/* asset import */ __webpack_require__(5666), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_14___ = new URL(/* asset import */ __webpack_require__(7958), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_15___ = new URL(/* asset import */ __webpack_require__(5653), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_16___ = new URL(/* asset import */ __webpack_require__(348), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_17___ = new URL(/* asset import */ __webpack_require__(7971), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_18___ = new URL(/* asset import */ __webpack_require__(1836), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_19___ = new URL(/* asset import */ __webpack_require__(3583), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_20___ = new URL(/* asset import */ __webpack_require__(7356), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_21___ = new URL(/* asset import */ __webpack_require__(1910), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_22___ = new URL(/* asset import */ __webpack_require__(9759), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_23___ = new URL(/* asset import */ __webpack_require__(6318), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_24___ = new URL(/* asset import */ __webpack_require__(2347), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_25___ = new URL(/* asset import */ __webpack_require__(2049), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_26___ = new URL(/* asset import */ __webpack_require__(3241), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_27___ = new URL(/* asset import */ __webpack_require__(9977), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_28___ = new URL(/* asset import */ __webpack_require__(6961), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_29___ = new URL(/* asset import */ __webpack_require__(9737), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_30___ = new URL(/* asset import */ __webpack_require__(707), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_31___ = new URL(/* asset import */ __webpack_require__(2666), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_32___ = new URL(/* asset import */ __webpack_require__(2691), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_33___ = new URL(/* asset import */ __webpack_require__(6697), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_34___ = new URL(/* asset import */ __webpack_require__(565), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_35___ = new URL(/* asset import */ __webpack_require__(5697), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_36___ = new URL(/* asset import */ __webpack_require__(2635), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_37___ = new URL(/* asset import */ __webpack_require__(8046), __webpack_require__.b);
-// Module
-var ___HTML_LOADER_REPLACEMENT_0___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_0___);
-var ___HTML_LOADER_REPLACEMENT_1___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_1___);
-var ___HTML_LOADER_REPLACEMENT_2___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_2___);
-var ___HTML_LOADER_REPLACEMENT_3___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_3___);
-var ___HTML_LOADER_REPLACEMENT_4___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_4___);
-var ___HTML_LOADER_REPLACEMENT_5___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_5___);
-var ___HTML_LOADER_REPLACEMENT_6___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_6___);
-var ___HTML_LOADER_REPLACEMENT_7___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_7___);
-var ___HTML_LOADER_REPLACEMENT_8___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_8___);
-var ___HTML_LOADER_REPLACEMENT_9___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_9___);
-var ___HTML_LOADER_REPLACEMENT_10___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_10___);
-var ___HTML_LOADER_REPLACEMENT_11___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_11___);
-var ___HTML_LOADER_REPLACEMENT_12___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_12___);
-var ___HTML_LOADER_REPLACEMENT_13___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_13___);
-var ___HTML_LOADER_REPLACEMENT_14___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_14___);
-var ___HTML_LOADER_REPLACEMENT_15___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_15___);
-var ___HTML_LOADER_REPLACEMENT_16___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_16___);
-var ___HTML_LOADER_REPLACEMENT_17___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_17___);
-var ___HTML_LOADER_REPLACEMENT_18___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_18___);
-var ___HTML_LOADER_REPLACEMENT_19___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_19___);
-var ___HTML_LOADER_REPLACEMENT_20___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_20___);
-var ___HTML_LOADER_REPLACEMENT_21___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_21___);
-var ___HTML_LOADER_REPLACEMENT_22___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_22___);
-var ___HTML_LOADER_REPLACEMENT_23___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_23___);
-var ___HTML_LOADER_REPLACEMENT_24___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_24___);
-var ___HTML_LOADER_REPLACEMENT_25___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_25___);
-var ___HTML_LOADER_REPLACEMENT_26___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_26___);
-var ___HTML_LOADER_REPLACEMENT_27___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_27___);
-var ___HTML_LOADER_REPLACEMENT_28___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_28___);
-var ___HTML_LOADER_REPLACEMENT_29___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_29___);
-var ___HTML_LOADER_REPLACEMENT_30___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_30___);
-var ___HTML_LOADER_REPLACEMENT_31___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_31___);
-var ___HTML_LOADER_REPLACEMENT_32___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_32___);
-var ___HTML_LOADER_REPLACEMENT_33___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_33___);
-var ___HTML_LOADER_REPLACEMENT_34___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_34___);
-var ___HTML_LOADER_REPLACEMENT_35___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_35___);
-var ___HTML_LOADER_REPLACEMENT_36___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_36___);
-var ___HTML_LOADER_REPLACEMENT_37___ = _node_modules_html_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_0___default()(___HTML_LOADER_IMPORT_37___);
-var code = "<!DOCTYPE HTML> <!--[if lt IE 7]> <html class=\"lt-ie9 lt-ie8 lt-ie7\" lang=\"ms-MY\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <![endif]--> <!--[if IE 7]> <html class=\"lt-ie9 lt-ie8\" lang=\"ms-MY\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <![endif]--> <!--[if IE 8]> <html class=\"lt-ie9\" lang=\"ms-MY\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <![endif]--> <!--[if gt IE 8]><!--> <html lang=\"ms\" xmlns:fb=\"http://ogp.me/ns/fb#\"> <head prefix=\"og: http://ogp.me/ns# object: http://ogp.me/ns/object#\"> <title>Rerumah | Shoenix Studios</title> <meta http-equiv=\"Content-Type\" content=\"text/html;\" charset=\"utf-8\"/> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <meta http-equiv=\"content-language\" content=\"ms\"/> <meta name=\"viewport\" user-scalable=\"yes\" content=\"width=device-width,initial-scale=1,minimum-scale=1\"/> <meta name=\"theme-color\" media=\"(prefers-color-scheme: dark)\" content=\"#000000\"/> <meta name=\"keywords\" content=\"Shoenix, Shoenix Studios, NMVX, Revenant's Formal, Revenant Formal, NemesisV\"> <meta name=\"description\" content=\"Selamat Datang ke Shoenix Studios | Projek Eksperimen Oleh NMVX.\"> <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css\"/> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"" + ___HTML_LOADER_REPLACEMENT_0___ + "\"> <link rel=\"icon\" type=\"image/x-icon\" href=\"" + ___HTML_LOADER_REPLACEMENT_1___ + "\"> <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"" + ___HTML_LOADER_REPLACEMENT_2___ + "\"> <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"" + ___HTML_LOADER_REPLACEMENT_3___ + "\"> <link rel=\"manifest\" href=\"https://shoenix-studios.web.app/site.webmanifest\"> <link rel=\"mask-icon\" href=\"https://shoenix-studios.web.app/global/assets/images/svg/safari-pinned-tab.svg\" color=\"#5bbad5\"> <meta name=\"msapplication-TileColor\" content=\"https://shoenix-studios.web.app/browserconfig.xml\"> <meta name=\"format-detection\" content=\"telephone=no\"> <link rel=\"canonical\" href=\"https://shoenix-studios.web.app/ms/home\"/> <link rel=\"alternate\" hreflang=\"en\" href=\"https://shoenix-studios.web.app/home\"/> <link rel=\"alternate\" hreflang=\"ms\" href=\"https://shoenix-studios.web.app/ms/home\"/> <link rel=\"alternate\" hreflang=\"x-default\" href=\"https://shoenix-studios.web.app/\"/> <meta property=\"og:type\" content=\"website\"> <meta property=\"og:image:type\" content=\"image/png\"> <meta property=\"og:image:width\" content=\"1563\"> <meta property=\"og:image:height\" content=\"818\"> <meta property=\"og:description\" content=\"Projek Eksperimen Oleh NMVX.\"> <meta property=\"og:title\" content=\"Rerumah | Shoenix Studios\"> <meta property=\"og:url\" content=\"https://shoenix-studios.web.app/home\"> <meta property=\"og:image\" content=\"https://shoenix-studios.web.app/global/assets/images/og-image/og-image-rerumah.jpg\"> <meta property=\"og:locale\" content=\"ms\"> <meta property=\"og:site_name\" content=\"Home\"> <meta name=\"twitter:card\" content=\"summary_large_image\"> <meta property=\"twitter:domain\" content=\"shoenix-studios.web.app\"> <meta property=\"twitter:url\" content=\"https://shoenix-studios.web.app/home\"> <meta name=\"twitter:title\" content=\"Rerumah | Shoenix Studios\"> <meta name=\"twitter:description\" content=\"Projek Eksperimen Oleh NMVX.\"> <meta name=\"twitter:image\" content=\"https://shoenix-studios.web.app/global/assets/images/og-image/og-image-rerumah.jpg\"> <noscript> <style>body:after,body:before{display:none}</style> <noscript>Sorry, your browser does not have/support JavaScript!</noscript> </noscript> </head> <body class=\"is-preload\"> <header class=\"header\" id=\"header\"> <nav class=\"nav container\"> <a title=\"Home\" href=\"home\" target=\"_self\" aria-label=\"Home\" class=\"nav__logo\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" height=\"32\" width=\"32\" alt=\"\"> </a> <span>Rerumah | <strong>Shoenix Studios</strong></span> </nav> </header> <section id=\"intro\" class=\"main style1 dark fullscreen\"> <div class=\"content\"> <header> <div id=\"slideshow\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" width=\"320\" height=\"320\" alt=\"NemesisV\" loading=\"eager\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_5___ + "\" width=\"720\" height=\"120.667\" alt=\"NemesisV\" loading=\"eager\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_6___ + "\" width=\"720\" height=\"120.667\" alt=\"Shoenix Lab Logo\" loading=\"eager\"> </div> </header> <p>Projek Eksperimen Oleh <strong>NMVX</strong></p> </div> </section> <section id=\"first\" class=\"main style2 right dark fullscreen\"> <span class=\"firsttext\">KONSEP KAPAK<br>VALHALLA</span> <model-viewer src=\"https://shoenix-studios.web.app/global/assets/images/3D/valhalla.glb\" disable-zoom touch-action=\"pan-y\" data-js-focus-visible alt=\"Valhalla Axes by Shoenix Studios\" poster=\"https://shoenix-studios.web.app/global/assets/images/poster-1.webp\" shadow-intensity=\"1\" disable-tap auto-rotate> <div class=\"model-viewer-poster\" slot=\"poster\" style=\"background-image:url(https://shoenix-studios.web.app/global/assets/images/poster-1.webp)\"></div> <div class=\"progress-bar hide\" slot=\"progress-bar\"> <div class=\"update-bar\" style=\"width:100%\"></div> </div> </model-viewer> <ul class=\"actions bottom-special\"> <li> <a href=\"https://www.artstation.com/artwork/o2OV4L\" target=\"_blank\" class=\"button\" aria-label=\"Artstation\">Dokumentasi 'Artstation'</a> </li> </ul> </section> <section id=\"second\" class=\"main style2 left dark fullscreen\"> <span class=\"secondtext\">JERSI KONSEP<br>JOHOR DARUL TA'ZIM</span> <model-viewer id=\"playcard\" src=\"https://shoenix-studios.web.app/global/assets/images/3D/playcard.glb\" disable-zoom touch-action=\"pan-y\" data-js-focus-visible alt=\"Johor Concept by Shoenix Studios\" poster=\"https://shoenix-studios.web.app/global/assets/images/poster-1.webp\" shadow-intensity=\"1\" disable-tap auto-rotate> <div class=\"model-viewer-poster\" slot=\"poster\" style=\"background-image:url(https://shoenix-studios.web.app/global/assets/images/poster.webp)\"></div> <div class=\"progress-bar hide\" slot=\"progress-bar\"> <div class=\"update-bar\" style=\"width:100%\"></div> </div> </model-viewer> <ul class=\"actions bottom-special\"> <div class=\"controls\"> <div><select id=\"variant\"></select></div> </div> <li> <a id=\"behancerd\" href=\"https://www.behance.net/gallery/143669887/JDT-CONCEPT-Shoenix-Studios\" target=\"_blank\" class=\"button\" aria-label=\"Behance\">Dokumentasi 'Behance'</a> </li> </ul> </section> <section> <div class=\"adsslider\"> <div class=\"ads-slider\"> <div class=\"slide\"> <a aria-label=\"Revenant Formal\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_7___ + "\" title=\"Revenant Formal\" width=\"1920\" height=\"300\" alt=\"Revenant Formal\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a href=\"https://www.behance.net/gallery/141503291/Karnival-FYPro-Com-20192020-UMP\" aria-label=\"Karnival FYPro-com\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_8___ + "\" title=\"Revenant Formal\" width=\"1920\" height=\"300\" alt=\"Revenant Formal\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a href=\"#productcard\" aria-label=\"ITNOT Koleksi\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_9___ + "\" title=\"Koleksi 'ITNOT'\" width=\"1920\" height=\"300\" alt=\"Koleksi 'In The Name of Tsar'\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a href=\"#productcard\" aria-label=\"World Koleksi\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_10___ + "\" title=\"Koleksi 'Dunia'\" width=\"1920\" height=\"300\" alt=\"Koleksi 'Dunia'\" loading=\"lazy\"/></a> </div> <div class=\"slide\"> <a aria-label=\"HM Concept\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_11___ + "\" title=\"Konsep Harimau Malaya | AC Milan\" width=\"1920\" height=\"300\" alt=\"Konsep Harimau Malaya | AC Milan\" loading=\"lazy\"/></a> </div> </div> </div> </section> <section id=\"work\" class=\"main style3 primary\"> <div class=\"content\"> <header> <h2 class=\"label\">Karya Baharu</h2> </header> <div class=\"gallery\"> <article class=\"from-left\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/01-full.webp\" class=\"image fit\"><img class=\"hidden\" src=\"" + ___HTML_LOADER_REPLACEMENT_12___ + "\" title=\"Seni Album Muka Depan\" height=\"225.817\" width=\"360\" alt=\"Seni Album Muka Depan\" loading=\"lazy\"/></a> </article> <article class=\"from-right\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/02-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_13___ + "\" title=\"Arus Kelajuan\" height=\"225.817\" width=\"360\" alt=\"Arus Kelajuan\" loading=\"lazy\"/></a> </article> <article class=\"from-left\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/03-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_14___ + "\" title=\"The Phantom Cries\" height=\"225.817\" width=\"360\" alt=\"The Phantom Cries\" loading=\"lazy\"/></a> </article> <article class=\"from-right\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/04-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_15___ + "\" title=\"GenesisPhantom | Papan Luncur Konsep Hiper\" height=\"225.817\" width=\"360\" alt=\"Papan Luncur Konsep Hiper\" loading=\"lazy\"/></a> </article> <article class=\"from-left\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/05-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_16___ + "\" title=\"Hausboom X Shoenix Studios\" height=\"225.817\" width=\"360\" alt=\"Hausboom X Shoenix Studios\" loading=\"lazy\"/></a> </article> <article class=\"from-right\"> <a href=\"https://shoenix-studios.web.app/global/assets/images/06-full.webp\" class=\"image fit\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_17___ + "\" title=\"Zulmat\" height=\"225.817\" width=\"360\" alt=\"Zulmat\" loading=\"lazy\"/></a> </article> </div> </div> </section> <section id=\"multiproject\" class=\"main style4 primary\"> <div class=\"mphero\"> <div class=\"mptext\"> <p id=\"projectup\" class=\"mptext__short\">kemaskini Terbaharu: </p> <h1 class=\"mptext__title\">Koleksi Projek</h1> <p class=\"mptext__description\"><br>Semua penvisualan & dokumentasi dari perancangan, penteksturan dan fasa kemas gabung. Semua projek adalah tertakluk kepada perubahan. + Termasuk galeri video dari projek terdahulu. </p> <a href=\"project\" target=\"_self\" class=\"button\" aria-label=\"Project\">Lihat semua projek</a> </div> <div class=\"mpgrid__container\"> <div class=\"mpgrid__item mpone\"></div> <div class=\"mpgrid__item mptwo\"></div> <div class=\"mpgrid__item mpthree\"></div> <div class=\"mpgrid__item mpfour\"></div> <div class=\"mpgrid__item mpfive\"></div> <div class=\"mpgrid__item mpsix\"></div> <div class=\"mpgrid__item mpseven\"></div> <div class=\"mpgrid__item mpeight\"></div> <div class=\"mpgrid__item mpnine\"></div> <div class=\"mpgrid__item mpten\"></div> <div class=\"mpgrid__item mpeleven\"></div> <div class=\"mpgrid__item mptwelve\"></div> </div> </div> </section> <section id=\"productcard\" class=\"main style3 primary\"> <div class=\"infocontent\"> <header> <h2 class=\"label\">Koleksi Terbaharu</h2> </header> <div class=\"info-container\"> <div class=\"card\"> <h2>Koleksi 1</h2> <a href=\"product\" type=\"button\" data-proj-col=\"1\" target=\"_self\" aria-label=\"ITNOT\"> <i class=\"fas fa-arrow-right\"></i></a> <p>Di atas nama Tsar</p> <div class=\"pic\"></div> <span> </span> </div> <div class=\"card\"> <h2>Koleksi 2</h2> <a href=\"product\" type=\"button\" data-proj-col=\"2\" target=\"_self\" aria-label=\"BSE\"> <i class=\"fas fa-arrow-right\"></i></a> <p>Helang Keluli Hitam</p> <div class=\"pic\"></div> <span> </span> </div> <div class=\"card\"> <h2>Koleksi 3</h2> <a href=\"product\" type=\"button\" data-proj-col=\"3\" target=\"_self\" aria-label=\"WORLD\"> <i class=\"fas fa-arrow-right\"></i></a> <p>Dunia</p> <div class=\"pic\"></div> <span> </span> </div> <div class=\"card\"> <h2>Koleksi 4</h2> <a href=\"product\" type=\"button\" data-proj-col=\"4\" target=\"_self\" aria-label=\"UNITY\"> <i class=\"fas fa-arrow-right\"></i></a> <p>kesatuan</p> <div class=\"pic\"></div> <span> </span> </div> </div> </div> </section> <section id=\"blog\" class=\"main style4 blog\"> <div class=\"blog-relative__container\"> <div class=\"blog-full__width blog-object__fit\"> <img class=\"blog-img\" src=\"" + ___HTML_LOADER_REPLACEMENT_18___ + "\" alt=\"Blog background picture\" loading=\"lazy\"> <div class=\"blog-absolute\"> <img class=\"blog-icon\" src=\"" + ___HTML_LOADER_REPLACEMENT_19___ + "\" width=\"128\" height=\"31.3\" style=\"margin-bottom:12px\" alt=\"Shoenix Logo\" loading=\"lazy\"> <h1 class=\"blog-text\">Log Pembangun</h1> <p class=\"blog-paragraph\">kompilasi penuh log pembangun untuk laman sesawang, dari bahagian hadapan hingga belakang. <span id=\"dateup\"><br> Kemaskini Terbaharu: </span> </p> <a id=\"blogbtn\" href=\"blog\" target=\"_self\" class=\"button\" aria-label=\"Blog\">Baca Sekarang!</a> </div> </div> </div> </section> <section> <div class=\"clientslider\"> <section class=\"client-slider\"> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_20___ + "\" width=\"149\" height=\"97\" alt=\"Pioneer CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_21___ + "\" width=\"149\" height=\"97\" alt=\"NMVX CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_22___ + "\" width=\"149\" height=\"97\" alt=\"Atmax CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_23___ + "\" width=\"149\" height=\"97\" alt=\"Usul Timur CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_24___ + "\" width=\"149\" height=\"97\" alt=\"FTSLR CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_25___ + "\" width=\"149\" height=\"97\" alt=\"Temor CLI\"></div> <div class=\"slide\"><img src=\"" + ___HTML_LOADER_REPLACEMENT_26___ + "\" width=\"149\" height=\"97\" alt=\"Granova CLI\"></div> </section> </div> </section> <footer class=\"footer section\"> <div class=\"footer__container container grid\"> <span class=\"footer__logo\"> <img src=\"" + ___HTML_LOADER_REPLACEMENT_4___ + "\" width=\"32\" height=\"32\" alt=\"Shoenix Studios's Logo\"> </span> <div class=\"footer__content\"> <h2 class=\"footer__title\">Sosial</h2> <ul class=\"footer__links\"> <li><a href=\"https://www.facebook.com/shoenixstudios\" target=\"_blank\" aria-label=\"Facebook\" class=\"footer__link\">Facebook</a></li> <li><a href=\"https://www.instagram.com/shoenix_studios/\" target=\"_blank\" aria-label=\"Instagram\" class=\"footer__link\">Instagram</a></li> <li><a href=\"https://www.youtube.com/@shoenixstudios\" target=\"_blank\" aria-label=\"Youtube\" class=\"footer__link\">Youtube</a></li> <li><a href=\"https://github.com/shoen1x\" target=\"_blank\" aria-label=\"Github\" class=\"footer__link\">Github</a> </li> </ul> </div> <div class=\"footer__content\"> <h2 class=\"footer__title\">Navigasi</h2> <ul class=\"footer__links\"> <li> <a href=\"project\" target=\"_self\" aria-label=\"Project\" class=\"footer__link\">Projek</a> </li> <li> <a href=\"#productcard\" target=\"_self\" aria-label=\"Products\" class=\"footer__link\">produk</a> </li> <li> <a href=\"blog\" target=\"_self\" aria-label=\"Blog\" class=\"footer__link\">Blog</a> </li> </ul> <ul class=\"footer__copy\"> <li> <span class=\"footer__copy-link\">&copy; 2023 <strong>Shoenix Studios</strong> Hak Cipta Terpelihara</span> <span class=\"footer__copy-link\"><span id=\"versioning\"></span><br><span id=\"revisioning\"></span></span> </li> </ul> <ul class=\"footer__links\"> <li> <label class=\"select-language\" for=\"langslct\"> <select id=\"langslct\" required=\"required\"> <option value=\"\" disabled=\"disabled\" selected=\"selected\">Pilihan Bahasa</option> <option value=\"en\">Bahasa Inggeris</option> <option value=\"ms\">Bahasa Melayu</option> </select> <svg> <use xlink:href=\"#select-arrow-down\"></use> </svg> </label> <svg class=\"sprites-language\"> <symbol id=\"select-arrow-down\" viewbox=\"0 0 10 6\"> <polyline points=\"1 1 5 5 9 1\"></polyline> </symbol> </svg> </li> </ul> </div> </div> </footer> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_27___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_28___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_29___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_30___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_31___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_32___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_33___ + "\"><" + "/script> <" + "script>var Revf_format=\"MMM d, yyyy\",bodyLangCode=\"ms\",bodyCountryCode=\"my\"<" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_34___ + "\"><" + "/script> <" + "script src=\"https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js\"><" + "/script> <" + "script type=\"module\" src=\"" + ___HTML_LOADER_REPLACEMENT_35___ + "\"><" + "/script> <" + "script type=\"module\" src=\"https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_36___ + "\"><" + "/script> <" + "script src=\"" + ___HTML_LOADER_REPLACEMENT_37___ + "\"><" + "/script> <" + "script>function appendData(n){document.getElementById(\"versioning\").innerHTML=DOMPurify.sanitize(\"</br></br>Binaan: <strong>\"+n.metadata.version+\"<strong>\"),document.getElementById(\"revisioning\").innerHTML=DOMPurify.sanitize(\"Semakan: <strong>\"+n.metadata.revision+\"<strong>\"),document.getElementById(\"dateup\").innerHTML=DOMPurify.sanitize(\"<br> Kemaskini Terbaharu: <strong>\"+n.metadata.date+\"<strong>\"),document.getElementById(\"projectup\").innerHTML=DOMPurify.sanitize(\"<br> Kemaskini Terbaharu: <strong>\"+n.metadata.date+\"<strong>\")}fetch(net_path+\"assets-terminal.json\").then((function(n){return n.json()})).then((function(n){appendData(n)})).catch((function(n){document.getElementById(\"versioning\").innerHTML=DOMPurify.sanitize(\"</br></br>Data versi hilang\"),document.getElementById(\"revisioning\").innerHTML=DOMPurify.sanitize(\"Data Semakan semula hilang\"),document.getElementById(\"dateup\").innerHTML=DOMPurify.sanitize(\"<br> Kemaskini Terbaharu: Gagal dimuatkan.\"),document.getElementById(\"projectup\").innerHTML=DOMPurify.sanitize(\"<br> Kemaskini Terbaharu: Gagal dimuatkan.\")}))<" + "/script> </body> </html>";
-// Exports
-/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (code)));
-})();
-
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 (() => {
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
@@ -2198,7 +1710,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return acc;
     }, {});
   };
-  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(8286));
+  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(1374));
 
   // Mobile ejah tene dlu
   function isMobile() {
@@ -2493,13 +2005,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   };
   var slike = document.getElementById("slideshow");
   slideShow(slike);
-  $('.card a').on('click', function () {
-    var projcol = $(this).data("proj-col");
-    var CookieDate = new Date(),
-      tmp;
-    CookieDate.setDate(CookieDate.getDate() + 3);
-    document.cookie = "proj-col=" + projcol + "; expires=" + CookieDate.toUTCString() + "; path=/";
-  });
 
   // putar2
   $(document).ready(function () {

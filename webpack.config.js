@@ -27,7 +27,7 @@ const package_version = require('./package.json').version;
 
 var cdn_url;
 if(process.env.NODE_ENV == "development"){
-  cdn_url = "../../../";
+  cdn_url = "http://127.0.0.1:5000/";
 }else if (process.env.NODE_ENV == "production"){
   cdn_url = "https://shoenix-studios.web.app/";
 }
@@ -55,21 +55,16 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
     filename: `${name}.html`, // output HTML files
     chunks: [`${name}`], // respective JS files
     inject: true,
-    // minify: {
-    //   html5                          : true,
-    //   collapseWhitespace             : true,
-    //   minifyCSS                      : true,
-    //   minifyJS                       : true,
-    //   minifyURLs                     : false,
-    //   removeAttributeQuotes          : true,
-    //   removeComments                 : true, // false for Vue SSR to find app placeholder
-    //   removeEmptyAttributes          : true,
-    //   removeOptionalTags             : true,
-    //   removeRedundantAttributes      : true,
-    //   removeScriptTypeAttributes     : true,
-    //   removeStyleLinkTypeAttributese : true,
-    //   useShortDoctype                : true
-    // },
+  })
+});
+
+let htmlPageNames_product = ['in-the-name-of-tsar', 'black-steel-eagle', 'the-world', 'unity'];
+let multipleHtmlPlugins_product = htmlPageNames_product.map(name => {
+  return new HtmlWebpackPlugin({
+    template: `./src/product/${name}.html`, // relative path to the HTML files
+    filename: `/product/${name}.html`, // output HTML files
+    chunks: [`product`], // respective JS files
+    inject: true,
   })
 });
 
@@ -83,12 +78,21 @@ let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
   })
 });
 
+let htmlPageNames_product_my = ['in-the-name-of-tsar', 'black-steel-eagle', 'the-world', 'unity'];
+let multipleHtmlPlugins_product_my = htmlPageNames_product_my.map(name => {
+  return new HtmlWebpackPlugin({
+    template: `./src/ms/product/${name}.html`, // relative path to the HTML files
+    filename: `/ms/product/${name}.html`, // output HTML files
+    chunks: [`product`], // respective JS files
+    inject: true,
+  })
+});
+
 module.exports = {
     entry: {
-
-        home :["./src/home.html", "./src/ms/home.html", "./src/assets/js/home.js", "./src/assets/css/home.css"],
-        product :["./src/product.html", "./src/ms/product.html", "./src/assets/js/product.js", "./src/assets/css/product.css"],
-        project :["./src/project.html", "./src/ms/product.html", "./src/assets/js/project.js", "./src/assets/css/project.css"],
+        home :["./src/assets/js/home.js", "./src/assets/css/home.css"],
+        product :["./src/assets/js/product.js",  "./src/assets/css/product.css"],
+        project :["./src/assets/js/project.js", "./src/assets/css/project.css"],
     },
     output: {
         publicPath: cdn_url,
@@ -183,7 +187,7 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
-          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt|sitemap.xml|robots.txt)$/,
+          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt|sitemap_index.xml|robots.txt)$/,
           type: 'asset/resource',
             generator: {
               filename: '[name][ext]?v=[contenthash]'
@@ -202,11 +206,11 @@ module.exports = {
       chunkFilename: "global/assets/css/[id].css?v=[contenthash]",
     }),
 
-    // new SubresourceIntegrityPlugin(),
+    new SubresourceIntegrityPlugin({enabled: true}),
     new HtmlWebpackInjector(),
     new WebpackAssetsManifest({ integrity: true }),
     new CleanWebpackPlugin(),
     assetsPluginInstance,
 
-  ].concat(multipleHtmlPlugins, multipleHtmlPlugins_my)
+  ].concat(multipleHtmlPlugins, multipleHtmlPlugins_product, multipleHtmlPlugins_my, multipleHtmlPlugins_product_my)
 };
