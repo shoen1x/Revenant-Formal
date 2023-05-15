@@ -1,10 +1,10 @@
-var net_path = "https://shoenix-studios.web.app/";
+// var net_path = "https://shoenix-studios.web.app/";
 // var net_path = "../../../";
-// var net_path = 'http://127.0.0.1:5000/';
-
+var net_path = 'http://127.0.0.1:5000/';
+var current_lang = (bodyLangCode || 'en-us').toLowerCase();
+var current_lang_sm = (bodyCountryCode || 'default').toLowerCase();
+var newURL = location.protocol + '//' + location.host + "/ms" + location.pathname + location.search + location.hash;
 (function () {
-  var current_lang = (bodyLangCode || 'en-us').toLowerCase();
-  var current_lang_sm = (bodyCountryCode || 'default').toLowerCase();
   var CookieDate = new Date(),
     tmp;
   CookieDate.setDate(CookieDate.getDate() + 30);
@@ -25,6 +25,8 @@ var net_path = "https://shoenix-studios.web.app/";
   }
   var langStr;
   if (document.cookie.indexOf("firebase-language-override=") >= 0) {
+    document.cookie = "firebase-language-override=" + bodyLangCode + "; expires=" + CookieDate.toUTCString() + "; path=/";
+    document.cookie = "firebase-country-override=" + bodyCountryCode + "; expires=" + CookieDate.toUTCString() + "; path=/";
     langStr = getCookie('firebase-language-override');
     countryStr = getCookie('firebase-country-override');
     // langck = document.cookie.indexOf("firebase-language-override=");
@@ -32,20 +34,16 @@ var net_path = "https://shoenix-studios.web.app/";
     $('#langslct option').removeAttr('selected').filter('[value=' + langStr + ']')
     // .filter('[value=' + document.cookie.substring(langck + 5) + ']')
     .attr('selected', true);
-    langStr = '[firebase-language-override="' + langStr + '"]';
-    if (getCookie('firebase-language-override') == 'ms') {
-      if (!(window.location.href == net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1))) {
-        window.location.replace(net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1));
-        // console.log(net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1));
-      }
-    }
 
-    if (getCookie('firebase-language-override') == 'en') {
-      if (!(window.location.href == net_path + location.pathname.split("/").slice(-1))) {
-        window.location.replace(net_path + location.pathname.split("/").slice(-1));
-        // console.log(net_path + location.pathname.split("/").slice(-1));
-      }
-    }
+    // if (getCookie('firebase-language-override') == 'ms') {
+    //     if (!(location.pathname.split('/')[1] == 'ms')) {
+    //         window.location.href = newURL;
+    //     }
+    // } else if (getCookie('firebase-language-override') == 'en') {
+    //     if ((location.pathname.split('/')[1] == 'ms')) {
+    //         window.location.href = location.pathname.replace("ms/", "");
+    //     }
+    // }
     // Utk debug jah
   } else {
     // No cookie - tunjuk inggeris
@@ -57,19 +55,18 @@ var net_path = "https://shoenix-studios.web.app/";
     var lang = $(this).val();
     switch (lang) {
       case 'en':
-        // document.cookie = "lang=en-US; expires=" + CookieDate.toUTCString() + ";path=/";
         document.cookie = "firebase-country-override=US; expires=" + CookieDate.toUTCString() + "; path=/";
         document.cookie = "firebase-language-override=en; expires=" + CookieDate.toUTCString() + "; path=/";
-        if (!(window.location.href == net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1))) {
-          window.location.replace(net_path + location.pathname.split("/").slice(-1));
+        if (location.pathname.split('/')[1] == 'ms') {
+          window.location.href = location.pathname.replace("ms/", "");
         }
         break;
       case 'ms':
         // document.cookie = "lang=ms-MY; expires=" + CookieDate.toUTCString() + "; path=/";
         document.cookie = "firebase-country-override=MY; expires=" + CookieDate.toUTCString() + "; path=/";
         document.cookie = "firebase-language-override=ms; expires=" + CookieDate.toUTCString() + "; path=/";
-        if (!(window.location.href == net_path + getCookie('firebase-language-override') + "/" + location.pathname.split("/").slice(-1))) {
-          window.location.replace(net_path + "ms/" + location.pathname.split("/").slice(-1));
+        if (!(location.pathname.split('/')[1] == 'ms')) {
+          window.location.href = newURL;
         }
         break;
     }
