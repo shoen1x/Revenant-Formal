@@ -59,16 +59,17 @@
         content="https://shoenix-studios.web.app/global/assets/images/og-image/og-image-product.jpg">
 
     <!--No script-->
-	<noscript>
-		Sorry, your browser does not have/support JavaScript!
-	</noscript>
+    <noscript>
+        Sorry, your browser does not have/support JavaScript!
+    </noscript>
 </head>
 
 <body>
 
     <header class="header" id="header">
         <nav class="nav container">
-            <a title="Home" href="https://shoenix-studios.web.app/home" target="_self" aria-label="Home" class="nav__logo">
+            <a title="Home" href="https://shoenix-studios.web.app/home" target="_self" aria-label="Home"
+                class="nav__logo">
                 <img src="/src/images/ico/shoenix.svg" height="32" width="32" alt="">
             </a>
             <span>Products | <strong>Shoenix Studios</strong></span>
@@ -78,8 +79,31 @@
     <div class="main-page-products">
         <div class="container">
             <h1 class="lg-title">New products</h1>
-            <p class="text-light">Discover new products collection, 'In the name of Tsar', 'Black Steel Eagle', 'The Unity', 'World' for multiples purposes. Get discount price with every bundles purchases</p>
-            <img src="/src/images/og-images/og-image-product.jpg" style="box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25); border-radius: 15px; margin-top: 15px;" alt="og-image-product">
+            <p class="text-light">Discover new products collection, 'In the name of Tsar', 'Black Steel Eagle', 'The
+                Unity', 'World' for multiples purposes. Get discount price with every bundles purchases</p>
+            <img src="/src/images/og-images/og-image-product.jpg"
+                style="box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25); border-radius: 15px; margin-top: 15px;"
+                alt="og-image-product">
+
+            <model-viewer id="product_disp3d"
+                src="http://shoenix-studios.web.app/global/assets/images/3D/product_disp3d.glb" disable-zoom
+                touch-action="pan-y" data-js-focus-visible alt="Products display"
+                poster="http://shoenix-studios.web.app/global/assets/images/cadjust.webp" shadow-intensity="1"
+                disable-tap auto-rotate style="width: 50vw; height: 50vh; left: 50%; transform: translateX(-50%);">
+
+                <div class="model-viewer-poster" slot="poster"
+                    style="background-image: url(http://shoenix-studios.web.app/global/assets/images/cadjust.webp);">
+                </div>
+
+            </model-viewer>
+            <p class="text-light">This was used for display only, final product may be vary!</p>
+
+            <div class="controls" style="position: relative; width: 100%; text-align: center; display: block;">
+                <div>Examples: <select
+                        style="font-family: var(--body-family); border-color: rgba(65, 51, 183, 1); outline: none; background: #161616; box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+                    border-radius: 0.8rem; margin: 0.8rem; display: relative; text-align: center; padding: 12px 55px 15px 15px; font-size: 14px; color: rgba(65, 51, 183, 1);"
+                        id="variant"></select></div>
+            </div>
 
             <div class="main-page-product-items">
                 <!-- single product -->
@@ -99,7 +123,8 @@
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/product/in-the-name-of-tsar.html" target="_self" class="button" aria-label="Collection1">View product</a>
+                    <a href="https://shoenix-studios.web.app/product/in-the-name-of-tsar.html" target="_self"
+                        class="button" aria-label="Collection1">View product</a>
 
                     <!-- <div class="off-info">
                         <h2 class="sm-title">25% off</h2>
@@ -123,7 +148,8 @@
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/product/black-steel-eagle.html" target="_self" class="button" aria-label="Collection2">View product</a>
+                    <a href="https://shoenix-studios.web.app/product/black-steel-eagle.html" target="_self"
+                        class="button" aria-label="Collection2">View product</a>
                 </div>
                 <!-- end of single product -->
                 <!-- single product -->
@@ -143,7 +169,8 @@
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/product/the-world.html" target="_self" class="button" aria-label="Collection3">View product</a>
+                    <a href="https://shoenix-studios.web.app/product/the-world.html" target="_self" class="button"
+                        aria-label="Collection3">View product</a>
                 </div>
                 <!-- end of single product -->
                 <!-- single product -->
@@ -158,12 +185,14 @@
                         <div class="main-page-product-info-top">
                             <h2 class="sm-title">Unity</h2>
                         </div>
-                        <a href="#" class="main-page-product-name">Suitable for e-sport and electronic sport organization</a>
+                        <a href="#" class="main-page-product-name">Suitable for e-sport and electronic sport
+                            organization</a>
                         <p class="main-page-product-price">RM ???</p>
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/product/unity.html" target="_self" class="button" aria-label="Collection4">View product</a>
+                    <a href="https://shoenix-studios.web.app/product/unity.html" target="_self" class="button"
+                        aria-label="Collection4">View product</a>
 
                     <!-- <div class="off-info">
                         <h2 class="sm-title">25% off</h2>
@@ -180,7 +209,7 @@
 
                 <h1 class="lg-title">Special Offers</h1>
                 <p class="text-light" style="text-align: center;">Not yet available</p>
-                
+
                 <!-- product col left -->
                 <!-- <div class="main-page-product-col-left flex">
                     <div class="main-page-product-col-content">
@@ -204,29 +233,29 @@
                         </div>
                     </div> -->
 
-                    <div class="main-page-product-col-r-bottom">
-                        <!-- left -->
-                        <div class="flex">
-                            <div class="main-page-product-col-content">
-                                <h2 class="sm-title">Not Available yet</h2>
-                                <h2 class="md-title">Not Available yet</h2>
-                                <p class="text-light">Not Available yet</p>
-                                <button type="button" class="btn-dark" disabled>Shop now</button>
-                            </div>
+                <div class="main-page-product-col-r-bottom">
+                    <!-- left -->
+                    <div class="flex">
+                        <div class="main-page-product-col-content">
+                            <h2 class="sm-title">Not Available yet</h2>
+                            <h2 class="md-title">Not Available yet</h2>
+                            <p class="text-light">Not Available yet</p>
+                            <button type="button" class="btn-dark" disabled>Shop now</button>
                         </div>
-                        <!-- right -->
-                        <div class="flex">
-                            <div class="main-page-product-col-content">
-                                <h2 class="sm-title">Not Available yet</h2>
-                                <h2 class="md-title">Not Available yet</h2>
-                                <p class="text-light">Not Available yet</p>
-                                <button type="button" class="btn-dark" disabled>Shop now</button>
-                            </div>
+                    </div>
+                    <!-- right -->
+                    <div class="flex">
+                        <div class="main-page-product-col-content">
+                            <h2 class="sm-title">Not Available yet</h2>
+                            <h2 class="md-title">Not Available yet</h2>
+                            <p class="text-light">Not Available yet</p>
+                            <button type="button" class="btn-dark" disabled>Shop now</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -258,13 +287,16 @@
 
                 <ul class="footer__links">
                     <li>
-                        <a href="https://shoenix-studios.web.app/home" target="_self" aria-label="Home" class="footer__link">Home</a>
+                        <a href="https://shoenix-studios.web.app/home" target="_self" aria-label="Home"
+                            class="footer__link">Home</a>
                     </li>
                     <li>
-                        <a href="https://shoenix-studios.web.app/project" target="_self" aria-label="Project" class="footer__link">Projects</a>
+                        <a href="https://shoenix-studios.web.app/project" target="_self" aria-label="Project"
+                            class="footer__link">Projects</a>
                     </li>
                     <li>
-                        <a href="https://shoenix-studios.web.app/blog" target="_self" aria-label="Blog" class="footer__link">Blog</a>
+                        <a href="https://shoenix-studios.web.app/blog" target="_self" aria-label="Blog"
+                            class="footer__link">Blog</a>
                     </li>
                 </ul>
 
@@ -319,6 +351,8 @@
     <script src="/src/network.js"></script>
 
     <script src="/src/assets/js/firebase.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
     <script type="text/javascript" src="/node_modules/dompurify/dist/purify.min.js"></script>
 
     <script>

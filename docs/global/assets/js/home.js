@@ -8,6 +8,7 @@ var map = {
 	"./playcard.glb": 4874,
 	"./poster-1.webp": 9277,
 	"./poster.webp": 5161,
+	"./product_disp3d.glb": 5861,
 	"./valhalla.glb": 971
 };
 
@@ -183,7 +184,7 @@ var map = {
 	"./favicon-32x32.png": 5344,
 	"./favicon.ico": 1194,
 	"./mstile-150x150.png": 7967,
-	"./safari-pinned-tab.svg": 5861,
+	"./safari-pinned-tab.svg": 9756,
 	"./shoenix.svg": 9411,
 	"./site.webmanifest": 60
 };
@@ -355,6 +356,14 @@ module.exports = __webpack_require__.p + "global/assets/images/poster-1.webp?v=0
 
 "use strict";
 module.exports = __webpack_require__.p + "global/assets/images/poster.webp?v=88a5f270696d5521b3d4";
+
+/***/ }),
+
+/***/ 5861:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "global/assets/images/3D/product_disp3d.glb?v=e6981c913eb8bb09cdc2";
 
 /***/ }),
 
@@ -1310,7 +1319,7 @@ module.exports = __webpack_require__.p + "global/assets/images/mstile-150x150.pn
 
 /***/ }),
 
-/***/ 5861:
+/***/ 9756:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";

@@ -61,7 +61,7 @@
 
     <!--No script-->
     <noscript>
-Sorry, your browser does not have/support JavaScript!
+        Sorry, your browser does not have/support JavaScript!
     </noscript>
 </head>
 
@@ -69,7 +69,8 @@ Sorry, your browser does not have/support JavaScript!
 
     <header class="header" id="header">
         <nav class="nav container">
-            <a title="Home" href="https://shoenix-studios.web.app/ms/home" target="_self" aria-label="Home" class="nav__logo">
+            <a title="Home" href="https://shoenix-studios.web.app/ms/home" target="_self" aria-label="Home"
+                class="nav__logo">
                 <img src="/src/images/ico/shoenix.svg" height="32" width="32" alt="">
             </a>
             <span>Produk | <strong>Shoenix Studios</strong></span>
@@ -79,8 +80,31 @@ Sorry, your browser does not have/support JavaScript!
     <div class="main-page-products">
         <div class="container">
             <h1 class="lg-title">Produk Baharu</h1>
-            <p class="text-light">Terokai koleksi produk baharu, 'Atas nama Tsar', 'Black Steel Eagle', 'The Unity', 'World' untuk pelbagai tujuan. Dapatkan harga diskaun dengan setiap pembelian bundle</p>
-            <img src="/src/images/og-images/og-image-produk.jpg" style="box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25); border-radius: 15px; margin-top: 15px;" alt="og-image-product">
+            <p class="text-light">Terokai koleksi produk baharu, 'Atas nama Tsar', 'Black Steel Eagle', 'The Unity',
+                'World' untuk pelbagai tujuan. Dapatkan harga diskaun dengan setiap pembelian bundle</p>
+            <img src="/src/images/og-images/og-image-produk.jpg"
+                style="box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25); border-radius: 15px; margin-top: 15px;"
+                alt="og-image-product">
+
+            <model-viewer id="product_disp3d"
+                src="http://shoenix-studios.web.app/global/assets/images/3D/product_disp3d.glb" disable-zoom
+                touch-action="pan-y" data-js-focus-visible alt="Products display"
+                poster="http://shoenix-studios.web.app/global/assets/images/cadjust.webp" shadow-intensity="1"
+                disable-tap auto-rotate style="width: 50vw; height: 50vh; left: 50%; transform: translateX(-50%);">
+
+                <div class="model-viewer-poster" slot="poster"
+                    style="background-image: url(http://shoenix-studios.web.app/global/assets/images/cadjust.webp);">
+                </div>
+
+            </model-viewer>
+            <p class="text-light">Ini digunakan untuk paparan sahaja, produk akhir mungkin berbeza-beza!</p>
+
+            <div class="controls" style="position: relative; width: 100%; text-align: center; display: block;">
+                <div>Contoh: <select
+                        style="font-family: var(--body-family); border-color: rgba(65, 51, 183, 1); outline: none; background: #161616; box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+                                            border-radius: 0.8rem; margin: 0.8rem; display: relative; text-align: center; padding: 12px 55px 15px 15px; font-size: 14px; color: rgba(65, 51, 183, 1);"
+                        id="variant"></select></div>
+            </div>
 
             <div class="main-page-product-items">
                 <!-- single product -->
@@ -100,7 +124,8 @@ Sorry, your browser does not have/support JavaScript!
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/ms/product/in-the-name-of-tsar.html" target="_self" class="button" aria-label="Collection1">Lihat produk</a>
+                    <a href="https://shoenix-studios.web.app/ms/product/in-the-name-of-tsar.html" target="_self"
+                        class="button" aria-label="Collection1">Lihat produk</a>
 
                     <!-- <div class="off-info">
                         <h2 class="sm-title">25% off</h2>
@@ -124,7 +149,8 @@ Sorry, your browser does not have/support JavaScript!
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/ms/product/black-steel-eagle.html" target="_self" class="button" aria-label="Collection2">Lihat produk</a>
+                    <a href="https://shoenix-studios.web.app/ms/product/black-steel-eagle.html" target="_self"
+                        class="button" aria-label="Collection2">Lihat produk</a>
                 </div>
                 <!-- end of single product -->
                 <!-- single product -->
@@ -144,7 +170,8 @@ Sorry, your browser does not have/support JavaScript!
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/ms/product/the-world.html" target="_self" class="button" aria-label="Collection3">Lihat produk</a>
+                    <a href="https://shoenix-studios.web.app/ms/product/the-world.html" target="_self" class="button"
+                        aria-label="Collection3">Lihat produk</a>
                 </div>
                 <!-- end of single product -->
                 <!-- single product -->
@@ -159,12 +186,14 @@ Sorry, your browser does not have/support JavaScript!
                         <div class="main-page-product-info-top">
                             <h2 class="sm-title">Unity</h2>
                         </div>
-                        <a href="#" class="main-page-product-name">Sesuai untuk e-sukan dan organisasi sukan elektronik</a>
+                        <a href="#" class="main-page-product-name">Sesuai untuk e-sukan dan organisasi sukan
+                            elektronik</a>
                         <p class="main-page-product-price">RM ???</p>
                         <p class="main-page-product-price">RM ???</p>
                     </div>
 
-                    <a href="https://shoenix-studios.web.app/ms/product/unity.html" target="_self" class="button" aria-label="Collection4">Lihat produk</a>
+                    <a href="https://shoenix-studios.web.app/ms/product/unity.html" target="_self" class="button"
+                        aria-label="Collection4">Lihat produk</a>
 
                     <!-- <div class="off-info">
                         <h2 class="sm-title">25% off</h2>
@@ -181,7 +210,7 @@ Sorry, your browser does not have/support JavaScript!
 
                 <h1 class="lg-title">Tawaran istimewa</h1>
                 <p class="text-light" style="text-align: center;">Belum tersedia</p>
-                
+
                 <!-- product col left -->
                 <!-- <div class="main-page-product-col-left flex">
                     <div class="main-page-product-col-content">
@@ -205,29 +234,29 @@ Sorry, your browser does not have/support JavaScript!
                         </div>
                     </div> -->
 
-                    <div class="main-page-product-col-r-bottom">
-                        <!-- left -->
-                        <div class="flex">
-                            <div class="main-page-product-col-content">
-                                <h2 class="sm-title">Belum Tersedia</h2>
-                                <h2 class="md-title">Belum Tersedia</h2>
-                                <p class="text-light">Belum Tersedia</p>
-                                <button type="button" class="btn-dark" disabled>Berbelanja sekarang</button>
-                            </div>
+                <div class="main-page-product-col-r-bottom">
+                    <!-- left -->
+                    <div class="flex">
+                        <div class="main-page-product-col-content">
+                            <h2 class="sm-title">Belum Tersedia</h2>
+                            <h2 class="md-title">Belum Tersedia</h2>
+                            <p class="text-light">Belum Tersedia</p>
+                            <button type="button" class="btn-dark" disabled>Berbelanja sekarang</button>
                         </div>
-                        <!-- right -->
-                        <div class="flex">
-                            <div class="main-page-product-col-content">
-                                <h2 class="sm-title">Belum Tersedia</h2>
-                                <h2 class="md-title">Belum Tersedia</h2>
-                                <p class="text-light">Belum Tersedia</p>
-                                <button type="button" class="btn-dark" disabled>Berbelanja sekarang</button>
-                            </div>
+                    </div>
+                    <!-- right -->
+                    <div class="flex">
+                        <div class="main-page-product-col-content">
+                            <h2 class="sm-title">Belum Tersedia</h2>
+                            <h2 class="md-title">Belum Tersedia</h2>
+                            <p class="text-light">Belum Tersedia</p>
+                            <button type="button" class="btn-dark" disabled>Berbelanja sekarang</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -240,7 +269,7 @@ Sorry, your browser does not have/support JavaScript!
 
             <!-- Icons -->
             <div class="footer__content">
-				<h2 class="footer__title">Sosial</h2>
+                <h2 class="footer__title">Sosial</h2>
                 <ul class="footer__links">
                     <li><a href="https://www.facebook.com/shoenixstudios" target="_blank" aria-label="Facebook"
                             class="footer__link">Facebook</a></li>
@@ -255,24 +284,27 @@ Sorry, your browser does not have/support JavaScript!
             </div>
 
             <div class="footer__content">
-				<h2 class="footer__title">Navigasi</h2>
+                <h2 class="footer__title">Navigasi</h2>
 
                 <ul class="footer__links">
                     <li>
-                        <a href="https://shoenix-studios.web.app/ms/home" target="_self" aria-label="Home" class="footer__link">Rerumah</a>
+                        <a href="https://shoenix-studios.web.app/ms/home" target="_self" aria-label="Home"
+                            class="footer__link">Rerumah</a>
                     </li>
                     <li>
-                        <a href="https://shoenix-studios.web.app/ms/project" target="_self" aria-label="Project" class="footer__link">Projek</a>
+                        <a href="https://shoenix-studios.web.app/ms/project" target="_self" aria-label="Project"
+                            class="footer__link">Projek</a>
                     </li>
                     <li>
-                        <a href="https://shoenix-studios.web.app/ms/blog" target="_self" aria-label="Blog" class="footer__link">Blog</a>
+                        <a href="https://shoenix-studios.web.app/ms/blog" target="_self" aria-label="Blog"
+                            class="footer__link">Blog</a>
                     </li>
                 </ul>
 
                 <ul class="footer__copy">
                     <li>
-						<span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> Hak Cipta
-							Terpelihara</span>
+                        <span class="footer__copy-link">&copy; 2023 <strong>Shoenix Studios</strong> Hak Cipta
+                            Terpelihara</span>
                         <span class="footer__copy-link"><span id="versioning"></span></br><span
                                 id="revisioning"></span></span>
                     </li>
@@ -282,7 +314,7 @@ Sorry, your browser does not have/support JavaScript!
                     <li>
                         <label class="select-language" for="langslct">
                             <select id="langslct" required="required">
-								<option value="" disabled="disabled" selected="selected">Pilihan Bahasa</option>
+                                <option value="" disabled="disabled" selected="selected">Pilihan Bahasa</option>
                                 <option value="en">Bahasa Inggeris</option>
                                 <option value="ms">Bahasa Melayu</option>
                             </select>
@@ -312,14 +344,16 @@ Sorry, your browser does not have/support JavaScript!
     <script src="/src/assets/js/util.js"></script>
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
 
-	<script>
-		var Revf_format = 'MMM d, yyyy';
-		var bodyLangCode = "ms";
-		var bodyCountryCode = "my";
-	</script>
+    <script>
+        var Revf_format = 'MMM d, yyyy';
+        var bodyLangCode = "ms";
+        var bodyCountryCode = "my";
+    </script>
     <script src="/src/network.js"></script>
 
     <script src="/src/assets/js/firebase.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
     <script type="text/javascript" src="/node_modules/dompurify/dist/purify.min.js"></script>
 
     <script>
@@ -336,7 +370,7 @@ Sorry, your browser does not have/support JavaScript!
             });
         function appendData(data) {
             document.getElementById("versioning").innerHTML = DOMPurify.sanitize('</br></br>Binaan: <strong>' + data.metadata.version + '<strong>');
-			document.getElementById("revisioning").innerHTML = DOMPurify.sanitize('Semakan: <strong>' + data.metadata.revision + '<strong>');
+            document.getElementById("revisioning").innerHTML = DOMPurify.sanitize('Semakan: <strong>' + data.metadata.revision + '<strong>');
         }
     </script>
 
