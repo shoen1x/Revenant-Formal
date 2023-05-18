@@ -51,27 +51,29 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   };
   var modelViewerVariants = document.querySelector("model-viewer#product_disp3d");
   var select = document.querySelector('#variant');
-  modelViewerVariants.addEventListener('load', function () {
-    var names = modelViewerVariants.availableVariants;
-    var _iterator = _createForOfIteratorHelper(names),
-      _step;
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var name = _step.value;
-        var option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        select.appendChild(option);
+  if (modelViewerVariants !== null) {
+    modelViewerVariants.addEventListener('load', function () {
+      var names = modelViewerVariants.availableVariants;
+      var _iterator = _createForOfIteratorHelper(names),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var name = _step.value;
+          var option = document.createElement('option');
+          option.value = name;
+          option.textContent = name;
+          select.appendChild(option);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
       }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-  });
-  select.addEventListener('input', function (event) {
-    modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
-  });
+    });
+    select.addEventListener('input', function (event) {
+      modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
+    });
+  }
   addEventListener("DOMContentLoaded", function (e) {
     e.preventDefault;
     var lang_injection = getCookie("firebase-language-override");

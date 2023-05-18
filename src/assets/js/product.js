@@ -48,7 +48,8 @@
   const modelViewerVariants = document.querySelector("model-viewer#product_disp3d");
   const select = document.querySelector('#variant');
 
-  modelViewerVariants.addEventListener('load', () => {
+  if(modelViewerVariants !== null){
+    modelViewerVariants.addEventListener('load', () => {
       const names = modelViewerVariants.availableVariants;
       for (const name of names) {
           const option = document.createElement('option');
@@ -61,6 +62,8 @@
   select.addEventListener('input', (event) => {
       modelViewerVariants.variantName = event.target.value === 'default' ? null : event.target.value;
   });
+  }
+
 
   addEventListener("DOMContentLoaded", e => {
     e.preventDefault;
