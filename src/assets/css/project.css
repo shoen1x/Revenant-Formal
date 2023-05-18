@@ -1107,9 +1107,9 @@ p, ul, ol, dl, table {
 
 /* Responsive Carousel */
 .Carousel {
+  display: grid;
   --carousel-gap: 1rem;
   border-radius: 1rem;
-  display: flex;
   gap: var(--carousel-gap);
   overflow-y: hidden;
   overflow-x: auto;
@@ -1118,10 +1118,175 @@ p, ul, ol, dl, table {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  height: 50vw;
+  /* height: 100vh; */
   outline: none !important;
-  min-height: 20rem;
-  max-height: 30rem;
+  /* min-height: 20rem;
+  max-height: 30rem; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 8px;
+}
+
+@media screen and (max-width:1024px){
+  .Carousel {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width:720px){
+  .Carousel {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width:480px){
+  .Carousel {
+    grid-template-columns: 1fr;
+    height: 80vh;
+    overflow-y: scroll;
+  }
+}
+
+/* Pagination */
+@keyframes activeDot {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(0.75);
+  }
+}
+@keyframes inactiveDot {
+  0%, 100% {
+    transform: scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: scaleX(0.85) scaleY(1.25);
+  }
+}
+@keyframes chevronEnterFirst {
+  0% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes chevronEnterSecond {
+  0% {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+.pagewrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 2rem 0 0 0;
+}
+
+.pagewrapper .pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.pagewrapper .pagination:hover button {
+  display: block;
+}
+.pagewrapper .pagination ul {
+  display: flex;
+  padding: 0;
+  gap: 0.1rem;
+  list-style: none;
+}
+.pagewrapper .pagination ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  transition: width 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.pagewrapper .pagination ul li::before {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 0.25rem;
+  background: #fff;
+  transform-origin: 50% 50%;
+  transition: width 0.6s cubic-bezier(0.23, 1, 0.32, 1), transform 0.2s ease-out, opacity 0.2s ease-out;
+  opacity: 0.2;
+}
+.pagewrapper .pagination ul li[active] {
+  width: 2rem;
+}
+.pagewrapper .pagination ul li[active]::before {
+  width: 1.25rem;
+  animation: activeDot 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+}
+.pagewrapper .pagination ul li:not([active])::before {
+  animation: inactiveDot 0.6s ease backwards;
+}
+.pagewrapper .pagination ul li:not([active]):hover::before {
+  opacity: 0.75;
+}
+.pagewrapper .pagination button {
+  display: none;
+  position: relative;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+  transition: opacity 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.2;
+}
+.pagewrapper .pagination button:hover {
+  opacity: 1;
+}
+.pagewrapper .pagination button:active {
+  opacity: 0.8;
+}
+.pagewrapper .pagination button:active::before {
+  transform: rotate(35deg) scale(0.85);
+}
+.pagewrapper .pagination button:active::after {
+  transform: rotate(-35deg) scale(0.85);
+}
+.pagewrapper .pagination button::before, .pagewrapper .pagination button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  transition: transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.pagewrapper .pagination button:before {
+  transform: rotate(45deg);
+  animation: chevronEnterFirst 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pagewrapper .pagination button:after {
+  transform: rotate(-45deg);
+  animation: chevronEnterSecond 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pagewrapper .pagination button.page-previous::before, .pagewrapper .pagination button.page-previous::after {
+  left: 20%;
+  transform-origin: 0% 50%;
+}
+.pagewrapper .pagination button.page-next::before, .pagewrapper .pagination button.page-next::after {
+  right: 20%;
+  transform-origin: 100% 50%;
 }
 
 .Carousel::-webkit-scrollbar {
@@ -1131,7 +1296,6 @@ p, ul, ol, dl, table {
 .Carousel .Card {
   aspect-ratio: var(--card-ratio);
   flex: 1 0 auto;
-  min-height: 100%;
   scroll-snap-align: start;
   cursor: pointer;
 }
@@ -1173,115 +1337,6 @@ p, ul, ol, dl, table {
   .Carousel .Card__image {
     position: relative !important;
   }
-}
-
-.Dots {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.Dot {
-  border-radius: 100%;
-  display: block;
-  height: 1.5rem;
-  width: 1.5rem;
-  position: relative;
-}
-
-.Dot::after {
-  background: currentColor;
-  border-radius: 100%;
-  content: "";
-  display: block;
-  height: 0.375rem;
-  width: 0.375rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.Dot--active {
-  color: hsl(var(--theme-pink)) !important;
-}
-
-.Pagination {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: 1rem -0.5rem;
-}
-
-.Pagination .Arrow {
-  flex: 0 0 auto;
-}
-
-.Pagination .Arrow:first-of-type {
-  margin-inline-end: auto;
-  order: -1;
-}
-
-.Pagination .Arrow:last-of-type {
-  margin-inline-start: auto;
-  order: 1;
-}
-
-.Arrow {
-  align-items: center;
-  appearance: none;
-  background: transparent;
-  border: none;
-  border-radius: 0.125rem;
-  cursor: pointer;
-  color: hsl(var(--theme-blue));
-  display: flex;
-  height: 3rem;
-  justify-content: center;
-  opacity: 1;
-  padding: 0.5rem;
-  transition: opacity 150ms, color 150ms;
-  width: 3rem;
-}
-
-.Arrow:hover {
-  color: hsl(var(--theme-red));
-}
-
-.Arrow:focus {
-  color: hsl(var(--theme-pink));
-  outline: none;
-}
-
-.Arrow:focus svg {
-  box-shadow: 0 0 0 0.125rem hsla(var(--theme-white), 1), 0 0 0 0.25rem currentColor;
-}
-
-.Arrow:focus:not(:focus-visible) {
-  color: hsl(var(--theme-red));
-}
-
-.Arrow:focus:not(:focus-visible) svg {
-  box-shadow: none;
-}
-
-.Arrow[disabled] {
-  color: hsl(var(--theme-dark));
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-.Arrow svg {
-  border-radius: 100%;
-  fill: currentColor;
-  height: 100%;
-  width: 100%;
-  transition: box-shadow 150ms;
-}
-
-[dir=rtl] .Arrow svg {
-  transform: scaleX(-1);
 }
 
 .Hidden {

@@ -3,12 +3,6 @@
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 (() => {
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 //	Revenant Formal by NMVX
 //	shoenix-studios.web.app | @Shoenixstudios
 //  under the CCA 3.0 License | Credit to HTML5 UP for template
@@ -268,175 +262,42 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
       currentMainPost.classList.remove("main-post--not-active");
     }
   }
-
-  // Carousel Bottom Select Project
-  (function () {
-    // Respect user perference
-    var isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Helper to apply inline CSS
-    var setStyleProps = function setStyleProps($el, styles) {
-      for (var _i3 = 0, _Object$entries = Object.entries(styles); _i3 < _Object$entries.length; _i3++) {
-        var _Object$entries$_i = _slicedToArray(_Object$entries[_i3], 2),
-          key = _Object$entries$_i[0],
-          value = _Object$entries$_i[1];
-        if (value === false) {
-          $el.style.removeProperty(key);
-        } else {
-          $el.style.setProperty(key, value);
-        }
-      }
-    };
-    document.querySelectorAll('.Carousel').forEach(function ($carousel) {
-      $carousel.scrollLeft = 0;
-      var $cards = Array.from($carousel.querySelectorAll('.Card'));
-      var $pagination = $carousel.nextElementSibling;
-      var _$pagination$querySel = $pagination.querySelectorAll('.Arrow'),
-        _$pagination$querySel2 = _slicedToArray(_$pagination$querySel, 2),
-        $previous = _$pagination$querySel2[0],
-        $next = _$pagination$querySel2[1];
-      $pagination.querySelector('.Dot').classList.add('Dot--active');
-      var $start = document.createElement('div');
-      var $end = document.createElement('div');
-      $carousel.prepend($start);
-      $carousel.append($end);
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.target === $start) {
-            if ($previous) {
-              $previous.disabled = entry.isIntersecting;
-            }
-          }
-          if (entry.target === $end) {
-            if ($next) {
-              $next.disabled = entry.isIntersecting;
-            }
-          }
-        });
-      });
-      observer.observe($start);
-      observer.observe($end);
-      var scrollTo = function scrollTo($card) {
-        var offset = getOffset($card);
-        var left = document.dir === 'rtl' ? -offset : offset;
-        var behavior = isReducedMotion ? 'auto' : 'smooth';
-        $carousel.scrollTo({
-          left: left,
-          behavior: behavior
-        });
-      };
-      var getOffset = function getOffset($el) {
-        var offset = $el.offsetLeft;
-        if (document.dir === 'rtl') {
-          offset = $carousel.offsetWidth - (offset + $el.offsetWidth);
-        }
-        return offset;
-      };
-      $previous.addEventListener('click', function (ev) {
-        ev.preventDefault();
-        var $card = $cards[0];
-        var scroll = Math.abs($carousel.scrollLeft);
-        $cards.forEach(function ($item) {
-          var offset = getOffset($item);
-          if (offset - scroll < -1 && offset > getOffset($card)) {
-            $card = $item;
-          }
-        });
-        scrollTo($card);
-      });
-      $next.addEventListener('click', function (ev) {
-        ev.preventDefault();
-        var $card = $cards[$cards.length - 1];
-        var scroll = Math.abs($carousel.scrollLeft);
-        $cards.forEach(function ($item) {
-          var offset = getOffset($item);
-          if (offset - scroll > 1 && offset < getOffset($card)) {
-            $card = $item;
-          }
-        });
-        scrollTo($card);
-      });
-      $pagination.addEventListener('click', function (ev) {
-        if (ev.target.classList.contains('Dot')) {
-          ev.preventDefault();
-          var _$card = document.querySelector(new URL(ev.target.href).hash);
-          if (_$card) scrollTo(_$card);
-        }
-      });
-
-      // Highlight nearest "Dot" in pagination
-      var scrollTimeout;
-      $carousel.addEventListener('scroll', function () {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(function () {
-          var _$active;
-          var $dot = $pagination.querySelector('.Dot--active');
-          if ($dot) $dot.classList.remove('Dot--active');
-          var $active;
-          var scroll = Math.abs($carousel.scrollLeft);
-          if (scroll <= 0) {
-            $active = $cards[0];
-          }
-          if (scroll >= $carousel.scrollWidth - $carousel.offsetWidth) {
-            $active = $cards[$cards.length - 1];
-          }
-          if (!$active) {
-            var oldDiff;
-            $cards.forEach(function ($card) {
-              var newDiff = Math.abs(scroll - getOffset($card));
-              if (!$active || newDiff < oldDiff) {
-                $active = $card;
-                oldDiff = newDiff;
-              }
-            });
-          }
-          $dot = $pagination.querySelector("[href=\"#".concat(((_$active = $active) !== null && _$active !== void 0 ? _$active : $card[0]).id, "\"]"));
-          if ($dot) $dot.classList.add('Dot--active');
-        }, 50);
-      }, {
-        passive: true
-      });
-
-      // Improve arrow key navigation
-      $carousel.addEventListener('keydown', function (ev) {
-        if (/^(Arrow)?Left$/.test(ev.key)) {
-          ev.preventDefault();
-          (document.dir === 'rtl' ? $next : $previous).click();
-        } else if (/(Arrow)?Right$/.test(ev.key)) {
-          ev.preventDefault();
-          (document.dir === 'rtl' ? $previous : $next).click();
-        }
-      });
-
-      // Improve transition when tabbing focus
-
-      // let scrollLeft = 0;
-      // $carousel.addEventListener(
-      //   'blur',
-      //   (ev) => {
-      //     scrollLeft = $carousel.scrollLeft;
-      //   },
-      //   { capture: true }
-      // );
-      // $carousel.addEventListener(
-      //   'focus',
-      //   (ev) => {
-      //     $carousel.scrollLeft = scrollLeft;
-      //     const $card = ev.target.closest('.Card');
-      //     if ($card) scrollTo($card);
-      //   },
-      //   { capture: true }
-      // );
-    });
-  })();
-
-  // // Optional polyfill for Safari 14
-  // if (!isReducedMotion && !window.CSS.supports('scroll-behavior: smooth')) {
-  //   import('https://cdn.skypack.dev/smoothscroll-polyfill').then((module) => {
-  //     module.polyfill();
-  //   });
-  // }
 })(jQuery);
+var nextDot;
+var nextActive = function nextActive() {
+  var activeDot = document.querySelectorAll("[active]");
+  var nextDot = activeDot[0].nextElementSibling ? activeDot[0].nextElementSibling : document.getElementById("list").firstElementChild;
+  activeDot[0].removeAttribute("active");
+  nextDot.setAttribute("active", "true");
+  detectpagination();
+};
+var previousActive = function previousActive() {
+  var activeDot = document.querySelectorAll("[active]");
+  var previousDot = activeDot[0].previousElementSibling ? activeDot[0].previousElementSibling : document.getElementById("list").lastElementChild;
+  activeDot[0].removeAttribute("active");
+  previousDot.setAttribute("active", "true");
+  detectpagination();
+};
+var setActive = function setActive(el) {
+  var activeDot = document.querySelectorAll("[active]");
+  activeDot[0].removeAttribute("active");
+  var nextDot = el;
+  activeDot[0].removeAttribute("active");
+  nextDot.setAttribute("active", "true");
+  detectpagination();
+};
+function detectpagination() {
+  var page_dots = document.querySelectorAll('#list li');
+  var carol1 = document.querySelector('#carousel1');
+  var carol2 = document.querySelector('#carousel2');
+  if (page_dots[0].hasAttribute('active')) {
+    carol1.classList.remove('Hidden');
+    carol2.classList.add('Hidden');
+  } else if (page_dots[1].hasAttribute('active')) {
+    carol2.classList.remove('Hidden');
+    carol1.classList.add('Hidden');
+  }
+}
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
