@@ -33,7 +33,7 @@
   },
   "/ms/project.html": {
     "src": "/ms/project.html",
-    "integrity": "sha256-j0PQpg/F3MZ0IBD/GgttnhCQSRujdgXaL3gwJBV3Mz8= sha384-aJID2+8kVFA14gqj4MT+nRXpL1p5YIzm/2Vw7X8ujiaJ5vPi3CeJtq3z+P03xkwt sha512-Sj3pNMOmIjcWudvcZB4LL6JTACgbUudj4LtXFLlBjiG5wTvxXW4gpYyZCOHsxQA7bXouvSefwoiOr7owgElWpw=="
+    "integrity": "sha256-s6pwvbOtsnhMGoebdBbUeTD8v1auGyBEkaF8/5Hx4xQ= sha384-4E8qWxcfF6C0vTW+l7A2TN0NquHAnJYlb4qgL5tFLM3Be00nR752uhoV5/WSNoFX sha512-wr56Jbg1X1DCsKLJi+FbGwUTzgctAqy6TpdHDreBbGkHv+5QjClxXrAqd74gi+w3owKz2Ue5m1hnPKer93OQ5A=="
   },
   "/product/black-steel-eagle.html": {
     "src": "/product/black-steel-eagle.html",
@@ -1129,7 +1129,7 @@
   },
   "project.html": {
     "src": "project.html",
-    "integrity": "sha256-YABUHrnV8IPACFK6CrJQ4kOlCQh9QAIPf61Q3S2jCew= sha384-py0bho+S2vvmXGq1DU+O75E6lUJu/ByNae7JkJsNz/IAhcooTaqAqeXRgrN1XzYW sha512-UZTB+eb4/GN3zh43nGD45tVBWhrpRgC0Kr0b//NoUGcalgmlM9Am3nq0BtATHTHlTTHGOb8Nc0OPc6lKgUOqDA=="
+    "integrity": "sha256-alhF1ahUldXoiR7o+tBwBbItBDrBUYWgcUAK7Aoub+Y= sha384-AGdjcwP1rMfwvEeliOfkfXD0xjxJ0nWgTRDBMbV+JuVPRNyKBFMr0UwhlaVEjEXV sha512-zO9C+GyfbW5zqm27TniKXzFLK44JUG0d0nSgpt4JWWTXTlOKtrcJVxd/G9ViITzn55NvVx3C3wSUcEc6OJwJfQ=="
   },
   "project.js": {
     "src": "global/assets/js/project.js?v=f26e71163d3aa0ed09bb",
