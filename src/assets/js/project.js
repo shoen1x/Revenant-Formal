@@ -50,7 +50,7 @@
     async function fetchDB() {
       if (db) return Promise.resolve(db);
       try {
-        const response = await fetch("/src/assets/js/databank.json");
+        const response = await fetch("https://shoenix-studios.web.app/databank.json");
         db = response.json();
         return await db;
       } catch (err) {

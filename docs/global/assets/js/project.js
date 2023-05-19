@@ -70,7 +70,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           case 2:
             _context.prev = 2;
             _context.next = 5;
-            return fetch("/src/assets/js/databank.json");
+            return fetch("https://shoenix-studios.web.app/databank.json");
           case 5:
             response = _context.sent;
             db = response.json();

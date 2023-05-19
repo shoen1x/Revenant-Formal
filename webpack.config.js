@@ -194,6 +194,14 @@ module.exports = {
             },
           exclude: /node_modules/,
         },
+        {
+          test: /\.json$/,
+          type: 'asset/resource',
+            generator: {
+              filename: '[name][ext]?v=[contenthash]'
+            },
+          exclude: /node_modules/,
+        },
       ],
     },
     optimization: {

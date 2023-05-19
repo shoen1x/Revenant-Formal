@@ -11,9 +11,15 @@
 		return acc;
 	}, {});
 
-	importAll(require.context('../../images/fulls/', true, /\.webp$/), require.context('../../images/3D/', true, /\.(glb|webp)$/), 
-	require.context('../../images/og-images/', true, /(og-image).*\.jpg$/), require.context('../../images/ico/', true, /\.*$/),
-	require.context('../../images/products/', true, /\.(svg|webp)$/),require.context('../../', true, /(sitemap_index.xml|robots.txt)$/));
+	importAll(
+		require.context('../../images/fulls/', true, /\.webp$/),
+		require.context('../../images/3D/', true, /\.(glb|webp)$/),
+		require.context('../../images/og-images/', true, /(og-image).*\.jpg$/),
+		require.context('../../images/ico/', true, /\.*$/),
+		require.context('../../images/products/', true, /\.(svg|webp)$/),
+		require.context('../../', true, /(sitemap_index.xml|robots.txt)$/),
+		require.context('../../assets/js/', true, /databank.json$/)
+	);
 
 	// Mobile ejah tene dlu
 	function isMobile() {
