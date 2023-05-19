@@ -107,6 +107,33 @@
                 "en": "NeoRonin Techwear Concept",
                 "ms": "Konsep pakaian teknologi 'NeoRonin'"
             }
+      },
+      {
+        "project_num_list": "15",
+        "project_tagged": "nr",
+        "language": 
+            {
+                "en": "Inspiration Series",
+                "ms": "Siri inspirasi"
+            }
+      },
+      {
+        "project_num_list": "6",
+        "project_tagged": "zm",
+        "language": 
+            {
+                "en": "Zulmat",
+                "ms": "Zulmat"
+            }
+      },
+      {
+        "project_num_list": "4",
+        "project_tagged": "kd",
+        "language": 
+            {
+                "en": "Kudrat",
+                "ms": "Kudrat"
+            }
       }
       ]
   }

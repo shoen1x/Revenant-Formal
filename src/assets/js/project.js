@@ -44,7 +44,7 @@
 
     const lang_injection = getCookie("firebase-language-override");
     const gal = document.querySelector('.gallery');
-    var carol_title = document.querySelector('#p-title');
+    const carol_title = document.querySelector('#p-title');
 
     let db;
     async function fetchDB() {
@@ -86,6 +86,7 @@
       pfigc.innerHTML = DOMPurify.sanitize(i + 1);
       document.getElementById('p-title').scrollIntoView();
     }
+    startcanvas();
   });
 
   const backtotop = document.createElement("a");
@@ -97,13 +98,13 @@
 
   $(".backtotop-button").on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({ behavior: "smooth", block: "center", inline: "center" }));
-    bttbtn.classList.remove('show');
-    removeAllChildNodes(gal)
-    carol_title.remove();
+      bttbtn.classList.remove('show');
+      removeAllChildNodes(gal);
+      carol_title.innerHTML = DOMPurify.sanitize("");
+      $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({ behavior: "smooth", block: "center", inline: "center" }));
   });
 
-  }
+  };
 
   // Remove Child and reset canvas
   function removeAllChildNodes(parent) {
@@ -118,80 +119,79 @@
     removeAllChildNodes(gal);
 
     canvasfpro(caroldata);
-    startcanvas();
+
     $('#app').removeClass("Hidden");
   });
 
-  //Image Grid
-  function startcanvas() {
-    const elApp = document.querySelector("#app");
+  function startcanvas(){
+      //Image Grid
+      const elApp = document.querySelector("#app");
 
-    const elImages = Array.from(document.querySelectorAll(".gallery-image"));
+      const elImages = Array.from(document.querySelectorAll(".gallery-image"));
 
-    const elDetail = document.querySelector(".detail");
+      const elDetail = document.querySelector(".detail");
 
-    function flipImages(firstEl, lastEl, change) {
-      const firstRect = firstEl.getBoundingClientRect();
+      function flipImages(firstEl, lastEl, change) {
+        const firstRect = firstEl.getBoundingClientRect();
 
-      const lastRect = lastEl.getBoundingClientRect();
+        const lastRect = lastEl.getBoundingClientRect();
 
-      const deltaX = firstRect.left - lastRect.left;
-      const deltaY = firstRect.top - lastRect.top;
-      const deltaW = firstRect.width / lastRect.width;
-      const deltaH = firstRect.height / lastRect.height;
+        const deltaX = firstRect.left - lastRect.left;
+        const deltaY = firstRect.top - lastRect.top;
+        const deltaW = firstRect.width / lastRect.width;
+        const deltaH = firstRect.height / lastRect.height;
 
-      change();
-      lastEl.parentElement.dataset.flipping = true;
+        change();
+        lastEl.parentElement.dataset.flipping = true;
 
-      const animation = lastEl.animate([
-        {
-          transform: `translateX(${deltaX}px) translateY(${deltaY}px) scaleX(${deltaW}) scaleY(${deltaH})`
-        },
-        {
-          transform: 'none'
-        }
-      ], {
-        duration: 600, // milliseconds
-        easing: 'cubic-bezier(.2, 0, .3, 1)'
-      });
-
-      animation.onfinish = () => {
-        delete lastEl.parentElement.dataset.flipping;
-      }
-
-    }
-
-    elImages.forEach(figure => {
-
-      figure.addEventListener("click", () => {
-        const elImage = figure.querySelector('img');
-
-        elDetail.innerHTML = DOMPurify.sanitize("");
-
-        const elClone = figure.cloneNode(true);
-        elDetail.appendChild(elClone);
-
-        const elCloneImage = elClone.querySelector('img');
-
-        flipImages(elImage, elCloneImage, () => {
-          elApp.dataset.state = "detail";
+        const animation = lastEl.animate([
+          {
+            transform: `translateX(${deltaX}px) translateY(${deltaY}px) scaleX(${deltaW}) scaleY(${deltaH})`
+          },
+          {
+            transform: 'none'
+          }
+        ], {
+          duration: 600, // milliseconds
+          easing: 'cubic-bezier(.2, 0, .3, 1)'
         });
 
-        function revert() {
-
-          flipImages(elCloneImage, elImage, () => {
-            elApp.dataset.state = "gallery";
-            elDetail.removeEventListener('click', revert);
-          });
-
+        animation.onfinish = () => {
+          delete lastEl.parentElement.dataset.flipping;
         }
 
-        elDetail.addEventListener('click', revert);
+      }
 
+      elImages.forEach(figure => {
+
+        figure.addEventListener("click", () => {
+          const elImage = figure.querySelector('img');
+
+          elDetail.innerHTML = DOMPurify.sanitize("");
+
+          const elClone = figure.cloneNode(true);
+          elDetail.appendChild(elClone);
+
+          const elCloneImage = elClone.querySelector('img');
+
+          flipImages(elImage, elCloneImage, () => {
+            elApp.dataset.state = "detail";
+          });
+
+          function revert() {
+
+            flipImages(elCloneImage, elImage, () => {
+              elApp.dataset.state = "gallery";
+              elDetail.removeEventListener('click', revert);
+            });
+
+          }
+
+          elDetail.addEventListener('click', revert);
+
+        });
       });
-    });
   };
-
 
   // Header news like hero
   let mainPosts = document.querySelectorAll(".main-post");

@@ -111,6 +111,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         pfigc.innerHTML = DOMPurify.sanitize(_i2 + 1);
         document.getElementById('p-title').scrollIntoView();
       }
+      startcanvas();
     });
     var backtotop = document.createElement("a");
     backtotop.className = "backtotop-button";
@@ -119,16 +120,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     bttbtn.classList.add('show');
     $(".backtotop-button").on('click', function (e) {
       e.preventDefault();
+      bttbtn.classList.remove('show');
+      removeAllChildNodes(gal);
+      carol_title.innerHTML = DOMPurify.sanitize("");
       $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({
         behavior: "smooth",
         block: "center",
         inline: "center"
       }));
-      bttbtn.classList.remove('show');
-      removeAllChildNodes(gal);
-      carol_title.remove();
     });
   }
+  ;
 
   // Remove Child and reset canvas
   function removeAllChildNodes(parent) {
@@ -142,12 +144,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     var caroldata = $(this).data("pcarou");
     removeAllChildNodes(gal);
     canvasfpro(caroldata);
-    startcanvas();
     $('#app').removeClass("Hidden");
   });
-
-  //Image Grid
   function startcanvas() {
+    //Image Grid
     var elApp = document.querySelector("#app");
     var elImages = Array.from(document.querySelectorAll(".gallery-image"));
     var elDetail = document.querySelector(".detail");
