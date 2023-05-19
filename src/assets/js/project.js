@@ -43,13 +43,38 @@
     }
 
     const lang_injection = getCookie("firebase-language-override");
+    const gal = document.querySelector('.gallery');
+    var carol_title = document.querySelector('#p-title');
+
+    let db;
+    async function fetchDB() {
+      if (db) return Promise.resolve(db);
+      try {
+        const response = await fetch("/src/assets/js/databank.json");
+        db = response.json();
+        return await db;
+      } catch (err) {
+        return console.log(err);
+      }
+    }
 
   // Draw new canvas and images
-  function canvasfpro(gic, gifn) {
+  function canvasfpro(caroldata) {
+
+    fetchDB().then(datajson => {
+      const gic = datajson.projects[caroldata - 1].project_num_list;
+      const gifn = datajson.projects[caroldata - 1].project_tagged;
+
+      if(lang_injection == 'en'){
+        carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.en);
+      }else if(lang_injection == 'ms'){
+        carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
+      }
+
     for (let i = 0; i < gic; i++) {
-      var pfigure = document.createElement("figure");
-      var pimg = document.createElement("img");
-      var pfigc = document.createElement("figcaption");
+      const pfigure = document.createElement("figure");
+      const pimg = document.createElement("img");
+      const pfigc = document.createElement("figcaption");
 
       document.querySelector('.gallery').appendChild(pfigure);
       pfigure.className = "gallery-image";
@@ -57,10 +82,27 @@
       pfigure.appendChild(pimg);
       pfigure.appendChild(pfigc);
 
-      pimg.src = net_path + "global/assets/images/" + gifn + (i + 1) + ".webp";
+      pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
       pfigc.innerHTML = DOMPurify.sanitize(i + 1);
       document.getElementById('p-title').scrollIntoView();
     }
+  });
+
+  const backtotop = document.createElement("a");
+  backtotop.className = "backtotop-button";
+  document.querySelector('.Main').appendChild(backtotop);
+  var bttbtn = document.querySelector('.backtotop-button');
+
+  bttbtn.classList.add('show');
+
+  $(".backtotop-button").on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({ behavior: "smooth", block: "center", inline: "center" }));
+    bttbtn.classList.remove('show');
+    removeAllChildNodes(gal)
+    carol_title.remove();
+  });
+
   }
 
   // Remove Child and reset canvas
@@ -73,110 +115,9 @@
   // Replace carousel to grid images
   $('.Card__link').on('click', function () {
     var caroldata = $(this).data("pcarou");
-    var carol_title = document.querySelector('#p-title');
-
-    const gal = document.querySelector('.gallery');
     removeAllChildNodes(gal);
 
-    switch (caroldata) {
-      case 1:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Johor Darul Ta'zim Concept Jersey");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Jersi Konsep Johor Darul Ta'zim");
-        }
-        canvasfpro(9, "st");
-        break;
-      case 2:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Istinggar");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Istinggar");
-        }
-        canvasfpro(7, "ic");
-        break;
-      case 3:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Aerophantom Earbud");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Fon Telinga Aerophantom");
-        }
-        canvasfpro(4, "ae");
-        break;
-      case 4:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Nordic Axe");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Kapak Nordic");
-        }
-        canvasfpro(6, "na");
-        break;
-      case 5:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Harimau Malaya Jersey Concept");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Jersi Konsep Harimau Malaya");
-        }
-        canvasfpro(7, "hm");
-        break;
-      case 6:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Kelantan Home Jersey Concept");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Jersi Konsep Kelantan - Kandang");
-        }
-        canvasfpro(9, "cs");
-        break;
-      case 7:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Kelantan Away Jersey Concept");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Jersi Konsep Kelantan - Tandang");
-        }
-        canvasfpro(9, "csa");
-        break;
-      case 8:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Twin Fangs Sword");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Pedang Taring Kembar");
-        }
-        canvasfpro(5, "rn");
-        break;
-      case 9:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Genesis Phantom skateboard concept");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Konsep Papan Luncur 'Genesis Phantom'");
-        }
-        canvasfpro(7, "nc");
-        break;
-      case 10:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Isometric Room");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Bilik Isometrik");
-        }
-        canvasfpro(3, "ri");
-        break;
-      case 11:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("Hausboom X Shoenix Studios");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Hausboom X Shoenix Studios");
-        }
-        canvasfpro(4, "th");
-        break;
-      case 12:
-        if(lang_injection == 'en'){
-          carol_title.innerHTML = DOMPurify.sanitize("NeoRonin Techwear Concept");
-        }else if(lang_injection == 'ms'){
-          carol_title.innerHTML = DOMPurify.sanitize("Konsep pakaian teknologi 'NeoRonin'");
-        }
-        canvasfpro(3, "nr");
-        break;
-    }
-
+    canvasfpro(caroldata);
     startcanvas();
     $('#app').removeClass("Hidden");
   });

@@ -1104,6 +1104,43 @@ p, ul, ol, dl, table {
   }
 }
 
+/* Back to top button */
+.backtotop-button {
+  display: inline-block;
+  background-color: var(--c-apricot);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+.backtotop-button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+.backtotop-button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+.backtotop-button:active {
+  background-color: #555;
+}
+.backtotop-button.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* Responsive Carousel */
 .Carousel {
