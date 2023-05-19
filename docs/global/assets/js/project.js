@@ -262,42 +262,42 @@ var __webpack_exports__ = {};
       currentMainPost.classList.remove("main-post--not-active");
     }
   }
-})(jQuery);
-var nextDot;
-var nextActive = function nextActive() {
-  var activeDot = document.querySelectorAll("[active]");
-  var nextDot = activeDot[0].nextElementSibling ? activeDot[0].nextElementSibling : document.getElementById("list").firstElementChild;
-  activeDot[0].removeAttribute("active");
-  nextDot.setAttribute("active", "true");
-  detectpagination();
-};
-var previousActive = function previousActive() {
-  var activeDot = document.querySelectorAll("[active]");
-  var previousDot = activeDot[0].previousElementSibling ? activeDot[0].previousElementSibling : document.getElementById("list").lastElementChild;
-  activeDot[0].removeAttribute("active");
-  previousDot.setAttribute("active", "true");
-  detectpagination();
-};
-var setActive = function setActive(el) {
-  var activeDot = document.querySelectorAll("[active]");
-  activeDot[0].removeAttribute("active");
-  var nextDot = el;
-  activeDot[0].removeAttribute("active");
-  nextDot.setAttribute("active", "true");
-  detectpagination();
-};
-function detectpagination() {
-  var page_dots = document.querySelectorAll('#list li');
-  var carol1 = document.querySelector('#carousel1');
-  var carol2 = document.querySelector('#carousel2');
-  if (page_dots[0].hasAttribute('active')) {
-    carol1.classList.remove('Hidden');
-    carol2.classList.add('Hidden');
-  } else if (page_dots[1].hasAttribute('active')) {
-    carol2.classList.remove('Hidden');
-    carol1.classList.add('Hidden');
+  $('.page-previous').on('click', function () {
+    var activeDot = document.querySelectorAll("[active]");
+    var nextDot = activeDot[0].nextElementSibling ? activeDot[0].nextElementSibling : document.getElementById("list").firstElementChild;
+    activeDot[0].removeAttribute("active");
+    nextDot.setAttribute("active", "true");
+    detectpagination();
+  });
+  $('.page-next').on('click', function () {
+    var activeDot = document.querySelectorAll("[active]");
+    var previousDot = activeDot[0].previousElementSibling ? activeDot[0].previousElementSibling : document.getElementById("list").lastElementChild;
+    activeDot[0].removeAttribute("active");
+    previousDot.setAttribute("active", "true");
+    detectpagination();
+  });
+  var listdots = document.querySelectorAll("#list-dots");
+  $(listdots).on('click', function () {
+    var activeDot = document.querySelectorAll("[active]");
+    activeDot[0].removeAttribute("active");
+    var nextDot = this;
+    activeDot[0].removeAttribute("active");
+    nextDot.setAttribute("active", "true");
+    detectpagination();
+  });
+  function detectpagination() {
+    var page_dots = document.querySelectorAll('#list li');
+    var carol1 = document.querySelector('#carousel1');
+    var carol2 = document.querySelector('#carousel2');
+    if (page_dots[0].hasAttribute('active')) {
+      carol1.classList.remove('Hidden');
+      carol2.classList.add('Hidden');
+    } else if (page_dots[1].hasAttribute('active')) {
+      carol2.classList.remove('Hidden');
+      carol1.classList.add('Hidden');
+    }
   }
-}
+})(jQuery);
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.

@@ -298,52 +298,52 @@
     }
   }
 
+  $('.page-previous').on('click', function() {
+    const activeDot = document.querySelectorAll("[active]");
+    let nextDot = activeDot[0].nextElementSibling
+      ? activeDot[0].nextElementSibling
+      : document.getElementById("list").firstElementChild;
+  
+    activeDot[0].removeAttribute("active");
+    nextDot.setAttribute("active", "true");
+    detectpagination();
+  });
+  
+  $('.page-next').on('click', function() {
+    const activeDot = document.querySelectorAll("[active]");
+    let previousDot = activeDot[0].previousElementSibling
+      ? activeDot[0].previousElementSibling
+      : document.getElementById("list").lastElementChild;
+  
+    activeDot[0].removeAttribute("active");
+    previousDot.setAttribute("active", "true");
+    detectpagination();
+  });
+
+  const listdots = document.querySelectorAll("#list-dots");
+  $(listdots).on('click', function(){
+    const activeDot = document.querySelectorAll("[active]");
+    activeDot[0].removeAttribute("active");
+  
+    const nextDot = this;
+    activeDot[0].removeAttribute("active");
+    nextDot.setAttribute("active", "true");
+    detectpagination();
+  });
+  
+  function detectpagination() {
+    const page_dots = document.querySelectorAll('#list li');
+    const carol1 = document.querySelector('#carousel1');
+    const carol2 = document.querySelector('#carousel2');
+  
+    if(page_dots[0].hasAttribute('active')){
+      carol1.classList.remove('Hidden');
+      carol2.classList.add('Hidden');
+    }else if(page_dots[1].hasAttribute('active')){
+      carol2.classList.remove('Hidden');
+      carol1.classList.add('Hidden');
+    }
+  }
+
 })(jQuery);
 
-let nextDot;
-
-const nextActive = () => {
-  const activeDot = document.querySelectorAll("[active]");
-  let nextDot = activeDot[0].nextElementSibling
-    ? activeDot[0].nextElementSibling
-    : document.getElementById("list").firstElementChild;
-
-  activeDot[0].removeAttribute("active");
-  nextDot.setAttribute("active", "true");
-  detectpagination();
-};
-
-const previousActive = () => {
-  const activeDot = document.querySelectorAll("[active]");
-  let previousDot = activeDot[0].previousElementSibling
-    ? activeDot[0].previousElementSibling
-    : document.getElementById("list").lastElementChild;
-
-  activeDot[0].removeAttribute("active");
-  previousDot.setAttribute("active", "true");
-  detectpagination();
-};
-
-const setActive = (el) => {
-  const activeDot = document.querySelectorAll("[active]");
-  activeDot[0].removeAttribute("active");
-
-  const nextDot = el;
-  activeDot[0].removeAttribute("active");
-  nextDot.setAttribute("active", "true");
-  detectpagination();
-};
-
-function detectpagination() {
-  const page_dots = document.querySelectorAll('#list li');
-  const carol1 = document.querySelector('#carousel1');
-  const carol2 = document.querySelector('#carousel2');
-
-  if(page_dots[0].hasAttribute('active')){
-    carol1.classList.remove('Hidden');
-    carol2.classList.add('Hidden');
-  }else if(page_dots[1].hasAttribute('active')){
-    carol2.classList.remove('Hidden');
-    carol1.classList.add('Hidden');
-  }
-}
