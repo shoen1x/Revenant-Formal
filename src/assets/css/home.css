@@ -2268,7 +2268,7 @@ body.is-touch .main {
 
 	.case__data {
 		padding: 0;
-	} 
+	}
 
 	.products__container {
 		grid-template-columns: 142px;
@@ -2522,10 +2522,10 @@ body.is-touch .main {
 
 #second {
 	background: linear-gradient(5deg, #0003 0%, #0000 33%),
-	linear-gradient(75deg, #0003 0%, #0000 66%),
-	linear-gradient(18deg, #0000004d 0%, #0000 33%),
-	linear-gradient(15deg, #0006 0%, #0000 66%),
-	linear-gradient(15deg, #00000080, #0000), url("../css/images/overlay2.webp"), url("../../images/shoenixsecond-1.webp");
+		linear-gradient(75deg, #0003 0%, #0000 66%),
+		linear-gradient(18deg, #0000004d 0%, #0000 33%),
+		linear-gradient(15deg, #0006 0%, #0000 66%),
+		linear-gradient(15deg, #00000080, #0000), url("../css/images/overlay2.webp"), url("../../images/shoenixsecond-1.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, fixed;
 	background-position: center center, center bottom;
@@ -2534,10 +2534,10 @@ body.is-touch .main {
 
 #second-1 {
 	background: linear-gradient(5deg, #0003 0%, #0000 33%),
-	linear-gradient(75deg, #0003 0%, #0000 66%),
-	linear-gradient(18deg, #0000004d 0%, #0000 33%),
-	linear-gradient(15deg, #0006 0%, #0000 66%),
-	linear-gradient(15deg, #00000080, #0000), url("../css/images/overlay2.webp"), url("../../images/shoenixsecond-2.webp");
+		linear-gradient(75deg, #0003 0%, #0000 66%),
+		linear-gradient(18deg, #0000004d 0%, #0000 33%),
+		linear-gradient(15deg, #0006 0%, #0000 66%),
+		linear-gradient(15deg, #00000080, #0000), url("../css/images/overlay2.webp"), url("../../images/shoenixsecond-2.webp");
 	background-size: 1920px 1080px, cover;
 	background-attachment: fixed, fixed;
 	background-position: center center, center bottom;
@@ -2783,10 +2783,10 @@ body.is-touch .main {
 	width: 100vw;
 	height: 60vh;
 	background: linear-gradient(5deg, #0003 0%, #0000 33%),
-	linear-gradient(75deg, #0003 0%, #0000 66%),
-	linear-gradient(18deg, #0000004d 0%, #0000 33%),
-	linear-gradient(15deg, #0006 0%, #0000 66%),
-	linear-gradient(15deg, #00000080, #0000), url("../css/images/overlay2.webp") fixed center repeat, url("../../images/thumbs/prd_thumb_home.webp") center no-repeat fixed;
+		linear-gradient(75deg, #0003 0%, #0000 66%),
+		linear-gradient(18deg, #0000004d 0%, #0000 33%),
+		linear-gradient(15deg, #0006 0%, #0000 66%),
+		linear-gradient(15deg, #00000080, #0000), url("../css/images/overlay2.webp") fixed center repeat, url("../../images/thumbs/prd_thumb_home.webp") center no-repeat fixed;
 }
 
 .multi-product-flex {
@@ -2812,7 +2812,7 @@ body.is-touch .main {
 	text-transform: uppercase;
 }
 
-.text-light{
+.text-light {
 	line-height: 1.25;
 	margin: 3rem;
 	text-align: center;
@@ -2849,7 +2849,7 @@ body.is-touch .main {
 		font-size: 3.5rem;
 	}
 
-	.text-light{
+	.text-light {
 		width: auto;
 	}
 
@@ -3339,39 +3339,6 @@ model-viewer {
 	}
 }
 
-/* Skeleton for Loading */
-.skeleton {
-	width: 280px;
-	height: var(--card-height);
-}
-
-.skeleton:empty::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	border-radius: 6px;
-	box-shadow: 0 10px 45px rgba(0, 0, 0, 0.1);
-	background-image: linear-gradient(90deg, rgba(211, 211, 211, 0) 0, rgba(211, 211, 211, 0.8) 50%, rgba(211, 211, 211, 0) 100%), var(--title-skeleton), var(--desc-line-skeleton), var(--desc-line-skeleton), var(--avatar-skeleton), var(--footer-skeleton), var(--card-skeleton);
-	background-size: var(--blur-size), var(--title-width) var(--title-height), var(--desc-line-1-width) var(--desc-line-height), var(--desc-line-2-width) var(--desc-line-height), var(--avatar-size) var(--avatar-size), 100% var(--footer-height), 100% 100%;
-	background-position: -150% 0, var(--title-position), var(--desc-line-1-position), var(--desc-line-2-position), var(--avatar-position), var(--footer-position), 0 0;
-	background-repeat: no-repeat;
-	-webkit-animation: loading 1.5s infinite;
-	animation: loading 1.5s infinite;
-}
-
-@-webkit-keyframes loading {
-	to {
-		background-position: 350% 0, var(--title-position), var(--desc-line-1-position), var(--desc-line-2-position), var(--avatar-position), var(--footer-position), 0 0;
-	}
-}
-
-@keyframes loading {
-	to {
-		background-position: 350% 0, var(--title-position), var(--desc-line-1-position), var(--desc-line-2-position), var(--avatar-position), var(--footer-position), 0 0;
-	}
-}
-
 /* Logo Client Sliders */
 
 .clientslider {
@@ -3385,7 +3352,7 @@ model-viewer {
 	padding-bottom: 40px;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) {
 	.clientslider {
 		width: 100%;
 		margin: 0 auto;
@@ -3410,7 +3377,7 @@ model-viewer {
 	padding-bottom: 40px;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) {
 	.adsslider {
 		width: 100%;
 		margin: 0 auto;
@@ -3534,45 +3501,13 @@ model-viewer {
 	display: none;
 }
 
-/* Skeletons elements */
-.skeleton {
-	background: linear-gradient(
-	  90deg,
-	  hsl(210, 15%, 88%),
-	  hsl(210, 15%, 95%),
-	  hsl(210, 15%, 88%)
-	);
-	background-size: 200%;
-	animation: loader 1s infinite reverse;
-  }
-  h2.skeleton {
-	width: 50%;
-	height: 1em;
-  }
-  small.skeleton {
-	height: 1rem;
-	width: 4rem;
-  }
-  p.skeleton {
-	height: 3em;
-  }
-  
-  /* skeleton animation */
-  @keyframes loader {
-	from {
-	  background-position: -100% 0;
-	}
-	to {
-	  background-position: 100% 0;
-	}
-  }
-
-  /* Language Changer Dropdown */
-  .select-language {
+/* Language Changer Dropdown */
+.select-language {
 	position: relative;
 	min-width: 200px;
-  }
-  .select-language svg {
+}
+
+.select-language svg {
 	position: absolute;
 	right: 12px;
 	top: calc(50% - 3px);
@@ -3584,8 +3519,9 @@ model-viewer {
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	pointer-events: none;
-  }
-  .select-language select {
+}
+
+.select-language select {
 	-webkit-appearance: none;
 	appearance: none;
 	padding: 7px 40px 7px 12px;
@@ -3598,29 +3534,34 @@ model-viewer {
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
 	transition: all 150ms ease;
-  }
-  .select-language select:required:invalid {
+}
+
+.select-language select:required:invalid {
 	color: #5a667f;
-  }
-  .select-language select option {
+}
+
+.select-language select option {
 	font-size: var(--small-font-size);
-  }
-  .select-language select option[value=""][disabled] {
+}
+
+.select-language select option[value=""][disabled] {
 	display: none;
-  }
-  .select-language select:focus {
+}
+
+.select-language select:focus {
 	outline: none;
 	border-color: #07f;
-	box-shadow: 0 0 0 2px rgba(0,119,255,0.2);
-  }
-  .select-language select:hover + svg {
+	box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.select-language select:hover+svg {
 	stroke: #07f;
-  }
-  .sprites-language {
+}
+
+.sprites-language {
 	position: absolute;
 	width: 0;
 	height: 0;
 	pointer-events: none;
 	user-select: none;
-  }
-  
+}

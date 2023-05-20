@@ -21,14 +21,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   var videoSlider = $('.owl-carousel');
   videoSlider.owlCarousel({
     loop: true,
-    video: true,
     merge: true,
-    margin: 10,
+    video: true,
     lazyLoad: true,
+    margin: 10,
     nav: true,
-    dots: true,
+    dots: false,
     items: 1,
-    center: true
+    autoHeight: true
   });
 
   // -----------------------------------------
@@ -55,7 +55,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   var db;
   function fetchDB() {
     return _fetchDB.apply(this, arguments);
-  } // Draw new canvas and images
+  } // Image importer
   function _fetchDB() {
     _fetchDB = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
       var response;
@@ -90,6 +90,33 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }));
     return _fetchDB.apply(this, arguments);
   }
+  function loadImage(_x, _x2) {
+    return _loadImage.apply(this, arguments);
+  } // Draw new canvas and images
+  function _loadImage() {
+    _loadImage = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(imageUrl, imageAlt) {
+      var img, imageLoadPromise;
+      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+        while (1) switch (_context2.prev = _context2.next) {
+          case 0:
+            imageLoadPromise = new Promise(function (resolve) {
+              img = new Image();
+              img.onload = resolve;
+              img.src = imageUrl;
+              img.alt = imageAlt;
+            });
+            _context2.next = 3;
+            return imageLoadPromise;
+          case 3:
+            return _context2.abrupt("return", img);
+          case 4:
+          case "end":
+            return _context2.stop();
+        }
+      }, _callee2);
+    }));
+    return _loadImage.apply(this, arguments);
+  }
   function canvasfpro(caroldata) {
     fetchDB().then(function (datajson) {
       var gic = datajson.projects[caroldata - 1].project_num_list;
@@ -99,18 +126,39 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       } else if (lang_injection == 'ms') {
         carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
       }
-      for (var _i2 = 0; _i2 < gic; _i2++) {
+      var _loop = function _loop(_i2) {
         var pfigure = document.createElement("figure");
-        var pimg = document.createElement("img");
+        // const pimg = document.createElement("img");
         var pfigc = document.createElement("figcaption");
         document.querySelector('.gallery').appendChild(pfigure);
-        pfigure.className = "gallery-image";
-        pfigure.appendChild(pimg);
-        pfigure.appendChild(pfigc);
-        pimg.src = net_path + "/global/assets/images/" + gifn + (_i2 + 1) + ".webp";
+        pfigure.className = "gallery-image skeleton";
         pfigc.innerHTML = DOMPurify.sanitize(_i2 + 1);
-        document.getElementById('p-title').scrollIntoView();
+        loadImage(net_path + "/global/assets/images/" + gifn + (_i2 + 1) + ".webp", datajson.projects[caroldata - 1].project_tagged + (_i2 + 1)).then(function (images) {
+          pfigure.appendChild(images);
+          pfigure.appendChild(pfigc);
+          pfigure.classList.remove("skeleton");
+          if (_i2 == gic - 1) {
+            document.getElementById('p-title').scrollIntoView();
+          }
+        });
+        // pimg.onload = function () {
+        //   pimg.setAttribute('src', this.src);
+        //   pimg.setAttribute('alt', this.alt);
+        //   pimg.setAttribute('width', this.width);
+        //   pimg.setAttribute('height', this.height);
+        //   pfigure.classList.remove("skeleton");
+        //   pfigure.appendChild(pfigc);
+        //   pfigc.innerHTML = DOMPurify.sanitize(i + 1);
+        // };
+        // pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
+        // pimg.alt = datajson.projects[caroldata - 1].project_tagged + (i + 1);
+
+        // pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
+      };
+      for (var _i2 = 0; _i2 < gic; _i2++) {
+        _loop(_i2);
       }
+      ;
       startcanvas();
     });
     var backtotop = document.createElement("a");

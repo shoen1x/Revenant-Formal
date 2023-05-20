@@ -13,14 +13,14 @@
     var videoSlider = $('.owl-carousel');
     videoSlider.owlCarousel({
       loop: true,
-      video:true,
       merge:true,
+      video:true,
+      lazyLoad:true,
       margin: 10,
-      lazyLoad: true,
       nav: true,
-      dots: true,
+      dots: false,
       items: 1,
-      center:true,  
+      autoHeight:true
     });
 
   // -----------------------------------------
@@ -58,6 +58,20 @@
       }
     }
 
+    // Image importer
+    async function loadImage(imageUrl, imageAlt) {
+      let img;
+      const imageLoadPromise = new Promise(resolve => {
+          img = new Image();
+          img.onload = resolve;
+          img.src = imageUrl;
+          img.alt = imageAlt;
+      });
+  
+      await imageLoadPromise;
+      return img;
+  } 
+
   // Draw new canvas and images
   function canvasfpro(caroldata) {
 
@@ -71,21 +85,38 @@
         carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
       }
 
-    for (let i = 0; i < gic; i++) {
-      const pfigure = document.createElement("figure");
-      const pimg = document.createElement("img");
-      const pfigc = document.createElement("figcaption");
+        for (let i = 0; i < gic; i++) {
+          const pfigure = document.createElement("figure");
+          // const pimg = document.createElement("img");
+          const pfigc = document.createElement("figcaption");
+    
+          document.querySelector('.gallery').appendChild(pfigure);
+          pfigure.className = "gallery-image skeleton";
+          pfigc.innerHTML = DOMPurify.sanitize(i + 1)
+    
+          loadImage(net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp", datajson.projects[caroldata - 1].project_tagged + (i + 1)).then(images => {
+            pfigure.appendChild(images);
+            pfigure.appendChild(pfigc);
+            pfigure.classList.remove("skeleton");
+              if(i == (gic - 1)){
+                document.getElementById('p-title').scrollIntoView(); 
+              }
+          })
+          // pimg.onload = function () {
+          //   pimg.setAttribute('src', this.src);
+          //   pimg.setAttribute('alt', this.alt);
+          //   pimg.setAttribute('width', this.width);
+          //   pimg.setAttribute('height', this.height);
+          //   pfigure.classList.remove("skeleton");
+          //   pfigure.appendChild(pfigc);
+          //   pfigc.innerHTML = DOMPurify.sanitize(i + 1);
+          // };
+          // pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
+          // pimg.alt = datajson.projects[caroldata - 1].project_tagged + (i + 1);
 
-      document.querySelector('.gallery').appendChild(pfigure);
-      pfigure.className = "gallery-image";
+          // pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
+        };
 
-      pfigure.appendChild(pimg);
-      pfigure.appendChild(pfigc);
-
-      pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
-      pfigc.innerHTML = DOMPurify.sanitize(i + 1);
-      document.getElementById('p-title').scrollIntoView();
-    }
     startcanvas();
   });
 
