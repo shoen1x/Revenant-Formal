@@ -2305,7 +2305,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   slideShow(slike);
 
   // putar2
-  $(document).ready(function () {
+  $(function () {
     $('.client-slider').slick({
       slidesToShow: 6,
       slidesToScroll: 1,

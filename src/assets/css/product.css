@@ -149,6 +149,139 @@ table {
 	margin-bottom: 1em;
 }
 
+section, footer {
+	background-color: var(--body-color);
+}
+
+body:before {
+	animation: splash-logo-show 1.5s 1 0.25s ease forwards, splash-logo-hide 0.25s ease-in-out forwards !important;
+	transform-origin: 50% 50%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-transform: none !important;
+	color: inherit;
+	content: url('../../images/ico/shoenix.svg');
+	color: #ffffff;
+	cursor: default;
+	display: block;
+	font-size: 4em;
+	height: 2em;
+	left: 50%;
+	line-height: 2em;
+	margin: -1em 0 0 -1em;
+	opacity: 0;
+	position: fixed;
+	text-align: center;
+	top: 50%;
+	width: 2em;
+	z-index: -1;
+}
+
+body:after {
+	animation: overlay-hide 1.5s ease-in forwards !important;
+	background: var(--body-color);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
+	-moz-animation: none !important;
+	-webkit-animation: none !important;
+	-ms-animation: none !important;
+	animation: none !important;
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	-ms-transition: none !important;
+	transition: none !important;
+}
+
+body.is-preload:before {
+	animation: splash-logo-show 1.5s 1 0.25s ease forwards, glow-pulse 2s ease-in-out infinite !important;
+	z-index: 100002;
+}
+
+body.is-preload:after {
+	-moz-animation: none !important;
+	-webkit-animation: none !important;
+	-ms-animation: none !important;
+	animation: none !important;
+	opacity: 0;
+	z-index: 100000;
+}
+
+@keyframes glow-pulse {
+	0% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0.25;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes splash-logo-show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes splash-logo-hide {
+	0% {
+		transform: scale(1);
+		color: #e5e6e7;
+		z-index: 100001;
+	}
+
+	99% {
+		transform: scale(0.5);
+		color: #e5e6e7;
+		z-index: 100001;
+	}
+
+	100% {
+		transform: scale(0.5);
+		color: #e5e6e7;
+		z-index: -1;
+	}
+}
+
+@keyframes overlay-hide {
+	0% {
+		opacity: 1;
+		z-index: 100000;
+	}
+
+	15% {
+		opacity: 1;
+		z-index: 100000;
+	}
+
+	99% {
+		opacity: 0;
+		z-index: 100000;
+	}
+
+	100% {
+		opacity: 0;
+		z-index: -1;
+	}
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
 	padding: 4rem 0 2rem;

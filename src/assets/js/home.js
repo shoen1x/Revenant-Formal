@@ -319,7 +319,7 @@
 	slideShow(slike);
 
 	// putar2
-	$(document).ready(function () {
+	$(function () {
 		$('.client-slider').slick({
 			slidesToShow: 6,
 			slidesToScroll: 1,
@@ -350,7 +350,7 @@
 			dots: false,
 			pauseOnHover: false,
 			centerMode: true,
-		  });
+		});
 	});
 
 	// Ambik sekut ikut 'home'

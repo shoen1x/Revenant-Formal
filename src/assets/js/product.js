@@ -4,6 +4,13 @@
 
 (function ($) {
 
+  	// animasi putar2
+	$window.on('load', function () {
+		setTimeout(function () {
+			$body.removeClass('is-preload');
+		}, 100);
+	});
+
   // Ambik sekut ikut 'home'
   function getCookie(cname) {
     let name = cname + "=";

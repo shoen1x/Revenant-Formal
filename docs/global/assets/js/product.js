@@ -11,6 +11,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //  under the CCA 3.0 License | Credit to HTML5 UP for template
 
 (function ($) {
+  // animasi putar2
+  $window.on('load', function () {
+    setTimeout(function () {
+      $body.removeClass('is-preload');
+    }, 100);
+  });
+
   // Ambik sekut ikut 'home'
   function getCookie(cname) {
     var name = cname + "=";
