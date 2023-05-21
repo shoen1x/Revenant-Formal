@@ -11,6 +11,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //  under the CCA 3.0 License | Credit to HTML5 UP for template
 
 (function ($) {
+  var $window = $(window),
+    $body = $('body'),
+    $header = $('#header'),
+    $all = $body.add($header);
+
   // animasi putar2
   $window.on('load', function () {
     setTimeout(function () {

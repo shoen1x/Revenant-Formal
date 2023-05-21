@@ -383,7 +383,7 @@ body.is-preload:after {
 	-webkit-animation: none !important;
 	-ms-animation: none !important;
 	animation: none !important;
-	opacity: 0;
+	opacity: 1;
 	z-index: 100000;
 }
 
@@ -3637,7 +3637,6 @@ model-viewer {
 /* Language Changer Dropdown */
 .select-language {
 	position: relative;
-	min-width: 200px;
 }
 
 .select-language svg {

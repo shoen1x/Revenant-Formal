@@ -4,12 +4,17 @@
 
 (function ($) {
 
-  	// animasi putar2
-	$window.on('load', function () {
-		setTimeout(function () {
-			$body.removeClass('is-preload');
-		}, 100);
-	});
+  var $window = $(window),
+  $body = $('body'),
+  $header = $('#header'),
+  $all = $body.add($header);
+
+  // animasi putar2
+  $window .on('load', function () {
+    setTimeout(function () {
+      $body.removeClass('is-preload');
+    }, 100);
+  });
 
   // Ambik sekut ikut 'home'
   function getCookie(cname) {

@@ -214,7 +214,7 @@ body.is-preload:after {
 	-webkit-animation: none !important;
 	-ms-animation: none !important;
 	animation: none !important;
-	opacity: 0;
+	opacity: 1;
 	z-index: 100000;
 }
 
@@ -1688,6 +1688,7 @@ p.skeleton {
 	font-family: var(--body-font);
 	font-size: var(--normal-font-size);
 	transition: all 150ms ease;
+	color: inherit;
 }
 
 .select-language select:required:invalid {
@@ -1760,6 +1761,7 @@ p.skeleton {
 /* product section */
 .main-page-products {
 	padding: 3.2rem 0;
+	background-color: var(--body-color);
 }
 
 .main-page-products .text-light {
@@ -1859,6 +1861,7 @@ p.skeleton {
 /* product collection */
 .main-page-product-collection {
 	padding: 3.2rem 0;
+	background-color: var(--body-color);
 }
 
 .main-page-product-collection-wrapper {

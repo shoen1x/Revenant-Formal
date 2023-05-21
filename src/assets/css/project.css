@@ -233,7 +233,7 @@ body.is-preload:after {
 	-webkit-animation: none !important;
 	-ms-animation: none !important;
 	animation: none !important;
-	opacity: 0;
+	opacity: 1;
 	z-index: 100000;
 }
 
@@ -1750,6 +1750,7 @@ body.is-preload:after {
   max-width: calc(90rem + 10vw);
   padding: 1.5rem 5vw;
   width: 100%;
+  background-color: var(--body-color);
 }
 
 .Main>*:first-child {
@@ -2212,6 +2213,7 @@ body.is-preload:after {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   transition: all 150ms ease;
+  color: inherit;
 }
 
 .select-language select:required:invalid {

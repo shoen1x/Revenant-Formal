@@ -214,7 +214,7 @@ module.exports = {
       chunkFilename: "global/assets/css/[id].css?v=[contenthash]",
     }),
 
-    new SubresourceIntegrityPlugin({enabled: true}),
+    new SubresourceIntegrityPlugin(),
     new HtmlWebpackInjector(),
     new WebpackAssetsManifest({ integrity: true }),
     new CleanWebpackPlugin(),
