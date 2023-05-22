@@ -17,7 +17,7 @@
 		require.context('../../images/og-images/', true, /(og-image).*\.jpg$/),
 		require.context('../../images/ico/', true, /\.*$/),
 		require.context('../../images/products/', true, /\.(svg|webp)$/),
-		require.context('../../', true, /(sitemap_index.xml|robots.txt)$/),
+		require.context('../../', true, /(sitemap.xml|robots.txt)$/),
 		require.context('../../assets/js/', true, /databank.json$/)
 	);
 

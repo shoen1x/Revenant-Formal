@@ -362,12 +362,12 @@ webpackContext.id = 9570;
 
 /***/ }),
 
-/***/ 1374:
+/***/ 8286:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
 	"./robots.txt": 8497,
-	"./sitemap_index.xml": 5599
+	"./sitemap.xml": 2753
 };
 
 
@@ -388,7 +388,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 1374;
+webpackContext.id = 8286;
 
 /***/ }),
 
@@ -1944,11 +1944,11 @@ module.exports = __webpack_require__.p + "robots.txt?v=47a13b8955fb1e48e9cc";
 
 /***/ }),
 
-/***/ 5599:
+/***/ 2753:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "sitemap_index.xml?v=65c3d4744c16608223e0";
+module.exports = __webpack_require__.p + "sitemap.xml?v=65c3d4744c16608223e0";
 
 /***/ })
 
@@ -2008,7 +2008,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return acc;
     }, {});
   };
-  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(1374), __webpack_require__(6810));
+  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(8286), __webpack_require__(6810));
 
   // Mobile ejah tene dlu
   function isMobile() {

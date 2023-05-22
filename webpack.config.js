@@ -171,14 +171,6 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
-          test: /\.(webm)$/,
-          type: 'asset/resource',
-          generator: {
-            filename: 'global/assets/videos/[name][ext]?v=[contenthash]'
-          },
-          exclude: /node_modules/,
-        },
-        {
           test: /(og-image).*\.jpg$/,
           type: 'asset/resource',
           generator: {
@@ -187,7 +179,7 @@ module.exports = {
           exclude: /node_modules/,
         },
         {
-          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt|sitemap_index.xml|robots.txt)$/,
+          test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt|sitemap.xml|robots.txt)$/,
           type: 'asset/resource',
             generator: {
               filename: '[name][ext]?v=[contenthash]'

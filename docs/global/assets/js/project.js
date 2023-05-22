@@ -150,20 +150,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           pfigure.classList.remove("skeleton");
           if (_i2 == gic - 1) {
             document.getElementById('p-title').scrollIntoView();
+            document.querySelector('.project-header').classList.remove("Hidden");
           }
         });
-        // pimg.onload = function () {
-        //   pimg.setAttribute('src', this.src);
-        //   pimg.setAttribute('alt', this.alt);
-        //   pimg.setAttribute('width', this.width);
-        //   pimg.setAttribute('height', this.height);
-        //   pfigure.classList.remove("skeleton");
-        //   pfigure.appendChild(pfigc);
-        //   pfigc.innerHTML = DOMPurify.sanitize(i + 1);
-        // };
-        // pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
-        // pimg.alt = datajson.projects[caroldata - 1].project_tagged + (i + 1);
-
         // pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
       };
       for (var _i2 = 0; _i2 < gic; _i2++) {
@@ -182,6 +171,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       bttbtn.classList.remove('show');
       removeAllChildNodes(gal);
       carol_title.innerHTML = DOMPurify.sanitize("");
+      document.querySelector('.project-header').classList.add("Hidden");
       $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -323,6 +313,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       carol2.classList.remove('Hidden');
       carol1.classList.add('Hidden');
     }
+    $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center"
+    }));
   }
 })(jQuery);
 })();
