@@ -168,137 +168,140 @@ table {
   margin-bottom: 1em;
 }
 
-section, footer {
-	background-color: var(--body-color);
+section,
+footer {
+  background-color: var(--body-color);
 }
 
 body:before {
-	animation: splash-logo-show 1.5s 1 0.25s ease forwards, splash-logo-hide 0.25s ease-in-out forwards !important;
-	transform-origin: 50% 50%;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	text-transform: none !important;
-	color: inherit;
-	content: url('../../images/ico/shoenix.svg');
-	color: #ffffff;
-	cursor: default;
-	display: block;
-	font-size: 4em;
-	height: 2em;
-	left: 50%;
-	line-height: 2em;
-	margin: -1em 0 0 -1em;
-	opacity: 0;
-	position: fixed;
-	text-align: center;
-	top: 50%;
-	width: 2em;
-	z-index: -1;
+  animation: splash-logo-show 1.5s 1 0.25s ease forwards, splash-logo-hide 0.25s ease-in-out forwards !important;
+  transform-origin: 50% 50%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none !important;
+  color: inherit;
+  content: url('../../images/ico/shoenix.svg');
+  color: #ffffff;
+  cursor: default;
+  display: block;
+  font-size: 4em;
+  height: 2em;
+  left: 50%;
+  line-height: 2em;
+  margin: -1em 0 0 -1em;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  width: 2em;
+  z-index: -1;
 }
 
 body:after {
-	animation: overlay-hide 1.5s ease-in forwards !important;
-	background: var(--body-color);
-	content: '';
-	display: block;
-	height: 100%;
-	left: 0;
-	opacity: 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: -1;
+  animation: overlay-hide 1.5s ease-in forwards !important;
+  background: var(--body-color);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 body.is-preload *,
 body.is-preload *:before,
 body.is-preload *:after {
-	-moz-animation: none !important;
-	-webkit-animation: none !important;
-	-ms-animation: none !important;
-	animation: none !important;
-	-moz-transition: none !important;
-	-webkit-transition: none !important;
-	-ms-transition: none !important;
-	transition: none !important;
+  -moz-animation: none !important;
+  -webkit-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
 }
 
 body.is-preload:before {
-	animation: splash-logo-show 1.5s 1 0.25s ease forwards, glow-pulse 2s ease-in-out infinite !important;
-	z-index: 100002;
+  animation: splash-logo-show 1.5s 1 0.25s ease forwards, glow-pulse 2s ease-in-out infinite !important;
+  z-index: 100002;
 }
 
 body.is-preload:after {
-	-moz-animation: none !important;
-	-webkit-animation: none !important;
-	-ms-animation: none !important;
-	animation: none !important;
-	opacity: 1;
-	z-index: 100000;
+  -moz-animation: none !important;
+  -webkit-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+  opacity: 1;
+  z-index: 100000;
 }
 
 @keyframes glow-pulse {
-	0% {
-		opacity: 1;
-	}
-	70% {
-		opacity: 0.25;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes splash-logo-show {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes splash-logo-hide {
-	0% {
-		transform: scale(1);
-		color: #e5e6e7;
-		z-index: 100001;
-	}
+  0% {
+    transform: scale(1);
+    color: #e5e6e7;
+    z-index: 100001;
+  }
 
-	99% {
-		transform: scale(0.5);
-		color: #e5e6e7;
-		z-index: 100001;
-	}
+  99% {
+    transform: scale(0.5);
+    color: #e5e6e7;
+    z-index: 100001;
+  }
 
-	100% {
-		transform: scale(0.5);
-		color: #e5e6e7;
-		z-index: -1;
-	}
+  100% {
+    transform: scale(0.5);
+    color: #e5e6e7;
+    z-index: -1;
+  }
 }
 
 @keyframes overlay-hide {
-	0% {
-		opacity: 1;
-		z-index: 100000;
-	}
+  0% {
+    opacity: 1;
+    z-index: 100000;
+  }
 
-	15% {
-		opacity: 1;
-		z-index: 100000;
-	}
+  15% {
+    opacity: 1;
+    z-index: 100000;
+  }
 
-	99% {
-		opacity: 0;
-		z-index: 100000;
-	}
+  99% {
+    opacity: 0;
+    z-index: 100000;
+  }
 
-	100% {
-		opacity: 0;
-		z-index: -1;
-	}
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -1305,6 +1308,47 @@ body.is-preload:after {
   grid-gap: 8px;
 }
 
+
+.project-load {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 8px;
+}
+
+.project-bar-progress {
+  background: transparent;
+  width: 100%;
+  height: 8px;
+  border: none;
+  display: flex;
+}
+
+/* necessary to style the progress bar background */
+::-webkit-progress-bar {
+  background-color: white;
+}
+
+.project-bar-progress::-webkit-progress-value {
+  transition: width 1s;
+  background-color: red;
+}
+
+.project-bar-progress::-moz-progress-bar {
+  transition: padding-bottom 1s;
+  padding-left: 60px;
+  padding-bottom: var(--value);
+  background-color: red;
+  height: 0;
+  transform-origin: 0 0;
+  transform: rotate(-90deg) translateX(-8px);
+}
+
+.project-bar-progress::-ms-fill {
+  background-color: red;
+  border: 0;
+}
+
 @media screen and (max-width:1024px) {
   .Carousel {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1377,7 +1421,7 @@ body.is-preload:after {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 2rem 0;
 }
 
 .pagewrapper .pagination {
@@ -1952,19 +1996,20 @@ body.is-preload:after {
 
 .project-header h1 {
   color: #fff;
-  letter-spacing: 2px;
   font-size: var(--mb-1-5);
-  text-align: start;
+  text-align: end;
   background-color: var(--c-apricot);
   padding: 1rem;
   border-radius: 12px 0 0 12px;
   width: 100%;
+  word-wrap: normal;
 }
 
 @media screen and (max-width: 480px) {
   .project-display {
     display: block;
   }
+
   .project-header {
     top: 50px;
     width: 100%;
@@ -1972,6 +2017,7 @@ body.is-preload:after {
     background-color: var(--body-color);
     border-radius: 0;
   }
+
   .project-header #p-title {
     background-color: var(--body-color);
     border-radius: 0;

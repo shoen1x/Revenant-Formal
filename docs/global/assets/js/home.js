@@ -2327,13 +2327,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }]
     });
     $('.ads-slider').slick({
+      accessibility: false,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 12000,
+      autoplaySpeed: 8000,
       arrows: false,
       dots: false,
-      pauseOnHover: false,
+      pauseOnHover: true,
+      centerPadding: "8px",
       centerMode: true
     });
   });

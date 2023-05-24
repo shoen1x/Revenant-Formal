@@ -2749,7 +2749,7 @@ body.is-touch .main {
 	max-width: 1920px;
 	gap: 2em;
 	justify-content: space-between;
-	margin: 5em 2em;
+	margin: 2em 2em;
 	white-space: normal;
 }
 
@@ -3482,7 +3482,11 @@ model-viewer {
 
 .client-slider {
 	padding-top: 40px;
-	padding-bottom: 40px;
+	/* padding-bottom: 40px; */
+}
+
+.client-slide-layer {
+	margin: 0 15px;
 }
 
 @media screen and (max-width:480px) {
@@ -3502,12 +3506,16 @@ model-viewer {
 .adsslider {
 	width: 100%;
 	margin: 0 auto;
-	padding: 10px;
+	padding: 5px;
 }
 
 .ads-slider {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.ads-slide-layer {
+	margin: 0px 6px;
 }
 
 @media screen and (max-width:480px) {
@@ -3523,9 +3531,9 @@ model-viewer {
 	}
 }
 
-.slick-slide {
-	margin: 0px 20px;
-}
+/* .slick-slide {
+	margin: 0px 6px;
+} */
 
 .slick-slide img {
 	width: 100%;

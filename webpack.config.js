@@ -119,6 +119,7 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               cacheDirectory: true,
+              cacheCompression: true,
               presets: ['@babel/preset-env']
             }
           },
@@ -133,7 +134,7 @@ module.exports = {
                 publicPath: cdn_url,
               },
             },
-            { loader: "css-loader", options: { sourceMap: true } },
+            { loader: "css-loader", options: { sourceMap: true, esModule: true } },
             { loader: "postcss-loader", options: { sourceMap: true } },
           ],
           exclude: /node_modules/,

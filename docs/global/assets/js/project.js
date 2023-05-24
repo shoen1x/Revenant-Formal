@@ -63,10 +63,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   var lang_injection = getCookie("firebase-language-override");
   var gal = document.querySelector('.gallery');
   var carol_title = document.querySelector('#p-title');
+  var progBar = document.querySelector(".project-bar-progress");
   var db;
   function fetchDB() {
     return _fetchDB.apply(this, arguments);
-  } // Image importer
+  }
   function _fetchDB() {
     _fetchDB = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
       var response;
@@ -101,33 +102,45 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }));
     return _fetchDB.apply(this, arguments);
   }
-  function loadImage(_x, _x2) {
-    return _loadImage.apply(this, arguments);
-  } // Draw new canvas and images
-  function _loadImage() {
-    _loadImage = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(imageUrl, imageAlt) {
-      var img, imageLoadPromise;
-      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-        while (1) switch (_context2.prev = _context2.next) {
-          case 0:
-            imageLoadPromise = new Promise(function (resolve) {
-              img = new Image();
-              img.onload = resolve;
-              img.src = imageUrl;
-              img.alt = imageAlt;
-            });
-            _context2.next = 3;
-            return imageLoadPromise;
-          case 3:
-            return _context2.abrupt("return", img);
-          case 4:
-          case "end":
-            return _context2.stop();
+  function loadImage(imageUrl, onprogress) {
+    return new Promise(function (resolve, reject) {
+      var xhr = new XMLHttpRequest();
+      var notifiedNotComputable = false;
+      var total;
+      xhr.open('GET', imageUrl, true);
+      xhr.responseType = 'arraybuffer';
+      xhr.onprogress = function (ev) {
+        if (ev.lengthComputable) {
+          onprogress(parseInt(ev.loaded / ev.total * 100));
+        } else {
+          if (!notifiedNotComputable) {
+            notifiedNotComputable = true;
+            onprogress(-1);
+          }
         }
-      }, _callee2);
-    }));
-    return _loadImage.apply(this, arguments);
+      };
+      xhr.onloadend = function () {
+        if (!xhr.status.toString().match(/^2/)) {
+          reject(xhr);
+        } else {
+          if (!notifiedNotComputable) {
+            onprogress(100);
+          }
+          var options = {};
+          var headers = xhr.getAllResponseHeaders();
+          var m = headers.match(/^Content-Type\:\s*(.*?)$/mi);
+          if (m && m[1]) {
+            options.type = m[1];
+          }
+          var blob = new Blob([this.response], options);
+          resolve(window.URL.createObjectURL(blob));
+        }
+      };
+      xhr.send();
+    });
   }
+
+  // Draw new canvas and images
   function canvasfpro(caroldata) {
     fetchDB().then(function (datajson) {
       var gic = datajson.projects[caroldata - 1].project_num_list;
@@ -138,22 +151,36 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
       }
       var _loop = function _loop(_i2) {
+        progBar.max = gic * 100;
         var pfigure = document.createElement("figure");
-        // const pimg = document.createElement("img");
         var pfigc = document.createElement("figcaption");
         document.querySelector('.gallery').appendChild(pfigure);
         pfigure.className = "gallery-image skeleton";
         pfigc.innerHTML = DOMPurify.sanitize(_i2 + 1);
-        loadImage(net_path + "/global/assets/images/" + gifn + (_i2 + 1) + ".webp", datajson.projects[caroldata - 1].project_tagged + (_i2 + 1)).then(function (images) {
-          pfigure.appendChild(images);
-          pfigure.appendChild(pfigc);
+        loadImage("https://shoenix-studios.web.app/global/assets/images/" + gifn + (_i2 + 1) + ".webp", function (ratio) {
+          if (ratio == -1) {
+            progBar.removeAttribute('value');
+          }
+        }).then(function (imgSrc) {
+          progBar.value += 100;
+          progBar.style.setProperty('--value', progBar.value / gic + "%");
+          var pimg = document.createElement("img");
+          pimg.src = imgSrc;
+          pfigure.appendChild(pimg);
+          // pfigure.appendChild(datajson.projects[caroldata - 1].project_tagged + (i + 1));
           pfigure.classList.remove("skeleton");
           if (_i2 == gic - 1) {
-            document.getElementById('p-title').scrollIntoView();
             document.querySelector('.project-header').classList.remove("Hidden");
+            document.querySelector('#app').scrollIntoView();
+            $(".backtotop-button").addClass("show");
+            setTimeout(function () {
+              progBar.value = 0;
+              progBar.style.setProperty('--value', 0);
+            }, 1600);
           }
+        }, function (xhr) {
+          console.log("Script error");
         });
-        // pimg.src = net_path + "/global/assets/images/" + gifn + (i + 1) + ".webp";
       };
       for (var _i2 = 0; _i2 < gic; _i2++) {
         _loop(_i2);
@@ -161,25 +188,21 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       ;
       startcanvas();
     });
-    var backtotop = document.createElement("a");
-    backtotop.className = "backtotop-button";
-    document.querySelector('.Main').appendChild(backtotop);
-    var bttbtn = document.querySelector('.backtotop-button');
-    bttbtn.classList.add('show');
-    $(".backtotop-button").on('click', function (e) {
-      e.preventDefault();
-      bttbtn.classList.remove('show');
-      removeAllChildNodes(gal);
-      carol_title.innerHTML = DOMPurify.sanitize("");
-      document.querySelector('.project-header').classList.add("Hidden");
-      $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-      }));
-    });
   }
   ;
+  $(".backtotop-button").on('click', function (e) {
+    e.preventDefault;
+    this.classList.remove('show');
+    removeAllChildNodes(gal);
+    carol_title.innerHTML = DOMPurify.sanitize("");
+    document.querySelector('.project-header').classList.add("Hidden");
+    $('#app').addClass("Hidden");
+    $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center"
+    }));
+  });
 
   // Remove Child and reset canvas
   function removeAllChildNodes(parent) {
