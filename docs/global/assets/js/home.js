@@ -1,10 +1,11 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 6810:
+/***/ 3561:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./blog-post.json": 1860,
 	"./databank.json": 1743
 };
 
@@ -26,7 +27,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 6810;
+webpackContext.id = 3561;
 
 /***/ }),
 
@@ -389,6 +390,14 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = 8286;
+
+/***/ }),
+
+/***/ 1860:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "blog-post.json?v=cb2552bc27707423dddc";
 
 /***/ }),
 
@@ -2008,7 +2017,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return acc;
     }, {});
   };
-  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(8286), __webpack_require__(6810));
+  importAll(__webpack_require__(1720), __webpack_require__(2171), __webpack_require__(7661), __webpack_require__(9228), __webpack_require__(9570), __webpack_require__(8286), __webpack_require__(3561));
 
   // Mobile ejah tene dlu
   function isMobile() {

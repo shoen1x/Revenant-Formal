@@ -1,0 +1,411 @@
+/*
+	Revenant Formal by NMVX
+	Shoen1x.github.io | @Shoenixstudios
+	under the CCA 3.0 License | Credit to HTML5 UP for template
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+    /* Colors: */
+    --bg: #16181d;
+    --accent: #5686f5;
+    --accent-10: #5686f510;
+    --emphasis: #e8e8fd;
+    --text: #98a0b3;
+    /* Typography */
+    --body-font: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+    --h1: 2.25rem;
+    --h2: 1.5rem;
+    --h3: 1.25rem;
+    --paragraph: clamp(1rem, 0.875rem + 0.4vw, 1.125rem);
+    --info-text: 1rem;
+    --text-width-wide: 70ch;
+    --text-width-medium: 60ch;
+    --fw-bold: 700;
+    --fw-regular: 500;
+    --fw-light: 300;
+    /* Spacing */
+    --spacing-xxs: 0.5em;
+    --spacing-xs: 1em;
+    --spacing-s: 1.5em;
+    --spacing-m: 3em;
+    --spacing-l: 6em;
+    --spacing-xl: 8em;
+    /* Misc */
+    --radius-xs: 0.25em;
+    --radius-s: 0.5em;
+    --center-it: auto;
+}
+
+#scroll-tracker {
+    height: 4px;
+    background-color: var(--accent);
+    position: fixed;
+    inset: 0 0 auto;
+    transform-origin: left;
+}
+
+body {
+    background-color: var(--bg);
+    font-weight: 400;
+    font-family: var(--body-font);
+}
+
+main {
+    margin-top: 0;
+    padding-block: var(--spacing-m);
+}
+
+button {
+    font-weight: 400;
+    font-family: var(--body-font);
+    background-color: var(--accent-10);
+    border: 0;
+    border-radius: var(--radius-s);
+    color: var(--accent);
+    cursor: pointer;
+    display: inline-block;
+    font-size: var(--info-text);
+    margin-bottom: 2em;
+    outline: 0;
+    padding: 1em 8em 1em 8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+}
+
+article {
+    margin: var(--center-it);
+    max-width: var(--text-width-wide);
+    background-color: var(--accent-10);
+    padding-block: 0;
+    border-radius: 12px;
+    padding: 1px 5rem;
+}
+
+article>p~p {
+    margin-bottom: var(--spacing-s);
+}
+
+h1 {
+    color: var(--emphasis);
+    margin-bottom: var(--spacing-s);
+    font-size: var(--h1);
+    font-weight: var(--fw-bold);
+}
+
+h2 {
+    color: var(--emphasis);
+    /* margin-bottom: var(--spacing-s);
+    margin-top: var(--spacing-m); */
+    font-size: var(--h2);
+    font-weight: var(--fw-bold);
+}
+
+h3 {
+    color: var(--accent);
+    margin-bottom: var(--spacing-s);
+    font-size: var(--h3);
+    font-weight: var(--fw-bold);
+}
+
+sub {
+    color: var(--text);
+
+}
+
+p {
+    font-size: var(--paragraph);
+    color: var(--text);
+    line-height: 32px;
+    letter-spacing: 0.25px;
+}
+
+em {
+    color: var(--emphasis);
+}
+
+cite {
+    font-weight: var(--fw-light);
+    color: var(--emphasis);
+    font-style: italic;
+}
+
+.info_block {
+    display: flex;
+    gap: 6px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.info {
+    font-size: var(--info-text);
+    color: var(--text);
+}
+
+.likes,
+.replies,
+.mentions {
+    font-size: var(--info-text);
+    color: var(--accent);
+}
+
+.last_update {
+    display: inline-block;
+    background-color: var(--accent-10);
+    color: var(--accent);
+    margin-bottom: 2em;
+    font-size: var(--info-text);
+    padding: var(--spacing-xxs) var(--spacing-xs);
+    border-radius: var(--radius-s);
+}
+
+.link {
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    margin-block: var(--spacing-m);
+    border-radius: var(--radius-xs);
+}
+
+.highlight {
+    margin: var(--center-it);
+    margin-bottom: var(--spacing-m);
+    background-color: var(--accent-10);
+    max-width: var(--text-width-medium);
+    border-radius: var(--radius-s);
+    padding: var(--spacing-m);
+}
+
+ul {
+    margin: var(--spacing-s);
+}
+
+li {
+    padding-bottom: var(--spacing-s);
+    margin-left: var(--spacing-xs);
+    font-size: var(--paragraph);
+    color: var(--emphasis);
+    list-style: square;
+}
+
+.returnhome_btn {
+    font-weight: 400;
+    font-family: var(--body-font);
+    border-radius: var(--radius-s);
+    background-color: var(--accent);
+    color: black;
+    display: block;
+    margin: 2em;
+    padding: 1em 8em 1em 8em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.returnhome_btn:hover {
+    background-color: black;
+    color: var(--accent);
+    transition: all 0.4s ease-in-out;
+}
+
+
+/* Styling */
+.timeline {
+    margin: 0 auto;
+    position: relative;
+    max-width: 46em;
+    list-style: none;
+    padding-top: 2.5rem;
+}
+
+.timeline:before {
+    background-color: var(--accent-10);
+    content: " ";
+    margin-left: 21px;
+    position: absolute;
+    top: 0;
+    left: 4.5em;
+    width: 2px;
+    height: 100%;
+}
+
+.timeline-event {
+    position: relative;
+    list-style: none;
+}
+
+.timeline-event:hover .timeline-event-icon {
+    transform: rotate(225deg);
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out 0s;
+    background-color: var(--accent);
+}
+
+.timeline-event:hover .timeline-event-thumbnail {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+    background-color: var(--accent);
+    color: var(--bg);
+}
+
+.timeline-event:hover .timeline-event-copy h3 {
+    animation-name: color_change;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    color: var(--accent);
+}
+
+.timeline-event-copy {
+    padding: 2em;
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    width: 80%;
+}
+
+.timeline-event-copy h3 {
+    font-size: 1.75em;
+}
+
+.timeline-event-copy h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.timeline-event-copy strong {
+    font-weight: 700;
+}
+
+.timeline-event-copy p:not(.timeline-event-thumbnail) {
+    padding-bottom: 1.2em;
+}
+
+.timeline-event-icon {
+    transform: rotate(360deg);
+    background-color: black;
+    outline: 10px solid white;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0.5em;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+}
+
+.timeline-event-thumbnail {
+    transition: box-shadow 0.5s ease-in-out 0.1s;
+    color: var(--text);
+    font-size: 0.75em;
+    background-color: #0f1013;
+	box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+    display: inline-block;
+    margin-bottom: 1.2em;
+    padding: 0.25em 1em 0.2em 1em;
+    border-radius: 8px;
+}
+
+@keyframes color_change {
+    0% {
+        color: var(--text);
+    }
+
+    100% {
+        color: var(--accent);
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        padding-inline: 0.8rem;
+    }
+
+    .info_block {
+        flex-direction: column;
+    }
+
+    .highlight {
+        padding: var(--spacing-s);
+        max-width: var(--text-width-wide);
+    }
+
+    .timeline:before {
+        background-color: var(--accent-10);
+        content: " ";
+        margin-left: 21px;
+        position: absolute;
+        top: 0;
+        left: 4.5em;
+        width: 2px;
+        height: 100%;
+    }
+
+    .timeline-event:hover .timeline-event-icon {
+        transform: rotate(225deg);
+        transition: all 0.3s ease-in-out 0s;
+        background-color: var(--accent);
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    article {
+        padding: 1px 2rem;
+    }
+    
+    .timeline {
+        padding: 0;
+        position: relative;
+        max-width: 100%;
+    }
+    
+    .timeline:before {
+        display: none;
+    }
+
+    .timeline-event {
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .timeline-event-copy {
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .timeline-event-icon {
+        display: none;
+    }
+
+    .timeline-event:hover .timeline-event-icon {
+        transform: rotate(225deg);
+        transition: all 0.3s ease-in-out 0s;
+        background-color: rgba(0, 119, 255, 0.2);
+    }
+
+    .timeline-event-thumbnail {
+        display: block;
+        margin-bottom: 0;
+        text-align: center;
+        box-shadow: none;
+        background-color: var(--accent-10);
+        color: var(--accent);
+    }
+
+    .returnhome_btn {
+        margin: 1em 1em 3em 1em;
+        padding: 1em;
+    }
+}

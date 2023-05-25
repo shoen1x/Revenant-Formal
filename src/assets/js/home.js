@@ -18,7 +18,7 @@
 		require.context('../../images/ico/', true, /\.*$/),
 		require.context('../../images/products/', true, /\.(svg|webp)$/),
 		require.context('../../', true, /(sitemap.xml|robots.txt)$/),
-		require.context('../../assets/js/', true, /databank.json$/)
+		require.context('../../assets/js/', true, /(databank|blog-post).json$/),
 	);
 
 	// Mobile ejah tene dlu

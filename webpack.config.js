@@ -93,6 +93,7 @@ module.exports = {
         home :["./src/assets/js/home.js", "./src/assets/css/home.css"],
         product :["./src/assets/js/product.js",  "./src/assets/css/product.css"],
         project :["./src/assets/js/project.js", "./src/assets/css/project.css"],
+        blog :["./src/assets/js/blog.js", "./src/assets/css/blog.css"],
     },
     output: {
         publicPath: cdn_url,

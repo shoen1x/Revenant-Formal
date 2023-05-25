@@ -1,0 +1,60 @@
+{
+  "en": [
+    {
+      "post_date": "9 Mei, 2023",
+      "post_title": "<strong>The <em>'Revenant Formal'</em> project has entered the 'Alpha' phase!.</strong>",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "<em>Alpha phase</em> have been release to public, Included all new features (refer previous developer update).",
+        "para2": "Included new <em>hashes</em> based assets, <em>subresources integrity</em> for CSS and javascripts for preventing XSS Attacks in website, DOMPurify and assets optimization tools."
+      }
+    },
+    {
+      "post_date": "4 Mei, 2023",
+      "post_title": "<em>New feature</em> added 'Language changer - Malay'",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "New language modifications have been added for the <em>'Home, Project, Product, blog, and 404'</em> pages and also the internal system for the <em>network</em> has been improved.",
+        "para2": "Much of the internal algorithm for network control has been reworked to stabilize the internal <em>'URL Hoop'</em> redirect firebase. All <em>user interfaces</em> for language selection have been shared. (may require some modifications and tests in the future)."
+      }
+    },
+    {
+      "post_date": "5 Mac, 2023",
+      "post_title": "Modify 'page #1, #2 & #3'",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "Modify the website for <em>'Home, Project, Product'</em> and add new ones for '404' and 'Blog' pages.",
+        "para2": "The 'Home' website has been modified from the <em>'Header' and 'Footer'</em> sections. The color preference and opacity have been changed from <em>'Opaque' to 'Transparent'</em> and rearranged from horizontal to stacked shapes. For 'Project' has been modified and optimized from <em>'CSS driven animation'</em> to <em>'Javascript + CSS driven animation'</em> to avoid low performance on <a class='link' href='https://web.dev/rendering-performance/' target='_blank'>website render </a> . For 'Product' is the same as 'Project'."
+      }
+    }
+  ],
+  "ms": [
+    {
+      "post_date": "9 Mei, 2023",
+      "post_title": "<strong>Projek <em>'Revenant Formal'</em> telah memasuki fasa 'Alpha'!.</strong>",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "<em>Fasa alfa</em> telah dikeluarkan kepada umum, Termasuk semua ciri baharu (rujuk kemas kini pembangun sebelumnya).",
+        "para2": "Termasuk aset berasaskan <em>'Hashes'</em> baharu, <em>integriti subsumber</em> untuk CSS dan javascript untuk mencegah Serangan XSS dalam tapak web, DOMPurify dan alat pengoptimuman aset."
+      }
+    },
+    {
+      "post_date": "4 Mei, 2023",
+      "post_title": "<em>Ciri baharu</em> ditambah 'Pengubah bahasa - Bahasa Melayu'",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "Pengubahsuaian bahasa baharu telah ditambah untuk halaman <em>'Home, Project, Product, blog, and 404'</em> dan juga sistem dalaman untuk <em>rangkaian(network)</em> telah diperbaik.",
+        "para2": "Sebahagian besar algoritma dalaman untuk kawalan rangkaian telah dibuat semula untuk menstabilkan <em>'URL Hoop'</em> didalam ubah hala(Redirect) firebase. Semua <em>antaramuka pengguna</em> untuk pemilihan bahasa telah disekatakan. (kemungkinan memerlukan beberapa pengubahsuaian dan ujian di masa hadapan)."
+      }
+    },
+    {
+      "post_date": "5 Mac, 2023",
+      "post_title": "Ubahsuai 'page #1, #2 & #3'",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "Ubahsuai laman sesawang untuk <em>'Home, Project, Product'</em> dan tambah baharu untuk laman '404' dan 'Blog'.",
+        "para2": "Laman sesawang 'Home' telah diubahsuai dari bahagian <em>'Header' dan 'Footer'</em>. Keutamaan warna dan kelegapan telah diubah dari <em>'Opaque' kepada 'Transparent'</em> dan disusun semula dari mendatar kepada bentuk tersusun. Untuk 'Project' telah diubahsuai dan dioptimumkan dari <em>'CSS driven animation'</em> kepada <em>'Javascript + CSS driven animation'</em> bagi mengelakkan prestasi rendah pada <a class='link' href='https://web.dev/rendering-performance/' target='_blank'>kemas gabung laman sesawang</a> . Untuk 'Product' adalah sama seperti 'Project'."
+      }
+    }
+  ]
+}

@@ -1334,7 +1334,8 @@ body.is-preload:after {
   background-color: red;
 }
 
-.project-bar-progress::-moz-progress-bar {
+.project-bar-progress::-moz-progress-bar,
+.project-bar-progress::-webkit-progress-bar {
   transition: padding-bottom 1s;
   padding-left: 60px;
   padding-bottom: var(--value);
