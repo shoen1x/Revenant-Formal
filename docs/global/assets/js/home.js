@@ -397,7 +397,7 @@ webpackContext.id = 8286;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "blog-post.json?v=cb2552bc27707423dddc";
+module.exports = __webpack_require__.p + "blog-post.json?v=bb28d6373623487a2434";
 
 /***/ }),
 

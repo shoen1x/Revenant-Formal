@@ -1,6 +1,15 @@
 {
   "en": [
     {
+      "post_date": "26 Mei, 2023",
+      "post_title": "Website <em>renewal</em> and <em>overhaul</em>",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "User interface updates and overhauls for 'Homes, products, projects, and blog' pages.",
+        "para2": "This update includes a 'Javascript' preprocessor for each modified page. For the entire project page the preview grid has been changed from flat to a 5x3 grid. For products, added a default page for product selection before being taken to the actual product page (the product page has been separated, each product has its own page and does not depend on script injection from Javascript). For blogs, modified from paragraph-based to canonical article-based."
+      }
+    },
+    {
       "post_date": "9 Mei, 2023",
       "post_title": "<strong>The <em>'Revenant Formal'</em> project has entered the 'Alpha' phase!.</strong>",
       "post_author": "NMVX",
@@ -29,6 +38,15 @@
     }
   ],
   "ms": [
+    {
+      "post_date": "26 Mei, 2023",
+      "post_title": "<em>pembaharuan</em> dan <em>baik pulih</em> tapak web",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "Pembaharuan dan baik pulih antaramuka pengguna untuk halaman 'Rerumah, produk, projek, dan blog'.",
+        "para2": "Pembaharuan ini termasuk prapemproses 'Javascript' untuk setiap halaman yang diubah suai. Untuk halaman projek keseluruhan grid pratonton telah diubah dari leper ke grid 5x3. Untuk product, ditambah halaman lalai untuk pilihan produk sebelum dibawa ke halaman sebenar produk(halaman produk telah diasingkan, setiap produk memiliki halaman tersendiri dan tidak bergantung pada suntikan skrip dari Javascript). Untuk blog diubah suai dari berasaskan perenggan kepada artikel berasaskan kanonik."
+      }
+    },
     {
       "post_date": "9 Mei, 2023",
       "post_title": "<strong>Projek <em>'Revenant Formal'</em> telah memasuki fasa 'Alpha'!.</strong>",
