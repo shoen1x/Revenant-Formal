@@ -1,22 +1,9 @@
-<!--
-	Revenant Formal by NMVX
-	Shoen1x.github.io | @Shoenixstudios
-	under the CCA 3.0 License | Credit to HTML5 UP for template
--->
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    * {
-        font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
-    }
-</style>
-
 <a name="readme-top"></a>
 
 <!-- Header -->
 <h1 align="center"><strong>Revenant's Formal<strong></h1>
 <div align="center">
-    <img src="https://shoenix-studios.web.app/global/assets/images/revenant-formal-header.webp" width="100%" style="border-radius: 18px;" alt="Revenant Formal"></img>
+    <img src="https://shoenix-studios.web.app/global/assets/images/revenant-formal-header.webp" width="100%" alt="Revenant Formal"></img>
     <h2>A experimental project by <strong>NMVX</strong></h2>
     <a href="https://shoenix-studios.web.app/home"><strong>Quick access!</strong></a>
     </br>
@@ -26,7 +13,7 @@
 <div align="center">
     <details>
     <summary>Contents</summary>
-        <ol style="list-style-type: none;margin: 0;padding: 0;">
+        <ol>
             <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#contributing">Contributing</a></li>
             <li><a href="#license">License</a></li>
@@ -186,11 +173,9 @@
     "clean": "rm -rf docs"
   }
 ```
-</br>
 
 <!-- Contributing -->
 # Contributing
-
 
 If you have a suggestion that would make this website better, please [open issues](https://github.com/shoen1x/Revenant-Formal/issues). You can also simply open an issue with the tag "enhancement".
 
@@ -198,23 +183,15 @@ If you have a suggestion that would make this website better, please [open issue
 2. Create your new [issues](https://github.com/shoen1x/Revenant-Formal/issues)
 3. Submit
 
-</br>
-
 <!-- License -->
 # License
 
 Distributed under the 'CC0 1.0 Universal' License. See `LICENSE.txt` or [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) for more information.
 
-</br>
-
 <!-- Authors & Support -->
 # Support
 
-> [NMVX](https://www.github.com/shoen1x)
-
 For support, email <kbd>shoenixstudios@gmail.com</kbd>
-
-</br>
 
 <!-- Ackdnowledgements -->
 # Acknowledgements
