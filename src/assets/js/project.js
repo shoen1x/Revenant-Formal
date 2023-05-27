@@ -21,20 +21,6 @@
     }, 100);
   });
 
-  // Video Carousel | Owl
-  var videoSlider = $('.owl-carousel');
-  videoSlider.owlCarousel({
-    loop: true,
-    merge: true,
-    video: true,
-    lazyLoad: true,
-    margin: 10,
-    nav: true,
-    dots: false,
-    items: 1,
-    autoHeight: true
-  });
-
   // -----------------------------------------
 
   // Ambik sekut ikut 'home'
