@@ -49,7 +49,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   var lang_injection = getCookie("firebase-language-override");
   var gal = document.querySelector('.gallery');
   var carol_title = document.querySelector('#p-title');
-  var progBar = document.querySelector(".project-bar-progress");
   var db;
   function fetchDB() {
     return _fetchDB.apply(this, arguments);
@@ -125,63 +124,95 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       xhr.send();
     });
   }
-
-  // Draw new canvas and images
-  function canvasfpro(caroldata) {
-    fetchDB().then(function (datajson) {
-      var gic = datajson.projects[caroldata - 1].project_num_list;
-      var gifn = datajson.projects[caroldata - 1].project_tagged;
-      if (lang_injection == 'en') {
-        carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.en);
-      } else if (lang_injection == 'ms') {
-        carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
-      }
-      var _loop = function _loop(_i2) {
-        progBar.max = gic * 100;
-        var pfigure = document.createElement("figure");
-        var pfigc = document.createElement("figcaption");
-        document.querySelector('.gallery').appendChild(pfigure);
-        pfigure.className = "gallery-image skeleton";
-        pfigc.innerHTML = DOMPurify.sanitize(_i2 + 1);
-        loadImage("https://shoenix-studios.web.app/global/assets/images/" + gifn + (_i2 + 1) + ".webp", function (ratio) {
-          if (ratio == -1) {
-            progBar.removeAttribute('value');
-          }
-        }).then(function (imgSrc) {
-          progBar.value += 100;
-          progBar.style.setProperty('--value', progBar.value / gic + "%");
-          var pimg = document.createElement("img");
-          pimg.src = imgSrc;
-          pfigure.appendChild(pimg);
-          // pfigure.appendChild(datajson.projects[caroldata - 1].project_tagged + (i + 1));
-          pfigure.classList.remove("skeleton");
-          if (_i2 == gic - 1) {
-            document.querySelector('.project-header').classList.remove("Hidden");
-            document.querySelector('#app').scrollIntoView();
-            $(".backtotop-button").addClass("show");
-            setTimeout(function () {
-              progBar.value = 0;
-              progBar.style.setProperty('--value', 0);
-            }, 1600);
-          }
-        }, function (xhr) {
-          console.log("Script error");
-        });
-      };
-      for (var _i2 = 0; _i2 < gic; _i2++) {
-        _loop(_i2);
-      }
-      ;
-      startcanvas();
-    });
+  function canvasfpro(_x) {
+    return _canvasfpro.apply(this, arguments);
   }
-  ;
+  function _canvasfpro() {
+    _canvasfpro = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2(caroldata) {
+      var datajson, gic, gifn, barstatus, gallery, _loop, _i2, width;
+      return _regeneratorRuntime().wrap(function _callee2$(_context3) {
+        while (1) switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return fetchDB();
+          case 2:
+            datajson = _context3.sent;
+            gic = datajson.projects[caroldata - 1].project_num_list;
+            gifn = datajson.projects[caroldata - 1].project_tagged;
+            barstatus = document.querySelector("#barStatus");
+            if (lang_injection == 'en') {
+              carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.en);
+            } else if (lang_injection == 'ms') {
+              carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
+            }
+            gallery = document.querySelector('.gallery');
+            _loop = /*#__PURE__*/_regeneratorRuntime().mark(function _loop(_i2) {
+              var pfigure, pfigc;
+              return _regeneratorRuntime().wrap(function _loop$(_context2) {
+                while (1) switch (_context2.prev = _context2.next) {
+                  case 0:
+                    pfigure = document.createElement("figure");
+                    pfigc = document.createElement("figcaption");
+                    width = 100 / gic;
+                    gallery.appendChild(pfigure);
+                    pfigure.className = "gallery-image skeleton";
+                    pfigc.innerHTML = DOMPurify.sanitize(_i2 + 1);
+                    loadImage("https://shoenix-studios.web.app/global/assets/images/".concat(gifn).concat(_i2 + 1, ".webp"), function (ratio) {
+                      if (ratio == -1) {
+                        console.log("ratio -1");
+                      }
+                    }).then(function (imgSrc) {
+                      var pimg = document.createElement("img");
+                      pimg.src = imgSrc;
+                      pfigure.appendChild(pimg);
+                      pfigure.classList.remove("skeleton");
+                      barstatus.style.width = width + "%";
+                      width = width + 100 / gic;
+                      if (_i2 == gic - 1) {
+                        document.querySelector('.project-header').classList.remove("Hidden");
+                        document.querySelector('#app').scrollIntoView();
+                        $(".backtotop-button").addClass("show");
+                      }
+                    }, function (xhr) {
+                      console.log("Script error");
+                    });
+                  case 7:
+                  case "end":
+                    return _context2.stop();
+                }
+              }, _loop);
+            });
+            _i2 = 0;
+          case 10:
+            if (!(_i2 < gic)) {
+              _context3.next = 15;
+              break;
+            }
+            return _context3.delegateYield(_loop(_i2), "t0", 12);
+          case 12:
+            _i2++;
+            _context3.next = 10;
+            break;
+          case 15:
+            ;
+            startcanvas();
+            setTimeout(function rmvstatus() {
+              barstatus.style.width = "0%";
+            }, 6000);
+          case 18:
+          case "end":
+            return _context3.stop();
+        }
+      }, _callee2);
+    }));
+    return _canvasfpro.apply(this, arguments);
+  }
   $(".backtotop-button").on('click', function (e) {
     e.preventDefault;
     this.classList.remove('show');
     removeAllChildNodes(gal);
     carol_title.innerHTML = DOMPurify.sanitize("");
-    document.querySelector('.project-header').classList.add("Hidden");
+    document.querySelector("#barStatus").style.width = "0%";
     $('#app').addClass("Hidden");
     $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({
       behavior: "smooth",

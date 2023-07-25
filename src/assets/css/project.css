@@ -1308,46 +1308,19 @@ body.is-preload:after {
   grid-gap: 8px;
 }
 
-
-.project-load {
-  position: absolute;
+#progressBar {
+  position: relative;
+  width: 100%;
+  height: 4px;
   background-color: transparent;
-  width: 100%;
-  height: 8px;
 }
 
-.project-bar-progress {
-  background: transparent;
-  width: 100%;
-  height: 8px;
-  border: none;
-  display: flex;
-}
-
-/* necessary to style the progress bar background */
-::-webkit-progress-bar {
-  background-color: white;
-}
-
-.project-bar-progress::-webkit-progress-value {
-  transition: width 1s;
+#barStatus {
+  position: absolute;
+  width: 0%;
+  height: 100%;
   background-color: red;
-}
-
-.project-bar-progress::-moz-progress-bar,
-.project-bar-progress::-webkit-progress-bar {
-  transition: padding-bottom 1s;
-  padding-left: 60px;
-  padding-bottom: var(--value);
-  background-color: red;
-  height: 0;
-  transform-origin: 0 0;
-  transform: rotate(-90deg) translateX(-8px);
-}
-
-.project-bar-progress::-ms-fill {
-  background-color: red;
-  border: 0;
+  transition: ease-in-out 0.5s;
 }
 
 @media screen and (max-width:1024px) {

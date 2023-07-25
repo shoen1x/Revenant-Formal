@@ -43,7 +43,6 @@
   const lang_injection = getCookie("firebase-language-override");
   const gal = document.querySelector('.gallery');
   const carol_title = document.querySelector('#p-title');
-  const progBar = document.querySelector(".project-bar-progress");
 
   let db;
   async function fetchDB() {
@@ -103,66 +102,63 @@
     });
   }
 
-  // Draw new canvas and images
-  function canvasfpro(caroldata) {
-    fetchDB().then(datajson => {
-      const gic = datajson.projects[caroldata - 1].project_num_list;
-      const gifn = datajson.projects[caroldata - 1].project_tagged;
+async function canvasfpro(caroldata) {
+  const datajson = await fetchDB();
+  const gic = datajson.projects[caroldata - 1].project_num_list;
+  const gifn = datajson.projects[caroldata - 1].project_tagged;
+  var barstatus = document.querySelector("#barStatus");
 
-      if (lang_injection == 'en') {
-        carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.en);
-      } else if (lang_injection == 'ms') {
-        carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
+  if (lang_injection == 'en') {
+    carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.en);
+  } else if (lang_injection == 'ms') {
+    carol_title.innerHTML = DOMPurify.sanitize(datajson.projects[caroldata - 1].language.ms);
+  }
+
+  const gallery = document.querySelector('.gallery');
+
+  for (let i = 0; i < gic; i++) {
+    const pfigure = document.createElement("figure");
+    const pfigc = document.createElement("figcaption");
+    var width = 100 / gic;
+
+    gallery.appendChild(pfigure);
+    pfigure.className = "gallery-image skeleton";
+    pfigc.innerHTML = DOMPurify.sanitize(i + 1);
+
+    loadImage(`https://shoenix-studios.web.app/global/assets/images/${gifn}${i + 1}.webp`, (ratio) => {
+      if (ratio == -1) {
+        console.log("ratio -1");
       }
+    }).then(imgSrc => {
+      const pimg = document.createElement("img");
+      pimg.src = imgSrc;
+      pfigure.appendChild(pimg);
+      pfigure.classList.remove("skeleton");
 
-      for (let i = 0; i < gic; i++) {
-        progBar.max = gic * 100;
-        const pfigure = document.createElement("figure");
-        const pfigc = document.createElement("figcaption");
+      barstatus.style.width = (width) + "%";
+      width = width + 100 / gic;
 
-        document.querySelector('.gallery').appendChild(pfigure);
-        pfigure.className = "gallery-image skeleton";
-        pfigc.innerHTML = DOMPurify.sanitize(i + 1);
-
-        loadImage(("https://shoenix-studios.web.app/global/assets/images/" + gifn + (i + 1) + ".webp"), (ratio) => {
-          if (ratio == -1) {
-            progBar.removeAttribute('value');
-          }
-        }).then(imgSrc => {
-          progBar.value += 100;
-          progBar.style.setProperty('--value', progBar.value / gic + "%");
-
-          const pimg = document.createElement("img");
-          pimg.src = imgSrc;
-          pfigure.appendChild(pimg);
-          // pfigure.appendChild(datajson.projects[caroldata - 1].project_tagged + (i + 1));
-          pfigure.classList.remove("skeleton");
-
-          if (i == (gic - 1)) {
-            document.querySelector('.project-header').classList.remove("Hidden");
-            document.querySelector('#app').scrollIntoView();
-            $(".backtotop-button").addClass("show");
-
-            setTimeout(function () {
-              progBar.value = 0;
-              progBar.style.setProperty('--value', 0);
-            }, 1600);
-          }
-        }, xhr => {
-          console.log("Script error");
-        });
-      };
-
-      startcanvas();
+      if (i == (gic - 1)) {
+        document.querySelector('.project-header').classList.remove("Hidden");
+        document.querySelector('#app').scrollIntoView();
+        $(".backtotop-button").addClass("show");
+      }
+    }, xhr => {
+      console.log("Script error");
     });
   };
+  startcanvas();
+  setTimeout(function rmvstatus(){
+    barstatus.style.width = "0%";
+  }, 6000);
+}
 
   $(".backtotop-button").on('click', function (e) {
     e.preventDefault;
     this.classList.remove('show');
     removeAllChildNodes(gal);
     carol_title.innerHTML = DOMPurify.sanitize("");
-    document.querySelector('.project-header').classList.add("Hidden");
+    document.querySelector("#barStatus").style.width = "0%";
     $('#app').addClass("Hidden");
     $('html, body').animate(document.querySelector('.Carousel').scrollIntoView({ behavior: "smooth", block: "center", inline: "center" }));
   });
