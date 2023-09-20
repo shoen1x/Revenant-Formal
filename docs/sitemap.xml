@@ -11,22 +11,7 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://shoenix-studios.web.app/product/in-the-name-of-tsar</loc>
-  <lastmod>2023-05-15T16:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shoenix-studios.web.app/product/the-world</loc>
-  <lastmod>2023-05-15T16:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://shoenix-studios.web.app/project</loc>
-  <lastmod>2023-05-15T16:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shoenix-studios.web.app/product</loc>
   <lastmod>2023-05-15T16:21:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -34,16 +19,6 @@
   <loc>https://shoenix-studios.web.app/blog</loc>
   <lastmod>2023-05-15T16:21:05+00:00</lastmod>
   <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://shoenix-studios.web.app/product/black-steel-eagle</loc>
-  <lastmod>2023-05-15T16:21:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://shoenix-studios.web.app/product/unity</loc>
-  <lastmod>2023-05-15T16:21:05+00:00</lastmod>
-  <priority>0.64</priority>
 </url>
 
 

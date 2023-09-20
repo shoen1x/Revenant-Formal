@@ -79,7 +79,7 @@
       - [x] Pagination added for more projects supports
       - [x] Loading progress bar for loading projects
 
-- ### Product
+- ### Product ***`Deprecated`***
 
   - [x] Added new ***Product*** page
     - [x] 4 Different `Collection` Based product.
@@ -90,6 +90,7 @@
     - [ ] Added guides for templates.
     - [ ] New payment gateway
       - [ ] New custom inquery/ Order system in last section for `Product` page?
+  - [x] 20 SEPTEMBER 2023 ***Product*** page was removed.
 
 - ### Blog
 

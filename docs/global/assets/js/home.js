@@ -1668,7 +1668,7 @@ module.exports = __webpack_require__.p + "robots.txt?v=47a13b8955fb1e48e9cc";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "sitemap.xml?v=65c3d4744c16608223e0";
+module.exports = __webpack_require__.p + "sitemap.xml?v=c17411c5fd2afbb47323";
 
 /***/ })
 
