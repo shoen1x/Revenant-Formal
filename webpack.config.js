@@ -33,6 +33,13 @@ if(process.env.NODE_ENV == "development"){
 }
   console.log("Now running: " + process.env.NODE_ENV + " Environment");
 
+// Get Current Date based on days
+const date = new Date();
+let day = date.getDate();
+let month = date.toLocaleString('default', { month: 'short' });
+let year = date.getFullYear();
+let currentDate = `${day} ${month} ${year}`;
+
 var assetsPluginInstance = new AssetsPlugin({
   path: path.join(__dirname, './', 'docs'),
   publicPath: "/docs/",
@@ -41,7 +48,7 @@ var assetsPluginInstance = new AssetsPlugin({
   update: true,
   filename: 'assets-terminal.json',
   prettyPrint: true,
-  metadata: {version: package_version, date: '04 Mei, 2023', revision: 'RevF' + Date.parse(Date())},
+  metadata: {version: package_version, date: currentDate, revision: 'RevF' + Date.parse(Date())},
 
   processOutput: function (assets) {
     return JSON.stringify(assets)
