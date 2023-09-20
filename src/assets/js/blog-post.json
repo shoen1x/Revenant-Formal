@@ -1,6 +1,15 @@
 {
   "en": [
     {
+      "post_date": "20 Sept, 2023",
+      "post_title": "Critical update for website",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "Critical update for <em>'Home, Project'</em> and removed product page in future version.",
+        "para2": "The 'Product' page have been removed from parents website. All connected linked have been update for footer and home pages. Updated new NPM and Nodejs version to latest stable versions, Webpack have been update and tested multiple times during development."
+      }
+    },
+    {
       "post_date": "26 Mei, 2023",
       "post_title": "Website <em>renewal</em> and <em>overhaul</em>",
       "post_author": "NMVX",
@@ -38,6 +47,15 @@
     }
   ],
   "ms": [
+    {
+      "post_date": "20 Sept, 2023",
+      "post_title": "Kemas kini kritikal untuk laman web",
+      "post_author": "NMVX",
+      "post_para": {
+        "para1": "Kemas kini kritikal untuk <em>'Home, Project'</em> dan halaman produk yang dialih keluar dalam versi akan datang.",
+        "para2": "Halaman 'Produk' telah dialih keluar daripada laman web utama. Semua pautan yang disambungkan telah dikemas kini untuk pengaki dan halaman utama. Mengemas kini versi NPM dan Nodejs baharu kepada versi stabil terkini, Webpack telah dikemas kini dan diuji beberapa kali semasa pembangunan."
+      }
+    },
     {
       "post_date": "26 Mei, 2023",
       "post_title": "<em>pembaharuan</em> dan <em>baik pulih</em> tapak web",

@@ -32,30 +32,30 @@
   },
   "homepage": "https://github.com/shoen1x/Revenant-Formal#readme",
   "dependencies": {
-    "dompurify": "^3.0.2",
-    "firebase": "^9.21.0",
+    "dompurify": "^3.0.5",
+    "firebase": "^10.4.0",
     "focus-visible": "^5.2.0",
     "owl.carousel": "^2.3.4",
-    "socket.io": "^4.5.4"
+    "socket.io": "^4.7.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.3",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
     "assets-webpack-plugin": "^7.1.1",
-    "babel-loader": "^9.1.2",
+    "babel-loader": "^9.1.3",
     "clean-webpack-plugin": "^4.0.0",
-    "css-loader": "^6.7.3",
-    "css-minimizer-webpack-plugin": "^5.0.0",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
     "cssnano": "^6.0.1",
     "html-loader": "^4.2.0",
     "html-webpack-injector": "^1.1.4",
-    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
-    "postcss": "^8.4.23",
-    "postcss-loader": "^7.3.0",
-    "webpack": "^5.76.1",
+    "postcss": "^8.4.30",
+    "postcss-loader": "^7.3.3",
+    "webpack": "^5.88.2",
     "webpack-assets-manifest": "^5.1.0",
-    "webpack-cli": "^5.0.1",
+    "webpack-cli": "^5.1.4",
     "webpack-subresource-integrity": "^5.2.0-rc.1"
   }
 }

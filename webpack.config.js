@@ -48,7 +48,7 @@ var assetsPluginInstance = new AssetsPlugin({
   }
 });
 
-let htmlPageNames = ['home', 'product', 'project', 'blog', '404', 'maintenance', 'googlebcf19c60ad795d29'];
+let htmlPageNames = ['home', 'project', 'blog', '404', 'maintenance', 'googlebcf19c60ad795d29'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/${name}.html`, // relative path to the HTML files
@@ -58,17 +58,17 @@ let multipleHtmlPlugins = htmlPageNames.map(name => {
   })
 });
 
-let htmlPageNames_product = ['in-the-name-of-tsar', 'black-steel-eagle', 'the-world', 'unity'];
-let multipleHtmlPlugins_product = htmlPageNames_product.map(name => {
-  return new HtmlWebpackPlugin({
-    template: `./src/product/${name}.html`, // relative path to the HTML files
-    filename: `/product/${name}.html`, // output HTML files
-    chunks: [`product`], // respective JS files
-    inject: true,
-  })
-});
+// let htmlPageNames_product = ['in-the-name-of-tsar', 'black-steel-eagle', 'the-world', 'unity'];
+// let multipleHtmlPlugins_product = htmlPageNames_product.map(name => {
+//   return new HtmlWebpackPlugin({
+//     template: `./src/product/${name}.html`, // relative path to the HTML files
+//     filename: `/product/${name}.html`, // output HTML files
+//     chunks: [`product`], // respective JS files
+//     inject: true,
+//   })
+// });
 
-let htmlPageNames_my = ['home', 'product', 'project', 'blog', '404'];
+let htmlPageNames_my = ['home', 'project', 'blog', '404'];
 let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/ms/${name}.html`, // relative path to the HTML files
@@ -78,20 +78,9 @@ let multipleHtmlPlugins_my = htmlPageNames_my.map(name => {
   })
 });
 
-let htmlPageNames_product_my = ['in-the-name-of-tsar', 'black-steel-eagle', 'the-world', 'unity'];
-let multipleHtmlPlugins_product_my = htmlPageNames_product_my.map(name => {
-  return new HtmlWebpackPlugin({
-    template: `./src/ms/product/${name}.html`, // relative path to the HTML files
-    filename: `/ms/product/${name}.html`, // output HTML files
-    chunks: [`product`], // respective JS files
-    inject: true,
-  })
-});
-
 module.exports = {
     entry: {
         home :["./src/assets/js/home.js", "./src/assets/css/home.css"],
-        product :["./src/assets/js/product.js",  "./src/assets/css/product.css"],
         project :["./src/assets/js/project.js", "./src/assets/css/project.css"],
         blog :["./src/assets/js/blog.js", "./src/assets/css/blog.css"],
     },
@@ -214,5 +203,5 @@ module.exports = {
     new CleanWebpackPlugin(),
     assetsPluginInstance,
 
-  ].concat(multipleHtmlPlugins, multipleHtmlPlugins_product, multipleHtmlPlugins_my, multipleHtmlPlugins_product_my)
+  ].concat(multipleHtmlPlugins, multipleHtmlPlugins_my)
 };
