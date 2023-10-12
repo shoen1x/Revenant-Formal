@@ -1,0 +1,13 @@
+.kamucurang.active {
+  background-color: none;
+  height: none;
+  overflow: unset;
+}
+
+.kamucurang {
+  position: relative;
+}
+
+.kamucurang-fader {
+  display: none;
+}
