@@ -51,7 +51,7 @@
     "html-webpack-injector": "^1.1.4",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
-    "postcss": "^8.4.30",
+    "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "webpack": "^5.88.2",
     "webpack-assets-manifest": "^5.1.0",
