@@ -1,13 +1,9 @@
 # Core
 /node_modules/
 **contact_Examples
-**Commented_not_use
 **.favicon_package
 
 # Javascript
 
 # Log files
 *.log
-
-# htaccess
-/.htaccess

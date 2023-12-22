@@ -100,7 +100,6 @@ module.exports = {
         crossOriginLoading: "anonymous",
     },
     performance: {
-      // Turn off size warnings for entry points
       hints: false,
     },
     module: {

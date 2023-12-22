@@ -6,6 +6,10 @@
     <img src="https://shoenix-studios.web.app/global/assets/images/revenant-formal-header.webp" width="100%" alt="Revenant Formal"></img>
     <h2>A experimental project by <strong>NMVX</strong></h2>
     <a href="https://shoenix-studios.web.app/home"><strong>Quick access!</strong></a>
+    <p>2024 update: Revenant's Formal project was deprecated, replaced with
+     <a href="https://github.com/shoen1x/Project-Revenant">Project Revenant</a>
+     with better framework, UI/UX and script.
+    </p>
     </br>
 </div>
 
@@ -79,7 +83,7 @@
       - [x] Pagination added for more projects supports
       - [x] Loading progress bar for loading projects
 
-- ### Product ***`Deprecated`***
+- ### Product ***`Deprecated`*** **`Removed`**
 
   - [x] Added new ***Product*** page
     - [x] 4 Different `Collection` Based product.
@@ -124,80 +128,23 @@
 
 - ### Ads banner (Pre-alpha version) ***`Deprecated`***
 
-    - Reintroduced in later version with better images, sizes control using Slick Carousel plugin implemented.
+  - Reintroduced in later version with better images, sizes control using Slick Carousel plugin implemented.
 
 - ### Marquee Logos for 'service used by' (Pre-alpha version) ***`Deprecated`***
 
-    - Reintroduced in later version with better images, sizes control using Slick Carousel plugin implemented.
+  - Reintroduced in later version with better images, sizes control using Slick Carousel plugin implemented.
 
 - ### License generated
 
 - ### NPM reoptimized
 
-  - [x] Added all new following packages for major version (Build) changes;-
-
-     ```javascript
-        "devDependencies": {
-            "@babel/core": "^7.21.3",
-            "@babel/preset-env": "^7.20.2",
-            "assets-webpack-plugin": "^7.1.1",
-            "babel-loader": "^9.1.2",
-            "clean-webpack-plugin": "^4.0.0",
-            "css-loader": "^6.7.3",
-            "css-minimizer-webpack-plugin": "^5.0.0",
-            "cssnano": "^6.0.1",
-            "html-loader": "^4.2.0",
-            "html-webpack-injector": "^1.1.4",
-            "html-webpack-plugin": "^5.5.0",
-            "mini-css-extract-plugin": "^2.7.6",
-            "postcss": "^8.4.23",
-            "postcss-loader": "^7.3.0",
-            "webpack": "^5.76.1",
-            "webpack-assets-manifest": "^5.1.0",
-            "webpack-cli": "^5.0.1",
-            "webpack-subresource-integrity": "^5.2.0-rc.1"
-        }
-    ```
-
-- ### ***`Webpack implemented`***
-
-```javascript
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "set NODE_ENV=development&& webpack --mode development",
-    "dev:watch": "set NODE_ENV=development&& webpack --mode development --watch",
-    "build": "set NODE_ENV=production&& webpack --mode production",
-    "prod": "npm run build",
-    "start": "set NODE_ENV=development&& webpack-dev-server --mode development --open",
-    "watch": "npm run dev:watch",
-    "lint": "eslint assets/scripts/*.js",
-    "clean": "rm -rf docs"
-  }
-```
-
-<!-- Contributing -->
-# Contributing
-
-If you have a suggestion that would make this website better, please [open issues](https://github.com/shoen1x/Revenant-Formal/issues). You can also simply open an issue with the tag "enhancement".
-
-1. Identify the problem or suggestions
-2. Create your new [issues](https://github.com/shoen1x/Revenant-Formal/issues)
-3. Submit
-
-<!-- License -->
-# License
-
-Distributed under the 'CC0 1.0 Universal' License. See `LICENSE.txt` or [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) for more information.
+  - [x] Added all new following packages for major version (Build) changes;
+  - [x] Webpack implemented
 
 <!-- Authors & Support -->
 # Support
 
 For support, email <kbd>shoenixstudios@gmail.com</kbd>
-
-<!-- Ackdnowledgements -->
-# Acknowledgements
-
-### [<strong>html5up</strong>](https://html5up.net/) for base template
 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
