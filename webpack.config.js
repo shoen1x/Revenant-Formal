@@ -55,7 +55,7 @@ var assetsPluginInstance = new AssetsPlugin({
   }
 });
 
-let htmlPageNames = ['home', 'project', 'blog', '404', 'maintenance', 'googlebcf19c60ad795d29'];
+let htmlPageNames = ['home', 'project', 'blog', '404', 'maintenance'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: `./src/${name}.html`, // relative path to the HTML files

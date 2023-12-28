@@ -3,8 +3,6 @@
 <!-- Header -->
 <h1 align="center"><strong>Revenant's Formal<strong></h1>
 <div align="center">
-    <img src="https://shoenix-studios.web.app/global/assets/images/revenant-formal-header.webp" width="100%" alt="Revenant Formal"></img>
-    <h2>A experimental project by <strong>NMVX</strong></h2>
     <a href="https://shoenix-studios.web.app/home"><strong>Quick access!</strong></a>
     <p>2024 update: Revenant's Formal project was deprecated, replaced with
      <a href="https://github.com/shoen1x/Project-Revenant">Project Revenant</a>
