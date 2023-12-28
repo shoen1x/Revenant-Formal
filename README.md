@@ -3,28 +3,12 @@
 <!-- Header -->
 <h1 align="center"><strong>Revenant's Formal<strong></h1>
 <div align="center">
-    <a href="https://shoenix-studios.web.app/home"><strong>Quick access!</strong></a>
     <p>2024 update: Revenant's Formal project was deprecated, replaced with
      <a href="https://github.com/shoen1x/Project-Revenant">Project Revenant</a>
      with better framework, UI/UX and script.
     </p>
     </br>
 </div>
-
-<!-- Contents -->
-<div align="center">
-    <details>
-    <summary>Contents</summary>
-        <ol>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="#contributing">Contributing</a></li>
-            <li><a href="#license">License</a></li>
-            <li><a href="#support">Support</a></li>
-            <li><a href="#acknowledgements">Acknowledgments</a></li>
-        </ol>
-    </details>
-</div>
-</br>
 
 <!-- Build With -->
 # Built With
@@ -132,17 +116,10 @@
 
   - Reintroduced in later version with better images, sizes control using Slick Carousel plugin implemented.
 
-- ### License generated
-
-- ### NPM reoptimized
-
-  - [x] Added all new following packages for major version (Build) changes;
-  - [x] Webpack implemented
-
 <!-- Authors & Support -->
-# Support
+# Credit
 
-For support, email <kbd>shoenixstudios@gmail.com</kbd>
+NMVX | Shoenix Studios <kbd>shoenixstudios@gmail.com</kbd>
 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
